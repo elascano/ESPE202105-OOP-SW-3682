@@ -1,2 +1,1 @@
-# OOP 3682
-First Name Workshops/Assignments/Exams
+# OOP 3682 Felix Cristian Workshops
