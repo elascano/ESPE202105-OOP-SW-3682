@@ -1,0 +1,22 @@
+#include <iostream>
+#include "function.h"
+ 
+/*
+Write a program that do the following: 1.- Add the elements of an array of 5
+integers, where the integers must be entered with the keyboard. 2.- Compute the
+average of three elements of an array of "oats, also the numbers must be entered
+with the keyboards. 3.- Find out if a speci!c integer is pa# of an array, the array will
+have the following elements { 12,23,34,98,87,65,0}, the user must enter the number
+to search for and the program tells whether the number is in the list or not. Use
+function
+functions for every requirement. And from the main method, call the specific
+functions accordingly
+*/
+package quiz_1_alisson_caiza.cpp;
+ * @author alisson
+ */
+public class Quiz_1_Alisson_CaizaCpp {
+ 
+	public static void main(String[] args) {
+    	entrada=new scanner (system.in);
+    	float numeros []= new float [5];
