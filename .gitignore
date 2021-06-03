@@ -21,3 +21,8 @@
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
+/workshops/portillad/unit1/WS08DefineObjects/ApplianceStoreSimulator/nbproject/private/
+/workshops/portillad/unit1/WS07DefineObjects/ApplianceStrSimulator/nbproject/private/
+/workshops/portillad/unit1/WS08DefineObjects/ApplianceStrSimulator/nbproject/private/
+/workshops/portillad/unit1/WS08DefineObjects/ApplainceS.Smt/nbproject/private/
+/workshops/portillad/unit1/WS08DefineObjects/ApplianceStore/nbproject/private/
