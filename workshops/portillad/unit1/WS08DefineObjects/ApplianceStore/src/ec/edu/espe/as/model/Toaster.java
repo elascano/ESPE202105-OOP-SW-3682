@@ -3,32 +3,33 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package ec.edu.espe.appliancestore.model;
+package ec.edu.espe.as.model;
 
 /**
  *
  * @author Diego Portilla
  */
-public class Microwave {
+public class Toaster {
     private float size;
     private float weight;
-    private String material;
     private float price;
-    private String model ;
+    private String model;
+    private String material;
+    private int power;
     private int SerialNumber;
+    
+    public void buy(){
         
-   public void buy(){
-       
-   } 
-   public void sell(){
-       
-   }
-   public void tostock(){
-       
-   }
-   private void GenerateProfit(){
-       
-   }
+    }
+    public void sell(){
+        
+    }
+    public void tostock(){
+        
+    }
+    private void GeneraateProfit(){
+        
+    }
 
     /**
      * @return the size
@@ -59,20 +60,6 @@ public class Microwave {
     }
 
     /**
-     * @return the material
-     */
-    public String getMaterial() {
-        return material;
-    }
-
-    /**
-     * @param material the material to set
-     */
-    public void setMaterial(String material) {
-        this.material = material;
-    }
-
-    /**
      * @return the price
      */
     public float getPrice() {
@@ -98,6 +85,34 @@ public class Microwave {
      */
     public void setModel(String model) {
         this.model = model;
+    }
+
+    /**
+     * @return the material
+     */
+    public String getMaterial() {
+        return material;
+    }
+
+    /**
+     * @param material the material to set
+     */
+    public void setMaterial(String material) {
+        this.material = material;
+    }
+
+    /**
+     * @return the power
+     */
+    public int getPower() {
+        return power;
+    }
+
+    /**
+     * @param power the power to set
+     */
+    public void setPower(int power) {
+        this.power = power;
     }
 
     /**

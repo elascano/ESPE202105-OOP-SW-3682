@@ -3,13 +3,13 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package ec.edu.espe.appliancestore.model;
+package ec.edu.espe.as.model;
 
 /**
  *
  * @author Diego Portilla
  */
-public class AplianceStore {
+public class AStore {
     private int SerialNumber;
     private String microwaves[];
     private String toaster[];

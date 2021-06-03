@@ -3,13 +3,13 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package appliancestore;
+package AS;
 
 /**
  *
  * @author Diego Portilla
  */
-public class ApplianceStore {
+public class AS {
 
     /**
      * @param args the command line arguments
