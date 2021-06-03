@@ -1,2 +1,1 @@
-# OOP 3682
-First Name Workshops/Assignments/Exams
+# OOP 3682 Sebastian Solano Workshops Unit 1
