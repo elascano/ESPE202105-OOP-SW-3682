@@ -21,8 +21,14 @@
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
+<<<<<<< HEAD
 /workshops/campoverdec/unit1/WS05tructuredPrmming/build/
 /workshops/campoverdec/unit1/WS06DeveloomenEnv/nbproject/private/
 /workshops/campoverdec/unit1/WS06DeveloomenEnv/build/
 /workshops/achigs/unit1/WS08DefiningObject/BookStore/nbproject/private/
 /workshops/achigs/unit1/WS08DefiningObject/Bookstore/nbproject/private/
+=======
+
+#Visual paradigm backup files
+*.vpp.bak*
+>>>>>>> 23aa031a8d0c83f26dc6ef6ceb92d7b454381202
