@@ -32,3 +32,5 @@ hs_err_pid*
 #Visual paradigm backup files
 *.vpp.bak*
 >>>>>>> 23aa031a8d0c83f26dc6ef6ceb92d7b454381202
+/workshops/salazare/unit1/WS08DefiningObjects/ApplianceStore/nbproject/private/
+/workshops/salazare/unit1/WS08DefiningObjects/ApplianceStore/build/
