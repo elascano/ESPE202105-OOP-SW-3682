@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package ec.edu.espe.as.model;
+package ec.edu.espe.AS.model;
 
 /**
  *
@@ -12,19 +12,22 @@ package ec.edu.espe.as.model;
 public class Microwave {
     private float size;
     private float weight;
-    private String matrial ;
-    private float price ;
-    private String model ;
+    private String material;
+    private String model;
     private int SerialNumber;
     
-   public void buy(){
+    public void buy(){
+        
     }
-   public void sell(){
+    public void sell(){
+        
     }
-   public void tostock(){
+    public void tostock(){
+        
     }
-   private void GenerateProfit(){
-   }
+    private void GenerateProfit(){
+        
+    }
 
     /**
      * @return the size
@@ -55,31 +58,17 @@ public class Microwave {
     }
 
     /**
-     * @return the matrial
+     * @return the material
      */
-    public String getMatrial() {
-        return matrial;
+    public String getMaterial() {
+        return material;
     }
 
     /**
-     * @param matrial the matrial to set
+     * @param material the material to set
      */
-    public void setMatrial(String matrial) {
-        this.matrial = matrial;
-    }
-
-    /**
-     * @return the price
-     */
-    public float getPrice() {
-        return price;
-    }
-
-    /**
-     * @param price the price to set
-     */
-    public void setPrice(float price) {
-        this.price = price;
+    public void setMaterial(String material) {
+        this.material = material;
     }
 
     /**
@@ -109,6 +98,4 @@ public class Microwave {
     public void setSerialNumber(int SerialNumber) {
         this.SerialNumber = SerialNumber;
     }
-   
 }
-
