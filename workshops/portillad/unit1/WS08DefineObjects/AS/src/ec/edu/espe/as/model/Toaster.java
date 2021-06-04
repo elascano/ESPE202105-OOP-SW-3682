@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package ec.edu.espe.AS.model;
+package ec.edu.espe.as.model;
 
 /**
  *
@@ -12,24 +12,19 @@ package ec.edu.espe.AS.model;
 public class Toaster {
     private float size;
     private float weight;
-    private float price;
     private String model;
     private int power;
     private String material;
     private int SerialNumber;
     
-    public void sell(){
-        
+   public void buy(){
     }
-    public void buy(){
-        
+   public void sell(){
     }
-    public void tostock(){
-        
+   public void tostock(){
     }
-    private void Generateprofit(){
-        
-    } 
+   private void GenerateProfit(){
+   }
 
     /**
      * @return the size
@@ -57,20 +52,6 @@ public class Toaster {
      */
     public void setWeight(float weight) {
         this.weight = weight;
-    }
-
-    /**
-     * @return the price
-     */
-    public float getPrice() {
-        return price;
-    }
-
-    /**
-     * @param price the price to set
-     */
-    public void setPrice(float price) {
-        this.price = price;
     }
 
     /**
