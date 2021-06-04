@@ -12,24 +12,19 @@ package ec.edu.espe.as.model;
 public class Toaster {
     private float size;
     private float weight;
-    private float price;
     private String model;
-    private String material;
     private int power;
+    private String material;
     private int SerialNumber;
     
-    public void buy(){
-        
+   public void buy(){
     }
-    public void sell(){
-        
+   public void sell(){
     }
-    public void tostock(){
-        
+   public void tostock(){
     }
-    private void GeneraateProfit(){
-        
-    }
+   private void GenerateProfit(){
+   }
 
     /**
      * @return the size
@@ -60,20 +55,6 @@ public class Toaster {
     }
 
     /**
-     * @return the price
-     */
-    public float getPrice() {
-        return price;
-    }
-
-    /**
-     * @param price the price to set
-     */
-    public void setPrice(float price) {
-        this.price = price;
-    }
-
-    /**
      * @return the model
      */
     public String getModel() {
@@ -88,20 +69,6 @@ public class Toaster {
     }
 
     /**
-     * @return the material
-     */
-    public String getMaterial() {
-        return material;
-    }
-
-    /**
-     * @param material the material to set
-     */
-    public void setMaterial(String material) {
-        this.material = material;
-    }
-
-    /**
      * @return the power
      */
     public int getPower() {
@@ -113,6 +80,20 @@ public class Toaster {
      */
     public void setPower(int power) {
         this.power = power;
+    }
+
+    /**
+     * @return the material
+     */
+    public String getMaterial() {
+        return material;
+    }
+
+    /**
+     * @param material the material to set
+     */
+    public void setMaterial(String material) {
+        this.material = material;
     }
 
     /**

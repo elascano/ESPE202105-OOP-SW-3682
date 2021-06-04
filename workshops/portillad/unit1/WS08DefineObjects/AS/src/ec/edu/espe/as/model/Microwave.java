@@ -12,22 +12,18 @@ package ec.edu.espe.as.model;
 public class Microwave {
     private float size;
     private float weight;
-    private String material;
-    private float price;
+    private String matrial ;
+    private float price ;
     private String model ;
     private int SerialNumber;
-        
+    
    public void buy(){
-       
-   } 
+    }
    public void sell(){
-       
-   }
+    }
    public void tostock(){
-       
-   }
+    }
    private void GenerateProfit(){
-       
    }
 
     /**
@@ -59,17 +55,17 @@ public class Microwave {
     }
 
     /**
-     * @return the material
+     * @return the matrial
      */
-    public String getMaterial() {
-        return material;
+    public String getMatrial() {
+        return matrial;
     }
 
     /**
-     * @param material the material to set
+     * @param matrial the matrial to set
      */
-    public void setMaterial(String material) {
-        this.material = material;
+    public void setMatrial(String matrial) {
+        this.matrial = matrial;
     }
 
     /**
@@ -113,4 +109,6 @@ public class Microwave {
     public void setSerialNumber(int SerialNumber) {
         this.SerialNumber = SerialNumber;
     }
+   
 }
+

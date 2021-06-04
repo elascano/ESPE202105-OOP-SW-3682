@@ -9,20 +9,20 @@ package ec.edu.espe.as.model;
  *
  * @author Diego Portilla
  */
-public class AStore {
+public class AS {
     private int SerialNumber;
-    private String microwaves[];
+    private String microwave[];
     private String toaster[];
     
-    public void AddMicrowave(String microwave[]){
-        
-    }
-    public void AddToaster(String Toaster[]){
-        
-    }
-    public void remove(int SerialNumber){
-        
-    }
+   public void addmicrowave(String microwave[]){
+       
+   } 
+   public void addmitoaster(String toaster[]){
+       
+   } 
+   private void remove(int SerialNumber){
+       
+   }
 
     /**
      * @return the SerialNumber
@@ -39,17 +39,17 @@ public class AStore {
     }
 
     /**
-     * @return the microwaves
+     * @return the microwave
      */
-    public String[] getMicrowaves() {
-        return microwaves;
+    public String[] getMicrowave() {
+        return microwave;
     }
 
     /**
-     * @param microwaves the microwaves to set
+     * @param microwave the microwave to set
      */
-    public void setMicrowaves(String[] microwaves) {
-        this.microwaves = microwaves;
+    public void setMicrowave(String[] microwave) {
+        this.microwave = microwave;
     }
 
     /**
@@ -65,4 +65,5 @@ public class AStore {
     public void setToaster(String[] toaster) {
         this.toaster = toaster;
     }
+   
 }
