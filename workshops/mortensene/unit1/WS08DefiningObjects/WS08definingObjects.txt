@@ -1,0 +1,9 @@
+
+Mortensen Franco, Eduardo Antonio 	
+
+
+•	Sauce:weight, purchaseprice, saleprice, brand, size, type, expirationdate, buy(), sell(), checkStatus(), checkQuality()
+•	Bacon:weight, purchaseprice, saleprice, brand, type, expirationdate, buy(), sell(), checkStatus(), checkQuality()
+•	Cheese:weight, purchaseprice, saleprice, brand, type, expirationdate, buy(), sell(), checkStatus(), checkQuality()
+•	Ketchup: volume, brand, purchaseprice, saleprice, expirationdate,  buy(),  sell(), checkStatus(), checkQuality()
+•	Ham: weight, brand, type, purchaseprice, sale price, expirationdate,  buy(), sell(), checkStatus(), checkQuality()
