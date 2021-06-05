@@ -21,6 +21,57 @@
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
+<<<<<<< HEAD
+/workshops/suquillof/unit1/WS08DefiningObjects/ApplianceStore/nbproject/private/
+=======
+<<<<<<< HEAD
+/workshops/guamanb/unit1/WS08DefiningObjects/Fruit/nbproject/private/
+=======
+<<<<<<< HEAD
+/workshops/escobari/unit1/WS08DefiningObjects/Cell Phone Store/nbproject/private/
+=======
+<<<<<<< HEAD
 /workshops/campoverdec/unit1/WS05tructuredPrmming/build/
 /workshops/campoverdec/unit1/WS06DeveloomenEnv/nbproject/private/
 /workshops/campoverdec/unit1/WS06DeveloomenEnv/build/
+<<<<<<< HEAD
+/workshops/cadenaj/unit1/WS08DefiningObjects/Bookstore/nbproject/private/
+=======
+<<<<<<< HEAD
+/workshops/gualotuñar/unit1/WS08DefiningObjects/WS08Cellphonestore/nbproject/private/
+=======
+<<<<<<< HEAD
+/workshops/campoverdec/unit1/WS08DefiningObjects/SanamedAccountSystem/nbproject/private/
+=======
+<<<<<<< HEAD
+/workshops/felixc/unit1/WS08FindingObjects/InventoryManagementOfACellPhoneStore/nbproject/private/
+=======
+<<<<<<< HEAD
+/workshops/caizaa/unit1/WS06DevelopmentEnv/WS08DefiningObjects/BookStore.System/nbproject/private/
+/workshops/caizaa/unit1/WS08DefiningObjects/BookStore/nbproject/private/
+/workshops/caizaa/unit1/WS08DefiningObjects/bookStore/nbproject/private/
+=======
+<<<<<<< HEAD
+/workshops/menak/unit1/WS08DefiningObjects/Grosery Store Management/nbproject/private/
+/workshops/menak/unit1/WS08DefiningObjects/Grosery Store Management/build/
+=======
+/workshops/achigs/unit1/WS08DefiningObject/BookStore/nbproject/private/
+/workshops/achigs/unit1/WS08DefiningObject/Bookstore/nbproject/private/
+=======
+
+#Visual paradigm backup files
+*.vpp.bak*
+>>>>>>> 23aa031a8d0c83f26dc6ef6ceb92d7b454381202
+<<<<<<< HEAD
+/workshops/salazare/unit1/WS08DefiningObjects/ApplianceStore/nbproject/private/
+/workshops/salazare/unit1/WS08DefiningObjects/ApplianceStore/build/
+=======
+>>>>>>> 65bbdffbe5ee9abba9759bf9e8a990e85ebbaa74
+>>>>>>> 0161857aba0a4131970dc32b253e1b5343edb0d3
+>>>>>>> 5162da0ea505cccdc60e18a42c8915427c9a4f9b
+>>>>>>> 615174e50c94b17be0cdcc1db1698d5fc44b15eb
+>>>>>>> fda4c3f6f0240a88f380765df0be44833965e2bd
+>>>>>>> 8345af0c70c3ace948966b8f2d7e497b7e20b274
+>>>>>>> 36a3481bfe7ec356fc2a696eff599e441909cd24
+>>>>>>> fb9799adcd48a5f26abc45457ad92f1762e5325f
+>>>>>>> d402275fdee4fb1f16217f3e2c723ed60b92e560
