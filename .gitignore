@@ -24,3 +24,4 @@ hs_err_pid*
 
 #Visual paradigm backup files
 *.vpp.bak*
+/workshops/salazare/unit1/Nueva Carpeta/ClassDiagram/nbproject/private/
