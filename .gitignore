@@ -24,3 +24,5 @@ hs_err_pid*
 
 #Visual paradigm backup files
 *.vpp.bak*
+/workshops/guamanb/unit1/WS08DefiningObjects/ChickenCoop/nbproject/private/
+/workshops/guamanb/unit1/WS08DefiningObjects/ClassDiagram/nbproject/private/
