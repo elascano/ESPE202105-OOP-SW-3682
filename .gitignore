@@ -24,3 +24,4 @@ hs_err_pid*
 
 #Visual paradigm backup files
 *.vpp.bak*
+/workshops/cadenaj/unit1/WS10ClassDiagram/ClassDiagram/nbproject/private/
