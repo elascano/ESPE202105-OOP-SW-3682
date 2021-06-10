@@ -24,12 +24,18 @@ hs_err_pid*
 
 #Visual paradigm backup files
 *.vpp.bak*
-<<<<<<< HEAD
+
+/workshops/campoverdec/unit1/WS08DefiningObjects/Class Diagram/nbproject/private/
+/workshops/felixc/unit1/WS08FindingObjects/WS10ClassDiagram/nbproject/private/
+/workshops/caizaa/unit1/WS10CD/ClassDiagram/nbproject/private/
+/workshops/caizaa/unit1/WS10CDimpl/ClassDiagram/nbproject/private/
+/workshops/gualotuñar/unit1/WS08DefiningObjects/ChickenFarmSimulator/nbproject/private/
+/workshops/guamanb/unit1/WS08DefiningObjects/ChickenCoop/nbproject/private/
+/workshops/guamanb/unit1/WS08DefiningObjects/ClassDiagram/nbproject/private/
+/workshops/menak/unit1/WS08DefiningObjects/Classdiagram/nbproject/private/
+/workshops/menak/unit1/WS10CDimpl/ClassDiagram/nbproject/private/
+/workshops/cadenaj/unit1/WS10ClassDiagram/ClassDiagram/nbproject/private/
 /assignments/portillad/unit1/HW11/ApplianceStoreSimulator/nbproject/private/
-=======
-<<<<<<< HEAD
 /workshops/escobari/unit1/WS010ClassDiagram/ClassDiagram/nbproject/private/
-=======
 /workshops/salazare/unit1/Nueva Carpeta/ClassDiagram/nbproject/private/
->>>>>>> 50dcf0ab2137372e1ae333df02c513712d8b3a16
->>>>>>> f8cacb1a8743f8a464e69bdce1a8daa29532d2df
+/assignments/menak/unit1/HW11CDToCode/GroseryStoreManagement/nbproject/private/
