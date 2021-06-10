@@ -25,7 +25,12 @@ hs_err_pid*
 #Visual paradigm backup files
 *.vpp.bak*
 <<<<<<< HEAD
+<<<<<<< HEAD
 /workshops/gualotuñar/unit1/WS08DefiningObjects/ChickenFarmSimulator/nbproject/private/
+=======
+/workshops/guamanb/unit1/WS08DefiningObjects/ChickenCoop/nbproject/private/
+/workshops/guamanb/unit1/WS08DefiningObjects/ClassDiagram/nbproject/private/
+>>>>>>> f544c8e39c42d5da19d34fd4458177254a1fc198
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
