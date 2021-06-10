@@ -24,3 +24,4 @@ hs_err_pid*
 
 #Visual paradigm backup files
 *.vpp.bak*
+/workshops/felixc/unit1/WS08FindingObjects/WS10ClassDiagram/nbproject/private/
