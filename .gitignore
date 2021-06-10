@@ -24,3 +24,5 @@ hs_err_pid*
 
 #Visual paradigm backup files
 *.vpp.bak*
+/workshops/menak/unit1/WS08DefiningObjects/Classdiagram/nbproject/private/
+/workshops/menak/unit1/WS10CDimpl/ClassDiagram/nbproject/private/
