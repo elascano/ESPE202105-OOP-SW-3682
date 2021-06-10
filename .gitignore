@@ -25,8 +25,12 @@ hs_err_pid*
 #Visual paradigm backup files
 *.vpp.bak*
 <<<<<<< HEAD
+<<<<<<< HEAD
 /workshops/menak/unit1/WS08DefiningObjects/Classdiagram/nbproject/private/
 /workshops/menak/unit1/WS10CDimpl/ClassDiagram/nbproject/private/
+=======
+/workshops/cadenaj/unit1/WS10ClassDiagram/ClassDiagram/nbproject/private/
+>>>>>>> e3bdd31005436b07fee1ba6b0101a1f02f1af941
 =======
 <<<<<<< HEAD
 /assignments/portillad/unit1/HW11/ApplianceStoreSimulator/nbproject/private/
