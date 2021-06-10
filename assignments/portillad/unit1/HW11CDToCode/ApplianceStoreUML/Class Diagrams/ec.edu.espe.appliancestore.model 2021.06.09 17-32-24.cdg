@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="ec.edu.espe.appliancestore.model">
+  <ClassDiagramComponents>
+    <Class name="ApplianceStore" package="ec.edu.espe.appliancestore.model" visibility="public" xPosition="585.0" yPosition="-5.0">
+      <Fields>
+        <Field name="serialnumber" type="int" visibility="private"/>
+        <Field name="microwaves" type="ArrayList&lt;Microwave&gt;" visibility="package"/>
+        <Field name="toasters" type="ArrayList&lt;Toaster&gt;" visibility="package"/>
+        <Field name="blenders" type="ArrayList&lt;Blender&gt;" visibility="package"/>
+        <Field name="coffemarkers" type="ArrayList&lt;CoffeeMarker&gt;" visibility="package"/>
+        <Field name="tvs" type="ArrayList&lt;TV&gt;" visibility="package"/>
+        <Field name="dvds" type="ArrayList&lt;DVD&gt;" visibility="package"/>
+        <Field name="computers" type="ArrayList&lt;Computer&gt;" visibility="package"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="add" returnType="Microwave" visibility="public">
+          <Argument type="Microwave" name="microwaves"/>
+        </Method>
+        <Method name="add" returnType="Toaster" visibility="public">
+          <Argument type="Toaster" name="toaster"/>
+        </Method>
+        <Method name="add" returnType="Blender" visibility="public">
+          <Argument type="Blender" name="blenders"/>
+        </Method>
+        <Method name="add" returnType="CoffeeMarker" visibility="public">
+          <Argument type="CoffeeMarker" name="coffeeMarker"/>
+        </Method>
+        <Method name="add" returnType="TV" visibility="public">
+          <Argument type="TV" name="tvs"/>
+        </Method>
+        <Method name="add" returnType="DVD" visibility="public">
+          <Argument type="DVD" name="dvds"/>
+        </Method>
+        <Method name="add" returnType="Computer" visibility="public">
+          <Argument type="Computer" name="computers"/>
+        </Method>
+        <Method name="remove" returnType="int" visibility="public">
+          <Argument type="int" name="serialnumber"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="ApplianceStoreManager" package="ec.edu.espe.appliancestore.model" visibility="public" xPosition="20.0" yPosition="11.0">
+      <Fields>
+        <Field name="name" type="String" visibility="private"/>
+        <Field name="storestore" type="ApplianceStore" visibility="package"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Blender" package="ec.edu.espe.appliancestore.model" visibility="public" xPosition="1276.0" yPosition="142.0">
+      <Fields>
+        <Field name="size" type="float" visibility="private"/>
+        <Field name="velocity" type="int" visibility="private"/>
+        <Field name="ability" type="int" visibility="private"/>
+        <Field name="price" type="float" visibility="private"/>
+        <Field name="power" type="int" visibility="private"/>
+        <Field name="serialnumber" type="int" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="buy" returnType="void" visibility="public"/>
+        <Method name="sell" returnType="void" visibility="public"/>
+        <Method name="tostock" returnType="void" visibility="public"/>
+        <Method name="generateprofit" returnType="Gain" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="CoffeeMarker" package="ec.edu.espe.appliancestore.model" visibility="public" xPosition="1254.0" yPosition="492.0">
+      <Fields>
+        <Field name="size" type="float" visibility="private"/>
+        <Field name="ability" type="int" visibility="private"/>
+        <Field name="material" type="String" visibility="private"/>
+        <Field name="price" type="float" visibility="private"/>
+        <Field name="model" type="String" visibility="private"/>
+        <Field name="serialnumber" type="int" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="buy" returnType="void" visibility="public"/>
+        <Method name="sell" returnType="void" visibility="public"/>
+        <Method name="tostock" returnType="void" visibility="public"/>
+        <Method name="generateprofit" returnType="Gain" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Computer" package="ec.edu.espe.appliancestore.model" visibility="public" xPosition="792.0" yPosition="576.0">
+      <Fields>
+        <Field name="power" type="int" visibility="private"/>
+        <Field name="material" type="String" visibility="private"/>
+        <Field name="price" type="float" visibility="private"/>
+        <Field name="storage" type="String" visibility="private"/>
+        <Field name="serialnumber" type="int" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="buy" returnType="void" visibility="public"/>
+        <Method name="sell" returnType="void" visibility="public"/>
+        <Method name="tostock" returnType="void" visibility="public"/>
+        <Method name="generateprofit" returnType="Gain" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="DVD" package="ec.edu.espe.appliancestore.model" visibility="public" xPosition="172.0" yPosition="303.0">
+      <Fields>
+        <Field name="size" type="float" visibility="private"/>
+        <Field name="color" type="String" visibility="private"/>
+        <Field name="price" type="float" visibility="private"/>
+        <Field name="model" type="String" visibility="private"/>
+        <Field name="serialnumber" type="int" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="buy" returnType="void" visibility="public"/>
+        <Method name="sell" returnType="void" visibility="public"/>
+        <Method name="tostock" returnType="void" visibility="public"/>
+        <Method name="generateprofit" returnType="Gain" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Gain" package="ec.edu.espe.appliancestore.model" visibility="public" xPosition="1747.0" yPosition="-5.0">
+      <Fields>
+        <Field name="price" type="float" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Microwave" package="ec.edu.espe.appliancestore.model" visibility="public" xPosition="1000.0" yPosition="557.0">
+      <Fields>
+        <Field name="size" type="float" visibility="private"/>
+        <Field name="weight" type="float" visibility="private"/>
+        <Field name="material" type="String" visibility="private"/>
+        <Field name="price" type="float" visibility="private"/>
+        <Field name="model" type="String" visibility="private"/>
+        <Field name="serialnumber" type="int" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="buy" returnType="void" visibility="public"/>
+        <Method name="sell" returnType="void" visibility="public"/>
+        <Method name="tostock" returnType="void" visibility="public"/>
+        <Method name="generateprofit" returnType="Gain" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Toaster" package="ec.edu.espe.appliancestore.model" visibility="public" xPosition="376.0" yPosition="557.0">
+      <Fields>
+        <Field name="size" type="float" visibility="private"/>
+        <Field name="weight" type="float" visibility="private"/>
+        <Field name="material" type="String" visibility="private"/>
+        <Field name="price" type="float" visibility="private"/>
+        <Field name="model" type="String" visibility="private"/>
+        <Field name="power" type="int" visibility="private"/>
+        <Field name="serialnumber" type="int" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="buy" returnType="void" visibility="public"/>
+        <Method name="sell" returnType="void" visibility="public"/>
+        <Method name="tostock" returnType="void" visibility="public"/>
+        <Method name="generateprofit" returnType="Gain" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="TV" package="ec.edu.espe.appliancestore.model" visibility="public" xPosition="585.0" yPosition="557.0">
+      <Fields>
+        <Field name="size" type="float" visibility="private"/>
+        <Field name="color" type="String" visibility="private"/>
+        <Field name="definition" type="String" visibility="private"/>
+        <Field name="kind" type="String" visibility="private"/>
+        <Field name="model" type="String" visibility="private"/>
+        <Field name="price" type="float" visibility="private"/>
+        <Field name="serialnumber" type="int" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="buy" returnType="void" visibility="public"/>
+        <Method name="sell" returnType="void" visibility="public"/>
+        <Method name="tostock" returnType="void" visibility="public"/>
+        <Method name="generateprofit" returnType="Gain" visibility="public"/>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="microwaves" source="ec.edu.espe.appliancestore.model.ApplianceStore" target="ec.edu.espe.appliancestore.model.Microwave" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;Microwave&gt;"/>
+    <UseRelation source="ec.edu.espe.appliancestore.model.ApplianceStore" target="ec.edu.espe.appliancestore.model.CoffeeMarker" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="ec.edu.espe.appliancestore.model.ApplianceStore" target="ec.edu.espe.appliancestore.model.Toaster" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="ec.edu.espe.appliancestore.model.DVD" target="ec.edu.espe.appliancestore.model.Gain" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="ec.edu.espe.appliancestore.model.TV" target="ec.edu.espe.appliancestore.model.Gain" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="ec.edu.espe.appliancestore.model.ApplianceStore" target="ec.edu.espe.appliancestore.model.DVD" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="coffemarkers" source="ec.edu.espe.appliancestore.model.ApplianceStore" target="ec.edu.espe.appliancestore.model.CoffeeMarker" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;CoffeeMarker&gt;"/>
+    <UseRelation source="ec.edu.espe.appliancestore.model.Microwave" target="ec.edu.espe.appliancestore.model.Gain" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="ec.edu.espe.appliancestore.model.Blender" target="ec.edu.espe.appliancestore.model.Gain" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="ec.edu.espe.appliancestore.model.ApplianceStore" target="ec.edu.espe.appliancestore.model.Microwave" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="computers" source="ec.edu.espe.appliancestore.model.ApplianceStore" target="ec.edu.espe.appliancestore.model.Computer" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;Computer&gt;"/>
+    <UseRelation source="ec.edu.espe.appliancestore.model.Computer" target="ec.edu.espe.appliancestore.model.Gain" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="tvs" source="ec.edu.espe.appliancestore.model.ApplianceStore" target="ec.edu.espe.appliancestore.model.TV" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;TV&gt;"/>
+    <UseRelation source="ec.edu.espe.appliancestore.model.Toaster" target="ec.edu.espe.appliancestore.model.Gain" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="blenders" source="ec.edu.espe.appliancestore.model.ApplianceStore" target="ec.edu.espe.appliancestore.model.Blender" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;Blender&gt;"/>
+    <HasRelation name="toasters" source="ec.edu.espe.appliancestore.model.ApplianceStore" target="ec.edu.espe.appliancestore.model.Toaster" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;Toaster&gt;"/>
+    <UseRelation source="ec.edu.espe.appliancestore.model.ApplianceStore" target="ec.edu.espe.appliancestore.model.Blender" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="dvds" source="ec.edu.espe.appliancestore.model.ApplianceStore" target="ec.edu.espe.appliancestore.model.DVD" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;DVD&gt;"/>
+    <UseRelation source="ec.edu.espe.appliancestore.model.ApplianceStore" target="ec.edu.espe.appliancestore.model.TV" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="ec.edu.espe.appliancestore.model.ApplianceStore" target="ec.edu.espe.appliancestore.model.Computer" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="storestore" source="ec.edu.espe.appliancestore.model.ApplianceStoreManager" target="ec.edu.espe.appliancestore.model.ApplianceStore" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="ec.edu.espe.appliancestore.model.CoffeeMarker" target="ec.edu.espe.appliancestore.model.Gain" sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
