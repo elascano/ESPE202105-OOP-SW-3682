@@ -24,3 +24,5 @@ hs_err_pid*
 
 #Visual paradigm backup files
 *.vpp.bak*
+/workshops/caizaa/unit1/WS10CD/ClassDiagram/nbproject/private/
+/workshops/caizaa/unit1/WS10CDimpl/ClassDiagram/nbproject/private/
