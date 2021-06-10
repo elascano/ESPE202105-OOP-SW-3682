@@ -24,5 +24,17 @@ hs_err_pid*
 
 #Visual paradigm backup files
 *.vpp.bak*
+<<<<<<< HEAD
 /workshops/caizaa/unit1/WS10CD/ClassDiagram/nbproject/private/
 /workshops/caizaa/unit1/WS10CDimpl/ClassDiagram/nbproject/private/
+=======
+<<<<<<< HEAD
+/assignments/portillad/unit1/HW11/ApplianceStoreSimulator/nbproject/private/
+=======
+<<<<<<< HEAD
+/workshops/escobari/unit1/WS010ClassDiagram/ClassDiagram/nbproject/private/
+=======
+/workshops/salazare/unit1/Nueva Carpeta/ClassDiagram/nbproject/private/
+>>>>>>> 50dcf0ab2137372e1ae333df02c513712d8b3a16
+>>>>>>> f8cacb1a8743f8a464e69bdce1a8daa29532d2df
+>>>>>>> e89271622c5c32121a8ff1cd7611a29f7759d144
