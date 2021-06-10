@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="ec.edu.espe.theoretical.model">
+  <ClassDiagramComponents>
+    <Class name="Book" package="ec.edu.espe.theoretical.model" visibility="public" xPosition="20.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Bookstore" package="ec.edu.espe.theoretical.model" visibility="public" xPosition="320.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Calculator" package="ec.edu.espe.theoretical.model" visibility="public" xPosition="620.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Client" package="ec.edu.espe.theoretical.model" visibility="public" xPosition="920.0" yPosition="20.0">
+      <Fields>
+        <Field name="name" type="String" visibility="private"/>
+        <Field name="age" type="int" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="askForProduct" returnType="boolean" visibility="public"/>
+        <Method name="m" returnType="Employee" visibility="public"/>
+        <Method name="buyProduct" returnType="int" visibility="public">
+          <Argument type="Product" name="product"/>
+        </Method>
+        <Method name="m1" returnType="Product" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Dictionary" package="ec.edu.espe.theoretical.model" visibility="public" xPosition="1220.0" yPosition="20.0">
+      <Fields>
+        <Field name="bilingual" type="boolean" visibility="private"/>
+        <Field name="conceptual" type="boolean" visibility="private"/>
+        <Field name="numberOfPages" type="int" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="sell" returnType="void" visibility="public"/>
+        <Method name="buy" returnType="void" visibility="public"/>
+        <Method name="bid" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Employee" package="ec.edu.espe.theoretical.model" visibility="public" xPosition="1520.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Folder" package="ec.edu.espe.theoretical.model" visibility="public" xPosition="1820.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Invoice" package="ec.edu.espe.theoretical.model" visibility="public" xPosition="2120.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Markers" package="ec.edu.espe.theoretical.model" visibility="public" xPosition="20.0" yPosition="420.0">
+      <Fields/>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Product" package="ec.edu.espe.theoretical.model" visibility="public" xPosition="320.0" yPosition="420.0">
+      <Fields>
+        <Field name="price" type="float" visibility="private"/>
+        <Field name="amount" type="float" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="m" returnType="void" visibility="public">
+          <Argument type="Client" name="client"/>
+        </Method>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <UseRelation source="ec.edu.espe.theoretical.model.Product" target="ec.edu.espe.theoretical.model.Client" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="ec.edu.espe.theoretical.model.Client" target="ec.edu.espe.theoretical.model.Employee" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="ec.edu.espe.theoretical.model.Client" target="ec.edu.espe.theoretical.model.Product" sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
