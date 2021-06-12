@@ -3,19 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package classdiagram;
+package ec.edu.espe.theoretical.model;
 
 /**
  *
  * @author Paul Mena The Programmers ESPE-DCCO
  */
-public class ClassDiagram {
-
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        // TODO code application logic here
-    }
+class F {
     
 }
