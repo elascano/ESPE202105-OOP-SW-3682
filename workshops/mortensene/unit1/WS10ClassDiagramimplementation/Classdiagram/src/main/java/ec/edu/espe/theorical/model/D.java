@@ -11,10 +11,28 @@ package ec.edu.espe.theorical.model;
  *
  */
 public class D {
+    private boolean b;
+    
     public B m(){
+        System.out.println("inside method D.m() returning and object b");
         return new B();
     }
 public int m(F f) {
+    System.out.println("inside method D.m() that receives f"+f+"");
 return 0;
 }
+
+    /**
+     * @return the b
+     */
+    public boolean isB() {
+        return b;
+    }
+
+    /**
+     * @param b the b to set
+     */
+    public void setB(boolean b) {
+        this.b = b;
+    }
 }

@@ -10,5 +10,29 @@ package ec.edu.espe.theorical.model;
  * @author pc
  */
 public class E {
+    private String S;
+   
+    
+    public  E(){
+        S = "empty";
+    }
+    public E (String s){
+        this.S =s;
+    
+    }
+
+    /**
+     * @return the S
+     */
+    public String getS() {
+        return S;
+    }
+
+    /**
+     * @param S the S to set
+     */
+    public void setS(String S) {
+        this.S = S;
+    }
     
 }

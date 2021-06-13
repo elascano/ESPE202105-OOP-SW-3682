@@ -10,5 +10,24 @@ package ec.edu.espe.theorical.model;
  * @author Isaac Escobar InnovaCode ESPE-DCCO
  */
 class E {
+    private String s;
+    
+    public E(){
+        s = "Empty";
+    }
+
+    /**
+     * @return the s
+     */
+    public String getS() {
+        return s;
+    }
+
+    /**
+     * @param s the s to set
+     */
+    public void setS(String s) {
+        this.s = s;
+    }
     
 }
