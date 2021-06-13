@@ -12,13 +12,52 @@ import java.util.ArrayList;
  * @author pc
  */
 public class A {
-    B b;
-    ArrayList<C> cs = new ArrayList<>();
-  public C m(D d){ 
+    private B b;
+    private ArrayList<C> cs = new ArrayList<>();
+   private int i;
+   
+  
+  public C m(D d){
+      System.out.println("inside method A.m() reciving paremeter d and returning a C object");
   return new C();
   } 
   
   public D m(){
+      System.out.println("inside method A.m() reuturning object D");
   return new D();
   }
+  public int getI() {
+        return i;
+    }
+public void setI( int i) {
+        this.i = i;
+    }
+
+    /**
+     * @return the b
+     */
+    public B getB() {
+        return b;
+    }
+
+    /**
+     * @param b the b to set
+     */
+    public void setB(B b) {
+        this.b = b;
+    }
+
+    /**
+     * @return the cs
+     */
+    public ArrayList<C> getCs() {
+        return cs;
+    }
+
+    /**
+     * @param cs the cs to set
+     */
+    public void setCs(ArrayList<C> cs) {
+        this.cs = cs;
+    }
 }
