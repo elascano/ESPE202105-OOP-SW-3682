@@ -10,7 +10,22 @@ package ec.edu.espe.theorical.model;
  * @author pc
  */
 public class C {
-float f;  
+    
+private float f;  
 public void m (){
 }
+
+    /**
+     * @return the f
+     */
+    public float getF() {
+        return f;
+    }
+
+    /**
+     * @param f the f to set
+     */
+    public void setF(float f) {
+        this.f = f;
+    }
 }
