@@ -12,16 +12,49 @@ import java.util.ArrayList;
  * @author Isaac Escobar InnovaCode ESPE-DCCO
  */
 public class A {
+
+    /**
+     * @return the b
+     */
+    public B getB() {
+        return b;
+    }
+
+    /**
+     * @param b the b to set
+     */
+    public void setB(B b) {
+        this.b = b;
+    }
     private B b;
     private final ArrayList<C> cs= new ArrayList<>();
     
+    private int i;
+    
     public C m(D d){
+        System.out.println("inside method A.m(d),receiving parameter d ->" 
+                + d + "and returning a c objetct");
         return new C();
     }
     
     public D m(){
+        System.out.println("inside method m() that returns a D object");
         return new D();
         
+    }
+
+    /**
+     * @return the i
+     */
+    public int getI() {
+        return i;
+    }
+
+    /**
+     * @param i the i to set
+     */
+    public void setI(int i) {
+        this.i = i;
     }
     
     

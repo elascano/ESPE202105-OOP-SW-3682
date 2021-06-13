@@ -10,9 +10,24 @@ package ec.edu.espe.theorical.model;
  * @author Isaac Escobar InnovaCode ESPE-DCCO
  */
 class C {
-    float f;
+
+    /**
+     * @return the f
+     */
+    public float getF() {
+        return f;
+    }
+
+    /**
+     * @param f the f to set
+     */
+    public void setF(float f) {
+        this.f = f;
+    }
+    private float f;
     
     public void m(){
+        System.out.println("inside C.m() method");
         
     }
     
