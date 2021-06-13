@@ -11,9 +11,24 @@ package ec.edu.espe.theoretical.model;
  */
 public class C {
 
-    float f;
+    private float f;
     
     public void m(){
+        System.out.println("Inside C.m{} method ");
         
+    }
+
+    /**
+     * @return the f
+     */
+    public float getF() {
+        return f;
+    }
+
+    /**
+     * @param f the f to set
+     */
+    public void setF(float f) {
+        this.f = f;
     }
 }
