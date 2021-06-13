@@ -2,7 +2,7 @@
 
 <ClassDiagram name="GroseryStoreManagement">
   <ClassDiagramComponents>
-    <Class name="Bill" package="ec.edu.espe.groserystoremanagenment.model" visibility="public" xPosition="574.0" yPosition="703.0">
+    <Class name="Bill" package="ec.edu.espe.groserystoremanagenment.model" visibility="public" xPosition="574.0" yPosition="690.0">
       <Fields>
         <Field name="date" type="float" visibility="private"/>
         <Field name="name" type="String" visibility="private"/>
@@ -73,7 +73,7 @@
         <Method name="checkStatus" returnType="void" visibility="public"/>
       </Methods>
     </Class>
-    <Class name="Inventory" package="ec.edu.espe.groserystoremanagenment.model" visibility="public" xPosition="251.0" yPosition="760.0">
+    <Class name="Inventory" package="ec.edu.espe.groserystoremanagenment.model" visibility="public" xPosition="253.0" yPosition="745.0">
       <Fields>
         <Field name="control" type="int" visibility="private"/>
       </Fields>
@@ -82,7 +82,7 @@
         <Method name="category" returnType="void" visibility="public"/>
       </Methods>
     </Class>
-    <Class name="Jams" package="ec.edu.espe.groserystoremanagenment.model" visibility="public" xPosition="364.0" yPosition="6.0">
+    <Class name="Jams" package="ec.edu.espe.groserystoremanagenment.model" visibility="public" xPosition="364.0" yPosition="20.0">
       <Fields>
         <Field name="price" type="float" visibility="private"/>
         <Field name="client" type="String" visibility="private"/>
@@ -125,7 +125,7 @@
         <Method name="checkStatus" returnType="void" visibility="public"/>
       </Methods>
     </Class>
-    <Class name="shoppingCart" package="ec.edu.espe.groserystoremanagenment.model" visibility="public" xPosition="-7.0" yPosition="322.0">
+    <Class name="shoppingCart" package="ec.edu.espe.groserystoremanagenment.model" visibility="public" xPosition="14.0" yPosition="322.0">
       <Fields>
         <Field name="price" type="float" visibility="private"/>
         <Field name="jams" type="Jams" visibility="private"/>
