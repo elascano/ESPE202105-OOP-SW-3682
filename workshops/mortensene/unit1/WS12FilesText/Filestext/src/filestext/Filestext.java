@@ -23,7 +23,7 @@ public class Filestext {
      */
  public static void main(String[] args) {
         try {
-            String root = "C:\\Users\\pc\\OneDrive\\Escritorio\\semestremayo21septiembre21\\ESPE202105-OOP-SW-3682\\workshops\\mortensene\\unit1\\WS12\\helloworld.txt";
+            String root = "C:\\Users\\pc\\OneDrive\\Escritorio\\semestremayo21septiembre21\\ESPE202105-OOP-SW-3682\\workshops\\mortensene\\unit1\\WS12FilesText\\helloworld.txt";
             String content = "Contenido de ejemplo";
             File file = new File(root);
             // Si el archivo no existe es creado
@@ -39,7 +39,7 @@ public class Filestext {
         
         }
         try {
-            PrintWriter writer = new PrintWriter("C:\\Users\\pc\\OneDrive\\Escritorio\\semestremayo21septiembre21\\ESPE202105-OOP-SW-3682\\workshops\\mortensene\\unit1\\WS12\\helloworld.txt");
+            PrintWriter writer = new PrintWriter("C:\\Users\\pc\\OneDrive\\Escritorio\\semestremayo21septiembre21\\ESPE202105-OOP-SW-3682\\workshops\\mortensene\\unit1\\WS12FilesText\\helloworld.txt");
             writer.println("save person one");
             writer.println("save person two or more");
             writer.close();
