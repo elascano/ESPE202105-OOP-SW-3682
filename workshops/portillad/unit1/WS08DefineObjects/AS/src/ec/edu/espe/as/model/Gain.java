@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 91227da3071c0c91af1b3b3f1f2c94e9eb032a5e
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -26,3 +30,36 @@ public class Gain {
         this.price = price;
     }
 }
+<<<<<<< HEAD
+=======
+=======
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package ec.edu.espe.as.model;
+
+/**
+ *
+ * @author Diego Portilla
+ */
+public class Gain {
+    private float price;
+
+    /**
+     * @return the price
+     */
+    public float getPrice() {
+        return price;
+    }
+
+    /**
+     * @param price the price to set
+     */
+    public void setPrice(float price) {
+        this.price = price;
+    }
+}
+>>>>>>> 88dab4cd3bc8eee44936e43c2d8f35c31fe68f44
+>>>>>>> 91227da3071c0c91af1b3b3f1f2c94e9eb032a5e
