@@ -37,13 +37,17 @@ public class SistemDisplay {
         d = a.m();
         
         System.out.println("d-> " + d);
-        
+        c =  a.m(d);
+        System.out.println("c-> " + c);
+        System.out. println ( "d ->"+c);
         System.out. println ( "object a to atributes ->");
         System.out. println ( "a.i-> "+ a.getI());
         System.out. println ( "object e to atributes ->");
         System.out. println ( "e.s-> "+ e.getS());
         System.out. println ( "object b to atributes ->");
         System.out. println ( "b.s-> "+ b.getS());
+        System.out. println ( "object c to atributes ->");
+        System.out. println ( "c.s-> "+ c.getS());
         System.out. println ( "object d to atributes ->");
         System.out. println ( "d.s-> "+ d.getS());
         System.out. println ( "object f to atributes ->");
@@ -62,14 +66,12 @@ public class SistemDisplay {
         System.out.println("objects a attributes ->");
         System.out.println("a.s -> " + e.getS()); 
     }
-
     private static class F {
-         private String s;
-    
-    public F() {
+            private String s;
+        public F() {
            s = "using constructor in F ";
-    }
-        
+    
+        }
         
     public F(String s){
         this.s =s;
@@ -99,5 +101,5 @@ public class SistemDisplay {
         this.d = d;
     }   
         
-   }
+    }
 }
