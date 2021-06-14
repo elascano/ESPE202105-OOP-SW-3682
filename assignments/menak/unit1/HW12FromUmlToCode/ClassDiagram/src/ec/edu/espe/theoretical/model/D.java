@@ -10,6 +10,29 @@ package ec.edu.espe.theoretical.model;
  * @author Paul Mena The Programmers ESPE-DCCO
  */
 public class D {
+    
+    private String s;
+    
+    public  D(){
+        
+        s = "print using constructor in D ";
+    }
+    
+    public D (String s){
+        this.s =s;
+    
+    }  
+    
+    
+     public String gets() {
+        return s;
+    }
+     
+     
+    public void sets(String s) {
+        this.s = s;
+    }
+    
     private boolean b;
     
     public B m(){
@@ -35,4 +58,6 @@ public class D {
     public void setB(boolean b) {
         this.b = b;
     }
+
+    
 }

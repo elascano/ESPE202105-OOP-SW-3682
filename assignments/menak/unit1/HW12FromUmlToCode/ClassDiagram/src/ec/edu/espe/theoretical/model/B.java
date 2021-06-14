@@ -11,7 +11,32 @@ import java.util.ArrayList;
  *
  * @author Paul Mena The Programmers ESPE-DCCO
  */
-class B {
+public class B {
+    
+    private String s;
+    
+    
+    public  B(){
+        s = "print using constructor in B";
+    }
+    
+    
+    public B (String s){
+        this.s =s;
+    
+    }
+    
+    
+        public String gets() {
+        return s;
+    }
+
+   
+    public void sets(String p) {
+        this.s= s;
+    }
+    
+    
     private int a;
     private int b;
     private ArrayList<E> es = new ArrayList<>();
@@ -64,6 +89,8 @@ class B {
     public void setEs(ArrayList<E> es) {
         this.es = es;
     }
+
+
     
     
     
