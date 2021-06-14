@@ -142,7 +142,7 @@
         <Method name="buy" returnType="void" visibility="public"/>
       </Methods>
     </Class>
-    <Class name="NutsandSeeds" package="ec.edu.espe.GroceryStoreManagement.model" visibility="public" xPosition="941.0" yPosition="993.0">
+    <Class name="NutsandSeeds" package="ec.edu.espe.GroceryStoreManagement.model" visibility="public" xPosition="851.0" yPosition="993.0">
       <Fields>
         <Field name="add" type="ShopCart" visibility="package"/>
         <Field name="type" type="String" visibility="private"/>
@@ -239,7 +239,7 @@
         <Method name="buy" returnType="void" visibility="public"/>
       </Methods>
     </Class>
-    <Class name="ShopCart" package="ec.edu.espe.GroceryStoreManagement.model" visibility="public" xPosition="920.0" yPosition="420.0">
+    <Class name="ShopCart" package="ec.edu.espe.GroceryStoreManagement.model" visibility="public" xPosition="920.0" yPosition="401.0">
       <Fields>
         <Field name="numberofproducts" type="int" visibility="public"/>
         <Field name="price" type="float" visibility="public"/>
