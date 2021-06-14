@@ -11,16 +11,13 @@ import java.util.ArrayList;
  *
  * @author Salazar Matthew NullPointers ESPE-DCC
  */
-public class A {
+public class A { 
 
-    public void setCs(ArrayList<C> cs) {
-        this.cs = cs;
-    }
      private B b; //Attributes
      private ArrayList<C> cs = new ArrayList<>();
       private int i;
       
-      public A(B b,int i,ArrayList<C> cs){  //constructor
+      public A(B b,int i,ArrayList cs){  //constructor
           this.b = b;
           this.i = i;
           this.cs = cs;
@@ -29,13 +26,13 @@ public class A {
      
      public C m(D d){
          System.out.println("Inside method m(d) reciving parameter d -> " 
-                 + d + "adn returning a C object");
-         return new C();
+                 + d + "and returning a C object");
+         return new C(i);
      }
     
      public D m(){
          System.out.println("Inside method m() that returns a D object");
-         return new D();
+         return new D(true, cs);
      }
     /**
      * @return the b
@@ -43,6 +40,7 @@ public class A {
     public B getB() {
         return b;
     }
+    
     
      public int getI() {
         return i;
@@ -63,6 +61,10 @@ public class A {
      */
     public ArrayList<C> getCs() {
         return cs;
+    }
+    
+     public void setCs(ArrayList<C> cs) {
+        this.cs = cs;
     }
 
     /**

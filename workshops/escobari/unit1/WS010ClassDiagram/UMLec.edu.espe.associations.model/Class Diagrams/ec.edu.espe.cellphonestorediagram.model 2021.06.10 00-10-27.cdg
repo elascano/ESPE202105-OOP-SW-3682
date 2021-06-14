@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="ec.edu.espe.cellphonestorediagram.model">
+  <ClassDiagramComponents>
+    <Class name="ArrayList" package="ec.edu.espe.cellphonestorediagram.model" visibility="public" xPosition="20.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Case" package="ec.edu.espe.cellphonestorediagram.model" visibility="public" xPosition="320.0" yPosition="20.0">
+      <Fields>
+        <Field name="color" type="String" visibility="private"/>
+        <Field name="size" type="String" visibility="private"/>
+        <Field name="price" type="Float" visibility="private"/>
+        <Field name="model" type="String" visibility="private"/>
+        <Field name="f" type="float" visibility="package"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="getColor" returnType="String" visibility="public"/>
+        <Method name="setColor" returnType="void" visibility="public">
+          <Argument type="String" name="color"/>
+        </Method>
+        <Method name="getSize" returnType="String" visibility="public"/>
+        <Method name="setSize" returnType="void" visibility="public">
+          <Argument type="String" name="size"/>
+        </Method>
+        <Method name="getPrice" returnType="Float" visibility="public"/>
+        <Method name="setPrice" returnType="void" visibility="public">
+          <Argument type="Float" name="price"/>
+        </Method>
+        <Method name="getModel" returnType="String" visibility="public"/>
+        <Method name="setModel" returnType="void" visibility="public">
+          <Argument type="String" name="model"/>
+        </Method>
+        <Method name="toPut" returnType="void" visibility="public"/>
+        <Method name="toRemove" returnType="void" visibility="public"/>
+        <Method name="m" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Client" package="ec.edu.espe.cellphonestorediagram.model" visibility="public" xPosition="620.0" yPosition="20.0">
+      <Fields>
+        <Field name="opinion" type="String" visibility="private"/>
+        <Field name="support" type="String" visibility="private"/>
+        <Field name="f" type="float" visibility="package"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="getOpinion" returnType="String" visibility="public"/>
+        <Method name="setOpinion" returnType="void" visibility="public">
+          <Argument type="String" name="opinion"/>
+        </Method>
+        <Method name="getSupport" returnType="String" visibility="public"/>
+        <Method name="setSupport" returnType="void" visibility="public">
+          <Argument type="String" name="support"/>
+        </Method>
+        <Method name="buy" returnType="void" visibility="public"/>
+        <Method name="pay" returnType="void" visibility="public"/>
+        <Method name="sell" returnType="void" visibility="public"/>
+        <Method name="givesupport" returnType="void" visibility="public"/>
+        <Method name="m" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="HeadPhone" package="ec.edu.espe.cellphonestorediagram.model" visibility="public" xPosition="920.0" yPosition="20.0">
+      <Fields>
+        <Field name="color" type="String" visibility="private"/>
+        <Field name="RGB" type="Boolean" visibility="private"/>
+        <Field name="model" type="String" visibility="private"/>
+        <Field name="pricerange" type="Float" visibility="private"/>
+        <Field name="brand" type="String" visibility="private"/>
+        <Field name="f" type="float" visibility="package"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="getColor" returnType="String" visibility="public"/>
+        <Method name="setColor" returnType="void" visibility="public">
+          <Argument type="String" name="color"/>
+        </Method>
+        <Method name="getRGB" returnType="Boolean" visibility="public"/>
+        <Method name="setRGB" returnType="void" visibility="public">
+          <Argument type="Boolean" name="RGB"/>
+        </Method>
+        <Method name="getModel" returnType="String" visibility="public"/>
+        <Method name="setModel" returnType="void" visibility="public">
+          <Argument type="String" name="model"/>
+        </Method>
+        <Method name="getPricerange" returnType="Float" visibility="public"/>
+        <Method name="setPricerange" returnType="void" visibility="public">
+          <Argument type="Float" name="pricerange"/>
+        </Method>
+        <Method name="getBrand" returnType="String" visibility="public"/>
+        <Method name="setBrand" returnType="void" visibility="public">
+          <Argument type="String" name="brand"/>
+        </Method>
+        <Method name="buy" returnType="void" visibility="public"/>
+        <Method name="sell" returnType="void" visibility="public"/>
+        <Method name="m" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Inventory" package="ec.edu.espe.cellphonestorediagram.model" visibility="public" xPosition="1220.0" yPosition="20.0">
+      <Fields>
+        <Field name="color" type="String" visibility="private"/>
+        <Field name="model" type="String" visibility="private"/>
+        <Field name="price" type="Float" visibility="private"/>
+        <Field name="capacity" type="Float" visibility="private"/>
+        <Field name="brand" type="String" visibility="private"/>
+        <Field name="f" type="float" visibility="package"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="getColor" returnType="String" visibility="public"/>
+        <Method name="setColor" returnType="void" visibility="public">
+          <Argument type="String" name="color"/>
+        </Method>
+        <Method name="getModel" returnType="String" visibility="public"/>
+        <Method name="setModel" returnType="void" visibility="public">
+          <Argument type="String" name="model"/>
+        </Method>
+        <Method name="getPrice" returnType="Float" visibility="public"/>
+        <Method name="setPrice" returnType="void" visibility="public">
+          <Argument type="Float" name="price"/>
+        </Method>
+        <Method name="getCapacity" returnType="Float" visibility="public"/>
+        <Method name="setCapacity" returnType="void" visibility="public">
+          <Argument type="Float" name="capacity"/>
+        </Method>
+        <Method name="getBrand" returnType="String" visibility="public"/>
+        <Method name="setBrand" returnType="void" visibility="public">
+          <Argument type="String" name="brand"/>
+        </Method>
+        <Method name="notice" returnType="void" visibility="public"/>
+        <Method name="m" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="OpticalPen" package="ec.edu.espe.cellphonestorediagram.model" visibility="public" xPosition="1520.0" yPosition="20.0">
+      <Fields>
+        <Field name="color" type="String" visibility="private"/>
+        <Field name="model" type="String" visibility="private"/>
+        <Field name="price" type="Float" visibility="private"/>
+        <Field name="precision" type="Float" visibility="private"/>
+        <Field name="entrytype" type="String" visibility="private"/>
+        <Field name="f" type="float" visibility="package"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="getColor" returnType="String" visibility="public"/>
+        <Method name="setColor" returnType="void" visibility="public">
+          <Argument type="String" name="color"/>
+        </Method>
+        <Method name="getModel" returnType="String" visibility="public"/>
+        <Method name="setModel" returnType="void" visibility="public">
+          <Argument type="String" name="model"/>
+        </Method>
+        <Method name="getPrice" returnType="Float" visibility="public"/>
+        <Method name="setPrice" returnType="void" visibility="public">
+          <Argument type="Float" name="price"/>
+        </Method>
+        <Method name="getPrecision" returnType="Float" visibility="public"/>
+        <Method name="setPrecision" returnType="void" visibility="public">
+          <Argument type="Float" name="precision"/>
+        </Method>
+        <Method name="getEntrytype" returnType="String" visibility="public"/>
+        <Method name="setEntrytype" returnType="void" visibility="public">
+          <Argument type="String" name="entrytype"/>
+        </Method>
+        <Method name="status" returnType="void" visibility="public"/>
+        <Method name="stock" returnType="void" visibility="public"/>
+        <Method name="m" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="PowerBank" package="ec.edu.espe.cellphonestorediagram.model" visibility="public" xPosition="1820.0" yPosition="20.0">
+      <Fields>
+        <Field name="id" type="String" visibility="private"/>
+        <Field name="type" type="String" visibility="private"/>
+        <Field name="price" type="Float" visibility="private"/>
+        <Field name="capacity" type="Float" visibility="private"/>
+        <Field name="f" type="float" visibility="package"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="getId" returnType="String" visibility="public"/>
+        <Method name="setId" returnType="void" visibility="public">
+          <Argument type="String" name="id"/>
+        </Method>
+        <Method name="getType" returnType="String" visibility="public"/>
+        <Method name="setType" returnType="void" visibility="public">
+          <Argument type="String" name="type"/>
+        </Method>
+        <Method name="getPrice" returnType="Float" visibility="public"/>
+        <Method name="setPrice" returnType="void" visibility="public">
+          <Argument type="Float" name="price"/>
+        </Method>
+        <Method name="getCapacity" returnType="Float" visibility="public"/>
+        <Method name="setCapacity" returnType="void" visibility="public">
+          <Argument type="Float" name="capacity"/>
+        </Method>
+        <Method name="paywithCash" returnType="void" visibility="public"/>
+        <Method name="paywithCard" returnType="void" visibility="public"/>
+        <Method name="toput" returnType="void" visibility="public"/>
+        <Method name="m" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="ProtectiveFilm" package="ec.edu.espe.cellphonestorediagram.model" visibility="public" xPosition="2120.0" yPosition="20.0">
+      <Fields>
+        <Field name="color" type="String" visibility="private"/>
+        <Field name="model" type="String" visibility="private"/>
+        <Field name="price" type="Float" visibility="private"/>
+        <Field name="f" type="float" visibility="package"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="getColor" returnType="String" visibility="public"/>
+        <Method name="setColor" returnType="void" visibility="public">
+          <Argument type="String" name="color"/>
+        </Method>
+        <Method name="getModel" returnType="String" visibility="public"/>
+        <Method name="setModel" returnType="void" visibility="public">
+          <Argument type="String" name="model"/>
+        </Method>
+        <Method name="getPrice" returnType="Float" visibility="public"/>
+        <Method name="setPrice" returnType="void" visibility="public">
+          <Argument type="Float" name="price"/>
+        </Method>
+        <Method name="toPut" returnType="void" visibility="public"/>
+        <Method name="toRemove" returnType="void" visibility="public"/>
+        <Method name="sell" returnType="void" visibility="public"/>
+        <Method name="buy" returnType="void" visibility="public"/>
+        <Method name="m" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="ScreenProtector" package="ec.edu.espe.cellphonestorediagram.model" visibility="public" xPosition="20.0" yPosition="420.0">
+      <Fields>
+        <Field name="id" type="String" visibility="private"/>
+        <Field name="material" type="String" visibility="private"/>
+        <Field name="price" type="Float" visibility="private"/>
+        <Field name="type" type="String" visibility="private"/>
+        <Field name="f" type="float" visibility="package"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="getId" returnType="String" visibility="public"/>
+        <Method name="setId" returnType="void" visibility="public">
+          <Argument type="String" name="id"/>
+        </Method>
+        <Method name="getMaterial" returnType="String" visibility="public"/>
+        <Method name="setMaterial" returnType="void" visibility="public">
+          <Argument type="String" name="material"/>
+        </Method>
+        <Method name="getPrice" returnType="Float" visibility="public"/>
+        <Method name="setPrice" returnType="void" visibility="public">
+          <Argument type="Float" name="price"/>
+        </Method>
+        <Method name="getType" returnType="String" visibility="public"/>
+        <Method name="setType" returnType="void" visibility="public">
+          <Argument type="String" name="type"/>
+        </Method>
+        <Method name="paywithCash" returnType="void" visibility="public"/>
+        <Method name="paywithCard" returnType="void" visibility="public"/>
+        <Method name="toput" returnType="void" visibility="public"/>
+        <Method name="m" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="UsbCable" package="ec.edu.espe.cellphonestorediagram.model" visibility="public" xPosition="320.0" yPosition="420.0">
+      <Fields>
+        <Field name="color" type="String" visibility="private"/>
+        <Field name="model" type="String" visibility="private"/>
+        <Field name="pricerange" type="Float" visibility="private"/>
+        <Field name="brand" type="String" visibility="private"/>
+        <Field name="f" type="float" visibility="package"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="getColor" returnType="String" visibility="public"/>
+        <Method name="setColor" returnType="void" visibility="public">
+          <Argument type="String" name="color"/>
+        </Method>
+        <Method name="getModel" returnType="String" visibility="public"/>
+        <Method name="setModel" returnType="void" visibility="public">
+          <Argument type="String" name="model"/>
+        </Method>
+        <Method name="getPricerange" returnType="Float" visibility="public"/>
+        <Method name="setPricerange" returnType="void" visibility="public">
+          <Argument type="Float" name="pricerange"/>
+        </Method>
+        <Method name="getBrand" returnType="String" visibility="public"/>
+        <Method name="setBrand" returnType="void" visibility="public">
+          <Argument type="String" name="brand"/>
+        </Method>
+        <Method name="buy" returnType="void" visibility="public"/>
+        <Method name="sell" returnType="void" visibility="public"/>
+        <Method name="m" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations/>
+</ClassDiagram>
