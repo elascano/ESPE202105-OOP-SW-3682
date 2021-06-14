@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="WS10ClassDiagram1">
+  <ClassDiagramComponents>
+    <Class name="A" package="ec.edu.espe.theoricall.model" visibility="public" xPosition="20.0" yPosition="20.0">
+      <Fields>
+        <Field name="b" type="B" visibility="private"/>
+        <Field name="cs" type="ArrayList&lt;C&gt;" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="m" returnType="C" visibility="public">
+          <Argument type="D" name="d"/>
+        </Method>
+        <Method name="m" returnType="D" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="B" package="ec.edu.espe.theoricall.model" visibility="public" xPosition="288.0" yPosition="324.0">
+      <Fields>
+        <Field name="a" type="int" visibility="private"/>
+        <Field name="b" type="int" visibility="private"/>
+        <Field name="es" type="ArrayList&lt;E&gt;" visibility="package"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="m1" returnType="C" visibility="public">
+          <Argument type="F" name="f"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="C" package="ec.edu.espe.theoricall.model" visibility="public" xPosition="53.0" yPosition="401.0">
+      <Fields>
+        <Field name="f" type="float" visibility="package"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="m" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="D" package="ec.edu.espe.theoricall.model" visibility="public" xPosition="457.0" yPosition="39.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="m" returnType="B" visibility="public"/>
+        <Method name="m" returnType="int" visibility="public">
+          <Argument type="F" name="f"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="E" package="ec.edu.espe.theoricall.model" visibility="public" xPosition="636.0" yPosition="483.0">
+      <Fields/>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="F" package="ec.edu.espe.theoricall.model" visibility="public" xPosition="661.0" yPosition="362.0">
+      <Fields/>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="WS10ClassDiagram1" package="ws10classdiagram1" visibility="public" xPosition="1820.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <UseRelation source="ec.edu.espe.theoricall.model.A" target="ec.edu.espe.theoricall.model.D" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="ec.edu.espe.theoricall.model.B" target="ec.edu.espe.theoricall.model.F" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="es" source="ec.edu.espe.theoricall.model.B" target="ec.edu.espe.theoricall.model.E" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;E&gt;"/>
+    <UseRelation source="ec.edu.espe.theoricall.model.D" target="ec.edu.espe.theoricall.model.F" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="cs" source="ec.edu.espe.theoricall.model.A" target="ec.edu.espe.theoricall.model.C" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;C&gt;"/>
+    <UseRelation source="ec.edu.espe.theoricall.model.D" target="ec.edu.espe.theoricall.model.B" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="b" source="ec.edu.espe.theoricall.model.A" target="ec.edu.espe.theoricall.model.B" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
