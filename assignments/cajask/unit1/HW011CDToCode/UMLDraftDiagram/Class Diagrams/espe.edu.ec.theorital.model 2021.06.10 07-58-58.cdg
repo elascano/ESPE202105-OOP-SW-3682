@@ -15,7 +15,11 @@
         <Method name="m" returnType="invoice" visibility="public"/>
       </Methods>
     </Class>
+<<<<<<< HEAD
     <Class name="Cosmetic" package="espe.edu.ec.theorital.model" visibility="public" xPosition="320.0" yPosition="20.0">
+=======
+    <Class name="Cosmetic" package="espe.edu.ec.theorital.model" visibility="public" xPosition="292.0" yPosition="10.0">
+>>>>>>> 6840c13c0867d1885f0eb5ff86754877b994797a
       <Fields>
         <Field name="stock" type="int" visibility="private"/>
         <Field name="quality" type="int" visibility="private"/>
@@ -27,7 +31,11 @@
         <Method name="m" returnType="ShoppingList" visibility="public"/>
       </Methods>
     </Class>
+<<<<<<< HEAD
     <Class name="FinalConsumer" package="espe.edu.ec.theorital.model" visibility="public" xPosition="620.0" yPosition="20.0">
+=======
+    <Class name="FinalConsumer" package="espe.edu.ec.theorital.model" visibility="public" xPosition="481.0" yPosition="29.0">
+>>>>>>> 6840c13c0867d1885f0eb5ff86754877b994797a
       <Fields>
         <Field name="nocostumerdata" type="int" visibility="private"/>
         <Field name="shoppinglist" type="int" visibility="private"/>
@@ -37,7 +45,11 @@
         <Method name="m" returnType="ShoppingList" visibility="public"/>
       </Methods>
     </Class>
+<<<<<<< HEAD
     <Class name="invoice" package="espe.edu.ec.theorital.model" visibility="public" xPosition="920.0" yPosition="20.0">
+=======
+    <Class name="invoice" package="espe.edu.ec.theorital.model" visibility="public" xPosition="20.0" yPosition="491.0">
+>>>>>>> 6840c13c0867d1885f0eb5ff86754877b994797a
       <Fields>
         <Field name="client" type="Client" visibility="package"/>
         <Field name="costumerdata" type="int" visibility="private"/>
@@ -51,7 +63,11 @@
         <Method name="m" returnType="ShoppingList" visibility="public"/>
       </Methods>
     </Class>
+<<<<<<< HEAD
     <Class name="Medicine" package="espe.edu.ec.theorital.model" visibility="public" xPosition="1220.0" yPosition="20.0">
+=======
+    <Class name="Medicine" package="espe.edu.ec.theorital.model" visibility="public" xPosition="689.0" yPosition="1.0">
+>>>>>>> 6840c13c0867d1885f0eb5ff86754877b994797a
       <Fields>
         <Field name="kind" type="int" visibility="private"/>
         <Field name="brand" type="int" visibility="private"/>
@@ -66,7 +82,11 @@
         <Method name="m" returnType="Product" visibility="public"/>
       </Methods>
     </Class>
+<<<<<<< HEAD
     <Class name="OtherProducts" package="espe.edu.ec.theorital.model" visibility="public" xPosition="1520.0" yPosition="20.0">
+=======
+    <Class name="OtherProducts" package="espe.edu.ec.theorital.model" visibility="public" xPosition="1121.0" yPosition="217.0">
+>>>>>>> 6840c13c0867d1885f0eb5ff86754877b994797a
       <Fields>
         <Field name="medicine" type="int" visibility="private"/>
         <Field name="total" type="int" visibility="private"/>
@@ -78,7 +98,11 @@
         <Method name="m" returnType="Product" visibility="public"/>
       </Methods>
     </Class>
+<<<<<<< HEAD
     <Class name="Pharmacy" package="espe.edu.ec.theorital.model" visibility="public" xPosition="1820.0" yPosition="20.0">
+=======
+    <Class name="Pharmacy" package="espe.edu.ec.theorital.model" visibility="public" xPosition="931.0" yPosition="20.0">
+>>>>>>> 6840c13c0867d1885f0eb5ff86754877b994797a
       <Fields>
         <Field name="name" type="int" visibility="private"/>
         <Field name="product" type="int" visibility="private"/>
@@ -90,7 +114,11 @@
         <Method name="m" returnType="ShoppingList" visibility="public"/>
       </Methods>
     </Class>
+<<<<<<< HEAD
     <Class name="Product" package="espe.edu.ec.theorital.model" visibility="public" xPosition="2120.0" yPosition="20.0">
+=======
+    <Class name="Product" package="espe.edu.ec.theorital.model" visibility="public" xPosition="952.0" yPosition="529.0">
+>>>>>>> 6840c13c0867d1885f0eb5ff86754877b994797a
       <Fields>
         <Field name="kind" type="int" visibility="private"/>
         <Field name="brand" type="int" visibility="private"/>
@@ -102,7 +130,11 @@
         <Method name="m" returnType="Client" visibility="public"/>
       </Methods>
     </Class>
+<<<<<<< HEAD
     <Class name="ShoppingList" package="espe.edu.ec.theorital.model" visibility="public" xPosition="20.0" yPosition="420.0">
+=======
+    <Class name="ShoppingList" package="espe.edu.ec.theorital.model" visibility="public" xPosition="534.0" yPosition="491.0">
+>>>>>>> 6840c13c0867d1885f0eb5ff86754877b994797a
       <Fields>
         <Field name="invoice" type="invoice" visibility="package"/>
         <Field name="product" type="Product" visibility="package"/>
@@ -117,6 +149,7 @@
     </Class>
   </ClassDiagramComponents>
   <ClassDiagramRelations>
+<<<<<<< HEAD
     <UseRelation source="espe.edu.ec.theorital.model.Client" target="espe.edu.ec.theorital.model.invoice" sourceCardinality="1..1" targetCardinality="1..1"/>
     <UseRelation source="espe.edu.ec.theorital.model.FinalConsumer" target="espe.edu.ec.theorital.model.ShoppingList" sourceCardinality="1..1" targetCardinality="1..1"/>
     <HasRelation name="cosmetic" source="espe.edu.ec.theorital.model.ShoppingList" target="espe.edu.ec.theorital.model.Cosmetic" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
@@ -133,5 +166,23 @@
     <UseRelation source="espe.edu.ec.theorital.model.invoice" target="espe.edu.ec.theorital.model.ShoppingList" sourceCardinality="1..1" targetCardinality="1..1"/>
     <HasRelation name="finalconsumer" source="espe.edu.ec.theorital.model.ShoppingList" target="espe.edu.ec.theorital.model.FinalConsumer" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
     <HasRelation name="otherproducts" source="espe.edu.ec.theorital.model.ShoppingList" target="espe.edu.ec.theorital.model.OtherProducts" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+=======
+    <UseRelation source="espe.edu.ec.theorital.model.OtherProducts" target="espe.edu.ec.theorital.model.Product" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="espe.edu.ec.theorital.model.Cosmetic" target="espe.edu.ec.theorital.model.ShoppingList" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="cosmetic" source="espe.edu.ec.theorital.model.ShoppingList" target="espe.edu.ec.theorital.model.Cosmetic" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="product" source="espe.edu.ec.theorital.model.ShoppingList" target="espe.edu.ec.theorital.model.Product" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="finalconsumer" source="espe.edu.ec.theorital.model.ShoppingList" target="espe.edu.ec.theorital.model.FinalConsumer" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="espe.edu.ec.theorital.model.FinalConsumer" target="espe.edu.ec.theorital.model.ShoppingList" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="espe.edu.ec.theorital.model.Client" target="espe.edu.ec.theorital.model.invoice" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="otherproducts" source="espe.edu.ec.theorital.model.ShoppingList" target="espe.edu.ec.theorital.model.OtherProducts" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="espe.edu.ec.theorital.model.Medicine" target="espe.edu.ec.theorital.model.Product" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="espe.edu.ec.theorital.model.Product" target="espe.edu.ec.theorital.model.Client" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="espe.edu.ec.theorital.model.Pharmacy" target="espe.edu.ec.theorital.model.ShoppingList" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="pharmacy" source="espe.edu.ec.theorital.model.ShoppingList" target="espe.edu.ec.theorital.model.Pharmacy" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="client" source="espe.edu.ec.theorital.model.invoice" target="espe.edu.ec.theorital.model.Client" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="invoice" source="espe.edu.ec.theorital.model.ShoppingList" target="espe.edu.ec.theorital.model.invoice" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="medicine" source="espe.edu.ec.theorital.model.ShoppingList" target="espe.edu.ec.theorital.model.Medicine" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="espe.edu.ec.theorital.model.invoice" target="espe.edu.ec.theorital.model.ShoppingList" sourceCardinality="1..1" targetCardinality="1..1"/>
+>>>>>>> 6840c13c0867d1885f0eb5ff86754877b994797a
   </ClassDiagramRelations>
 </ClassDiagram>

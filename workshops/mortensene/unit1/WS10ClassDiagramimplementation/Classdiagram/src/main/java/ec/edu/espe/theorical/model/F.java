@@ -10,5 +10,20 @@ package ec.edu.espe.theorical.model;
  * @author pc
  */
 class F {
-    
+  private double d;
+
+    /**
+     * @return the d
+     */
+    public double getD() {
+        return d;
+    }
+
+    /**
+     * @param d the d to set
+     */
+    public void setD(double d) {
+        this.d = d;
+    }
+  
 }

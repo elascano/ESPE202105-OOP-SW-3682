@@ -17,6 +17,7 @@ public class B {
     ArrayList<E> es = new ArrayList<>();
     
     public C ml(F f){
+        System.out.println("inside method C.m() reciving paremeter f");
      return new C();  
     }
 }
