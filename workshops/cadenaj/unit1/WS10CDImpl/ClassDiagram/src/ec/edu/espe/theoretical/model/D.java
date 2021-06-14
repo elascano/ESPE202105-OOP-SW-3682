@@ -9,12 +9,30 @@ package ec.edu.espe.theoretical.model;
  *
  * @author jejoc
  */
-class D {
+public class D {
+    private boolean b;
+    
     public B m(){
+        System.out.println("Inside D.m() method tha returns B object");
         return new B();
     }
     
     public int m(F f){
+        System.out.println("Inside D.m(f) method that receives f -> " + f);
         return 0; 
+    }
+
+    /**
+     * @return the b
+     */
+    public boolean isB() {
+        return b;
+    }
+
+    /**
+     * @param b the b to set
+     */
+    public void setB(boolean b) {
+        this.b = b;
     }
 }

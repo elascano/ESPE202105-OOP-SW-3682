@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="espe.edu.ec.theorital.model">
+  <ClassDiagramComponents>
+    <Class name="A" package="espe.edu.ec.theorital.model" visibility="public" xPosition="20.0" yPosition="20.0">
+      <Fields>
+        <Field name="b" type="B" visibility="private"/>
+        <Field name="cs" type="ArrayList&lt;C&gt;" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="m" returnType="C" visibility="public">
+          <Argument type="D" name="d"/>
+        </Method>
+        <Method name="m" returnType="D" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="B" package="espe.edu.ec.theorital.model" visibility="public" xPosition="320.0" yPosition="20.0">
+      <Fields>
+        <Field name="a" type="int" visibility="private"/>
+        <Field name="b" type="int" visibility="private"/>
+        <Field name="es" type="ArrayList&lt;E&gt;" visibility="package"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="m1" returnType="C" visibility="public">
+          <Argument type="F" name="f"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="C" package="espe.edu.ec.theorital.model" visibility="public" xPosition="620.0" yPosition="20.0">
+      <Fields>
+        <Field name="f" type="float" visibility="package"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="m" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="D" package="espe.edu.ec.theorital.model" visibility="public" xPosition="920.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="m" returnType="B" visibility="public"/>
+        <Method name="m" returnType="int" visibility="public">
+          <Argument type="F" name="f"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="E" package="espe.edu.ec.theorital.model" visibility="public" xPosition="1220.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="F" package="espe.edu.ec.theorital.model" visibility="public" xPosition="1520.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods/>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="es" source="espe.edu.ec.theorital.model.B" target="espe.edu.ec.theorital.model.E" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;E&gt;"/>
+    <UseRelation source="espe.edu.ec.theorital.model.D" target="espe.edu.ec.theorital.model.F" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="espe.edu.ec.theorital.model.D" target="espe.edu.ec.theorital.model.B" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="b" source="espe.edu.ec.theorital.model.A" target="espe.edu.ec.theorital.model.B" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="espe.edu.ec.theorital.model.A" target="espe.edu.ec.theorital.model.D" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="cs" source="espe.edu.ec.theorital.model.A" target="espe.edu.ec.theorital.model.C" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;C&gt;"/>
+    <UseRelation source="espe.edu.ec.theorital.model.B" target="espe.edu.ec.theorital.model.F" sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
