@@ -10,6 +10,21 @@ package ec.edu.espe.theorical.model;
  * @author pc
  */
 public class C {
+    private String s;
+  public  C(){
+        s = "print using constructor in C ";
+    }
+    public C (String s){
+        this.s =s;
+    
+    }  
+     public String gets() {
+        return s;
+    }
+    public void sets(String s) {
+        this.s = s;
+    }
+
     
 private float f;  
 public void m (){
