@@ -3,13 +3,13 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package appliancestore;
+package appliancestoresimulator;
 
 /**
  *
- * @author Darwin
+ * @author Darwin Valdiviezo NullPunters ESPE-DCCO
  */
-public class AplianceStore {
+public class ApplianceStoreSimulator {
 
     /**
      * @param args the command line arguments
