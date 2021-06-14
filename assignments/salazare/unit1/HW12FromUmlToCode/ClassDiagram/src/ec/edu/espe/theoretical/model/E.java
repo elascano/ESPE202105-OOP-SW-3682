@@ -9,22 +9,28 @@ package ec.edu.espe.theoretical.model;
  *
  * @author Salazar Matthew NullPointers ESPE-DCC
  */
-class F {
-   private double d;
-   
-public F(double d){
-    this.d = d;
+public class E {
+  private String s;
+  
+public E(){
+    s = "empty";
 }
-    
-    public double getD() {
-        return d;
+
+public E(String s){
+    this.s=s;
+}
+    /**
+     * @return the s
+     */
+    public String getS() {
+        return s;
     }
 
     /**
-     * @param d the d to set
+     * @param s the s to set
      */
-    public void setD(double d) {
-        this.d = d;
+    public void setS(String s) {
+        this.s = s;
     }
-   
+  
 }

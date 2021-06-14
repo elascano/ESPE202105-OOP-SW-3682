@@ -11,7 +11,7 @@ import java.util.ArrayList;
  *
  * @author Salazar Matthew NullPointers ESPE-DCC
  */
-public class A { 
+public class A {
 
      private B b; //Attributes
      private ArrayList<C> cs = new ArrayList<>();
