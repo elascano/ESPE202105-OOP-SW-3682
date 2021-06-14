@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Oils">
+  <ClassDiagramComponents>
+    <Class name="Oils" package="ec.edu.espe.GroceryStoreManagement.model" visibility="public" xPosition="20.0" yPosition="20.0">
+      <Fields>
+        <Field name="add" type="ShopCart" visibility="package"/>
+        <Field name="type" type="String" visibility="private"/>
+        <Field name="brand" type="String" visibility="private"/>
+        <Field name="amountperunit" type="int" visibility="private"/>
+        <Field name="price" type="float" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="getType" returnType="String" visibility="public"/>
+        <Method name="setType" returnType="void" visibility="public">
+          <Argument type="String" name="type"/>
+        </Method>
+        <Method name="getBrand" returnType="String" visibility="public"/>
+        <Method name="setBrand" returnType="void" visibility="public">
+          <Argument type="String" name="brand"/>
+        </Method>
+        <Method name="getAmountperunit" returnType="int" visibility="public"/>
+        <Method name="setAmountperunit" returnType="void" visibility="public">
+          <Argument type="int" name="amountperunit"/>
+        </Method>
+        <Method name="getPrice" returnType="float" visibility="public"/>
+        <Method name="setPrice" returnType="void" visibility="public">
+          <Argument type="float" name="price"/>
+        </Method>
+        <Method name="buy" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations/>
+</ClassDiagram>
