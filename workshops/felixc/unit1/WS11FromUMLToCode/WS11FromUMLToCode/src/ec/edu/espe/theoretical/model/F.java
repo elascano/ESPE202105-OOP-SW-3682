@@ -3,19 +3,27 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package ws10classdiagram;
+package ec.edu.espe.theoretical.model;
 
 /**
  *
  * @author Cristian Felix InnovaCode ESPE-DCCO
  */
-public class WS10ClassDiagram {
+class F {
+    private double d;
 
     /**
-     * @param args the command line arguments
+     * @return the d
      */
-    public static void main(String[] args) {
-        // TODO code application logic here
+    public double getD() {
+        return d;
+    }
+
+    /**
+     * @param d the d to set
+     */
+    public void setD(double d) {
+        this.d = d;
     }
     
 }

@@ -7,17 +7,18 @@ package ec.edu.espe.theoretical.model;
 
 /**
  *
- * @author Cristian Felix InnovaCode ESPE-DCCO
+ * @author Diego Portilla NullPointers ESPE-DCCO
  */
 public class E {
-    private String s;
-    
-    public E(){
-        s = "Empty";
-    }
-    public E (String s){
-        this.s = s;
-    }
+   private String s;
+   
+   public E(){
+       s = "empty";
+   }
+   
+   public E(String s){
+       this.s=s;
+   }
 
     /**
      * @return the s

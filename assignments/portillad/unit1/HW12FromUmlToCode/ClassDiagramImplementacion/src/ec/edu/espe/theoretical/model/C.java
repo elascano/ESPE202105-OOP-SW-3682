@@ -7,16 +7,31 @@ package ec.edu.espe.theoretical.model;
 
 /**
  *
- * @author Cristian Felix InnovaCode ESPE-DCCO
+ * @author Diego Portilla NullPointers ESPE-DCCO
  */
-public class E {
+public class C {
+    private float f;
     private String s;
-    
-    public E(){
-        s = "Empty";
+    public C(String s){
+        s="Constructor in C";
     }
-    public E (String s){
-        this.s = s;
+    
+     public void m(){
+       System.out.println("Inside C.m1() method"); 
+    }
+
+    /**
+     * @return the f
+     */
+    public float getF() {
+        return f;
+    }
+
+    /**
+     * @param f the f to set
+     */
+    public void setF(float f) {
+        this.f = f;
     }
 
     /**
@@ -32,5 +47,4 @@ public class E {
     public void setS(String s) {
         this.s = s;
     }
-    
 }

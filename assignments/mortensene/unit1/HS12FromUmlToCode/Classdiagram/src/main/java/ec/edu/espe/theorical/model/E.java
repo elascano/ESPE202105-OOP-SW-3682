@@ -3,34 +3,36 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package ec.edu.espe.theoretical.model;
+package ec.edu.espe.theorical.model;
 
 /**
  *
- * @author Cristian Felix InnovaCode ESPE-DCCO
+ * @author pc
  */
 public class E {
-    private String s;
+    private String S;
+   
     
-    public E(){
-        s = "Empty";
+    public  E(){
+        S = "empty";
     }
     public E (String s){
-        this.s = s;
+        this.S =s;
+    
     }
 
     /**
-     * @return the s
+     * @return the S
      */
     public String getS() {
-        return s;
+        return S;
     }
 
     /**
-     * @param s the s to set
+     * @param S the S to set
      */
-    public void setS(String s) {
-        this.s = s;
+    public void setS(String S) {
+        this.S = S;
     }
     
 }

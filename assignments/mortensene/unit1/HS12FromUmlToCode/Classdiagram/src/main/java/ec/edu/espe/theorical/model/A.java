@@ -3,33 +3,34 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package ec.edu.espe.theoretical.model;
+package ec.edu.espe.theorical.model;
 
 import java.util.ArrayList;
 
 /**
  *
- * @author Cristian Felix InnovaCode ESPE-DCCO
+ * @author pc
  */
 public class A {
     private B b;
     private ArrayList<C> cs = new ArrayList<>();
-    private int i;
-    
-    public C m (D d){
-        System.out.println("Inside method A.m(d), receiving parameter d -> "
-                + d + "and returning a C object");
-        return new C();
-    }
-    public D m (){
-        System.out.println("Inside method A.m() that returns a D object");
-        return new D();
-    }
-    /**
-     * @return the i
-     */
-    public int getI() {
+   private int i;
+   
+  
+  public C m(D d){
+      System.out.println("inside method A.m() reciving paremeter d and returning a C object");
+  return new C();
+  } 
+  
+  public D m(){
+      System.out.println("inside method A.m() reuturning object D");
+  return new D();
+  }
+  public int getI() {
         return i;
+    }
+public void setI( int i) {
+        this.i = i;
     }
 
     /**
@@ -38,14 +39,6 @@ public class A {
     public B getB() {
         return b;
     }
-    
-    /**
-     * @param i the i to set
-     */
-    public void setI(int i) {
-        this.i = i;
-    }
-
 
     /**
      * @param b the b to set

@@ -9,18 +9,19 @@ import java.util.ArrayList;
 
 /**
  *
- * @author Cristian Felix InnovaCode ESPE-DCCO
+ * @author Diego Portilla NullPointers ESPE-DCCO
  */
 public class B {
-    private int a; 
+    private int a;
     private int b;
-    private ArrayList<E> es = new ArrayList<>(); 
+    private ArrayList<E> es = new ArrayList<>();
+    private String s;
     
-    public C m1(F f){
-        System.out.println("Inside method B.m1(f), that receives an object f ->"
-                +f+"and returns a C object");
-        return new C ();
-    }                        
+    public B(){
+        s = "Constructor in B";
+    }
+    
+    
 
     /**
      * @return the a
@@ -63,5 +64,18 @@ public class B {
     public void setEs(ArrayList<E> es) {
         this.es = es;
     }
+
+    /**
+     * @return the s
+     */
+    public String getS() {
+        return s;
+    }
+
+    /**
+     * @param s the s to set
+     */
+    public void setS(String s) {
+        this.s = s;
+    }
 }
-    

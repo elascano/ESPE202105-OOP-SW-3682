@@ -3,18 +3,32 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package ec.edu.espe.theoretical.model;
+package ec.edu.espe.theorical.model;
 
 /**
  *
- * @author Cristian Felix InnovaCode ESPE-DCCO
+ * @author pc
  */
 public class C {
-    private float f;
-    
-    public void m(){
-        System.out.println("Inside C.m()method");
+    private String s;
+  public  C(){
+        s = "print using constructor in C ";
     }
+    public C (String s){
+        this.s =s;
+    
+    }  
+     public String gets() {
+        return s;
+    }
+    public void sets(String s) {
+        this.s = s;
+    }
+
+    
+private float f;  
+public void m (){
+}
 
     /**
      * @return the f
@@ -29,5 +43,4 @@ public class C {
     public void setF(float f) {
         this.f = f;
     }
-  
 }
