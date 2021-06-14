@@ -11,16 +11,31 @@ package ec.edu.espe.theorical.model;
  *
  */
 public class D {
+     private String s;
+  public  D(){
+        s = "print using constructor in D ";
+    }
+    public D (String s){
+        this.s =s;
+    
+    }  
+     public String gets() {
+        return s;
+    }
+    public void sets(String s) {
+        this.s = s;
+    }
+
     private boolean b;
     
     public B m(){
         System.out.println("inside method D.m() returning and object b");
         return new B();
     }
-public int m(F f) {
-    System.out.println("inside method D.m() that receives f"+f+"");
-return 0;
-}
+//public int m(F f) {
+   // System.out.println("inside method D.m() that receives f"+f+"");
+//return 0;
+//}
 
     /**
      * @return the b

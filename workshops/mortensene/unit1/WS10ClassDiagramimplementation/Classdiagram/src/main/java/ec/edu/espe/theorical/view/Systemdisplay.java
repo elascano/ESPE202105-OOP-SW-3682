@@ -7,6 +7,7 @@ package ec.edu.espe.theorical.view;
 
 
 import ec.edu.espe.theorical.model.*;
+
 /**
  *
  * @author Eduardo Mortensen The Programers
@@ -15,11 +16,14 @@ public class Systemdisplay {
  
     public static void main (String[]args){
         System.out.println("Setters Getters and Constructors Eduardo Mortesen");
+        //First method constructors
         A a = new A();
         D d= new D();
         C c = new C();
-        E e;
-        e= new E();
+        E e = new E();
+        F f = new F();
+        //second method initialized and declaration
+        B b = new B();
         d = a.m();
         //a.i=10;
         a.setI(10);
@@ -30,6 +34,14 @@ public class Systemdisplay {
         System.out. println ( "a.i-> "+ a.getI());
         System.out. println ( "object e to atributes ->");
         System.out. println ( "e.s-> "+ e.getS());
+        System.out. println ( "object b to atributes ->");
+        System.out. println ( "b.s-> "+ b.gets());
+        System.out. println ( "object c to atributes ->");
+        System.out. println ( "c.s-> "+ c.gets());
+        System.out. println ( "object d to atributes ->");
+        System.out. println ( "d.s-> "+ d.gets());
+        System.out. println ( "object f to atributes ->");
+        System.out. println ( "f.s-> "+ f.gets());
 
 
         String s = new String ("hello");
