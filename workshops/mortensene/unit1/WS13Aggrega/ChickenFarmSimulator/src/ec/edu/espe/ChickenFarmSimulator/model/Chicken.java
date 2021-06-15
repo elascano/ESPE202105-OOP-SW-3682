@@ -34,7 +34,7 @@ public class Chicken {
     public Chicken() {
         this.id = 0;
         this.name = "no name";
-        this.color = "";
+        this.color = "no color";
         this.age = new Date();
         this.isMolting = false;
     }
