@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="ec.edu.espe.CellPhoneStore.model">
+  <ClassDiagramComponents>
+    <Class name="Case" package="ec.edu.espe.CellPhoneStore.model" visibility="public" xPosition="158.0" yPosition="693.0">
+      <Fields>
+        <Field name="clor" type="String" visibility="private"/>
+        <Field name="model" type="String" visibility="private"/>
+        <Field name="type" type="String" visibility="private"/>
+        <Field name="priceRange" type="float" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="buy" returnType="void" visibility="public"/>
+        <Method name="sell" returnType="void" visibility="public"/>
+        <Method name="tostock" returnType="void" visibility="public"/>
+        <Method name="earnings" returnType="Profit" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="CellPhone" package="ec.edu.espe.CellPhoneStore.model" visibility="public" xPosition="340.0" yPosition="379.0">
+      <Fields>
+        <Field name="brand" type="String" visibility="private"/>
+        <Field name="color" type="String" visibility="private"/>
+        <Field name="priceRange" type="float" visibility="private"/>
+        <Field name="model" type="String" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="buy" returnType="void" visibility="public"/>
+        <Method name="sell" returnType="void" visibility="public"/>
+        <Method name="tostock" returnType="void" visibility="public"/>
+        <Method name="earnings" returnType="Profit" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="CellPhoneStore" package="ec.edu.espe.CellPhoneStore.model" visibility="public" xPosition="925.0" yPosition="683.0">
+      <Fields>
+        <Field name="cellPhones" type="ArrayList&lt;CellPhone&gt;" visibility="package"/>
+        <Field name="earPods" type="ArrayList&lt;EarPod&gt;" visibility="package"/>
+        <Field name="dataCable" type="ArrayList&lt;DataCable&gt;" visibility="package"/>
+        <Field name="chargers" type="ArrayList&lt;Charger&gt;" visibility="package"/>
+        <Field name="memoryCards" type="ArrayList&lt;MemoryCard&gt;" visibility="package"/>
+        <Field name="cases" type="ArrayList&lt;Case&gt;" visibility="package"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="add" returnType="CellPhone" visibility="public">
+          <Argument type="CellPhone" name="celPhones"/>
+        </Method>
+        <Method name="add" returnType="EarPod" visibility="public">
+          <Argument type="EarPod" name="earPods"/>
+        </Method>
+        <Method name="add" returnType="DataCable" visibility="public">
+          <Argument type="DataCable" name="dataCables"/>
+        </Method>
+        <Method name="add" returnType="Charger" visibility="public">
+          <Argument type="Charger" name="chargers"/>
+        </Method>
+        <Method name="add" returnType="MemoryCard" visibility="public">
+          <Argument type="MemoryCard" name="memoryCards"/>
+        </Method>
+        <Method name="add" returnType="Case" visibility="public">
+          <Argument type="Case" name="cases"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="CellPhoneStoreInCharge" package="ec.edu.espe.CellPhoneStore.model" visibility="public" xPosition="999.0" yPosition="398.0">
+      <Fields>
+        <Field name="name" type="String" visibility="private"/>
+        <Field name="store" type="CellPhoneStore" visibility="package"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Charger" package="ec.edu.espe.CellPhoneStore.model" visibility="public" xPosition="1300.0" yPosition="151.0">
+      <Fields>
+        <Field name="model" type="String" visibility="private"/>
+        <Field name="brand" type="String" visibility="private"/>
+        <Field name="priceRange" type="float" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="buy" returnType="void" visibility="public"/>
+        <Method name="sell" returnType="void" visibility="public"/>
+        <Method name="tostock" returnType="void" visibility="public"/>
+        <Method name="earnings" returnType="Profit" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="DataCable" package="ec.edu.espe.CellPhoneStore.model" visibility="public" xPosition="671.0" yPosition="303.0">
+      <Fields>
+        <Field name="model" type="String" visibility="private"/>
+        <Field name="brand" type="String" visibility="private"/>
+        <Field name="priceRange" type="float" visibility="private"/>
+        <Field name="color" type="String" visibility="private"/>
+        <Field name="size" type="float" visibility="private"/>
+        <Field name="material" type="String" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="buy" returnType="void" visibility="public"/>
+        <Method name="sell" returnType="void" visibility="public"/>
+        <Method name="tostock" returnType="void" visibility="public"/>
+        <Method name="earnings" returnType="Profit" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="EarPod" package="ec.edu.espe.CellPhoneStore.model" visibility="public" xPosition="1650.0" yPosition="40.0">
+      <Fields>
+        <Field name="model" type="String" visibility="private"/>
+        <Field name="brand" type="String" visibility="private"/>
+        <Field name="priceRange" type="float" visibility="private"/>
+        <Field name="color" type="String" visibility="private"/>
+        <Field name="noiceMuffer" type="boolean" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="buy" returnType="void" visibility="public"/>
+        <Method name="sell" returnType="void" visibility="public"/>
+        <Method name="tostock" returnType="void" visibility="public"/>
+        <Method name="earnings" returnType="Profit" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="MemoryCard" package="ec.edu.espe.CellPhoneStore.model" visibility="public" xPosition="1792.0" yPosition="477.0">
+      <Fields>
+        <Field name="model" type="String" visibility="private"/>
+        <Field name="type" type="String" visibility="private"/>
+        <Field name="priceRange" type="float" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="buy" returnType="void" visibility="public"/>
+        <Method name="sell" returnType="void" visibility="public"/>
+        <Method name="tostock" returnType="void" visibility="public"/>
+        <Method name="earnings" returnType="Profit" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Profit" package="ec.edu.espe.CellPhoneStore.model" visibility="public" xPosition="158.0" yPosition="78.0">
+      <Fields>
+        <Field name="price" type="float" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <UseRelation source="ec.edu.espe.CellPhoneStore.model.CellPhone" target="ec.edu.espe.CellPhoneStore.model.Profit" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="dataCable" source="ec.edu.espe.CellPhoneStore.model.CellPhoneStore" target="ec.edu.espe.CellPhoneStore.model.DataCable" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;DataCable&gt;"/>
+    <UseRelation source="ec.edu.espe.CellPhoneStore.model.EarPod" target="ec.edu.espe.CellPhoneStore.model.Profit" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="earPods" source="ec.edu.espe.CellPhoneStore.model.CellPhoneStore" target="ec.edu.espe.CellPhoneStore.model.EarPod" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;EarPod&gt;"/>
+    <UseRelation source="ec.edu.espe.CellPhoneStore.model.Case" target="ec.edu.espe.CellPhoneStore.model.Profit" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="ec.edu.espe.CellPhoneStore.model.DataCable" target="ec.edu.espe.CellPhoneStore.model.Profit" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="chargers" source="ec.edu.espe.CellPhoneStore.model.CellPhoneStore" target="ec.edu.espe.CellPhoneStore.model.Charger" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;Charger&gt;"/>
+    <UseRelation source="ec.edu.espe.CellPhoneStore.model.CellPhoneStore" target="ec.edu.espe.CellPhoneStore.model.Case" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="ec.edu.espe.CellPhoneStore.model.CellPhoneStore" target="ec.edu.espe.CellPhoneStore.model.EarPod" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="ec.edu.espe.CellPhoneStore.model.MemoryCard" target="ec.edu.espe.CellPhoneStore.model.Profit" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="ec.edu.espe.CellPhoneStore.model.CellPhoneStore" target="ec.edu.espe.CellPhoneStore.model.CellPhone" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="memoryCards" source="ec.edu.espe.CellPhoneStore.model.CellPhoneStore" target="ec.edu.espe.CellPhoneStore.model.MemoryCard" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;MemoryCard&gt;"/>
+    <UseRelation source="ec.edu.espe.CellPhoneStore.model.Charger" target="ec.edu.espe.CellPhoneStore.model.Profit" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="cases" source="ec.edu.espe.CellPhoneStore.model.CellPhoneStore" target="ec.edu.espe.CellPhoneStore.model.Case" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;Case&gt;"/>
+    <UseRelation source="ec.edu.espe.CellPhoneStore.model.CellPhoneStore" target="ec.edu.espe.CellPhoneStore.model.MemoryCard" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="ec.edu.espe.CellPhoneStore.model.CellPhoneStore" target="ec.edu.espe.CellPhoneStore.model.DataCable" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="store" source="ec.edu.espe.CellPhoneStore.model.CellPhoneStoreInCharge" target="ec.edu.espe.CellPhoneStore.model.CellPhoneStore" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="cellPhones" source="ec.edu.espe.CellPhoneStore.model.CellPhoneStore" target="ec.edu.espe.CellPhoneStore.model.CellPhone" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;CellPhone&gt;"/>
+    <UseRelation source="ec.edu.espe.CellPhoneStore.model.CellPhoneStore" target="ec.edu.espe.CellPhoneStore.model.Charger" sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
