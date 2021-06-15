@@ -16,6 +16,17 @@ public class A {
     private ArrayList <C> cs = new ArrayList<>();
     private int i;
 
+    public A(B b, int i, ArrayList<C> cs){
+        this.b = b;
+        this.i = i;
+        this.cs = cs;
+        
+        System.out.println("The value of a.b is : " + b);
+        System.out.println("The value of a.i is : " + i);
+        System.out.println("The value of a.cs is : " + cs);
+    }
+
+    
     public C m(D d){
         System.out.println("Inside method A.m{d},receiving parameter d ->"
                 + d + " and returning a C object");
