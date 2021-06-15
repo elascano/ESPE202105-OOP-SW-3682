@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="ClassDiagram">
+  <ClassDiagramComponents>
+    <Class name="A" package="ec.edu.espe.theoretical.model" visibility="public" xPosition="20.0" yPosition="20.0">
+      <Fields>
+        <Field name="b" type="B" visibility="private"/>
+        <Field name="cs" type="ArrayList&lt;C&gt;" visibility="private"/>
+        <Field name="i" type="int" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="m" returnType="C" visibility="public">
+          <Argument type="D" name="d"/>
+        </Method>
+        <Method name="m" returnType="D" visibility="public"/>
+        <Method name="getB" returnType="B" visibility="public"/>
+        <Method name="setB" returnType="void" visibility="public">
+          <Argument type="B" name="b"/>
+        </Method>
+        <Method name="getCs" returnType="ArrayList&lt;C&gt;" visibility="public"/>
+        <Method name="setCs" returnType="void" visibility="public">
+          <Argument type="ArrayList&lt;C&gt;" name="cs"/>
+        </Method>
+        <Method name="geti" returnType="int" visibility="public"/>
+        <Method name="seti" returnType="void" visibility="public">
+          <Argument type="int" name="i"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="B" package="ec.edu.espe.theoretical.model" visibility="public" xPosition="21.0" yPosition="527.0">
+      <Fields>
+        <Field name="a" type="int" visibility="private"/>
+        <Field name="b" type="int" visibility="private"/>
+        <Field name="es" type="ArrayList&lt;E&gt;" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="int" name="a"/>
+          <Argument type="int" name="b"/>
+        </Constructor>
+        <Constructor visibility="package"/>
+      </Constructors>
+      <Methods>
+        <Method name="showData" returnType="void" visibility="public"/>
+        <Method name="m1" returnType="C" visibility="public">
+          <Argument type="F" name="f"/>
+        </Method>
+        <Method name="getA" returnType="int" visibility="public"/>
+        <Method name="setA" returnType="void" visibility="public">
+          <Argument type="int" name="a"/>
+        </Method>
+        <Method name="getB" returnType="int" visibility="public"/>
+        <Method name="setB" returnType="void" visibility="public">
+          <Argument type="int" name="b"/>
+        </Method>
+        <Method name="getEs" returnType="ArrayList&lt;E&gt;" visibility="public"/>
+        <Method name="setEs" returnType="void" visibility="public">
+          <Argument type="ArrayList&lt;E&gt;" name="es"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="C" package="ec.edu.espe.theoretical.model" visibility="public" xPosition="252.0" yPosition="20.0">
+      <Fields>
+        <Field name="f" type="float" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="m" returnType="void" visibility="public"/>
+        <Method name="getF" returnType="float" visibility="public"/>
+        <Method name="setF" returnType="void" visibility="public">
+          <Argument type="float" name="f"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="D" package="ec.edu.espe.theoretical.model" visibility="public" xPosition="252.0" yPosition="284.0">
+      <Fields>
+        <Field name="b" type="B" visibility="package"/>
+        <Field name="h" type="boolean" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="m" returnType="B" visibility="public"/>
+        <Method name="m" returnType="int" visibility="public">
+          <Argument type="F" name="f"/>
+        </Method>
+        <Method name="isH" returnType="boolean" visibility="public"/>
+        <Method name="setH" returnType="void" visibility="public">
+          <Argument type="boolean" name="h"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="E" package="ec.edu.espe.theoretical.model" visibility="public" xPosition="267.0" yPosition="679.0">
+      <Fields>
+        <Field name="s" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="s"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getS" returnType="String" visibility="public"/>
+        <Method name="setS" returnType="void" visibility="public">
+          <Argument type="String" name="s"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="F" package="ec.edu.espe.theoretical.model" visibility="public" xPosition="557.0" yPosition="246.0">
+      <Fields>
+        <Field name="name" type="String" visibility="private"/>
+        <Field name="age" type="int" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="_name"/>
+          <Argument type="int" name="_age"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="showData" returnType="void" visibility="public"/>
+        <Method name="getName" returnType="String" visibility="public"/>
+        <Method name="setName" returnType="void" visibility="public">
+          <Argument type="String" name="name"/>
+        </Method>
+        <Method name="getAge" returnType="int" visibility="public"/>
+        <Method name="setAge" returnType="void" visibility="public">
+          <Argument type="int" name="age"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="SystemDisplay" package="ec.edu.espe.theoretical.view" visibility="public" xPosition="1820.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="b" source="ec.edu.espe.theoretical.model.D" target="ec.edu.espe.theoretical.model.B" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="ec.edu.espe.theoretical.model.D" target="ec.edu.espe.theoretical.model.B" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="es" source="ec.edu.espe.theoretical.model.B" target="ec.edu.espe.theoretical.model.E" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;E&gt;"/>
+    <UseRelation source="ec.edu.espe.theoretical.model.D" target="ec.edu.espe.theoretical.model.F" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="ec.edu.espe.theoretical.model.B" target="ec.edu.espe.theoretical.model.F" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="cs" source="ec.edu.espe.theoretical.model.A" target="ec.edu.espe.theoretical.model.C" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;C&gt;"/>
+    <HasRelation name="b" source="ec.edu.espe.theoretical.model.A" target="ec.edu.espe.theoretical.model.B" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="ec.edu.espe.theoretical.model.B" target="ec.edu.espe.theoretical.model.E" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="ec.edu.espe.theoretical.model.A" target="ec.edu.espe.theoretical.model.D" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="ec.edu.espe.theoretical.model.A" target="ec.edu.espe.theoretical.model.B" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="ec.edu.espe.theoretical.model.A" target="ec.edu.espe.theoretical.model.C" sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
