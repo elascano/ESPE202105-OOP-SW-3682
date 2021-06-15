@@ -6,6 +6,7 @@
 package ec.edu.espe.theoretical.view;
 
 import ec.edu.espe.theoretical.model.*;
+import java.util.ArrayList;
 
 /**
  *
@@ -17,15 +18,37 @@ public class SystemDisplay {
         System.out.println("Setters Getters and Constructors Nicolas Suquillo");
         
         int i;
-        A a; //declaracion 
+        double d1;
+        int a1;
+        float f1;
+        int b1;
+        String s1;
+        String s;
+        A a; 
         D d;
         E e;
-        C c = new C(); // don´t do it 
-        String s;
+        C c;
+        B b;
+        F f;
+        ArrayList<C> cs;
+        ArrayList<E> es;
+        boolean b2;
         
-        a = new A(); //instance
-        d = new D();
-        e = new E();
+        i = 20;
+        b1 = 80;
+        d1 = 13.3;
+        a1 = 60;
+        f1 = 23.9F;
+        b2 = true;
+        s1 = "Hi Edyson";
+        cs = new ArrayList<>();
+        es = new ArrayList<>();
+        b = new B(a1, b1, es);
+        a = new A(b, i, cs);   
+        c = new C(f1);
+        d = new D(b2);
+        e = new E(s1);
+        f = new F(d1);
         
         d = a.m();
         System.out.println("d->" + d);
@@ -48,5 +71,10 @@ public class SystemDisplay {
         e = new E(s);
         System.out.println("object a attributes -> ");
         System.out.println("e.s - >" + e.getS());
+        
+        // Constructors
+        
+        System.out.println("Object A ->");
+        System.out.println("A ->" + a);
     }    
 }

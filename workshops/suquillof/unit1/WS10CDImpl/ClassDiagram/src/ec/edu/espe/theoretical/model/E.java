@@ -19,6 +19,8 @@ public class E {
     
     public E(String s){
         this.s = s;
+        
+        System.out.println("The value of e.s is : " + s);
     }
     /**
      * @return the s
