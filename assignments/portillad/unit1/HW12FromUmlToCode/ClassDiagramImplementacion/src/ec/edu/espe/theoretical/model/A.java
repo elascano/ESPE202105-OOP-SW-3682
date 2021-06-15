@@ -27,7 +27,11 @@ public class A {
       }
      
      
-   
+    public C m(D d){
+         System.out.println("Inside method m(d) reciving parameter d -> " 
+                 + d + "adn returning a C object");
+        return new C();
+     }
     
      public D m(){
          System.out.println("Inside method m() that returns a D object");
