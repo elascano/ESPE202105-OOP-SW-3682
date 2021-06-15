@@ -5,6 +5,7 @@
  */
 package ec.edu.espe.sanamed.model;
 
+<<<<<<< HEAD
 /**
  *
  * @author Carlos Campoverde <EMCL.java>
@@ -12,4 +13,15 @@ package ec.edu.espe.sanamed.model;
 public class Visa {
     private int number;
     
+=======
+import java.util.ArrayList;
+
+/**
+ *
+ * @author Carlos Campoverde EMCL:java
+ */
+public class Visa {
+    private int number; 
+   
+>>>>>>> b0248f8fb7c20307928377337bf48b753c72edee
 }

@@ -7,11 +7,21 @@ package ec.edu.espe.sanamed.model;
 
 /**
  *
+<<<<<<< HEAD
  * @author Carlos Campoverde <EMCL.java>
  */
 public class Costumer {
     private int id;
     private String name;
     private CreditCard card;
+=======
+ * @author Carlos Campoverde EMCL:java
+ */
+class Costumer {
+    private int id;
+    private String name; 
+    private CreditCard card; 
+   
+>>>>>>> b0248f8fb7c20307928377337bf48b753c72edee
     
 }

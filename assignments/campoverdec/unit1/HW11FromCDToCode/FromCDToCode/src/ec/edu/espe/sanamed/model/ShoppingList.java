@@ -7,7 +7,11 @@ package ec.edu.espe.sanamed.model;
 
 /**
  *
+<<<<<<< HEAD
  * @author Carlos Campoverde <EMCL.java>
+=======
+ * @author Carlos Campoverde EMCL:java
+>>>>>>> b0248f8fb7c20307928377337bf48b753c72edee
  */
 class ShoppingList {
     

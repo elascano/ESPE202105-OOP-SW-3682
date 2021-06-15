@@ -7,7 +7,11 @@ package fromcdtocode;
 
 /**
  *
+<<<<<<< HEAD
  * @author sony
+=======
+ * @author Carlos Campoverde EMCL:java
+>>>>>>> b0248f8fb7c20307928377337bf48b753c72edee
  */
 public class FromCDToCode {
 
