@@ -36,7 +36,9 @@ public  Oils oils (){
   return new Oils();
   
 }
-
+public  Cereals cereals(){
+  return new Cereals();
+  }
 private void add(){
 }
 private void remove(){
