@@ -5,6 +5,9 @@
 <<<<<<< HEAD
         <group/>
 =======
+<<<<<<< HEAD
+        <group/>
+=======
         <group>
             <file>file:/C:/Users/Carlos/Desktop/espe/poo/POO/ESPE202105-OOP-SW-3682/assignments/campoverdec/unit1/HW11FromCDToCode/FromCDToCode/src/ec/edu/espe/sanamed/model/PersonalCare.java</file>
             <file>file:/C:/Users/Carlos/Desktop/espe/poo/POO/ESPE202105-OOP-SW-3682/assignments/campoverdec/unit1/HW11FromCDToCode/FromCDToCode/src/ec/edu/espe/sanamed/model/Visa.java</file>
@@ -20,5 +23,6 @@
             <file>file:/C:/Users/Carlos/Desktop/espe/poo/POO/ESPE202105-OOP-SW-3682/assignments/campoverdec/unit1/HW11FromCDToCode/FromCDToCode/src/ec/edu/espe/sanamed/model/Snack.java</file>
         </group>
 >>>>>>> b0248f8fb7c20307928377337bf48b753c72edee
+>>>>>>> 4f5c92728b8cc1627f6c8aa366bbf4f3f2164ed6
     </open-files>
 </project-private>
