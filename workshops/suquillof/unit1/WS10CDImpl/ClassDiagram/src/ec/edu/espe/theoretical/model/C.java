@@ -12,7 +12,13 @@ package ec.edu.espe.theoretical.model;
 public class C {
 
     private float f;
-    
+
+    public C(float f) {
+        this.f = f;
+        
+        System.out.println("The value of c.f is : " + f);
+    }
+
     public void m(){
         System.out.println("Inside C.m{} method ");
         

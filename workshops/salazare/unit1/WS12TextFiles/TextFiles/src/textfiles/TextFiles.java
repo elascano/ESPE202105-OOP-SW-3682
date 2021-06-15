@@ -1,0 +1,52 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package textfiles;
+
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.Scanner;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
+/**
+ *
+ * @author Salazar Matthew NullPointers ESPE-DCC
+ */
+public class TextFiles {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) throws IOException {
+        
+        try{
+          FileWriter fw = new FileWriter ("C:\\Matthew 2021\\PROGRAMACION ORIENTADA\\salazare\\ESPE202105-OOP-SW-3682\\workshops\\salazare\\unit1\\WS12TextFiles\\Person.txt", true);  
+        
+        
+        Scanner person = new Scanner(System.in);
+        System.out.println("\nEnter your name: ");
+        String name = person.nextLine();
+        System.out.println("\nEnter your gender: ");
+        String sex = person.nextLine();
+        System.out.println("\nEnter your age: ");
+        int age = person.nextInt();
+        System.out.println("\nThank you");
+        
+        System.out.println("Name -> "+ name);
+        System.out.println("Age -> "+ age);
+        System.out.println("Sex -> "+ sex);
+        
+        fw.write("\nName -> "+ name);
+        fw.write("\nAge -> "+ age);
+        fw.write("\nSex -> "+ sex);
+        fw.close();
+        
+        }catch (IOException ex){
+           Logger.getLogger(TextFiles.class.getName()).log(Level.SEVERE,null,ex); 
+        }
+    }
+    
+}

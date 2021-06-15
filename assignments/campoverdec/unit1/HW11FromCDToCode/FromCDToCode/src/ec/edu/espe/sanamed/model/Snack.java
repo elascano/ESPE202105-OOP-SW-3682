@@ -7,9 +7,18 @@ package ec.edu.espe.sanamed.model;
 
 /**
  *
+<<<<<<< HEAD
+ * @author Carlos Campoverde <EMCL.java>
+ */
+class Snack {
+    private int amount;
+    private int price;
+    
+=======
  * @author Carlos Campoverde EMCL:java
  */
 class Snack {
     private int amount;
     private float price;
+>>>>>>> b0248f8fb7c20307928377337bf48b753c72edee
 }
