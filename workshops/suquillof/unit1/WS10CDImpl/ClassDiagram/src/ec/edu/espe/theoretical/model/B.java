@@ -16,7 +16,17 @@ public class B {
     private int a;
     private int b;
     private ArrayList<E> es = new ArrayList<>();
-    
+
+    public B(int a, int b, ArrayList<E> es) {
+        this.a = a;
+        this.b = b;
+        this.es = es;
+        
+        System.out.println("The value of b.a is : " + a);
+        System.out.println("The value of b.b is : " + b);
+        System.out.println("The value of b.es is : " + es);
+    }
+
     public C m1(F f){
         System.out.println("inside method B.m1{f}, that receives and object f->" 
                 + f + "and returning a C object");
