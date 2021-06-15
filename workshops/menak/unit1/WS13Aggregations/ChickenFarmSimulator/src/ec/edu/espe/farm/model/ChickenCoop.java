@@ -3,19 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package appliancestore;
+package ec.edu.espe.farm.model;
 
 /**
  *
- * @author Matthew Salazar
+ * @author Paul Mena The Programmers ESPE-DCCO
  */
-public class ApplianceStore {
-
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-
-    }
+public class ChickenCoop {
     
 }

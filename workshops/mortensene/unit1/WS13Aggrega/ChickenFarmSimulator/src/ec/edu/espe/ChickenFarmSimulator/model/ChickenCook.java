@@ -3,19 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package appliancestore;
+package ec.edu.espe.ChickenFarmSimulator.model;
 
 /**
  *
- * @author Matthew Salazar
+ * @author Eduardo Mortesen The Programers
  */
-public class ApplianceStore {
-
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-
-    }
+public class ChickenCook {
     
 }
