@@ -24,10 +24,10 @@ public class TextFiles {
         int cont;
         String name = null;
         
-        cont =10;
+        cont =2;
         file = new FileWriter("D:\\Users\\Familia Solano\\Desktop\\Sebas\\Prog.Objetos\\Functions3682\\Workshops\\ESPE202105-OOP-SW-3682\\workshops\\solanos\\unit1\\WS12TextFiles\\file.txt");
-        for(cont = 0; cont<10; cont++){
-            System.out.println("Entre your name, age and id");
+        for(cont = 0; cont<2; cont++){
+            System.out.println("Entre your name");
             name = enter.nextLine();
             file.write(name + "\n");
         }
