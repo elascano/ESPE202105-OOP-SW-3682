@@ -1,10 +1,2 @@
 sebas
-andres
-ismael
-martin
-lucia
-emilia
-david
-camila
-liz
-moises
+francisco
