@@ -3,40 +3,40 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package ec.edu.espe.farm.view;
+package ec.edu.espe.Farm.view;
 
-import ec.edu.espe.farm.model.Chicken;
+import ec.edu.espe.Farm.model.Chicken;
 import java.util.ArrayList;
 import java.util.Date;
 
-
-
-
 /**
  *
- * @author Paul Mena The Programmers ESPE-DCCO
+ * @author Darwin Valdiviezo NullPunters ESPE-DCCO
  */
 public class Simulator {
+
+    /**
+     * @param args the command line arguments
+     */
     public static void main(String[] args) {
-        
-        int chickenId;
+     int chickenId;
         String name;
         String color;
         Date date = new Date();
-        boolean isMolting;
-        ArrayList<Chicken> chickens = new ArrayList<>();
+        boolean isMoting;
+        ArrayList<Chicken>chickens=new ArrayList<>();
         Chicken chickensArray[] = new Chicken[5];
         
         //input by keayboard
         chickenId = 1;
         name = "Lucy";
         color = "White";
-        isMolting = true;
+        isMoting = true;
         
         Chicken chicken = new Chicken();
         System.out.println("Chicken object -> " + chicken);
         
-        chicken = new Chicken(chickenId, name, color, date, isMolting);
+        chicken = new Chicken(chickenId, name, color, date, isMoting);
         System.out.println("Chicken object -> " + chicken);
         
         Chicken chicken2 = new Chicken(2, "Maruja", "Black", new Date(), false);
@@ -49,5 +49,8 @@ public class Simulator {
         chickensArray[0] = chicken;
         
         System.out.println("chickensArray -> " + chickensArray[0]);
-}
+        
+    
+    }
+    
 }

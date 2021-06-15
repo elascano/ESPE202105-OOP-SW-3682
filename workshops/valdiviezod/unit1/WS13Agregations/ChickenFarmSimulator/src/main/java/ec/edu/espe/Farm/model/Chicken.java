@@ -3,47 +3,41 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package ec.edu.espe.farm.model;
+package ec.edu.espe.Farm.model;
 
-import ec.edu.espe.farm.model.Chicken;
-import java.util.ArrayList;
 import java.util.Date;
-import java.util.Locale;
 
 /**
  *
- * @author Paul Mena The Programmers ESPE-DCCO
+ * @author Darwin Valdiviezo NullPunters ESPE-DCCO
  */
 public class Chicken {
-    private int id;
+ private int id;
     private String name;
     private String color;
     private Date age;
-    private boolean isMolting;
-
-    @Override
-    public String toString() {
-        return "Chicken{" + "id=" + id + ", name=" + name + ", color=" + color + ", age=" + age + ", isMolting=" + isMolting + '}';
+    private boolean isMoting;
+    
+     public Chicken() {
+        this.id = 0;
+        this.name = "No name";
+        this.color = "";
+        this.age = new Date();
+        this.isMoting = false;
     }
 
-    public Chicken(int id, String name, String color, Date age, boolean isMolting) {
+    public Chicken(int id, String name, String color, Date age, boolean isMoting) {
         this.id = id;
         this.name = name;
         this.color = color;
         this.age = age;
-        this.isMolting = isMolting;
+        this.isMoting = isMoting;
     }
-    
-    public Chicken() {
-        id = 0;
-        name = "no name";
-        color = "";
-        age = new Date();
-        isMolting = false;
+
+    @Override
+    public String toString() {
+        return "Chicken{" + "id=" + id + ", name=" + name + ", color=" + color + ", age=" + age + ", isMoting=" + isMoting + '}';
     }
-    
-    
-    
     
     /**
      * @return the id
@@ -102,24 +96,16 @@ public class Chicken {
     }
 
     /**
-     * @return the isMolting
+     * @return the isMoting
      */
-    public boolean isIsMolting() {
-        return isMolting;
+    public boolean isIsMoting() {
+        return isMoting;
     }
 
     /**
-     * @param isMolting the isMolting to set
+     * @param isMoting the isMoting to set
      */
-    public void setIsMolting(boolean isMolting) {
-        this.isMolting = isMolting;
+    public void setIsMoting(boolean isMoting) {
+        this.isMoting = isMoting;
     }
-
-    public void add(Chicken chicken2) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-    
-    
-    
-    
 }
