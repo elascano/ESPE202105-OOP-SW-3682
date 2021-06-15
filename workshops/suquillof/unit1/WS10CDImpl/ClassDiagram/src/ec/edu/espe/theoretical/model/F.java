@@ -13,6 +13,13 @@ public class F {
     
     private double d;
 
+    public F(double d) {
+        this.d = d;
+        
+        System.out.println("The value of f.a is : " + d);
+    }
+
+    
     /**
      * @return the d
      */
