@@ -21,7 +21,11 @@ public class B {
         s = "Constructor in B";
     }
     
-    
+    public C m1(F f){
+        System.out.println("Inside method B.m1(f), that recives an objects "
+                + "and object f -> "+ f + "and returns a C Oject");
+        return new C();
+    }
 
     /**
      * @return the a
