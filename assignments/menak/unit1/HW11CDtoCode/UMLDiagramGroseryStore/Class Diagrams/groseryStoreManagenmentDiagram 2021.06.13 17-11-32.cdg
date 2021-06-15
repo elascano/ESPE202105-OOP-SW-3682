@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="groseryStoreManagenmentDiagram">
+  <ClassDiagramComponents>
+    <Class name="Bill" package="ec.edu.espe.groseryStroeManagenmentDiagram.model" visibility="public" xPosition="176.0" yPosition="179.0">
+      <Fields>
+        <Field name="date" type="float" visibility="private"/>
+        <Field name="name" type="String" visibility="private"/>
+        <Field name="value" type="float" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="send" returnType="void" visibility="public"/>
+        <Method name="receive" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Client" package="ec.edu.espe.groseryStroeManagenmentDiagram.model" visibility="public" xPosition="719.0" yPosition="477.0">
+      <Fields>
+        <Field name="Name" type="String" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="sell" returnType="void" visibility="public"/>
+        <Method name="buy" returnType="void" visibility="public"/>
+        <Method name="income" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Drinks" package="ec.edu.espe.groseryStroeManagenmentDiagram.model" visibility="public" xPosition="590.0" yPosition="86.0">
+      <Fields>
+        <Field name="price" type="float" visibility="private"/>
+        <Field name="client" type="String" visibility="private"/>
+        <Field name="brandType" type="String" visibility="private"/>
+        <Field name="weight" type="float" visibility="private"/>
+        <Field name="expediationDate" type="int" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="sell" returnType="void" visibility="public"/>
+        <Method name="buy" returnType="void" visibility="public"/>
+        <Method name="checkQuality" returnType="void" visibility="public"/>
+        <Method name="checkStatus" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Frozen" package="ec.edu.espe.groseryStroeManagenmentDiagram.model" visibility="public" xPosition="843.0" yPosition="195.0">
+      <Fields>
+        <Field name="price" type="float" visibility="private"/>
+        <Field name="client" type="String" visibility="private"/>
+        <Field name="brandType" type="String" visibility="private"/>
+        <Field name="weight" type="float" visibility="private"/>
+        <Field name="expediationDate" type="int" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="sell" returnType="void" visibility="public"/>
+        <Method name="buy" returnType="void" visibility="public"/>
+        <Method name="checkQuality" returnType="void" visibility="public"/>
+        <Method name="checkStatus" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="FruitsAndVegetables" package="ec.edu.espe.groseryStroeManagenmentDiagram.model" visibility="public" xPosition="1061.0" yPosition="164.0">
+      <Fields>
+        <Field name="price" type="float" visibility="private"/>
+        <Field name="client" type="String" visibility="private"/>
+        <Field name="brandType" type="String" visibility="private"/>
+        <Field name="weight" type="float" visibility="private"/>
+        <Field name="expediationDate" type="int" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="sell" returnType="void" visibility="public"/>
+        <Method name="buy" returnType="void" visibility="public"/>
+        <Method name="checkQuality" returnType="void" visibility="public"/>
+        <Method name="checkStatus" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Inventory" package="ec.edu.espe.groseryStroeManagenmentDiagram.model" visibility="public" xPosition="624.0" yPosition="290.0">
+      <Fields>
+        <Field name="control" type="int" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="category" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Jams" package="ec.edu.espe.groseryStroeManagenmentDiagram.model" visibility="public" xPosition="527.0" yPosition="1.0">
+      <Fields>
+        <Field name="price" type="float" visibility="private"/>
+        <Field name="client" type="String" visibility="private"/>
+        <Field name="brandType" type="String" visibility="private"/>
+        <Field name="weight" type="float" visibility="private"/>
+        <Field name="expediationDate" type="int" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="sell" returnType="void" visibility="public"/>
+        <Method name="buy" returnType="void" visibility="public"/>
+        <Method name="checkQuality" returnType="void" visibility="public"/>
+        <Method name="checkStatus" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Revenue" package="ec.edu.espe.groseryStroeManagenmentDiagram.model" visibility="public" xPosition="513.0" yPosition="290.0">
+      <Fields>
+        <Field name="sales" type="float" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="entry" returnType="void" visibility="public"/>
+        <Method name="exit" returnType="void" visibility="public"/>
+        <Method name="operation" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Sauces" package="ec.edu.espe.groseryStroeManagenmentDiagram.model" visibility="public" xPosition="432.0" yPosition="477.0">
+      <Fields>
+        <Field name="price" type="float" visibility="private"/>
+        <Field name="client" type="String" visibility="private"/>
+        <Field name="brandType" type="String" visibility="private"/>
+        <Field name="weight" type="float" visibility="private"/>
+        <Field name="expediationDate" type="int" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="sell" returnType="void" visibility="public"/>
+        <Method name="buy" returnType="void" visibility="public"/>
+        <Method name="checkQuality" returnType="void" visibility="public"/>
+        <Method name="checkStatus" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="shoppingCart" package="ec.edu.espe.groseryStroeManagenmentDiagram.model" visibility="public" xPosition="46.0" yPosition="231.0">
+      <Fields>
+        <Field name="price" type="float" visibility="private"/>
+        <Field name="client" type="Client" visibility="private"/>
+        <Field name="jams" type="Jams" visibility="private"/>
+        <Field name="frozen" type="Frozen" visibility="private"/>
+        <Field name="FruitsAndVegetables" type="FruitsAndVegetables" visibility="private"/>
+        <Field name="drinks" type="Drinks" visibility="private"/>
+        <Field name="sauces" type="Sauces" visibility="private"/>
+        <Field name="revenue" type="Revenue" visibility="private"/>
+        <Field name="bill" type="Bill" visibility="private"/>
+        <Field name="inventory" type="Inventory" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="sell" returnType="void" visibility="public"/>
+        <Method name="buy" returnType="void" visibility="public"/>
+        <Method name="checkQuality" returnType="void" visibility="public"/>
+        <Method name="checkStatus" returnType="void" visibility="public"/>
+        <Method name="income" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="GroseryStoreManagenmentDiagram" package="groserystoremanagenmentdiagram" visibility="public" xPosition="-7.0" yPosition="26.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="frozen" source="ec.edu.espe.groseryStroeManagenmentDiagram.model.shoppingCart" target="ec.edu.espe.groseryStroeManagenmentDiagram.model.Frozen" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="inventory" source="ec.edu.espe.groseryStroeManagenmentDiagram.model.shoppingCart" target="ec.edu.espe.groseryStroeManagenmentDiagram.model.Inventory" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="client" source="ec.edu.espe.groseryStroeManagenmentDiagram.model.shoppingCart" target="ec.edu.espe.groseryStroeManagenmentDiagram.model.Client" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="sauces" source="ec.edu.espe.groseryStroeManagenmentDiagram.model.shoppingCart" target="ec.edu.espe.groseryStroeManagenmentDiagram.model.Sauces" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="revenue" source="ec.edu.espe.groseryStroeManagenmentDiagram.model.shoppingCart" target="ec.edu.espe.groseryStroeManagenmentDiagram.model.Revenue" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="drinks" source="ec.edu.espe.groseryStroeManagenmentDiagram.model.shoppingCart" target="ec.edu.espe.groseryStroeManagenmentDiagram.model.Drinks" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="FruitsAndVegetables" source="ec.edu.espe.groseryStroeManagenmentDiagram.model.shoppingCart" target="ec.edu.espe.groseryStroeManagenmentDiagram.model.FruitsAndVegetables" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="jams" source="ec.edu.espe.groseryStroeManagenmentDiagram.model.shoppingCart" target="ec.edu.espe.groseryStroeManagenmentDiagram.model.Jams" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="bill" source="ec.edu.espe.groseryStroeManagenmentDiagram.model.shoppingCart" target="ec.edu.espe.groseryStroeManagenmentDiagram.model.Bill" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

@@ -15,7 +15,12 @@ public class ApplianceStore {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+<<<<<<< HEAD
         // TODO code application logic here
+=======
+        
+        System.out.println("hello class diagram");
+>>>>>>> 91227da3071c0c91af1b3b3f1f2c94e9eb032a5e
     }
     
 }
