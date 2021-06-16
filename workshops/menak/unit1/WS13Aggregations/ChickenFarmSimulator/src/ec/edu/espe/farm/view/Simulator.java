@@ -27,29 +27,27 @@ public class Simulator {
         ArrayList<Chicken> chickens = new ArrayList<>();
         Chicken chickensArray[] = new Chicken[5];
         
-        //input by keyboard
-        
+        //input by keayboard
         chickenId = 1;
         name = "Lucy";
-        color = "white";
+        color = "White";
         isMolting = true;
         
-        
         Chicken chicken = new Chicken();
-        System.out.println("chicken object --> " + chicken);
+        System.out.println("Chicken object -> " + chicken);
         
         chicken = new Chicken(chickenId, name, color, date, isMolting);
-        System.out.println("chicken object --> " + chicken);
+        System.out.println("Chicken object -> " + chicken);
         
-        Chicken chicken2 = new Chicken(2, "Maruja", "black", new Date(), false);
+        Chicken chicken2 = new Chicken(2, "Maruja", "Black", new Date(), false);
         
-        chickens-add(chicken);
+        chickens.add(chicken);
         chickens.add(chicken2);
         
-        System.out.println("chickena --> " + chickens);
+        System.out.println("Chickens -> " + chickens);
         
         chickensArray[0] = chicken;
         
-        System.out.println("chickensArray --> " + chickensArray[0]);
+        System.out.println("chickensArray -> " + chickensArray[0]);
 }
 }

@@ -5,7 +5,10 @@
  */
 package ec.edu.espe.farm.model;
 
+import ec.edu.espe.farm.model.Chicken;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.Locale;
 
 /**
  *
