@@ -43,9 +43,8 @@ public class Simulator {
         chickens.add(chicken2);
         
         System.out.println("chickens -> " + chickens);
-        Chicken[] chickensArray = null;
-        chickensArray[0]= chicken;
-        
+        Chicken[] chickensArray = new Chicken[5];
+        chickensArray[0] = chicken;
         System.out.println("chickensArray -> " + chickensArray);
     }
     
