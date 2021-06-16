@@ -9,28 +9,29 @@ package ec.edu.espe.theoretical.model;
  *
  * @author jejoc
  */
-public class C {
-    private float f;
-
-    public C(float f) {
-        this.f = f;
+public class E {
+    private String s;
+    
+    public E(){
+        s = "Empty";
     }
     
-    public void m(){
-        System.out.println("Inside C.m() method");
+    public E(String s){
+        this.s = s;
     }
 
     /**
-     * @return the f
+     * @return the s
      */
-    public float getF() {
-        return f;
+    public String getS() {
+        return s;
     }
 
     /**
-     * @param f the f to set
+     * @param s the s to set
      */
-    public void setF(float f) {
-        this.f = f;
+    public void setS(String s) {
+        this.s = s;
     }
+    
 }

@@ -9,25 +9,15 @@ package ec.edu.espe.theoretical.model;
  *
  * @author jejoc
  */
-public class F {
-    private double d;
-
-    public F(double d) {
-        this.d = d;
-    }
-
-    /**
-     * @return the d
-     */
-    public double getD() {
-        return d;
-    }
-
-    /**
-     * @param d the d to set
-     */
-    public void setD(double d) {
-        this.d = d;
-    }
+public class Calculator extends Product {
+    private String model;
+    private String material;
+    private String size;
     
+    public void sell(){
+    }
+    public void buy(){
+    }
+    public void bid(){
+    }
 }
