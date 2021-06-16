@@ -9,32 +9,8 @@ package ec.edu.espe.GroceryStoreManagement.model;
  *
  * @author pc
  */
-public class Drinks {
-   private String type;
-   private String brand;
-   private float volume;
-   private int amountperunit;
-   private float price;
-     @Override
-    public String toString() {
-        return "Drinks{" + "type=" + type + ", brand=" + brand + ", volume=" + volume + ", amountperunit=" + amountperunit + ", price=" + price + '}';
-    }
+class Pasta {
 
-    public Drinks(String type, String brand, float volume ,int amountperunit ,float price ) {
-        this.type = type;
-        this.brand = brand;
-        this.volume = volume;
-        this.amountperunit = amountperunit;
-        this.price = price;
-    }
-    
-    public Drinks() {
-        this.type = "no type";
-        this.brand = "no brand";
-        this.volume=0;
-        this.amountperunit=0;
-        this.price=0;
-    }
     /**
      * @return the type
      */
@@ -64,17 +40,17 @@ ShopCart add;
     }
 
     /**
-     * @return the volume
+     * @return the weight
      */
-    public float getVolume() {
-        return volume;
+    public float getWeight() {
+        return weight;
     }
 
     /**
-     * @param volume the volume to set
+     * @param weight the weight to set
      */
-    public void setVolume(float volume) {
-        this.volume = volume;
+    public void setWeight(float weight) {
+        this.weight = weight;
     }
 
     /**
@@ -104,11 +80,11 @@ ShopCart add;
     public void setPrice(float price) {
         this.price = price;
     }
-
+   private String type;
+   private String brand;
+   private float weight;
+   private int amountperunit;
+   private float price;
  public void buy()
    {}
-
-    public void add(Drinks drinks2) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
 }
