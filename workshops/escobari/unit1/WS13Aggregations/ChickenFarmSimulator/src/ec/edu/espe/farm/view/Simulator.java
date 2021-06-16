@@ -7,6 +7,7 @@ package ec.edu.espe.farm.view;
 
 import ec.edu.espe.farm.model.Chicken;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Date;
 import java.util.Locale;
 
@@ -46,7 +47,7 @@ public class Simulator {
         Chicken[] chickensArray = null;
         chickensArray[0]= chicken;
         
-        System.out.println("chickensArray -> " + chickensArray);
+        System.out.println("chickensArray -> " + chickensArray[0]);
     }
     
 }
