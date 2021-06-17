@@ -16,6 +16,7 @@ public class Chicken {
     private String name;
     private String color;
     private Date age;
+    private Date bornOn;
     private boolean isMolting;
 
     @Override
@@ -86,6 +87,9 @@ public class Chicken {
      * @return the age
      */
     public Date getAge() {
+        //compute the age
+        //
+        //asing to age 
         return age;
     }
 
