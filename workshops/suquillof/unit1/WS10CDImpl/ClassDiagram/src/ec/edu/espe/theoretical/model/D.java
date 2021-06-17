@@ -12,7 +12,14 @@ package ec.edu.espe.theoretical.model;
 public class D {
     
     private boolean b;
-   
+
+    public D(boolean b) {
+        this.b = b;
+        
+        System.out.println("The value of d.b is : " + b);
+    }
+
+    
     public B m(){
         System.out.println("inside D.m{} method that returns a B object");
         return new B();
