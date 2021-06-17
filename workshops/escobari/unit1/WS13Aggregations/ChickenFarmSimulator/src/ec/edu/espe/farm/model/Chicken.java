@@ -5,7 +5,9 @@
  */
 package ec.edu.espe.farm.model;
 
+import java.util.Calendar;
 import java.util.Date;
+import java.util.GregorianCalendar;
 
 /**
  *
@@ -86,6 +88,7 @@ public class Chicken {
      * @return the age
      */
     public Date getAge() {
+        
         return age;
     }
 
@@ -109,6 +112,8 @@ public class Chicken {
     public void setIsMolting(boolean isMolting) {
         this.isMolting = isMolting;
     }
+    
+    
     
     
     
