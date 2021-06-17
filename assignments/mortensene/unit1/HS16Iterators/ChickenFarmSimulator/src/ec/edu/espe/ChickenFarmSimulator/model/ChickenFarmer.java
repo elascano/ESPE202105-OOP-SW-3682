@@ -9,6 +9,6 @@ package ec.edu.espe.ChickenFarmSimulator.model;
  *
  * @author Eduardo Mortesen The Programers
  */
-public class ChickenCook {
+public class ChickenFarmer {
     
 }
