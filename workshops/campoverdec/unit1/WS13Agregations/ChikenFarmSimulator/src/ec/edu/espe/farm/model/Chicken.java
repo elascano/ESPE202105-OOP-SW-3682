@@ -16,13 +16,15 @@ public class Chicken {
     private String name;
     private String color;
     private Date age;
+    private Date bornOn;
     private boolean isMolting;
 
     @Override
     public String toString() {
-        return "Chicken{" + "id=" + id + ", name=" + name + ", color=" + color + ", age=" + age + ", isMolting=" + isMolting + '}';
+        return "Chicken{" + "id=" + getId() + ", name=" + getName() + ", color=" + getColor() + ", age=" + getAge() + ", isMolting=" + isIsMolting() + '}';
     }
 
+    
     public Chicken(int id, String name, String color, Date age, boolean isMolting) {
         this.id = id;
         this.name = name;
@@ -87,6 +89,9 @@ public class Chicken {
      * @return the age
      */
     public Date getAge() {
+        //compute the age
+        //?
+        //asign to age 
         return age;
     }
 
@@ -109,6 +114,20 @@ public class Chicken {
      */
     public void setIsMolting(boolean isMolting) {
         this.isMolting = isMolting;
+    }
+
+    /**
+     * @return the bornOn
+     */
+    public Date getBornOn() {
+        return bornOn;
+    }
+
+    /**
+     * @param bornOn the bornOn to set
+     */
+    public void setBornOn(Date bornOn) {
+        this.bornOn = bornOn;
     }
     
     
