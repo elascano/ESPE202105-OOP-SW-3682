@@ -5,6 +5,8 @@
  */
 package ec.edu.espe.farm.view;
 
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 import ec.edu.espe.farm.model.Chicken;
 import ec.edu.espe.farm.model.ChickenCoop;
 import java.time.LocalDate;
@@ -26,6 +28,9 @@ public class Simulator {
          String color;
          Date date = new Date();
          boolean isMolting;
+         GsonBuilder gsonBuilder = new GsonBuilder();
+         Gson gson = gsonBuilder.create();
+         String jsonChicken;
          ArrayList<Chicken> chickens = new ArrayList<>();
          Chicken chickensArray[] = new Chicken[10];
          Period edad1 = Period.between(LocalDate.of(1999, 4, 8), LocalDate.now());
@@ -38,8 +43,7 @@ public class Simulator {
          Period edad8 = Period.between(LocalDate.of(2014, 5, 10), LocalDate.now());
          Period edad9 = Period.between(LocalDate.of(2015, 6, 10), LocalDate.now());
          Period edad10 = Period.between(LocalDate.of(2017, 5, 10), LocalDate.now());
-         String jsonChicken;
-       
+         
          
          
          chickenId = 1;
@@ -135,13 +139,13 @@ public class Simulator {
         chickens.add(chicken9);
         chickens.add(chicken10);
         
-    
-        
-        ChickenCoop chickenCoop;
-         chickenCoop = new ChickenCoop(1,chickens);
-         System.out.println("Chicken Coop -> "+ chickenCoop);  
-         chickenCoop.remove(6);
-         System.out.println("Chicken Coop -> "+ chickenCoop);  
-        
+        //serialization
+         jsonChicken = gson.toJson(chiken);
+         System.out.println("jsonChicken->"+ jsonChicken);
+         
+         Chicken chickens2;
+         chickens2 = gson.fromJson(jsonChicken, Chicken.class);
+         
+         System.out.println("chicken2-> "+ chickens2.getName()); 
     }
 }
