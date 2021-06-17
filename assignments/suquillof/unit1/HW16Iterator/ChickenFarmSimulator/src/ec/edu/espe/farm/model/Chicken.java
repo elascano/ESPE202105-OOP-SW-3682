@@ -17,7 +17,7 @@ public class Chicken {
     private int id;
     private String name;
     private String color;
-    private Calendar bornOn= new GregorianCalendar(2015,Calendar.FEBRUARY,04);
+    private Calendar bornOn= new GregorianCalendar(2018,Calendar.MARCH,25);
     private Calendar currentDay = Calendar.getInstance();
     private int yearBornOn = bornOn.get(Calendar.YEAR);
     private int yearCurrentDay = currentDay.get(Calendar.YEAR);
