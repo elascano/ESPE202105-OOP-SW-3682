@@ -5,6 +5,8 @@
  */
 package ec.edu.espe.farm.view;
 
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 import ec.edu.espe.farm.model.Chicken;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -27,7 +29,7 @@ public class Simulator {
         int yearNac=DateNac.get(Calendar.YEAR);
         int yearToday=DateToday.get(Calendar.YEAR);
         int age;
-        String jsonChicken;
+        String jsonChicken = null;
 
         ArrayList<Chicken> chickens = new ArrayList<>();
         
@@ -37,6 +39,8 @@ public class Simulator {
         color="White";
         isMolting = true;
         age= yearToday-yearNac;
+        GsonBuilder gsonBuilder= new GsonBuilder();
+        Gson gson= gsonBuilder.create();
         
         
         Chicken chicken = new Chicken();
@@ -99,7 +103,16 @@ public class Simulator {
         //System.out.println("jsonString" + jsonChicken);
         
         //serialization
+        jsonChicken = gson.toJson(chicken);
+        System.out.println("jsonChicken -> " + jsonChicken);
         
+        Chicken chicken10;
+        chicken10= gson.fromJson(jsonChicken, Chicken.class);
+        
+        System.out.println("choen10 name -> " + chicken10.getName());
+        
+
+
     }
     
 }
