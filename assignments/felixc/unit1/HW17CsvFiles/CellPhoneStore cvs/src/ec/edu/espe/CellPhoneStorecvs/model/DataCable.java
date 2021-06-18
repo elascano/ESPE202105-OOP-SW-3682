@@ -8,7 +8,7 @@ package ec.edu.espe.CellPhoneStorecvs.model;
 
 /**
  *
- * @author 59399
+ * @author Cristian Felix InnovaCode ESPE-DCCO
  */
 public class DataCable {
     private String model;
