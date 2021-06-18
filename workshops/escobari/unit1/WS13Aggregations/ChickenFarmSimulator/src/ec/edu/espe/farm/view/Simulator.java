@@ -27,6 +27,7 @@ public class Simulator {
         int yearNac=DateNac.get(Calendar.YEAR);
         int yearToday=DateToday.get(Calendar.YEAR);
         int age;
+        String jsonChicken;
 
         ArrayList<Chicken> chickens = new ArrayList<>();
         
@@ -93,6 +94,11 @@ public class Simulator {
         chickensArray[9]= chicken;
         
         System.out.println("chickensArray -> " + chickensArray[0]);
+        
+        //jsonChicken = "{\"id\":\""+chicken.getId()+"\"}";
+        //System.out.println("jsonString" + jsonChicken);
+        
+        //serialization
         
     }
     
