@@ -5,6 +5,7 @@
  */
 package ec.edu.espe.ChickenFarmSimulator.view;
 
+
 import ec.edu.espe.ChickenFarmSimulator.model.*;
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -30,6 +31,15 @@ public class Simulator {
         boolean isMolting;
         ArrayList<Chicken> chickens = new ArrayList<>();
         
+       GsonBuilder gsonBuilder= new GsonBuilder();
+        Gson gson= gsonBuilder.create();
+        
+        //jsonChicken = "{\"id\":\""+chicken.getId()+"\"}";
+        //System.out.println("jsonString" + jsonChicken);
+           Chicken chicken11;
+        String jsonChicken = null;
+        chicken11= gson.fromJson(jsonChicken, Chicken.class);
+         System.out.println("choen10 name -> " + chicken11.getName());
         
         Chicken chicken = new Chicken(1, "Lucy", "black", Calendar.getInstance(),new GregorianCalendar(), false);
         
@@ -81,6 +91,13 @@ public class Simulator {
             
         System.out.println("chickenArray->" + Chickens.toString());
             System.out.println("");
+            
+            System.out.println("jsonString"+jsonChicken);
+    
+     
+        chicken2 = gson.fromJson(jsonChicken, Chicken.class);
+        
+        System.out.println("jsonString"+chicken2.getName());
     }
     }
     
