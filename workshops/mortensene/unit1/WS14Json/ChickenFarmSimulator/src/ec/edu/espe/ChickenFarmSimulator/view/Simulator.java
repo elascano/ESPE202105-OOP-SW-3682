@@ -7,21 +7,22 @@ package ec.edu.espe.ChickenFarmSimulator.view;
 
 
 
+
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-import ec.edu.espe.ChickenFarmSimulator.model.Chicken;
-
+import ec.edu.espe.ChickenFarmSimulator.model.*;
 import java.util.ArrayList;
 import java.util.Calendar;
-import java.util.Date;
 import java.util.GregorianCalendar;
-import java.util.Locale;
+
 
 /**
  *
  * @author Eduardo Mortesen The Programers
  */
 public class Simulator {
+
+    private static Object chicken;
     public static void main(String [] args){
         int chickenId;
         String name;
@@ -31,19 +32,22 @@ public class Simulator {
         int Birthyear = bornOn.get(Calendar.YEAR);
         int today = now.get(Calendar.YEAR);
         int age = today - Birthyear;
-        String jsonChicken;
+        
         boolean isMolting;
         ArrayList<Chicken> chickens = new ArrayList<>();
-        GsonBuilder gsonBuilder= new GsonBuilder();
+         String jsonChicken;
+    
+        
+          
+         GsonBuilder gsonBuilder= new GsonBuilder();
         Gson gson= gsonBuilder.create();
-      
-   
-        
-        //jsonChicken = "{\"id\":\""+chicken.getId()+"\"}";
-        //System.out.println("jsonString" + jsonChicken);
-        //serialization
+       
         
         
+       
+        
+
+
         
 
 
@@ -102,13 +106,17 @@ public class Simulator {
         
         
           }    
-       jsonChicken = gson.toJson(chicken);
+      
+         //jsonChicken = "{\"id\":\""+chicken.getId()+"\"}";
+        //System.out.println("jsonString" + jsonChicken);
+        
+        //serialization
+        jsonChicken = gson.toJson(chicken);
         System.out.println("jsonChicken -> " + jsonChicken);
         
         Chicken chicken11;
         chicken11= gson.fromJson(jsonChicken, Chicken.class);
-        
-        System.out.println("choen10 name -> " + chicken11.getName());   
+                System.out.println("choen11 name -> " + chicken11.getName());  
           
     }
     

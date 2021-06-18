@@ -5,7 +5,9 @@
  */
 package ec.edu.espe.ChickenFarmSimulator.model;
 
+
 import java.util.Calendar;
+
 import java.util.GregorianCalendar;
 
 /**
@@ -88,7 +90,7 @@ public class Chicken {
      * @return the age
      */
     public Calendar getAge() {
- Calendar now = Calendar.getInstance();
+  Calendar now = Calendar.getInstance();
         Calendar bornOn = new GregorianCalendar(2019, 01,02);
         int Birthyear = bornOn.get(Calendar.YEAR);
         int today = now.get(Calendar.YEAR);
@@ -138,6 +140,12 @@ System.out.println(String.format("%d years and %d days", years, days));
     public void setIsMolting(boolean isMolting) {
         this.isMolting = isMolting;
     }
+
+    private GregorianCalendar GregorianCalendar() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    
 }
     
 
