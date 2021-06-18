@@ -12,13 +12,19 @@ import java.util.Scanner;
  * @author Salazar Matthew NullPointers ESPE-DCC
  */
 public class ElectricKitchen {
-    float price;
-    float weight;
-    String size;
-    String material;
-    int identificationNumber;
+    private float price;
+    private float weight;
+    private String size;
+    private String material;
+    private int identificationNumber;
     
-    
+    public ElectricKitchen(){
+       this.price = 0;
+        this.weight = 0;
+        this.size = "";
+        this.material = "";
+        this.identificationNumber = 0;
+    }
         
        
 
@@ -28,6 +34,18 @@ public class ElectricKitchen {
         this.size = size;
         this.material = material;
         this.identificationNumber = identificationNumber;
+    }
+
+
+    @Override
+    public String toString() {
+        return "ElectricKitchen{" + "price=" + price + ", weight=" + weight + ", size=" + size + ", material=" + material + ", identificationNumber=" + identificationNumber + '}';
+    }
+    
+    public String []getArray(){
+        
+       String[] date ={"Price -> " + String.valueOf(price)+ " Weight ->" +String.valueOf(weight)+ " Size -> "+String.valueOf(size)+" IdentificationNumber -> "+String.valueOf(identificationNumber)+" Material -> "+String.valueOf(material)};
+       return date;
     }
 
     public float getPrice() {
