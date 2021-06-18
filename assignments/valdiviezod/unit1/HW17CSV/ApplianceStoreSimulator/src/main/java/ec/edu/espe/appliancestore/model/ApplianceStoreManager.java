@@ -3,12 +3,13 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package ec.edu.espe.Farm.model;
+package ec.edu.espe.appliancestore.model;
 
 /**
  *
  * @author Darwin Valdiviezo NullPunters ESPE-DCCO
  */
-public class ChickenFarmer {
-    
+public class ApplianceStoreManager {
+    private String name;
+    ApplianceStore storestore;
 }
