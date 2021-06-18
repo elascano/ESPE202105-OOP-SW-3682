@@ -9,7 +9,6 @@ import ec.edu.espe.farm.model.Chicken;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Calendar;
-import java.util.Date;
 import java.util.GregorianCalendar;
 import java.util.Locale;
 
@@ -22,8 +21,14 @@ public class Simulator {
         int chickenId;
         String name;
         String color;
-        Date date = new Date();
         boolean isMolting;
+        Calendar DateNac= new GregorianCalendar(2016,05,07);
+        Calendar DateToday=Calendar.getInstance();
+        int yearNac=DateNac.get(Calendar.YEAR);
+        int yearToday=DateToday.get(Calendar.YEAR);
+        int age;
+        String jsonChicken;
+
         ArrayList<Chicken> chickens = new ArrayList<>();
         
         //input by keyboard
@@ -31,36 +36,37 @@ public class Simulator {
         name="Lucy";
         color="White";
         isMolting = true;
+        age= yearToday-yearNac;
         
         
         Chicken chicken = new Chicken();
-        System.out.println("chicken object -> " + chicken);
+        System.out.println("Chicken object -> " + chicken);
         
-        chicken = new Chicken(chickenId, name, color, date, isMolting);
-        System.out.println("chicken object -> " + chicken);
+        chicken = new Chicken(chickenId, name, color, age, isMolting);
+        System.out.println("Chicken object -> " + chicken);
         
-        Chicken chicken2 = new Chicken(2, "Pamela", "black", new Date(), false);
+        Chicken chicken2 = new Chicken(2, "Pamela", "black", age, false);
         System.out.println("chicken2 object -> " + chicken2);
         
-        Chicken chicken3 = new Chicken(3, "Sofia", "black", new Date(), true);
+        Chicken chicken3 = new Chicken(3, "Sofia", "white", age, true);
         System.out.println("chicken3 object -> " + chicken3);
         
-        Chicken chicken4 = new Chicken(4, "Maria", "black", new Date(), false);
+        Chicken chicken4 = new Chicken(4, "Maria", "coffee", age, false);
         System.out.println("chicken4 object -> " + chicken4);
         
-        Chicken chicken5 = new Chicken(5, "Luisa", "black", new Date(), false);
+        Chicken chicken5 = new Chicken(5, "Luisa", "black", age, false);
         System.out.println("chicken5 object -> " + chicken5);
         
-        Chicken chicken6 = new Chicken(6, "Andrea", "black", new Date(), false);
+        Chicken chicken6 = new Chicken(6, "Andrea", "coffee", age, false);
         System.out.println("chicken6 object -> " + chicken6);
         
-        Chicken chicken7 = new Chicken(7, "Emilia", "black", new Date(), false);
+        Chicken chicken7 = new Chicken(7, "Emilia", "white", age, false);
         System.out.println("chicken7 object -> " + chicken7);
         
-        Chicken chicken8 = new Chicken(8, "Alejandra", "black", new Date(), true);
+        Chicken chicken8 = new Chicken(8, "Alejandra", "white", age, true);
         System.out.println("chicken8 object -> " + chicken8);
         
-        Chicken chicken9 = new Chicken(9, "Karina", "black", new Date(), true);
+        Chicken chicken9 = new Chicken(9, "Karina", "black", age, true);
         System.out.println("chicken9 object -> " + chicken9);
        
         chickens.add(chicken);
@@ -88,6 +94,11 @@ public class Simulator {
         chickensArray[9]= chicken;
         
         System.out.println("chickensArray -> " + chickensArray[0]);
+        
+        //jsonChicken = "{\"id\":\""+chicken.getId()+"\"}";
+        //System.out.println("jsonString" + jsonChicken);
+        
+        //serialization
         
     }
     
