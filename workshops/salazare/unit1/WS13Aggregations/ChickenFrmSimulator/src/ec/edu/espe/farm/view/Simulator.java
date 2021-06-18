@@ -6,6 +6,7 @@
 package ec.edu.espe.farm.view;
 
 import ec.edu.espe.farm.model.Chicken;
+import ec.edu.espe.farm.model.ChickenCoop;
 import java.time.LocalDate;
 import java.time.Period;
 import java.util.ArrayList;
@@ -37,6 +38,8 @@ public class Simulator {
          Period edad8 = Period.between(LocalDate.of(2014, 5, 10), LocalDate.now());
          Period edad9 = Period.between(LocalDate.of(2015, 6, 10), LocalDate.now());
          Period edad10 = Period.between(LocalDate.of(2017, 5, 10), LocalDate.now());
+         String jsonChicken;
+       
          
          
          chickenId = 1;
@@ -50,7 +53,8 @@ public class Simulator {
         System.out.println(String.format("%d years, %d months y %d days",
         edad1.getYears(),
         edad1.getMonths(),
-        edad1.getDays()));       
+        edad1.getDays()));   
+
         
         chiken = new Chicken(chickenId, name, color, date, isMolting);
         System.out.println("chicken object ->" + chiken);
@@ -133,6 +137,11 @@ public class Simulator {
         
     
         
+        ChickenCoop chickenCoop;
+         chickenCoop = new ChickenCoop(1,chickens);
+         System.out.println("Chicken Coop -> "+ chickenCoop);  
+         chickenCoop.remove(6);
+         System.out.println("Chicken Coop -> "+ chickenCoop);  
         
     }
 }

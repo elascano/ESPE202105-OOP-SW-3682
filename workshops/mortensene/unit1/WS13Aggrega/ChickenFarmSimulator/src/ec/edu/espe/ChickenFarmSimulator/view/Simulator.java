@@ -5,7 +5,12 @@
  */
 package ec.edu.espe.ChickenFarmSimulator.view;
 
-import ec.edu.espe.ChickenFarmSimulator.model.*;
+
+
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import ec.edu.espe.ChickenFarmSimulator.model.Chicken;
+
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
@@ -26,11 +31,23 @@ public class Simulator {
         int Birthyear = bornOn.get(Calendar.YEAR);
         int today = now.get(Calendar.YEAR);
         int age = today - Birthyear;
-        
+        String jsonChicken;
         boolean isMolting;
         ArrayList<Chicken> chickens = new ArrayList<>();
+        GsonBuilder gsonBuilder= new GsonBuilder();
+        Gson gson= gsonBuilder.create();
+      
+   
+        
+        //jsonChicken = "{\"id\":\""+chicken.getId()+"\"}";
+        //System.out.println("jsonString" + jsonChicken);
+        //serialization
         
         
+        
+
+
+       
         Chicken chicken = new Chicken(1, "Lucy", "black", Calendar.getInstance(),new GregorianCalendar(), false);
         
         Chicken chicken2 = new Chicken(2, "Maruja", "black",Calendar.getInstance(),new GregorianCalendar(), false);
@@ -63,7 +80,7 @@ public class Simulator {
         chickens.add(chicken9);
         chickens.add(chicken10);
         
-       
+       jsonChicken="{\"id\""+chicken.getId()+"\"}";
         Chicken[] chickensArray = new Chicken[10];
         
         chickensArray[0] = chicken;
@@ -80,8 +97,19 @@ public class Simulator {
           for(Chicken Chickens:chickensArray){
             
         System.out.println("chickenArray->" + Chickens.toString());
-            System.out.println("");
-    }
+         
+        System.out.println("");
+        
+        
+          }    
+       jsonChicken = gson.toJson(chicken);
+        System.out.println("jsonChicken -> " + jsonChicken);
+        
+        Chicken chicken11;
+        chicken11= gson.fromJson(jsonChicken, Chicken.class);
+        
+        System.out.println("choen10 name -> " + chicken11.getName());   
+          
     }
     
 }
