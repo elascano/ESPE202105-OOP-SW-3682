@@ -1,0 +1,9 @@
+ec\edu\espe\GroceryStoreManagement\model\NutsandSeeds.class
+ec\edu\espe\GroceryStoreManagement\model\Appetizers.class
+ec\edu\espe\GroceryStoreManagement\model\Bill.class
+ec\edu\espe\GroceryStoreManagement\model\Oils.class
+ec\edu\espe\GroceryStoreManagement\model\Cereals.class
+ec\edu\espe\GroceryStoreManagement\model\Pasta.class
+ec\edu\espe\GroceryStoreManagement\model\Drinks.class
+ec\edu\espe\GroceryStoreManagement\model\Meats.class
+ec\edu\espe\GroceryStoreManagement\model\ShopCart.class
