@@ -9,76 +9,27 @@ package ec.edu.espe.GroceryStoreModel.view;
 
 import com.csvreader.CsvReader;
 import com.csvreader.CsvWriter;
-import com.google.gson.Gson;
 import ec.edu.espe.groseryStoreModel.model.*;
 import java.io.BufferedReader;
 import java.io.File;
-import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Date;
-import java.util.InputMismatchException;
 import java.util.List;
 import java.util.Locale;
-import java.util.Properties;
-import java.util.Scanner;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-import org.json.simple.JSONArray;
-import org.json.simple.JSONObject;
-import org.json.simple.parser.JSONParser;
-import org.json.simple.parser.ParseException;
 /**
  *
  * @author Eduardo Mortensen The Programers
  */
 public class SystemDisplay {
-   
-     public static void main(String [] args) throws IOException, ParseException{
+    
+    
+     public static void main(String [] args) throws IOException{
          
-        Scanner sn = new Scanner(System.in);
-        boolean exit = false;
-        int opcion; //Guardaremos la opcion del usuario
- 
-        while (!exit) {
- 
-            System.out.println("PRESS 1:Read on CSV");
-            System.out.println("PRESS 2:Read on Json");
-            System.out.println("PRESS 3: EXIT");
- 
-            try {
- 
-                System.out.println("Choose one option");
-                opcion = sn.nextInt();
- 
-                switch (opcion) {
-                    case 1:
-                        System.out.println("");
-                        ImportCSV();
-                        break;
-                    case 2:
-                        System.out.println("");
-                        ReadJson();
-                        break;
-                     case 4:
-                        System.out.println("");
-                        break;   
-                    case 3:
-                        System.out.println("THANK YOU FOR USING OUR STORE, HAVE A NICE DAY!!");
-                        exit = true;
-                        break;
-                    default:
-                        System.out.println("you haven´t choosed any option, please try again");
-                }
-            } catch (InputMismatchException e) {
-                sn.next();
-            }
-        }
- 
         
         String type;
         String brand;
@@ -121,7 +72,7 @@ public class SystemDisplay {
           }  
         System.out.println("drinksArray -> " + drinksArray);
       ExportCSV (drinkss);
-
+      ReadCvs();
 }
     public static void ExportCSV(List<Drinks> drinkss){
         String fileOutput = "Drinks.cvs"; 
@@ -165,67 +116,43 @@ public class SystemDisplay {
        
     }
    
-    public static void ImportCSV(){
-        try{
-            List<Drinks> drinks = new ArrayList<Drinks>();
-            CsvReader readDrinks = new CsvReader("Drinks.cvs");
-            readDrinks.readHeaders();
-           
-            while(readDrinks.readRecord()){
-                Drinks brand = drinks.get(0);
-                Drinks type = drinks.get(1);
-                Drinks price = drinks.get(2);
-                Drinks volume= drinks.get(3);
-                Drinks amountofproducts = drinks.get(4);
-                
-               
-                drinks.add(new Drinks(brand, type,price,volume,
-                        amountofproducts));//Information
-               
-            }
-           
-            readDrinks.close(); //Close
-           
-            for(Drinks drinkss : drinks){
-                System.out.println(drinkss.getBrand() + " , " +
-                        drinkss.getType() + " , " );
-                       
-            }
-           
-        }catch(FileNotFoundException e){
-            e.printStackTrace();
-           
-        }catch(IOException e){
-            e.printStackTrace();
-        }
-    }
-    static public void ReadJson(){
-    Gson gson = new Gson();
-         String file = "";
  
-try (BufferedReader br = new BufferedReader(new FileReader("Drinks.json"))) {
-    String line;
-    while ((line = br.readLine()) != null) {
-        file += line;
-    }
- 
-} catch (FileNotFoundException ex) {
-    System.out.println(ex.getMessage());
-} catch (IOException ex) {
-    System.out.println(ex.getMessage());
-    
-}
-    Properties properties = gson.fromJson(file, Properties.class);
-    System.out.println(properties.get("brand"));
-    System.out.println(properties.get("price"));
-    System.out.println(properties.get("volume"));
-    System.out.println(properties.get("amount of products")); 
-    System.out.println(properties.get("value"));
-    }
-    
+    public static final String SEPARADOR = ",";
+static public void ReadCvs(){
 
-}
-
-    
+ BufferedReader bufferLectura = null;
+ try {
+  // Abrir el .csv en buffer de lectura
+  bufferLectura = new BufferedReader(new FileReader("Drinks.cvs"));
   
+  // Leer una linea del archivo
+  String linea = bufferLectura.readLine();
+  
+  while (linea != null) {
+   // Sepapar la linea leída con el separador definido previamente
+   String[] campos = linea.split(SEPARADOR); 
+   
+   System.out.println(Arrays.toString(campos));
+   
+   // Volver a leer otra línea del fichero
+   linea = bufferLectura.readLine();
+  }
+ } 
+ catch (IOException e) {
+  e.printStackTrace();
+ }
+ finally {
+  // Cierro el buffer de lectura
+  if (bufferLectura != null) {
+   try {
+    bufferLectura.close();
+   } 
+   catch (IOException e) {
+    e.printStackTrace();
+   }
+  }
+ }
+}
+}
+ 
   
