@@ -1,4 +1,4 @@
-package ec.edu.espe.archivocsv.view;
+package ec.edu.espe.archivojson.view;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -9,24 +9,36 @@ package ec.edu.espe.archivocsv.view;
 
 
 import com.csvreader.CsvReader;
-import com.csvreader.CsvWriter;
-import ec.edu.espe.archivocsv.model.ElectricKitchen;
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import com.google.gson.stream.JsonWriter;
+import ec.edu.espe.archivojson.model.ElectricKitchen;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
+import java.io.Writer;
 import java.util.ArrayList;
 import java.util.InputMismatchException;
+import java.util.Iterator;
 
 import java.util.Scanner;
+import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
+import org.json.simple.parser.ParseException;
+
 
 /**
  *
  * @author Salazar Matthew NullPointers ESPE-DCC
  */
-public class ArchivoCsv {
+public class ArchivoJson {
 
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) throws IOException, ParseException, Exception {
         
        
         Scanner sn = new Scanner(System.in);
@@ -64,24 +76,47 @@ public class ArchivoCsv {
                         electricKitchens.add(electricKitchen);
         
                         electricKitchensArray[0] = electricKitchen;
-                         CsvWriter csvWriter = new CsvWriter("ElectricKitchen.csv");
                          for (ElectricKitchen electrickitchenArray : electricKitchens){
                          String [] date = electricKitchen.getArray();
-                         csvWriter.writeRecord(date);
+                         Gson gson = new GsonBuilder().setPrettyPrinting().create();
+                         try(Writer writer = new FileWriter("ElectricKitchen.json")){
+                             writer.write(gson.toJson(electricKitchens));
                          }
-                        csvWriter.close();
+                         String json = gson.toJson(date);
+                         
+                         }
+                        // writer.close();
         
                         break;
                case 2:
-                        System.out.println("\nYou have selected option 2");
-                        CsvReader csvReader = new CsvReader("ElectricKitchen.csv");
-                        csvReader.readHeaders();
-                        while(csvReader.readRecord()){
-                            String date = csvReader.get(0);
-                        }
-                        csvReader.close();
-                        for(ElectricKitchen electricKitchenArray : electricKitchens){
-                            System.out.println(electricKitchenArray.getWeight() + ',' + electricKitchenArray.getPrice() + ',' + electricKitchenArray.getIdentificationNumber() + ',' + electricKitchenArray.getMaterial() + ',' + electricKitchenArray.getSize());
+                        System.out.println("\nYou have selected option 2"); 
+                        try{
+       
+                            JSONParser parser = new JSONParser();
+                            FileReader reader = new FileReader("ElectricKitchen.json");
+                            JSONArray jsonArray = (JSONArray) parser.parse(new FileReader("ElectricKitchen.json"));
+                            for (Object object : jsonArray)
+                             {
+                              JSONObject config = (JSONObject) object;
+
+                                String sizeP = (String) config.get("size");
+                                    System.out.println(sizeP);
+
+                                String materialP = (String) config.get("material");
+                                    System.out.println(materialP);
+
+                                 String weightP = (String) config.get("weight");
+                                    System.out.println(weightP);
+
+                                 String priceP = (String) config.get("price");
+                                    System.out.println(priceP);
+                                    
+                                 String identificationNumberP = (String) config.get("identificationNumber");
+                                    System.out.println(identificationNumberP);
+                             }
+
+                        }catch(FileNotFoundException e){
+                         e.printStackTrace();   
                         }
                         break; 
                 
@@ -96,9 +131,8 @@ public class ArchivoCsv {
                         
                         
             }
-         }catch(InputMismatchException e) {
-                System.out.println("Enter the number");
-                sn.next();   
+         }catch(IOException e) {
+                 e.printStackTrace(); 
     }
         
     }

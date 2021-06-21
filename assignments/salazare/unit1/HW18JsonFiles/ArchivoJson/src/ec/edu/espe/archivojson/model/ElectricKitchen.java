@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package ec.edu.espe.archivocsv.model;
+package ec.edu.espe.archivojson.model;
 
 import java.util.Scanner;
 
