@@ -8,37 +8,155 @@ package ec.edu.espe.GroceryStoreModel.view;
 
 
 import com.csvreader.CsvReader;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 import com.csvreader.CsvWriter;
 import com.google.gson.Gson;
 import ec.edu.espe.groseryStoreModel.model.*;
 import java.io.BufferedReader;
 import java.io.File;
-import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.nio.charset.StandardCharsets;
+import java.io.InputStreamReader;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Date;
 import java.util.InputMismatchException;
 import java.util.List;
 import java.util.Locale;
 import java.util.Properties;
 import java.util.Scanner;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-import org.json.simple.JSONArray;
-import org.json.simple.JSONObject;
-import org.json.simple.parser.JSONParser;
-import org.json.simple.parser.ParseException;
 /**
  *
  * @author Eduardo Mortensen The Programers
  */
 public class SystemDisplay {
-   
-     public static void main(String [] args) throws IOException, ParseException{
+    
+    
+     public static void main(String [] args){
+         
          
         Scanner sn = new Scanner(System.in);
         boolean exit = false;
@@ -48,7 +166,9 @@ public class SystemDisplay {
  
             System.out.println("PRESS 1:Read on CSV");
             System.out.println("PRESS 2:Read on Json");
-            System.out.println("PRESS 3: EXIT");
+            System.out.println("PRESS 3: Write on CSV");
+            System.out.println("PRESS 4: Write on Json");
+            System.out.println("PRESS 5: EXIT");
  
             try {
  
@@ -58,16 +178,17 @@ public class SystemDisplay {
                 switch (opcion) {
                     case 1:
                         System.out.println("");
-                        ImportCSV();
+                        ReadCvs();
                         break;
                     case 2:
                         System.out.println("");
                         ReadJson();
                         break;
-                     case 4:
+                     case 3:
                         System.out.println("");
+                        WriteCsv ();
                         break;   
-                    case 3:
+                    case 5:
                         System.out.println("THANK YOU FOR USING OUR STORE, HAVE A NICE DAY!!");
                         exit = true;
                         break;
@@ -78,8 +199,8 @@ public class SystemDisplay {
                 sn.next();
             }
         }
- 
-        
+    
+         
         String type;
         String brand;
         float volume;
@@ -116,15 +237,13 @@ public class SystemDisplay {
         System.out.println("drinkSArray->" + Drinkss.toString());
          
         System.out.println("");
-        
-        
           }  
         System.out.println("drinksArray -> " + drinksArray);
-      ExportCSV (drinkss);
-
+        
+    ExportCSV (drinkss);
 }
     public static void ExportCSV(List<Drinks> drinkss){
-        String fileOutput = "Drinks.cvs"; 
+        String fileOutput = "Drinks.csv"; 
         boolean exists = new File(fileOutput).exists();
       
         if(exists) {
@@ -168,7 +287,7 @@ public class SystemDisplay {
     public static void ImportCSV(){
         try{
             List<Drinks> drinks = new ArrayList<Drinks>();
-            CsvReader readDrinks = new CsvReader("Drinks.cvs");
+            CsvReader readDrinks = new CsvReader("Drinks.csv");
             readDrinks.readHeaders();
            
             while(readDrinks.readRecord()){
@@ -199,7 +318,7 @@ public class SystemDisplay {
             e.printStackTrace();
         }
     }
-    static public void ReadJson(){
+     static public void ReadJson(){
     Gson gson = new Gson();
          String file = "";
  
@@ -220,12 +339,77 @@ try (BufferedReader br = new BufferedReader(new FileReader("Drinks.json"))) {
     System.out.println(properties.get("price"));
     System.out.println(properties.get("volume"));
     System.out.println(properties.get("amount of products")); 
-    System.out.println(properties.get("value"));
-    }
     
+    }
+public static final String SEPARADOR = ",";
+static public void ReadCvs(){
+
+ BufferedReader bufferLectura = null;
+ try {
+  // Abrir el .csv en buffer de lectura
+  bufferLectura = new BufferedReader(new FileReader("Drinks.cvs"));
+  
+  // Leer una linea del archivo
+  String linea = bufferLectura.readLine();
+  
+  while (linea != null) {
+   // Sepapar la linea leída con el separador definido previamente
+   String[] campos = linea.split(SEPARADOR); 
+   
+   System.out.println(Arrays.toString(campos));
+   
+   // Volver a leer otra línea del fichero
+   linea = bufferLectura.readLine();
+  }
+ } 
+ catch (IOException e) {
+  e.printStackTrace();
+ }
+ finally {
+  // Cierro el buffer de lectura
+  if (bufferLectura != null) {
+   try {
+    bufferLectura.close();
+   } 
+   catch (IOException e) {
+    e.printStackTrace();
+   }
+  }
+ }
+
+
+}
+public static void WriteCsv (){
+ try 
+          {    
+               BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+                FileWriter fw=new FileWriter("Drinks.cvs", true); 
+                 System.out.println("Write the price");
+                String price = br.readLine();
+                System.out.println("Write the brand");
+                String brand = br.readLine();
+                System.out.println("Write the type");
+                String type = br.readLine();
+                System.out.println("Write the volume");
+                 String volume = br.readLine();
+                fw.write( "price:");
+                fw.write( price); 
+                 fw.write(System.getProperty( "line.separator" ));
+                fw.write( "brand:");
+                fw.write( brand); 
+                 fw.write(System.getProperty( "line.separator" ));
+                fw.write( "type:");
+                fw.write(type );
+                 fw.write(System.getProperty( "line.separator" ));
+                fw.write( "volume:");
+                 fw.write(volume);
+                  fw.write(System.getProperty( "line.separator" ));
+                fw.close();    
+          }
+          catch(Exception e){System.out.println(e);}    
+          System.out.println("Success...");    
+    }    
 
 }
 
-    
-  
   
