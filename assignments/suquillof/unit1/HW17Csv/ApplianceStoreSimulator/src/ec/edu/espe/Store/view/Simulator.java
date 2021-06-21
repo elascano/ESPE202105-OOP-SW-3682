@@ -5,7 +5,7 @@
  */
 package ec.edu.espe.Store.view;
 
-import com.csvreader.CsvReader;
+
 import com.csvreader.CsvWriter;
 import ec.edu.espe.Store.model.Kitchen;
 import java.io.IOException;
@@ -18,80 +18,65 @@ import java.util.Scanner;
  */
 public class Simulator {
  
-    public static void main(String[] args) throws IOException, CsvWriter.FinalizedException, CsvReader.FinalizedException, CsvReader.CatastrophicException{
-    
+    public static void main(String[] args) throws IOException {
+        
     int kitchenId;
-    int size;
     String color;
     float weight;
     String material;
     int knobs; 
     int selectedOption;
-    ArrayList<Kitchen> kitchens = new ArrayList<>();
-    Kitchen kitchensArray[] = new Kitchen[2];
+    CsvWriter writer;
     
     Scanner scanner = new Scanner(System.in);
+    ArrayList<Kitchen> kitchenslist = new ArrayList<>();
+    writer = new CsvWriter("Csvfile.csv");
+    
+        System.out.println("Csv Files Nicolas Suquillo \n");    
+    
+    do{
         System.out.println("\t\t\tAppliance Store");
-        System.out.println("1.- Add csv");
-        System.out.println("2.- Read csv \n");
+        System.out.println("1.- Insert Csv");
+        System.out.println("2.- Read Csv");
+        System.out.println("3._ Exit\n");
         System.out.println("Select an option : ");
         selectedOption = scanner.nextInt();
-        while (selectedOption<1 || selectedOption>2){
-            System.out.println("Error, choose a correct option : ");
-            selectedOption = scanner.nextInt();
-        }
-        
-    if (selectedOption == 1){
-        
-        System.out.println("Enter the id : ");
-        kitchenId = scanner.nextInt();
-        System.out.println("Enter de size(cm) : ");
-        size = scanner.nextInt();
-        System.out.println("Enter de color : ");
-        color = scanner.next();
-        System.out.println("Enter de weight : ");
-        weight = scanner.nextFloat();
-        System.out.println("Enter de material : ");
-        material = scanner.next();
-        System.out.println("Enter de Knobs : ");
-        knobs = scanner.nextInt();
-        
-        Kitchen kitchen = new Kitchen();
-        System.out.println("Kitche  object -> " + kitchen);
-        
-        kitchen = new Kitchen(kitchenId, size, color, weight, material, knobs);
-        System.out.println("Kitchen object -> " + kitchen);
-        
-        kitchens.add(kitchen);
-        
-        System.out.println("Kitchen - > " + kitchens);
-        
-        kitchensArray[0]= kitchen;
-        CsvWriter fileCsv = new CsvWriter("FileCsv.csv");
-        
-        for(int i= 0; i<2;i++){
-            String data = kitchen.getArray();
-            fileCsv.write(kitchen.getArray()); 
-        }
-        fileCsv.close();
-        
-    }else{
-        if (selectedOption==2){ 
-        CsvReader fileCsv = new CsvReader("FileCsv.csv");
-        fileCsv.readHeaders();
-        while(fileCsv.readRecord()) {
-                String data = fileCsv.get(0);       
-                }
-        
-        fileCsv.close();
-        
-        for(Kitchen kitchenArray : kitchens) {
-                System.out.println(kitchenArray.getId()+ " , "
-                    + kitchenArray.getSize()+" , "
-                    +kitchenArray.getColor()+ "," +kitchenArray.getWeight() + 
-                        "," +kitchenArray.getMaterial() + "," + kitchenArray.getKnobs());
+            while(selectedOption<1 || selectedOption>3){
+                System.out.println("Error, Choose a correct option : ");
+                selectedOption = scanner.nextInt();
             }
-        }  
-        } 
-    }
+        switch(selectedOption){
+            case 1:
+                System.out.println("Enter the id: ");
+                kitchenId= scanner.nextInt();
+                System.out.println("Enter the color: ");
+                color= scanner.next();
+                System.out.println("Enter the weight(kg): ");
+                weight= scanner.nextFloat();
+                System.out.println("Enter the material: ");
+                material = scanner.next();
+                System.out.println("Enter the knobs: ");
+                knobs= scanner.nextInt();
+                Kitchen kitchen  = new Kitchen();
+                kitchen.setId(kitchenId);
+                kitchen.setColor(color);
+                kitchen.setWeight(weight);
+                kitchen.setMaterial(material);
+                kitchen.setKnobs(knobs);
+                kitchenslist.add(kitchen);
+                String[] data = kitchen.getArray();
+                writer.writeRecord(data);
+            break;
+            case 2:
+                for (int i=0;i<kitchenslist.size();i++){
+                    System.out.println("Dryer " + (i+1) + kitchenslist.get(i).toString());
+                }
+            break;
+            case 3:
+            writer.close();
+            break;
+        }    
+    }while(selectedOption!=3);  
+    
+}
 }
