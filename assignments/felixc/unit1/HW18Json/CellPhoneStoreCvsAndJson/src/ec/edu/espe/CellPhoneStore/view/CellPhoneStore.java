@@ -32,76 +32,7 @@ public class CellPhoneStore {
      * @param args the command line arguments
      * @throws java.io.IOException
      */
-    public static void main(String[] args) throws IOException, Exception {
-
-        String color;
-        String brand;
-        float price;
-        int id;
-        String model;
-
-        CellPhone cellPhonesArray[] = new CellPhone[3];
-        ArrayList<CellPhone> cellPhones = new ArrayList<>();
-
-        int selection;
-
-        Scanner select = new Scanner(System.in);
-        System.out.println("*****You have opened the CellPhone Store database*****");
-        System.out.println("");
-        System.out.println("Please, select the type of file you want to access");
-        System.out.println("1-> DATABASE WITH CSV");
-        System.out.println("2-> DATABASE WITH JSON");
-        selection = select.nextInt();
-
-        if (selection == 1) {
-            System.out.println("1-> Enter new data in csv file");
-            System.out.println("2-> Read data from csv file");
-            selection = select.nextInt();
-            if (selection == 1) {
-                writeInCsvFile();
-            } else {
-                if (selection == 2) {
-                    readFromCsvFile();
-                }
-            }
-        } else {
-            if (selection == 2) {
-                System.out.println("1-> Enter new data in Json file");
-                System.out.println("2-> read data from Json file");
-                selection = select.nextInt();
-                if (selection == 1) {
-                    writeInJsonFile();
-                } else {
-                    if (selection == 2) {
-                        readFromJsonFile();
-                    }
-                }
-            }
-        }
-    }
-
-    public static void readFromCsvFile() throws FileNotFoundException, IOException {
-        try {
-            ArrayList<CellPhone> cellPhones = new ArrayList<>();
-            System.out.println("read data from CSV");
-            CsvReader readCellPhone = new CsvReader("CellPhone.csv");
-            readCellPhone.readHeaders();
-            while (readCellPhone.readRecord()) {
-                String date = readCellPhone.get(0);
-            }
-            readCellPhone.close();
-
-            cellPhones.forEach((CellPhoneArray) -> {
-                System.out.println(CellPhoneArray.getId() + ","
-                        + CellPhoneArray.getPrice() + "," + CellPhoneArray.getBrand() + ","
-                        + CellPhoneArray.getModel() + "," + CellPhoneArray.getColor());
-            });
-
-        } catch (FileNotFoundException e) {
-        } catch (IOException e) {
-        }
-
-    }
+    
 
     public static void writeInCsvFile() throws IOException {
         String color;
@@ -127,7 +58,6 @@ public class CellPhoneStore {
         color = select.nextLine();
 
         CellPhone cellPhone = new CellPhone();
-        System.out.println("CellPhone object -> " + cellPhone);
 
         cellPhone = new CellPhone(id, price, brand, model, color);
         System.out.println("CellPhone object -> " + cellPhone);
@@ -158,7 +88,30 @@ public class CellPhoneStore {
         } catch (IOException e) {
         }
     }
+    
+    public static void readFromCsvFile() throws FileNotFoundException, IOException {
+        try {
+            ArrayList<CellPhone> cellPhones = new ArrayList<>();
+            System.out.println("read data from CSV");
+            CsvReader readCellPhone = new CsvReader("CellPhone.csv");
+            readCellPhone.readHeaders();
+            while (readCellPhone.readRecord()) {
+                String date = readCellPhone.get(0);
+            }
+            readCellPhone.close();
 
+            cellPhones.forEach((CellPhoneArray) -> {
+                System.out.println(CellPhoneArray.getId() + ","
+                        + CellPhoneArray.getPrice() + "," + CellPhoneArray.getBrand() + ","
+                        + CellPhoneArray.getModel() + "," + CellPhoneArray.getColor());
+            });
+
+        } catch (FileNotFoundException e) {
+        } catch (IOException e) {
+        }
+
+    }
+    
     public static void writeInJsonFile() throws IOException {
 
         String brand;
@@ -183,7 +136,6 @@ public class CellPhoneStore {
         color = select.nextLine();
 
         CellPhone cellPhone = new CellPhone();
-        System.out.println("Blender object -> " + cellPhone);
 
         cellPhone = new CellPhone(id, price, brand, model, color);
         System.out.println("CellPhone object -> " + cellPhone);
@@ -200,7 +152,7 @@ public class CellPhoneStore {
             file.close();
         }
     }
-
+    
     public static void readFromJsonFile() throws FileNotFoundException, IOException, ParseException {
 
         ArrayList<CellPhone> cellPhones = new ArrayList<>();
@@ -229,6 +181,53 @@ public class CellPhoneStore {
             }
 
         } catch (FileNotFoundException e) {
+        }
+    }
+ 
+    public static void main(String[] args) throws IOException, Exception {
+
+        String color;
+        String brand;
+        float price;
+        int id;
+        String model;
+
+        CellPhone cellPhonesArray[] = new CellPhone[3];
+        ArrayList<CellPhone> cellPhones = new ArrayList<>();
+
+        int selection;
+
+        Scanner select = new Scanner(System.in);
+        System.out.println("*****You have opened the CellPhone Store database*****\n");
+        System.out.println("Please, select the type of file you want to access");
+        System.out.println("1-> DATABASE WITH CSV");
+        System.out.println("2-> DATABASE WITH JSON");
+        selection = select.nextInt();
+
+        if (selection == 1) {
+            System.out.println("1-> Enter new data in csv file");
+            System.out.println("2-> Read data from csv file");
+            selection = select.nextInt();
+            if (selection == 1) {
+                writeInCsvFile();
+            } else {
+                if (selection == 2) {
+                    readFromCsvFile();
+                }
+            }
+        } else {
+            if (selection == 2) {
+                System.out.println("1-> Enter new data in Json file");
+                System.out.println("2-> read data from Json file");
+                selection = select.nextInt();
+                if (selection == 1) {
+                    writeInJsonFile();
+                } else {
+                    if (selection == 2) {
+                        readFromJsonFile();
+                    }
+                }
+            }
         }
     }
 }
