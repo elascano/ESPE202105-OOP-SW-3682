@@ -3,12 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package ec.edu.espe.GroceryStoreModel.view;
+package ec.edu.espe.groseryStoreModel.model;
 
 /**
  *
  * @author Eduardo Mortensen The Programers
  */
-public class CSVReader {
+class ShopCart {
     
 }
