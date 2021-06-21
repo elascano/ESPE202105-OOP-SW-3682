@@ -9,7 +9,7 @@ package ec.edu.espe.Store.model;
  *
  * @author Nicolas Suquillo NullPointers ESPE-DCCO
  */
-public class Kitchen {
+public class Dryer {
     
     private int id;
     private String color;
@@ -19,31 +19,27 @@ public class Kitchen {
 
     @Override
     public String toString() {
-        return "Kitchen{" + "id=" + id + ", color=" + color + ", weight=" + weight + ", material=" + material + ", knobs=" + knobs + '}';
-    }
-
-    public String[] getArray(){
-        
-        String[] data = {String.valueOf(id), color, String.valueOf(weight), material,String.valueOf(knobs)};
-        return data;
+        return "Dryer \n" + "id = " + id + "\n color=" + color + "\n weight=" + weight + "\n material=" + material + "\n knobs=" + knobs;
     }
     
-    public Kitchen(int id, String color, float weight, String material, int knobs) {
+    public Dryer(int id, String color, float weight, String material, int knobs) {
         this.id = id;
         this.color = color;
         this.weight = weight;
         this.material = material;
         this.knobs = knobs;
     }
-    
-    public Kitchen(){
+
+    public Dryer(){
         
         id = 0;
         color = "";
-        weight = 0;
+        weight = 0F;
         material = "";
         knobs = 0;
+    
     }
+    
     /**
      * @return the id
      */
@@ -113,5 +109,6 @@ public class Kitchen {
     public void setKnobs(int knobs) {
         this.knobs = knobs;
     }
-
+    
+    
 }

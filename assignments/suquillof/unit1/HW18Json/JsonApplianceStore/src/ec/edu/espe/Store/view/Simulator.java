@@ -5,9 +5,10 @@
  */
 package ec.edu.espe.Store.view;
 
-
-import com.csvreader.CsvWriter;
-import ec.edu.espe.Store.model.Kitchen;
+import com.google.gson.*;
+import ec.edu.espe.Store.model.Dryer;
+import java.io.File;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -17,27 +18,32 @@ import java.util.Scanner;
  * @author Nicolas Suquillo NullPointers ESPE-DCCO
  */
 public class Simulator {
- 
+    
     public static void main(String[] args) throws IOException {
         
-    int kitchenId;
+    int dryerId;
     String color;
     float weight;
     String material;
     int knobs; 
     int selectedOption;
-    CsvWriter writer;
+    String jsonDryer;
+    File fileJson; 
+    FileWriter writer;
     
     Scanner scanner = new Scanner(System.in);
-    ArrayList<Kitchen> kitchenslist = new ArrayList<>();
-    writer = new CsvWriter("Csvfile.csv");
+    ArrayList<Dryer> dryerslist = new ArrayList<>();
+    GsonBuilder gsonBuilder = new GsonBuilder();
+    Gson gson = gsonBuilder.create();
+    fileJson = new File("Jsonfile.json");
+    writer = new FileWriter(fileJson,true);
     
-        System.out.println("Csv Files Nicolas Suquillo \n");    
+        System.out.println("Json Files Nicolas Suquillo \n");    
     
     do{
         System.out.println("\t\t\tAppliance Store");
-        System.out.println("1.- Insert Csv");
-        System.out.println("2.- Read Csv");
+        System.out.println("1.- Insert Json");
+        System.out.println("2.- Read Json");
         System.out.println("3._ Exit\n");
         System.out.println("Select an option : ");
         selectedOption = scanner.nextInt();
@@ -48,7 +54,7 @@ public class Simulator {
         switch(selectedOption){
             case 1:
                 System.out.println("Enter the id: ");
-                kitchenId= scanner.nextInt();
+                dryerId= scanner.nextInt();
                 System.out.println("Enter the color: ");
                 color= scanner.next();
                 System.out.println("Enter the weight(kg): ");
@@ -57,19 +63,20 @@ public class Simulator {
                 material = scanner.next();
                 System.out.println("Enter the knobs: ");
                 knobs= scanner.nextInt();
-                Kitchen kitchen  = new Kitchen();
-                kitchen.setId(kitchenId);
-                kitchen.setColor(color);
-                kitchen.setWeight(weight);
-                kitchen.setMaterial(material);
-                kitchen.setKnobs(knobs);
-                kitchenslist.add(kitchen);
-                String[] data = kitchen.getArray();
-                writer.writeRecord(data);
+                Dryer dryer = new Dryer();
+                dryer.setId(dryerId);
+                dryer.setColor(color);
+                dryer.setWeight(weight);
+                dryer.setMaterial(material);
+                dryer.setKnobs(knobs);
+                dryerslist.add(dryer);
+                jsonDryer = gson.toJson(dryer);
+                writer.write("Dryer" + jsonDryer + "\n");
             break;
             case 2:
-                for (int i=0;i<kitchenslist.size();i++){
-                    System.out.println("Dryer " + (i+1) + kitchenslist.get(i).toString());
+                writer.close();
+                for (int i=0;i<dryerslist.size();i++){
+                    System.out.println("Dryer " + (i+1) + dryerslist.get(i).toString());
                 }
             break;
             case 3:
