@@ -5,6 +5,8 @@
  */
 package ec.edu.espe.farm.view;
 
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 import ec.edu.espe.farm.model.Chicken;
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -28,7 +30,7 @@ public class Simulator {
         boolean isMolting;
         ArrayList<Chicken> chickens = new ArrayList<> (); 
         Chicken chickensArray[] = new Chicken[10];
-        
+        String jsonChicken;
         
         //input to keyboard 
         chickenId=1;
@@ -36,6 +38,8 @@ public class Simulator {
         color="white";
         age = yearCurrentDay-yearBornOn;
         isMolting=true;
+        GsonBuilder gsonBuilder = new GsonBuilder();
+        Gson gson = gsonBuilder.create();
         
         Chicken  chicken = new Chicken(); 
         //System.out.println("chicken object ->" + chicken);
@@ -43,7 +47,7 @@ public class Simulator {
         chicken = new Chicken(chickenId, name, color, age, isMolting); 
         //System.out.println("chicken object ->" + chicken);
         
-        Chicken  chicken2 = new Chicken(2,"maruja","black", age,false); 
+        //Chicken  chicken2 = new Chicken(2,"maruja","black", age,false); 
         //System.out.println("chicken object ->" + chicken2);
         Chicken chicken3 = new Chicken(3, "lupita", "brown", age, false);
         Chicken chicken4 = new Chicken(4, "paula", "white", age, true);
@@ -54,14 +58,14 @@ public class Simulator {
         Chicken chicken9 = new Chicken(9, "carmela", "orange", age, true);
         Chicken chicken10 = new Chicken(10, "nuria", "black", age, true);
         
-        
+       // jsonChicken = "{\"id\:"""+ chicken.getId() +"\"}";};
         //chickens.add(chicken);
         //chickens.add(chicken2);
         
         //System.out.println("chikens ->" + chickens);
         
         chickensArray[0] = chicken;
-        chickensArray[1] = chicken2;
+        //chickensArray[1] = chicken2;
         chickensArray[2] = chicken3;
         chickensArray[3] = chicken4;
         chickensArray[4] = chicken5;
@@ -71,12 +75,20 @@ public class Simulator {
         chickensArray[8] = chicken9;
         chickensArray[9] = chicken10;
         
-        for(int i=0;i<10;i++){
-            System.out.println("chikensArray->" + chickensArray[i]);
-        }
+        //for(int i=0;i<10;i++){
+         //   System.out.println("chikensArray->" + chickensArray[i]);
+        //}
+        //jsonChicken = "{\"id\""+chicken.getId()+"\"}";
+        //System.out.println("jsonString" + jsonChicken);
         
         
+       //serialization 
+       jsonChicken = gson.toJson(chicken);
+       System.out.println("jasonChicken"+jsonChicken);
         
+       Chicken chicken2;
+       chicken2 = gson.fromJson(jsonChicken, Chicken.class);
+       System.out.println("chicken2 -> " + chicken2.getName());
         
     }
 }
