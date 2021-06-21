@@ -41,7 +41,7 @@ public class JsonFile {
         String color;
         int numberOfPages;
         int nElements;
-        String jsonBook;
+        String jsonBook = null;
         GsonBuilder gsonBuilder = new GsonBuilder();
         Gson gson = gsonBuilder.create();
         
@@ -71,11 +71,14 @@ public class JsonFile {
             System.out.println("\nMaterial of Book " + i+1 + ": " + books[i].getMaterial()+"\nEditorial of Book " + i+1 + ": "+books[i].getEditorial()+"\nTitle of Book " + i+1 + ": "+books[i].getTitle()+"\nAutor of Book " + i+1 + ": "+books[i].getAutor()+"\nColor of Book " + i+1 + ": "+books[i].getColor()+"\nNumber of Pages of Book " + i+1 + ": "+books[i].getNumberOfPages());
         }
         
-            
-        
         for(int i = 0; i<nElements; i++){
             jsonBook = gson.toJson(books[i]);
             System.out.println("jsonBook" + i + "->" + jsonBook);
+        }
+        
+        for(int i = 0; i<nElements; i++){
+        books[i] = gson.fromJson(jsonBook, Book.class);        
+        System.out.println("Json Autor Book -> " + books[i].getAutor());    
         }
     }
 
