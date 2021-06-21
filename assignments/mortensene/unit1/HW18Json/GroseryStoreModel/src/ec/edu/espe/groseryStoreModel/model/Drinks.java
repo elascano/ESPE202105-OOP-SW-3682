@@ -24,6 +24,10 @@ public class Drinks {
     public Drinks(Drinks brand, Drinks type, Drinks price, Drinks volume, Drinks amountofproducts) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
+
+    public Drinks(String id, float parseFloat, String color, float parseFloat0, String model, float parseFloat1) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
      @Override
     public String toString() {
         return "Drinks{" + "type=" + getType() + ", brand=" + getBrand() + ", volume=" + getVolume() + ", amountperunit=" + getAmountofproducts() + ", price=" + getPrice() + '}';
