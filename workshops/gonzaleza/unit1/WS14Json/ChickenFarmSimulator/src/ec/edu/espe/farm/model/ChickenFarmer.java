@@ -3,13 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package ec.edu.espe.CellPhoneStore.model;
+package ec.edu.espe.farm.model;
 
 /**
  *
- * @author Cristian Felix InnovaCode ESPE-DCCO
+ * @author Ariel Gonzalez InnovaCode ESPE-DCCO
  */
-public class Profit {
-    private float price;
+public class ChickenFarmer {
     
 }

@@ -7,7 +7,7 @@ package ec.edu.espe.CellPhoneStore.model;
 
 /**
  *
- * @author 59399
+ * @author Cristian Felix InnovaCode ESPE-DCCO
  */
 public class CellPhone {
     
@@ -40,11 +40,11 @@ public class CellPhone {
     
     @Override
     public String toString() {
-        return "CellPhone(" + "ProductId -> " + getId() + " price ->" + 
-                getPrice() + " brand -> " + getBrand()  + " model->" + getModel() + "color" + getColor() ;
+        return "CellPhone(" + "ProductId -> " + getId() + "; price ->" + 
+                getPrice() + "; brand -> " + getBrand()  + "; model-> " + getModel() + "; color-> " + getColor() ;
                 }
     public String [] getArray(){
-        String[] date = {"id -> " + String.valueOf(getId())+ " price ->" +String.valueOf(getPrice())+ " brand -> "+String.valueOf(getBrand()) + " model-> "+String.valueOf(getModel())+ "color -> " + String.valueOf(getColor())};
+        String[] date = {"id -> " + String.valueOf(getId())+ "; price ->" +String.valueOf(getPrice())+ "; brand -> "+String.valueOf(getBrand()) + "; model-> "+String.valueOf(getModel())+ "; color -> " + String.valueOf(getColor())};
      return date;
     }
     
