@@ -9,7 +9,7 @@ import java.util.ArrayList;
 
 /**
  *
- * @author 59399
+ * @author Cristian Felix InnovaCode ESPE-DCCO
  */
 public class Warehouse {
     

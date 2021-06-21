@@ -7,7 +7,7 @@ package ec.edu.espe.CellPhoneStore.model;
 
 /**
  *
- * @author 59399
+ * @author Cristian Felix InnovaCode ESPE-DCCO
  */
 public class Profit {
     private float price;

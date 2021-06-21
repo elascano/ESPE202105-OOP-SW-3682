@@ -24,7 +24,7 @@ import org.json.simple.parser.ParseException;
 
 /**
  *
- * @author 59399
+ * @author Cristian Felix InnovaCode ESPE-DCCO
  */
 public class CellPhoneStore {
 
