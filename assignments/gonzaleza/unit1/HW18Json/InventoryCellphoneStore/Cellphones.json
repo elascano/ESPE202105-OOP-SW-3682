@@ -1,0 +1,26 @@
+[
+  {
+    "price": 342.0,
+    "size": 14.5,
+    "color": "Green",
+    "weight": 16.2,
+    "model": "Poco",
+    "id": "9876"
+  },
+  {
+    "price": 320.25,
+    "size": 15.5,
+    "color": "Electric blue",
+    "weight": 188.0,
+    "model": "Redmi Note 8",
+    "id": "12345"
+  },
+  {
+    "price": 260.25,
+    "size": 15.8,
+    "color": "Black",
+    "weight": 190.1,
+    "model": "Redmi Note 7",
+    "id": "23456"
+  }
+]
