@@ -10,11 +10,14 @@ package ec.edu.espe.GroceryStoreModel.view;
 import com.csvreader.CsvReader;
 import com.csvreader.CsvWriter;
 import ec.edu.espe.groseryStoreModel.model.*;
+import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
 import java.util.Locale;
@@ -25,9 +28,9 @@ import java.util.Locale;
 public class SystemDisplay {
     
     
-     public static void main(String [] args){
+     public static void main(String [] args) throws IOException{
          
-         
+        
         String type;
         String brand;
         float volume;
@@ -68,7 +71,8 @@ public class SystemDisplay {
         
           }  
         System.out.println("drinksArray -> " + drinksArray);
-    
+      ExportCSV (drinkss);
+      ReadCvs();
 }
     public static void ExportCSV(List<Drinks> drinkss){
         String fileOutput = "Drinks.cvs"; 
@@ -112,39 +116,43 @@ public class SystemDisplay {
        
     }
    
-    public static void ImportCSV(){
-        try{
-            List<Drinks> drinks = new ArrayList<Drinks>();
-            CsvReader readDrinks = new CsvReader("Drinks.csv");
-            readDrinks.readHeaders();
-           
-            while(readDrinks.readRecord()){
-                Drinks brand = drinks.get(0);
-                Drinks type = drinks.get(1);
-                Drinks price = drinks.get(2);
-                Drinks volume= drinks.get(3);
-                Drinks amountofproducts = drinks.get(4);
-                
-               
-                drinks.add(new Drinks(brand, type,price,volume,
-                        amountofproducts));//Information
-               
-            }
-           
-            readDrinks.close(); //Close
-           
-            for(Drinks drinkss : drinks){
-                System.out.println(drinkss.getBrand() + " , " +
-                        drinkss.getType() + " , " );
-                       
-            }
-           
-        }catch(FileNotFoundException e){
-            e.printStackTrace();
-           
-        }catch(IOException e){
-            e.printStackTrace();
-        }
-    }
+ 
+    public static final String SEPARADOR = ",";
+static public void ReadCvs(){
+
+ BufferedReader bufferLectura = null;
+ try {
+  // Abrir el .csv en buffer de lectura
+  bufferLectura = new BufferedReader(new FileReader("Drinks.cvs"));
+  
+  // Leer una linea del archivo
+  String linea = bufferLectura.readLine();
+  
+  while (linea != null) {
+   // Sepapar la linea leída con el separador definido previamente
+   String[] campos = linea.split(SEPARADOR); 
+   
+   System.out.println(Arrays.toString(campos));
+   
+   // Volver a leer otra línea del fichero
+   linea = bufferLectura.readLine();
+  }
+ } 
+ catch (IOException e) {
+  e.printStackTrace();
+ }
+ finally {
+  // Cierro el buffer de lectura
+  if (bufferLectura != null) {
+   try {
+    bufferLectura.close();
+   } 
+   catch (IOException e) {
+    e.printStackTrace();
+   }
+  }
+ }
 }
+}
+ 
   

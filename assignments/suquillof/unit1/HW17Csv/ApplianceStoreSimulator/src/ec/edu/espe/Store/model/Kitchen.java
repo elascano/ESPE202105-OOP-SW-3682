@@ -12,7 +12,6 @@ package ec.edu.espe.Store.model;
 public class Kitchen {
     
     private int id;
-    private int size;
     private String color;
     private float weight;
     private String material;
@@ -20,34 +19,31 @@ public class Kitchen {
 
     @Override
     public String toString() {
-        return "Kitchen{" + "id=" + id + ", size=" + size + ", color=" + color + ", weight=" + weight + ", material=" + material + ", knobs=" + knobs + '}';
+        return "Kitchen{" + "id=" + id + ", color=" + color + ", weight=" + weight + ", material=" + material + ", knobs=" + knobs + '}';
     }
-    
-    public String getArray(){
+
+    public String[] getArray(){
         
-        String data = ("\n"+ " KitchenId-> " + id + " Size-> " + size + " Color-> " +color+ " Weight-> " +weight+ " Material-> " + material+ " Knobs-> " +knobs);
+        String[] data = {String.valueOf(id), color, String.valueOf(weight), material,String.valueOf(knobs)};
         return data;
     }
     
-    public Kitchen(int id, int size, String color, float weight, String material, int knobs) {
+    public Kitchen(int id, String color, float weight, String material, int knobs) {
         this.id = id;
-        this.size = size;
         this.color = color;
         this.weight = weight;
         this.material = material;
         this.knobs = knobs;
     }
-
+    
     public Kitchen(){
         
         id = 0;
-        size = 0;
         color = "";
-        weight = 0F;
+        weight = 0;
         material = "";
-        knobs = 0;   
+        knobs = 0;
     }
-    
     /**
      * @return the id
      */
@@ -60,20 +56,6 @@ public class Kitchen {
      */
     public void setId(int id) {
         this.id = id;
-    }
-
-    /**
-     * @return the size
-     */
-    public int getSize() {
-        return size;
-    }
-
-    /**
-     * @param size the size to set
-     */
-    public void setSize(int size) {
-        this.size = size;
     }
 
     /**
@@ -131,5 +113,5 @@ public class Kitchen {
     public void setKnobs(int knobs) {
         this.knobs = knobs;
     }
-    
+
 }
