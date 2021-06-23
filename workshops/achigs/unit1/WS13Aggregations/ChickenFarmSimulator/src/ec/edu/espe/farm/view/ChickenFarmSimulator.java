@@ -22,23 +22,27 @@ public class ChickenFarmSimulator {
         int chickenId;
         String name;
         String color;
-        Date date = new Date();
+        Date age = new Date();
+        Date bornOn;
         boolean isMolting;
+        String jsonChicken;
+        int eggCounter;
         ArrayList<Chicken> chickens = new ArrayList<>();
         Chicken chickensArray[] = new Chicken[5];
         
         
         //Input by Keyboard
-        chickenId = 1;
+        chickenId = 0;
         name="Lucy";
         color="white";
+        age = new Date();
         isMolting = true;
-        
+        eggCounter = 0;
         
         Chicken chicken = new Chicken();
         System.out.println("chicken object ->" + chicken);
         
-        chicken = new Chicken(chickenId, name, color, date, isMolting);
+        chicken = new Chicken(chickenId, name, color, age, isMolting);
         System.out.println("chicken object ->" + chicken);
         
         Chicken chicken2 = new Chicken(2, "Maruja", "black", new Date(), false);
@@ -50,6 +54,6 @@ public class ChickenFarmSimulator {
         
         chickensArray[0] = chicken;
         System.out.println("chickensArray -> " + chickensArray[0]);
+        
     }
-    
 }
