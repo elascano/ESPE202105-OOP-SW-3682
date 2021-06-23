@@ -1,0 +1,20 @@
+Brand,Type,Price,Volume,amountofproducts
+3.0,1.0,CocaCola,Soda
+1.0,1.0,Del Valle,Juice
+
+price:5
+brand:6
+type:7
+volume:8
+price:Coca cola
+brand:3
+type:5
+volume:6
+price:3
+brand:4
+type:6
+volume:7
+price:3.00
+brand:Soda Rica
+type:Soda
+volume:3.00 l

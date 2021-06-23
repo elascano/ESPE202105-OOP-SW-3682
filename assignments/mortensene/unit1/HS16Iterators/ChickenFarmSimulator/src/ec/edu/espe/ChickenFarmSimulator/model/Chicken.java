@@ -44,8 +44,6 @@ public class Chicken {
         this.id = 0;
         this.name = "no name";
         this.color = "no color";
-        this.age =  Calendar.getInstance();
-        this.bornOn= GregorianCalendar();
         this.isMolting = false;
     }
 
