@@ -47,9 +47,7 @@ public class Simulator {
         
         blendersArray[0] = blender;
         
-        for (int i = 0; i < blendersArray.length; i++) {
-			System.out.print("BlendersArray -> " + blendersArray[i] + "\n");
-		}
+        
 						
 		    
         
