@@ -13,7 +13,7 @@ public class Blender {
     private int velocity;
     private int ability;
     private float price;
-   private int serialnumber;
+    private int serialnumber;
 
     public Blender(){
         this.serialnumber = 0;
