@@ -2,7 +2,7 @@
 
 <ClassDiagram name="BookStore2">
   <ClassDiagramComponents>
-    <Class name="BookStore20" package="bookstore2.pkg0" visibility="public" xPosition="20.0" yPosition="20.0">
+    <Class name="BookStore" package="bookstore" visibility="public" xPosition="20.0" yPosition="20.0">
       <Fields/>
       <Constructors/>
       <Methods>
@@ -26,7 +26,7 @@
         <Method name="beSold" returnType="void" visibility="public"/>
       </Methods>
     </Class>
-    <Class name="calculator" package="ec.edu.espe.theorical.model" visibility="public" xPosition="546.0" yPosition="20.0">
+    <Class name="calculator" package="ec.edu.espe.theorical.model" visibility="public" xPosition="620.0" yPosition="20.0">
       <Fields>
         <Field name="model" type="String" visibility="private"/>
         <Field name="material" type="String" visibility="private"/>
@@ -38,7 +38,7 @@
         <Method name="beSold" returnType="void" visibility="public"/>
       </Methods>
     </Class>
-    <Class name="Client" package="ec.edu.espe.theorical.model" visibility="public" xPosition="922.0" yPosition="20.0">
+    <Class name="Client" package="ec.edu.espe.theorical.model" visibility="public" xPosition="920.0" yPosition="20.0">
       <Fields>
         <Field name="name" type="String" visibility="package"/>
         <Field name="age" type="Date" visibility="package"/>
@@ -52,7 +52,7 @@
         <Method name="m" returnType="Product" visibility="public"/>
       </Methods>
     </Class>
-    <Class name="ColorPencil" package="ec.edu.espe.theorical.model" visibility="public" xPosition="726.0" yPosition="20.0">
+    <Class name="ColorPencil" package="ec.edu.espe.theorical.model" visibility="public" xPosition="1220.0" yPosition="20.0">
       <Fields>
         <Field name="material" type="String" visibility="private"/>
         <Field name="quiality" type="String" visibility="private"/>
@@ -65,7 +65,7 @@
         <Method name="beSold" returnType="void" visibility="public"/>
       </Methods>
     </Class>
-    <Class name="Employee" package="ec.edu.espe.theorical.model" visibility="public" xPosition="1234.0" yPosition="20.0">
+    <Class name="Employee" package="ec.edu.espe.theorical.model" visibility="public" xPosition="1520.0" yPosition="20.0">
       <Fields>
         <Field name="name" type="String" visibility="package"/>
         <Field name="age" type="Date" visibility="package"/>
@@ -73,14 +73,14 @@
       </Fields>
       <Constructors/>
       <Methods>
-        <Method name="m" returnType="Product" visibility="public"/>
+        <Method name="n" returnType="Product" visibility="public"/>
+        <Method name="m" returnType="Invoice" visibility="public"/>
         <Method name="Client" returnType="int" visibility="public">
           <Argument type="Client" name="client"/>
         </Method>
-        <Method name="m" returnType="Invoice" visibility="public"/>
       </Methods>
     </Class>
-    <Class name="Invoice" package="ec.edu.espe.theorical.model" visibility="public" xPosition="1203.0" yPosition="473.0">
+    <Class name="Invoice" package="ec.edu.espe.theorical.model" visibility="public" xPosition="1820.0" yPosition="20.0">
       <Fields>
         <Field name="mandatory" type="boolean" visibility="package"/>
       </Fields>
@@ -92,7 +92,7 @@
         <Method name="cancel" returnType="void" visibility="public"/>
       </Methods>
     </Class>
-    <Class name="Notebook" package="ec.edu.espe.theorical.model" visibility="public" xPosition="969.0" yPosition="496.0">
+    <Class name="Notebook" package="ec.edu.espe.theorical.model" visibility="public" xPosition="2120.0" yPosition="20.0">
       <Fields>
         <Field name="material" type="String" visibility="private"/>
         <Field name="type" type="String" visibility="private"/>
@@ -104,7 +104,7 @@
         <Method name="beSold" returnType="void" visibility="public"/>
       </Methods>
     </Class>
-    <Class name="Pen" package="ec.edu.espe.theorical.model" visibility="public" xPosition="320.0" yPosition="473.0">
+    <Class name="Pen" package="ec.edu.espe.theorical.model" visibility="public" xPosition="20.0" yPosition="420.0">
       <Fields>
         <Field name="material" type="String" visibility="private"/>
         <Field name="quiality" type="String" visibility="private"/>
@@ -118,7 +118,7 @@
         <Method name="beSold" returnType="void" visibility="public"/>
       </Methods>
     </Class>
-    <Class name="Pensil" package="ec.edu.espe.theorical.model" visibility="public" xPosition="320.0" yPosition="280.0">
+    <Class name="Pensil" package="ec.edu.espe.theorical.model" visibility="public" xPosition="320.0" yPosition="420.0">
       <Fields>
         <Field name="material" type="String" visibility="private"/>
         <Field name="color" type="String" visibility="private"/>
@@ -147,16 +147,16 @@
     </Class>
   </ClassDiagramComponents>
   <ClassDiagramRelations>
-    <UseRelation source="ec.edu.espe.theorical.model.Client" target="ec.edu.espe.theorical.model.Product" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <HasRelation name="notebooks" source="ec.edu.espe.theorical.model.Product" target="ec.edu.espe.theorical.model.Notebook" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;Notebook&gt;"/>
-    <UseRelation source="ec.edu.espe.theorical.model.Invoice" target="ec.edu.espe.theorical.model.Employee" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <UseRelation source="ec.edu.espe.theorical.model.Employee" target="ec.edu.espe.theorical.model.Client" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <HasRelation name="colorspencil" source="ec.edu.espe.theorical.model.Product" target="ec.edu.espe.theorical.model.ColorPencil" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;ColorPencil&gt;"/>
-    <HasRelation name="books" source="ec.edu.espe.theorical.model.Product" target="ec.edu.espe.theorical.model.Book" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;Book&gt;"/>
-    <UseRelation source="ec.edu.espe.theorical.model.Employee" target="ec.edu.espe.theorical.model.Invoice" sourceCardinality="1..1" targetCardinality="1..1"/>
-    <HasRelation name="calcularos" source="ec.edu.espe.theorical.model.Product" target="ec.edu.espe.theorical.model.calculator" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;calculator&gt;"/>
-    <HasRelation name="pens" source="ec.edu.espe.theorical.model.Product" target="ec.edu.espe.theorical.model.Pen" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;Pen&gt;"/>
-    <HasRelation name="pensils" source="ec.edu.espe.theorical.model.Product" target="ec.edu.espe.theorical.model.Pensil" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;Pensil&gt;"/>
     <UseRelation source="ec.edu.espe.theorical.model.Employee" target="ec.edu.espe.theorical.model.Product" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="books" source="ec.edu.espe.theorical.model.Product" target="ec.edu.espe.theorical.model.Book" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;Book&gt;"/>
+    <HasRelation name="notebooks" source="ec.edu.espe.theorical.model.Product" target="ec.edu.espe.theorical.model.Notebook" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;Notebook&gt;"/>
+    <HasRelation name="colorspencil" source="ec.edu.espe.theorical.model.Product" target="ec.edu.espe.theorical.model.ColorPencil" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;ColorPencil&gt;"/>
+    <HasRelation name="calcularos" source="ec.edu.espe.theorical.model.Product" target="ec.edu.espe.theorical.model.calculator" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;calculator&gt;"/>
+    <UseRelation source="ec.edu.espe.theorical.model.Employee" target="ec.edu.espe.theorical.model.Client" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="ec.edu.espe.theorical.model.Invoice" target="ec.edu.espe.theorical.model.Employee" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="pens" source="ec.edu.espe.theorical.model.Product" target="ec.edu.espe.theorical.model.Pen" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;Pen&gt;"/>
+    <UseRelation source="ec.edu.espe.theorical.model.Employee" target="ec.edu.espe.theorical.model.Invoice" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="ec.edu.espe.theorical.model.Client" target="ec.edu.espe.theorical.model.Product" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="pensils" source="ec.edu.espe.theorical.model.Product" target="ec.edu.espe.theorical.model.Pensil" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;Pensil&gt;"/>
   </ClassDiagramRelations>
 </ClassDiagram>

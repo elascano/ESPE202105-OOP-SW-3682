@@ -3,13 +3,13 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package bookstore2.pkg0;
+package bookstore;
 
 /**
  *
  * @author Steven Achig FutureProgrammers ESPE-DCCO
  */
-public class BookStore20 {
+public class BookStore {
 
     /**
      * @param args the command line arguments
