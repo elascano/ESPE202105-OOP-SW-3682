@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="ec.edu.espe.cellphonestore.model">
+  <ClassDiagramComponents>
+    <Class name="PowerBank" package="ec.edu.espe.cellphonestore.model" visibility="public" xPosition="102.0" yPosition="125.0">
+      <Fields>
+        <Field name="id" type="int" visibility="private"/>
+        <Field name="price" type="float" visibility="private"/>
+        <Field name="capacity" type="String" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="getId" returnType="int" visibility="public"/>
+        <Method name="setId" returnType="void" visibility="public">
+          <Argument type="int" name="id"/>
+        </Method>
+        <Method name="getPrice" returnType="float" visibility="public"/>
+        <Method name="setPrice" returnType="void" visibility="public">
+          <Argument type="float" name="price"/>
+        </Method>
+        <Method name="getCapacity" returnType="String" visibility="public"/>
+        <Method name="setCapacity" returnType="void" visibility="public">
+          <Argument type="String" name="capacity"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="ScreenProtector" package="ec.edu.espe.cellphonestore.model" visibility="public" xPosition="341.0" yPosition="125.0">
+      <Fields>
+        <Field name="id" type="int" visibility="private"/>
+        <Field name="price" type="float" visibility="private"/>
+        <Field name="type" type="String" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="getId" returnType="int" visibility="public"/>
+        <Method name="setId" returnType="void" visibility="public">
+          <Argument type="int" name="id"/>
+        </Method>
+        <Method name="getPrice" returnType="float" visibility="public"/>
+        <Method name="setPrice" returnType="void" visibility="public">
+          <Argument type="float" name="price"/>
+        </Method>
+        <Method name="getType" returnType="String" visibility="public"/>
+        <Method name="setType" returnType="void" visibility="public">
+          <Argument type="String" name="type"/>
+        </Method>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations/>
+</ClassDiagram>
