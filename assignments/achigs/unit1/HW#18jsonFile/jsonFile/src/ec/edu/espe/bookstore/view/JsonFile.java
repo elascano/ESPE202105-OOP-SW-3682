@@ -14,7 +14,7 @@ import javax.swing.JOptionPane;
 
 /**
  *
- * @author steve
+ * @author Steven Achig Future Programmers ESPE-DCCO
  */
 public class JsonFile {
 
@@ -49,7 +49,7 @@ public class JsonFile {
         Book books[] = new Book[nElements];
 
         for(int i = 0; i < nElements; i++){
-            System.out.println("\nEnter the data of the Book\n"+ i+1);
+            System.out.println("\nEnter the data of the Book "+ (i+1) + "\n");
             System.out.println("Enter the material of Book: ");
             material = read.nextLine();
             System.out.println("Enter the editorial of Book: ");
@@ -67,13 +67,13 @@ public class JsonFile {
         }
         
         for(int i = 0; i<nElements; i++){
-            System.out.println("\nThe data of Book " + i+1 + " are: ");
-            System.out.println("\nMaterial of Book " + i+1 + ": " + books[i].getMaterial()+"\nEditorial of Book " + i+1 + ": "+books[i].getEditorial()+"\nTitle of Book " + i+1 + ": "+books[i].getTitle()+"\nAutor of Book " + i+1 + ": "+books[i].getAutor()+"\nColor of Book " + i+1 + ": "+books[i].getColor()+"\nNumber of Pages of Book " + i+1 + ": "+books[i].getNumberOfPages());
+            System.out.println("\n-All books-");
+            System.out.println("\nMaterial of Book " + (i+1) + ": " + books[i].getMaterial()+"\nEditorial of Book " + (i+1) + ": "+books[i].getEditorial()+"\nTitle of Book " + (i+1) + ": "+books[i].getTitle()+"\nAutor of Book " + (i+1) + ": "+books[i].getAutor()+"\nColor of Book " + (i+1) + ": "+books[i].getColor()+"\nNumber of Pages of Book " + (i+1) + ": "+books[i].getNumberOfPages());
         }
         
         for(int i = 0; i<nElements; i++){
             jsonBook = gson.toJson(books[i]);
-            System.out.println("jsonBook" + i + "->" + jsonBook);
+            System.out.println("jsonBook" + (i+1) + "->" + jsonBook);
         }
         
         for(int i = 0; i<nElements; i++){
