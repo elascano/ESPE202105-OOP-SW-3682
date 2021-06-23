@@ -62,7 +62,7 @@ public class ChickenFarmSimulator {
         yearAge = Math.abs(yearBorn - yearActual);
         dayAge = Math.abs(dayBorn - dayActual);
         
-        System.out.println("chickens -> \n" + chickens);
+        System.out.println("\nchickens -> \n" + chickens + "\n");
         
         chickensArray[0] = chicken;
         System.out.println("chickensArray -> " + chickensArray[0]);
