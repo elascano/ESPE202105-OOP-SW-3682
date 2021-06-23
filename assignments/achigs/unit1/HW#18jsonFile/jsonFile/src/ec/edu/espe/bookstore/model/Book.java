@@ -7,7 +7,7 @@ package ec.edu.espe.bookstore.model;
 
 /**
  *
- * @author steve
+ * @author Steven Achig Future Programmers ESPE-DCCO
  */
 public class Book {
     private String material;

@@ -24,7 +24,7 @@ public class Chicken {
 
     @Override
     public String toString() {
-        return "{, id=" + getId() + ", name=" + getName() + ", color=" + getColor() + ", monthBorn=" + getMonthBorn() + ", yearBorn=" + getYearBorn() + ", dayBorn=" + getDayBorn() + ", isMolting=" + isIsMolting() + '}';
+        return "{, id=" + getId() + "\n" + ", name=" + getName() + "\n" + ", color=" + getColor() +"\n" + ", monthBorn=" + getMonthBorn() +"\n" + ", yearBorn=" + getYearBorn() +"\n" + ", dayBorn=" + getDayBorn() +"\n" + ", isMolting=" + isIsMolting() + '}';
     }
     
     //overload
