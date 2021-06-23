@@ -65,7 +65,9 @@ public class Simulator {
         
         Scanner sc = new Scanner(System.in);
         System.out.println("welcome to the system Appliance Store \n");
-        System.out.println("");        
+        
+        System.out.println("1-> Blender");
+        
         System.out.println("1-> data CSV");
         System.out.println("2-> data JSON");
         selection=sc.nextInt();
@@ -79,6 +81,8 @@ public class Simulator {
             }else{
             if (selection==2){
             readCSV();
+            }else{
+              System.out.println("Incorrect Number");
             }  
             }      
         }else{
@@ -91,9 +95,13 @@ public class Simulator {
                 }else{
             if (selection==2){
                 readJSON();
+            }else{
+               System.out.println("Incorrect Number");
             }
             }
-    }
+    }else{
+            System.out.println("Incorrect Number");
+        }
         }
     }
 
@@ -201,7 +209,7 @@ public class Simulator {
     
         
     }
-    public static void writeJSON() throws IOException{
+    public static void writeJSON() throws IOException, Exception{
         
         int velocity;
         int ability;
@@ -231,26 +239,31 @@ public class Simulator {
         blenders.add(blender);
                
         System.out.println("Blenders -> " + blenders + "\n");
-        
         blendersArray[0] = blender;
-        Gson gson = new GsonBuilder().setPrettyPrinting().create();
+        GsonBuilder gsonBuilder = new GsonBuilder();
+        Gson gson = gsonBuilder.create();
+        String jsonBlender;
+        jsonBlender = gson.toJson(blender);
+        
+        
+        gson = new GsonBuilder().setPrettyPrinting().create();
              try (Writer writer = new FileWriter("Blender.json")) {
                  writer.write(gson.toJson(blenders));
              }
     }
-    public static void readJSON() throws Exception {
-         ArrayList<Blender>blenders=new ArrayList<Blender>();
+    public static void readJSON() throws Exception , ParseException {
+        ArrayList<Blender>blenders=new ArrayList<Blender>();
         JSONParser parser = new JSONParser();
         try {
            
         FileReader reader = new FileReader("Blender.json");
         Object obj = parser.parse(reader);
-        JSONObject JsonObj = (JSONObject)obj;
+        JSONObject jsonObj = (JSONObject)obj;
                        
-            String serialnumber =(String) JsonObj.get("serialnumber");
-            String price =(String) JsonObj.get("price");
-            String velocity =(String) JsonObj.get("velocity");
-            String ability =(String) JsonObj.get("ability");
+            int serialnumber =(int) jsonObj.get("serialnumber");
+            float price =(float) jsonObj.get("price");
+            int velocity =(int) jsonObj.get("velocity");
+            int ability =(int) jsonObj.get("ability");
             
             System.out.println( "SerialNumber: " + serialnumber);
             System.out.println( "Price: " + price);

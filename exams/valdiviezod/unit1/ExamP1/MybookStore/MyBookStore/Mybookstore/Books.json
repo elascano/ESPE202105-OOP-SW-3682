@@ -1,0 +1,7 @@
+{
+    "Usuarios":[
+        {"Title":"Polvo y Ceniza","Author":"Eliécer Cárdenas","Publisher":"Eskeletra","Year":"1979"},
+        {"Title":"Huasipungo","Author":"Jorge Icaza","Publisher":"0987654321","Year":"1934"},
+        {"Title":"A la Costa","Author":"luis","Publisher":"5432167890","Year":"luis@hola.com.mx"}
+    ]
+}
