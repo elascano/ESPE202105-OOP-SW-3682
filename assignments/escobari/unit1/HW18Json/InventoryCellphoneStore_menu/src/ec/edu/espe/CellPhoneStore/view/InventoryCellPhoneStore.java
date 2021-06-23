@@ -236,14 +236,14 @@ public class InventoryCellPhoneStore {
         try{
             FileReader reader = new FileReader("CellPhone.json");
             Object obj = parser.parse(reader);
-            JSONObject jsonObj = (JSONObject)obj;
+            JSONObject JsonObj = (JSONObject)obj;
             
-            String price = (String) jsonObj.get("price");
-            String size = (String) jsonObj.get("size");
-            String color = (String) jsonObj.get("color");
-            String weight = (String) jsonObj.get("weight");
-            String id = (String) jsonObj.get("id");
-            String model = (String) jsonObj.get("model");
+            String price = (String) JsonObj.get("price");
+            String size = (String) JsonObj.get("size");
+            String color = (String) JsonObj.get("color");
+            String weight = (String) JsonObj.get("weight");
+            String id = (String) JsonObj.get("id");
+            String model = (String) JsonObj.get("model");
             
             System.out.println("Price: " + price);
             System.out.println("Size: " + size);
