@@ -30,10 +30,10 @@ public class Simulator {
         ability = 3;
         
         Iron iron = new Iron();
-        System.out.println("Blender object -> " + iron);
+        System.out.println("Iron object -> " + iron);
         
         iron = new Iron(serialnumber,price,velocity,ability);
-        System.out.println("Blender object -> " + iron);
+        System.out.println("Iron object -> " + iron);
     
         Iron iron2 = new Iron(135790,23.4F,4,2);
         Iron iron3 = new Iron(172921,27.9F,7,5);
@@ -42,7 +42,7 @@ public class Simulator {
         irons.add(iron2);
         irons.add(iron3);
         
-        System.out.println("Blenders -> " + irons + "\n");
+        System.out.println("Irons -> " + irons + "\n");
         
         ironsArray[0] = iron;
         

@@ -272,7 +272,6 @@ public static void WriteCsv (){
                  String volume = br.readLine();
                 fw.write( "price:");
                 fw.write( price); 
-                 fw.write(System.getProperty( "line.separator" ));
                 fw.write( "brand:");
                 fw.write( brand); 
                  fw.write(System.getProperty( "line.separator" ));

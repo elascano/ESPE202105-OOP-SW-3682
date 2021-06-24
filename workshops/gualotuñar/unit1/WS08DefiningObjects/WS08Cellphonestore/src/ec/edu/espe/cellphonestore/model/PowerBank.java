@@ -14,6 +14,12 @@ public class PowerBank {
     private float price;
     private String capacity;   
 
+    public PowerBank(int id, float price, String capacity) {
+        this.id = id;
+        this.price = price;
+        this.capacity = capacity;
+    }
+
     /**
      * @return the id
      */
