@@ -12,20 +12,16 @@ import java.util.ArrayList;
  * @author Cristian Felix InnovaCode ESPE-DCCO
  */
 public class Warehouse {
-    
-    private int serialnumber;
 
-   ArrayList <CellPhone> cellPhones =  new  ArrayList <> ();
+    private int id;
+    ArrayList<CellPhone> cellPhones = new ArrayList<>();
 
-   
-  
-   
-   public CellPhone add(CellPhone cellPhones){
-       return new CellPhone();
+    public CellPhone add(CellPhone cellPhones) {
+        return new CellPhone();
     }
 
-   public int remove(int serialnumber){
-       return 0;
-   }
-    
+    public int remove(int serialnumber) {
+        return 0;
+    }
+
 }
