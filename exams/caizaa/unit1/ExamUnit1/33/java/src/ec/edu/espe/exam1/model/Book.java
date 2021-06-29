@@ -94,3 +94,9 @@ public class Book {
 
 
 
+//Rubric
+//- Execution....... 0 pts. (No corre el programa)
+//- Json file.............. 0 pts.( No se crea archivo json, no guarda información)
+//- books list on screen....... 0pts.(No se guarda ningún dato)
+//- Total number of books... 0pts.(No hay datos)
+//- Code quality.......... 2.pts.(falta código  ,se califica por que tiene getter y setter mas constructor)
