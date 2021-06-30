@@ -10,39 +10,31 @@ package ec.edu.espe.books.model;
  * @author Sebastian Solano NullPunters ESPE-DCCO
  */
 public class Books {
-    public class Book {
     private String title;
     private String author;
     private int instances;
     private int rendered;
-
-    // default constructor
-    public Book () {
+    private int borrowed;
+    
+    public Books () {
     }
 
-    // constructor with parameters
-    public Book (String title, String author, int items, int borrowed) {
+    public Books (String title, String author, int items, int borrowed) {
         this.title = title;
-        this.autor = author;
-        this.examples = exemplars;
+        this.author = author;
         this.borrowed = rendered;
     }
 
-    // getters and setters
     public String getAutor () {
         return author;
     }
 
     public void setAutor (String author) {
-        this.autor = author;
+        this.author = author;
     }
 
     public int getExamples () {
         return instances;
-    }
-
-    public void setExamples (int instances) {
-        this.examples = exemplars;
     }
 
     public int getPrestados () {
@@ -61,19 +53,7 @@ public class Books {
         this.title = title;
     }
 
-    // method to borrow a book
-    public boolean loan () {
-        boolean borrowed = true;
-        if (borrowed <items) {
-            rendered ++;
-        } else {
-            borrowed = false;
-        }
-        return borrowed;
-    }
-
-    // method to return a book
-    public boolean return () {
+    public boolean returnq () {
         boolean returned = true;
         if (rendered == 0) {
             returned = false;
@@ -83,10 +63,8 @@ public class Books {
         return returned;
     }
 
-    // overridden toString method to display data from Book class
     @Override
     public String toString () {
-        return "title:" + title + "\ nautor:" + author +
-                  "\ neissues:" + copies + "\ nloaned:" + borrowed;
+        return "title:" + title + " nautor:" + author ;
     }
-}
+    }
