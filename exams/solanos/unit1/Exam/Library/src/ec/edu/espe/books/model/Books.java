@@ -14,16 +14,14 @@ public class Books {
     private String author;
     private int instances;
     private int rendered;
-        private int borrowed;
-    private String autor;
-
+    private int borrowed;
+    
     public Books () {
     }
 
     public Books (String title, String author, int items, int borrowed) {
         this.title = title;
-        this.autor = author;
-        this.examples = exemplars;
+        this.author = author;
         this.borrowed = rendered;
     }
 
@@ -32,15 +30,11 @@ public class Books {
     }
 
     public void setAutor (String author) {
-        this.autor = author;
+        this.author = author;
     }
 
     public int getExamples () {
         return instances;
-    }
-
-    public void setExamples (int instances) {
-        this.instances = exemplars;
     }
 
     public int getPrestados () {
@@ -59,16 +53,6 @@ public class Books {
         this.title = title;
     }
 
-    public boolean loan () {
-        boolean borrowed = true;
-        if (borrowed <items) {
-            rendered ++;
-        } else {
-            borrowed = false;
-        }
-        return borrowed;
-    }
-
     public boolean returnq () {
         boolean returned = true;
         if (rendered == 0) {
@@ -81,7 +65,6 @@ public class Books {
 
     @Override
     public String toString () {
-        return "title:" + title + "\ nautor:" + author +
-                  "\ neissues:" + copies + "\ nloaned:" + borrowed;
+        return "title:" + title + " nautor:" + author ;
     }
     }

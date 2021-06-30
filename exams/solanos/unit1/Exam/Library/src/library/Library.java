@@ -5,7 +5,7 @@
  */
 package library;
 
-import ec.edu.espe.books.model.Books.Book;
+import ec.edu.espe.books.model.Books.book;
 import java.util.Scanner;
 
 
@@ -19,14 +19,13 @@ public class Library {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        public static void main (String [] args) {
         Scanner sc = new Scanner (System.in);
         String title, author;
         int instances;
 
         
-        Book book1 = new Book ("Don Quixote", "Cervantes", 1, 0);
-        Book book2 = new Book ();
+        Book book1 = new book ("Don Quixote", "Cervantes", 1, 0);
+        Book book2 = new book ();
 
         System.out.print ("Enter title:");
         title = sc.nextLine ();
@@ -37,13 +36,11 @@ public class Library {
 
         book2.setTitulo (title);
         book2.setAutor (author);
-        book2.setEjemplares (copies);
 
         System.out.println ("Book 1:");
         System.out.println ("Title:" + book1.getTitle ());
         System.out.println ("Author:" + book1.getAutor ());
         System.out.println ("Items:" + book1.getExamples ());
-        System.out.println ("Borrowed:" + book1.get Borrowed ());
         System.out.println ();
 
         if (book1.loan ()) {
@@ -74,14 +71,12 @@ public class Library {
         System.out.println ("Title:" + book1.getTitle ());
         System.out.println ("Author:" + book1.getAutor ());
         System.out.println ("Items:" + book1.getExamples ());
-        System.out.println ("Borrowed:" + book1.get Borrowed ());
         System.out.println ();
 
         System.out.println ("Book 2:");
         System.out.println ("Title:" + book2.getTitle ());
         System.out.println ("Author:" + book2.getAutor ());
         System.out.println ("Items:" + book2.getExamples ());
-        System.out.println ("Borrowed:" + book2.get Borrowed ());
         System.out.println ();
     }
-        
+}  
