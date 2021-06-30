@@ -308,6 +308,14 @@ hs_err_pid*
 >>>>>>> b4d3f203400351f4191915cbb1c6bcb842ff4841
 >>>>>>> ca08fac46b6c2521bbdf337089bafe657f765955
 <<<<<<< HEAD
+/exams/solanos/unit1/Exam/Library/build/
+/workshops/solanos/unit2/WS18Libreries/Taxes/nbproject/private/
+/workshops/solanos/unit2/WS18Libreries/Taxes/build/
+/workshops/solanos/unit2/WS18Libreries/TaxLibrary/nbproject/private/
+/workshops/solanos/unit2/WS18Libreries/TaxLibrary/dist/
+/workshops/solanos/unit2/WS18Libreries/TaxLibrary/build/
+=======
+<<<<<<< HEAD
 /assignments/portillad/unit2/HW19Library/ApplianceStoreSimulator/build/
 /assignments/portillad/unit2/HW19Library/ApplianceStoreSimulator/dist/
 /assignments/portillad/unit2/HW19Library/ApplianceStoreSimulator/nbproject/private/
@@ -371,3 +379,4 @@ hs_err_pid*
 >>>>>>> 4cedc03d06a3d868d85130a948abd5ea1a806c0b
 >>>>>>> 46df04030a8de30e2f8de80f163babc81e53607d
 >>>>>>> 47a1e44c8a0ec27a90553755b36c6662f33312b8
+>>>>>>> 88a37c839dd181f72b70ccb3fb7b07734e6f8f7b
