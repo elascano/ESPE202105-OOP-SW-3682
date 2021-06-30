@@ -5,9 +5,8 @@
  */
 package ec.edu.espe.appliancestore.view;
 
-import appliancestoresimulator.DateCSV;
-import appliancestoresimulator.ReadCSV;
-import ec.edu.espe.appliancestore.model.Blender;
+import ec.edu.espe.appliancestore.controller.DateCSV;
+import ec.edu.espe.appliancestore.controller.ReadCSV;
 import ec.edu.espe.json.Descuent;
 import java.util.Scanner;
 

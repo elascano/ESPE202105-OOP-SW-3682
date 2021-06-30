@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package appliancestoresimulator;
+package ec.edu.espe.appliancestore.controller;
 
 import com.csvreader.CsvWriter;
 import ec.edu.espe.appliancestore.model.Blender;
