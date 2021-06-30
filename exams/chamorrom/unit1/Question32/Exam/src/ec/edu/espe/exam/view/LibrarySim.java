@@ -45,7 +45,7 @@ public class LibrarySim {
 
         switch (selectOption) {
             case 1:
-                System.out.println("Text Files by Myckel Chamorro");
+                System.out.println("Text Files by Myckel Chamorro"); // good
                 System.out.println("Insert Title-->");
                 title = keyboardinput.next();
                 System.out.println("Insert author-->");
@@ -112,3 +112,5 @@ public class LibrarySim {
     }
     }
     
+// El codigo no avanza despues de seleccionar las opciones
+// El codigo no avanza despues de poner el año

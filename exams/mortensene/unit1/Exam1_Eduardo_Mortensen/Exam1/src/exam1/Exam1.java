@@ -25,6 +25,7 @@ import java.io.OutputStream;
 import java.io.Writer;
 import java.lang.ProcessBuilder.Redirect.Type;
 import java.util.Collection;
+import java.util.InputMismatchException;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Properties;
@@ -48,7 +49,7 @@ public class Exam1 {
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) throws Exception {
+    public static void main(String[] args) throws ParseException, IOException, Exception {
         String author;
         String title;
         String publisher;
