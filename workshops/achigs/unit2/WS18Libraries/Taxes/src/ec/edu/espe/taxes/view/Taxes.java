@@ -25,7 +25,6 @@ public class Taxes {
         
         iva = Tax.computeIva(amount);
         
-        
         System.out.println("The iva of ->" + amount + "<- is: " + iva);
         
         total = Tax.computeTotalPrice(amount);
