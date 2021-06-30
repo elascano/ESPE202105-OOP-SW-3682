@@ -11,6 +11,12 @@ import javax.swing.table.DefaultTableModel;
  * @author Isaac Escobar InnovaCode ESPE-DCCO
  */
 
+
+/*some variables names are not descriptive enough
+    *use graphical interface
+    *variables are in spanish
+*/  
+
 public class Sistema extends javax.swing.JFrame {
     private DefaultTableModel  modelo1, modelo2;
 
