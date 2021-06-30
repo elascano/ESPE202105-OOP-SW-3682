@@ -2,6 +2,15 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+<<<<<<< HEAD
         <group/>
+=======
+        <group>
+            <file>file:/D:/Users/Familia%20Solano/Desktop/Sebas/Prog.Objetos/Functions3682/Workshops/ESPE202105-OOP-SW-3682/assignments/portillad/unit2/HW21Library/ApplianceStoreSimulator/src/ec/edu/espe/appliancestore/controller/DateCSV.java</file>
+            <file>file:/D:/Users/Familia%20Solano/Desktop/Sebas/Prog.Objetos/Functions3682/Workshops/ESPE202105-OOP-SW-3682/assignments/portillad/unit2/HW21Library/ApplianceStoreSimulator/src/ec/edu/espe/appliancestore/controller/DateJSON.java</file>
+            <file>file:/D:/Users/Familia%20Solano/Desktop/Sebas/Prog.Objetos/Functions3682/Workshops/ESPE202105-OOP-SW-3682/assignments/portillad/unit2/HW21Library/ApplianceStoreSimulator/src/ec/edu/espe/appliancestore/controller/ReadCSV.java</file>
+            <file>file:/D:/Users/Familia%20Solano/Desktop/Sebas/Prog.Objetos/Functions3682/Workshops/ESPE202105-OOP-SW-3682/assignments/portillad/unit2/HW21Library/ApplianceStoreSimulator/src/ec/edu/espe/appliancestore/view/Simulator.java</file>
+        </group>
+>>>>>>> 576e8fc08e6a3bf0021a7b1452cef6d05196fc8f
     </open-files>
 </project-private>
