@@ -11,7 +11,6 @@ import java.io.IOException;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
-import org.json.simple.parser.ParseException;
 
 /**
  *
@@ -33,9 +32,9 @@ public class Mybookstore {
             System.out.println("");
             
             for(int i = 0 ; i < array.size() ; i++) {
-                JSONObject jsonObject1 = (JSONObject) array.get(i);
+                JSONObject jsonObject1 = (JSONObject) array.get(i); //does not exist a class Book for add the data in this class
                 
-                System.out.println("DATOS DEL USUARIO: " + i);
+                System.out.println("DATOS DEL USUARIO: " + i); // varibles not have a name apropiate
                 System.out.println("Title: " + jsonObject1.get("Title"));
                 System.out.println("Author: " + jsonObject1.get("Author"));
                 System.out.println("Publisher: " + jsonObject1.get("Publisher"));
