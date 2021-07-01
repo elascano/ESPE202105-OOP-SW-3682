@@ -1,0 +1,57 @@
+
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.PrintWriter;
+
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+/**
+ *
+ * @author Steven Achig Future Programmers ESPE-DCCO
+ */
+public class ArchiveLibrary {
+    /**
+     * @param args the command line arguments
+     */
+    
+    public static void writeArchive(String pRoute, String pContent){
+            FileWriter file = null;
+            PrintWriter printWriter = null;
+        try {
+            file = new FileWriter(pRoute);
+            printWriter = new PrintWriter(file);
+            printWriter.write(pContent);
+            
+            printWriter.close();
+            file.close();
+        } catch (Exception except) {
+            System.out.println("The error is: " + except.getMessage());
+        }
+    }
+    public static void readArchive(String pRoute){
+        String content = "";
+        File archive = null;
+        FileReader fileReader = null;
+        BufferedReader bufferedReader = null;
+        
+        try {
+            archive = new File(pRoute);
+            fileReader = new FileReader(archive);
+            bufferedReader = new BufferedReader(fileReader);
+            String line;
+            
+            while((line=bufferedReader.readLine())!=null){
+                content.concat(line + "\n");
+                System.out.println(line);
+            }
+        } catch (Exception except) {
+            System.out.println("the error is: "+ except.getMessage());
+        }
+    }
+}
