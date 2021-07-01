@@ -1,16 +1,4 @@
-IncomeTax 
-Annual Amount -> 24000.0
-Monthly Amount -> 2000.0
-Payable Amount -> 1324.7
-IncomeTax 
-Annual Amount -> 38400.0
-Monthly Amount -> 3200.0
-Payable Amount -> 3484.7
-IncomeTax 
-Annual Amount -> 29784.0
-Monthly Amount -> 2482.0
-Payable Amount -> 2192.3
-IncomeTax 
-Annual Amount -> 180000.0
-Monthly Amount -> 15000.0
-Payable Amount -> 45365.2
+Income tax =>{"monthly":2000.0,"annual":24000.0,"amountPayable":1324.7}
+Income tax =>{"monthly":2422.0,"annual":29064.0,"amountPayable":2084.3}
+Income tax =>{"monthly":4001.0,"annual":48012.0,"amountPayable":5183.6}
+Income tax =>{"monthly":200.0,"annual":2400.0,"amountPayable":2400.0}

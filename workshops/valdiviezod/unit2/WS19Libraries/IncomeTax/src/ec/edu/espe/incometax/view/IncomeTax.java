@@ -8,10 +8,14 @@ package ec.edu.espe.incometax.view;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+import ec.edu.espe.incometax.model.Amount;
 import ec.edu.espe.utils.MyFileLibrary;
 import ec.edu.espe.utils.MyIncomeTax;
+import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileReader;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 /**
@@ -29,32 +33,35 @@ public class IncomeTax {
         
         float annualAmount;
         float monthlyAmount;
-        float amountpayable;
+        float amountPayable;
         File fileJson;
-        String jsonMonthlyAmount;
-        String jsonAnnualAmount;
-        String amountPayable;
+        String jsonAmount;
+        ArrayList<Amount> amounts;
         
+        amounts = new ArrayList<>();
         GsonBuilder gsonBuilder = new GsonBuilder();
         Gson gson = gsonBuilder.create();
         fileJson = new File("IncomeTax.json");
         
-        Scanner keyboardinput = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
         System.out.println("=== Income Tax ===");
         System.out.println("Enter the monthly ammount: ");
-        monthlyAmount = keyboardinput.nextFloat();
+        monthlyAmount = scanner.nextFloat();
         
-        annualAmount = monthlyAmount * 12.0F;
+        Amount amount = new Amount();
+        amount.setMonthly(monthlyAmount);
+        annualAmount = amount.calculateAnnual(monthlyAmount);
+        amount.setAnnual(annualAmount);
+        amountPayable = MyIncomeTax.calculeIncometax(annualAmount);
+        amount.setAmountPayable(amountPayable);
+        amounts.add(amount);
         
-        jsonAnnualAmount = gson.toJson(annualAmount);
-        MyFileLibrary.write( "IncomeTax \n" + "Annual Amount -> " + jsonAnnualAmount, fileJson);
-        jsonMonthlyAmount = gson.toJson(monthlyAmount);
-        MyFileLibrary.write("Monthly Amount -> " + jsonMonthlyAmount, fileJson);
-        amountpayable = MyIncomeTax.calculeIncometax(annualAmount);
-        amountPayable = gson.toJson(amountpayable);
-        MyFileLibrary.write("Payable Amount -> " + amountPayable, fileJson);
-        
+        jsonAmount = gson.toJson(amount);
+        MyFileLibrary.write("Income tax =>" + jsonAmount, fileJson);
         System.out.println("The annual ammount for ->" + monthlyAmount + "<- is : " + annualAmount);
-        System.out.println("The amount to pay for the income tax is: " + amountpayable);
+        System.out.println("The amount to pay for the income tax is: " + amountPayable + "\n");
+        System.out.println("File content ↓");
+        MyFileLibrary.read(fileJson);
+      
     }  
 }
