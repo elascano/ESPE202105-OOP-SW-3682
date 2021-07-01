@@ -21,7 +21,6 @@ import java.util.Scanner;
 /**
  *
  * @author Nicolas Suquillo NullPointers ESPE-DCCO
- * @author Darwin Valdiviezo NullPointers ESPE-DCCO
  */
 public class IncomeTax {
 
