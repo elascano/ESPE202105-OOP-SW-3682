@@ -16,13 +16,13 @@ import java.io.PrintWriter;
  * @author Steven Achig Future Programmers ESPE-DCCO
  */
 public class Archive {
-    public static void writeArchive(String route, String classProject){
+    public static void writeArchive(String route, String tax){
             FileWriter file = null;
             PrintWriter printWriter = null;
         try {
             file = new FileWriter(route);
             printWriter = new PrintWriter(file);
-            printWriter.write(classProject);
+            printWriter.write(tax);
             
             printWriter.close();
             file.close();
