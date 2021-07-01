@@ -5,6 +5,7 @@
  */
 package incometax;
 
+import ec.edu.espe.utils.Archive;
 import java.util.Scanner;
 import utils.Tax;
 
@@ -18,7 +19,9 @@ public class IncomeTax {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-                Scanner scan = new Scanner(System.in);
+        String route = "C:\\Users\\steve\\Desktop\\BookstoreProyect\\06-Code\\Bookstore\\file\\jsonFile.txt";
+        
+        Scanner scan = new Scanner(System.in);
         int option;
         int op;
         float salary;
@@ -40,6 +43,7 @@ public class IncomeTax {
                 incomeTax = Tax.computeIncomeTax(anualSalary, expensive);
                 System.out.println("Your anual salary is: " + anualSalary 
                             + " your total income Tax is: " + incomeTax);
+                Archive.writeArchive(route, );
                 break;
             case 0:
                 System.out.println("thanks");
