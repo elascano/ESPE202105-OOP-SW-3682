@@ -21,7 +21,6 @@ public class IncomeTax {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        String route = "C:\\Users\\steve\\Desktop\\ESPE202105-OOP-SW-3682\\workshops\\achigs\\unit2\\WS19Libraries\\IncomeTax";
         String jsonTax;
         GsonBuilder gsonBuilder = new GsonBuilder();
         Gson gson = gsonBuilder.create();
@@ -48,7 +47,7 @@ public class IncomeTax {
                 String printTax= "your salary is: "+ anualSalary + " your income tax is: " +incomeTax;
                 System.out.println(printTax);
                 jsonTax = gson.toJson(printTax);
-                Archive.writeArchive(route, printTax);
+                Archive.writeArchive(printTax);
                 break;
             case 0:
                 System.out.println("thanks");
