@@ -23,6 +23,7 @@ public class Chicken {
         return "Chicken{" + "id=" + id + ", name=" + name + ", color=" + color + ", age=" + age + ", isMolting=" + isMolting + '}';
     }
 
+    //overload
     public Chicken(int id, String name, String color, Date age, boolean isMolting) {
         this.id = id;
         this.name = name;
