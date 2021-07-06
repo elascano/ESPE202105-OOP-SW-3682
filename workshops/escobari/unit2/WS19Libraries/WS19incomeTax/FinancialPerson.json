@@ -1,3 +1,3 @@
 [{"FinancialPerson":{"anualSalary":13020.0,"incomeTax":90.4,"name":"Marta","mesualSalary":1085.0}},
 {"FinancialPerson":{"anualSalary":24048.0,"incomeTax":1331.9,"name":"Pedro","mesualSalary":2004.0}},
-{"FinancialPerson":{"anualSalary":12288.0,"incomeTax":53.8,"name":"Edison","mesualSalary":1024.0}}]
+{"FinancialPerson":{"anualSalary":12288.0,"incomeTax":53.8,"name":"Edison","mesualSalary":1024.0}},{"FinancialPerson":{"anualSalary":65784.0,"incomeTax":8811.75,"name":"isaac","mesualSalary":5482.0}},{"FinancialPerson":{"anualSalary":7008.0,"incomeTax":0.0,"name":"isaac","mesualSalary":584.0}},{"FinancialPerson":{"anualSalary":2982576.0,"incomeTax":1026266.8,"name":"Eduardo","mesualSalary":248548.0}}]
