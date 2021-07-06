@@ -16,19 +16,19 @@ import java.io.PrintWriter;
  * @author Steven Achig Future Programmers ESPE-DCCO
  */
 public class Archive {
-    public static void writeArchive(String route, String classProject){
-            FileWriter file = null;
-            PrintWriter printWriter = null;
-        try {
-            file = new FileWriter(route);
-            printWriter = new PrintWriter(file);
-            printWriter.write(classProject);
-            
-            printWriter.close();
-            file.close();
-        } catch (Exception except) {
-            System.out.println("The error is: " + except.getMessage());
-        }
+    public static void writeArchive(String tax){
+        FileWriter file = null;
+        PrintWriter printWriter = null;
+    try {
+        file = new FileWriter("tax.txt");
+        printWriter = new PrintWriter(file);
+        printWriter.write(tax);
+
+        printWriter.close();
+        file.close();
+    } catch (Exception except) {
+        System.out.println("The error is: " + except.getMessage());
+    }
     }
     public static void readArchive(String route){
         String content = "";
