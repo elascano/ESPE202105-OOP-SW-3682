@@ -5,6 +5,9 @@
  */
 package incometax;
 
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import ec.edu.espe.utils.Archive;
 import java.util.Scanner;
 import utils.Tax;
 
@@ -18,7 +21,10 @@ public class IncomeTax {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-                Scanner scan = new Scanner(System.in);
+        String jsonTax;
+        GsonBuilder gsonBuilder = new GsonBuilder();
+        Gson gson = gsonBuilder.create();
+        Scanner scan = new Scanner(System.in);
         int option;
         int op;
         float salary;
@@ -38,8 +44,10 @@ public class IncomeTax {
                 expensive = scan.nextFloat();
                 anualSalary = Tax.computeAnnualIncome(salary);
                 incomeTax = Tax.computeIncomeTax(anualSalary, expensive);
-                System.out.println("Your anual salary is: " + anualSalary 
-                            + " your total income Tax is: " + incomeTax);
+                String printTax= "your salary is: "+ anualSalary + " your income tax is: " +incomeTax;
+                System.out.println(printTax);
+                jsonTax = gson.toJson(printTax);
+                Archive.writeArchive(printTax);
                 break;
             case 0:
                 System.out.println("thanks");
