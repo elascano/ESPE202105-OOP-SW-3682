@@ -1,4 +1,3 @@
-
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -6,24 +5,24 @@
  */
 package ec.edu.espe.farm.model;
 
-
 import java.util.Date;
-
 
 /**
  *
- * @author Lizbeth Cajas
+ * @author Lizbeth cajas
  */
-public class FarmAnimal {
+public abstract class FarmAnimal {
+    
     private int id;
     private String breed;
     private Date bornOn;
-    
+
     public int getAgeInMonths(){
-        
         return bornOn.getDate();
     }
-
+    
+    public abstract void feed(int amount);
+    
     public FarmAnimal(int id, String breed, Date bornOn) {
         this.id = id;
         this.breed = breed;
@@ -35,8 +34,6 @@ public class FarmAnimal {
         return "FarmAnimal{" + "id=" + id + ", breed=" + breed + ", bornOn=" + bornOn + '}';
     }
     
-    
-
     /**
      * @return the id
      */

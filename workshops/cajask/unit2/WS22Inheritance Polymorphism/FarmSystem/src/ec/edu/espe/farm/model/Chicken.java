@@ -9,24 +9,21 @@ import java.util.Date;
 
 /**
  *
- * @author Lizbeth Cajas
+ * @author Lizbeth cajas
  */
 public class Chicken extends FarmAnimal{
+    
     private boolean isMolting;
-
-    @Override
-    public String toString() {
-        return "Chicken{" +super.toString()+ "isMolting=" + isMolting + '}';
-    }
-    
-    
 
     public Chicken(int id, String breed, Date bornOn,boolean isMolting) {
         super(id, breed, bornOn);
         this.isMolting = isMolting;
     }
-    
-    
+
+    @Override
+    public String toString() {
+        return "Chicken{" + super.toString() + ", isMolting=" + isMolting + '}';
+    }
 
     /**
      * @return the isMolting
@@ -40,6 +37,11 @@ public class Chicken extends FarmAnimal{
      */
     public void setIsMolting(boolean isMolting) {
         this.isMolting = isMolting;
+    }
+
+    @Override
+    public void feed(int amount) {
+        System.out.println("feeding a Chicken with balanced");
     }
     
     
