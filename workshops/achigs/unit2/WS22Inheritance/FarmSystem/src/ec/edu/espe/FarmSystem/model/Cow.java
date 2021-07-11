@@ -16,10 +16,10 @@ public class Cow extends FarmAnimal{
 
     @Override
     public String toString() {
-        return "Cow{" + "isProducingMilk=" + isProducingMilk + '}';
+        return "Cow{"+ super.toString() + "isProducingMilk=" + isProducingMilk + '}';
     }
 
-    public Cow(int id, String breed, Date bornOn, boolean isProducingMilk) {
+    public Cow(boolean isProducingMilk, int id, String breed, Date bornOn) {
         super(id, breed, bornOn);
         this.isProducingMilk = isProducingMilk;
     }
@@ -37,6 +37,17 @@ public class Cow extends FarmAnimal{
     public void setIsProducingMilk(boolean isProducingMilk) {
         this.isProducingMilk = isProducingMilk;
     }
+
+    @Override
+    public void feed(int amount) {
+        System.out.println("feeding a cow with sugarcane ");
+    }
     
+    public void feed(int amount, String foodType) {
+        System.out.println("feeding a cow with " + foodType);
+    }
     
+    public void feed(int amount, int foodType) {
+        System.out.println("feeding a cow with " + foodType);
+    }
 }

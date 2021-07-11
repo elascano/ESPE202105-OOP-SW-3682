@@ -11,7 +11,7 @@ import java.util.Date;
  *
  * @author Steven Achig Future Programmers ESPE-DCCO
  */
-public  class FarmAnimal {
+public abstract class FarmAnimal {
     private int id;
     private String breed;
     private Date bornOn;
@@ -21,6 +21,7 @@ public  class FarmAnimal {
         return bornOn.getDate();
     }
     
+    public abstract void feed(int amount);
     
     public FarmAnimal(int id, String breed, Date bornOn) {
         this.id = id;
