@@ -9,66 +9,43 @@ package ec.edu.espe.cellphonestore.model;
  *
  * @author InnovaCode
  */
-public class CellPhone extends Warehouse{
+public class CellPhone extends Products{
     private String color;
-    private String brand;
-    private float price;
-    private int id;
-    String model;
-    
-    
+    private String model;
 
-    public CellPhone(){
-        this.id = 0;
-        this.price = 0.0F;
-        this.brand = "";
-        this.color = "";
-        this.model = "";
-        }
-    
-    
-    public CellPhone(String model, int id, float price,String brand , String color ){
-        this.id = id;
-        this.price = price;
-        this.brand= brand;
+    public CellPhone(String color, String model, int id, float price, String brand) {
+        super(id, price, brand);
+        this.color = color;
         this.model = model;
-        this.color = color; 
-        
     }
     
+    public CellPhone(int id, float price, String brand) {
+        super(id, price, brand);
+    }
+
     @Override
     public String toString() {
-        return "CellPhone(" + "ProductId -> " + getId() + "; price ->" + 
-                getPrice() + "; brand -> " + getBrand()  + "; model-> " + getModel() + "; color-> " + getColor() ;
-                }
-    public String [] getArray(){
-        String[] date = {"id -> " + String.valueOf(getId())+ "; price ->" +String.valueOf(getPrice())+ "; brand -> "+String.valueOf(getBrand()) + "; model-> "+String.valueOf(getModel())+ "; color -> " + String.valueOf(getColor())};
-     return date;
+        return "CellPhone{" + "color=" + color + ", model=" + model + '}';
     }
     
-        
-    public void buy(){
-        
-    }
-    public void sell(){
-        
-    }
-    public void tostock(){
-        
-    }
-    
-    /**
-     * @return the brand
-     */
-    public String getBrand() {
-        return brand;
+
+    @Override
+    public Profit generateProfit(float price) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     /**
-     * @param brand the brand to set
+     * @return the color
      */
-    public void setBrand(String brand) {
-        this.brand = brand;
+    public String getColor() {
+        return color;
+    }
+
+    /**
+     * @param color the color to set
+     */
+    public void setColor(String color) {
+        this.color = color;
     }
 
     /**
@@ -85,49 +62,6 @@ public class CellPhone extends Warehouse{
         this.model = model;
     }
 
-    /**
-     * @return the price
-     */
-    public float getPrice() {
-        return price;
-    }
-
-    /**
-     * @param price the price to set
-     */
-    public void setPrice(float price) {
-        this.price = price;
-    }
-
-    
-    /**
-     * @return the id
-     */
-    public int getId() {
-        return id;
-    }
-
-    /**
-     * @param id the id to set
-     */
-    public void setId(int id) {
-        this.id = id;
-    }
-    
-    /**
-     * @return the color
-     */
-    public String getColor() {
-        return color;
-    }
-
-    /**
-     * @param color the color to set
-     */
-    public void setColor(String color) {
-        this.color = color;
-    }
-  
     
 }
 

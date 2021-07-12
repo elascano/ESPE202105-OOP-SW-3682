@@ -11,36 +11,40 @@ import java.util.ArrayList;
  *
  * @author InnovaCode
  */
-public abstract class Warehouse {
+public class Warehouse {
     private int id;
-    ArrayList<CellPhone> cellphones = new ArrayList<>();
-    ArrayList<PhoneCase> phoneCases = new ArrayList<>();
-    ArrayList<Charger> chargers = new ArrayList<>();
-    ArrayList<HeadPhone> headPhones = new ArrayList<>();
-    ArrayList<ScreenProtector> screenProtectors = new ArrayList<>();
+    
+    
+    private ArrayList<CellPhone> cellphones = new ArrayList<>();
+    private ArrayList<PhoneCase> phoneCases = new ArrayList<>();
+    private ArrayList<Charger> chargers = new ArrayList<>();
+    private ArrayList<HeadPhone> headPhones = new ArrayList<>();
+    private ArrayList<ScreenProtector> screenProtectors = new ArrayList<>();
 
     public CellPhone add(CellPhone cellPhones) {
-        return new CellPhone();
+        return new CellPhone(id, id, "");
     }
     
     public Charger add(Charger chargers) {
-        return new Charger();
+        return new Charger(id, id, "");
     }
     
     public HeadPhone add(HeadPhone headPhones) {
-        return new HeadPhone();
+        return new HeadPhone(id, id, "");
     }
     
     public PhoneCase add(PhoneCase phoneCases) {
-        return new PhoneCase();
+        return new PhoneCase(id, id, "");
     }
     
     public ScreenProtector add(ScreenProtector screenProtectors) {
-        return new ScreenProtector();
+        return new ScreenProtector(id, id, "");
     }
 
     public int remove(int id) {
         return 0;
     }
-    
+
+   
+  
 }

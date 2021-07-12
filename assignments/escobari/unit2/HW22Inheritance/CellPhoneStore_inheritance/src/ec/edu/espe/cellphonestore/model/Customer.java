@@ -9,7 +9,7 @@ package ec.edu.espe.cellphonestore.model;
  *
  * @author InnovaCode ESPE-DCCO
  */
-public class Customer extends Warehouse{
+public class Customer{
     private String name;
     private int id;
     private String email;

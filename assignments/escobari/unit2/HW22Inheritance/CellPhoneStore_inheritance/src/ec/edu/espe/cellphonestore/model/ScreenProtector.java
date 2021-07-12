@@ -9,46 +9,35 @@ package ec.edu.espe.cellphonestore.model;
  *
  * @author InnovaCode ESPE-DCCO
  */
-public class ScreenProtector extends Warehouse {
-    private float price;
+public class ScreenProtector extends Products {
+    
     private String material;
     private String model;
-    private int id;
+    
+    
 
-    public ScreenProtector(String model, float price, String material, int id) {
-        this.price = price;
+    public ScreenProtector(String material, String model, int id, float price, String brand) {
+        super(id, price, brand);
         this.material = material;
         this.model = model;
-        this.id = id;
     }
-
     
+    
+
     @Override
     public String toString() {
-        return "ScreenProtector{" + "price=" + getPrice() + ", material=" + getMaterial() + ", model=" + getModel() + ", id=" + getId() + '}';
+        return "ScreenProtector{" + "material=" + getMaterial() + ", model=" + getModel() + '}';
     }
-
-   
     
-    public ScreenProtector(){
-        this.id = 0;
-        this.price = 0.0F;
-        this.material = "";
-        this.model = "";
-        }
+    
 
-    /**
-     * @return the price
-     */
-    public float getPrice() {
-        return price;
+    public ScreenProtector(int id, float price, String brand) {
+        super(id, price, brand);
     }
 
-    /**
-     * @param price the price to set
-     */
-    public void setPrice(float price) {
-        this.price = price;
+    @Override
+    public Profit generateProfit(float price) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     /**
@@ -77,19 +66,5 @@ public class ScreenProtector extends Warehouse {
      */
     public void setModel(String model) {
         this.model = model;
-    }
-
-    /**
-     * @return the id
-     */
-    public int getId() {
-        return id;
-    }
-
-    /**
-     * @param id the id to set
-     */
-    public void setId(int id) {
-        this.id = id;
     }
 }
