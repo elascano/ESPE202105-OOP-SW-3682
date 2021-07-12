@@ -9,8 +9,8 @@ import java.util.ArrayList;
 
 /**
  *
- * @author Myckel Chamorro EMCL.java ESPE-DCCO
- */
+* @author Isaac Escobar Innovacode.java ESPE-DCCO
+*/
 public abstract class B {
 
     private float f;

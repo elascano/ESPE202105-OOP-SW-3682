@@ -7,8 +7,8 @@ package ec.edu.espe.abstractclass.model;
 
 /**
  *
- * @author Myckel Chamorro EMCL.java ESPE-DCCO
- */
+* @author Isaac Escobar Innovacode.java ESPE-DCCO
+*/
 public class F {
     private String r;
 
