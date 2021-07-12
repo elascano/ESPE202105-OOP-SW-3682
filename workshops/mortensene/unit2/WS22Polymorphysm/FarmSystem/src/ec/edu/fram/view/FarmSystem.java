@@ -13,7 +13,7 @@ import java.util.Date;
 
 /**
  *
- * @author pc
+ * @author Eduardo Mortensen
  */
 public class FarmSystem {
 
@@ -26,23 +26,26 @@ public class FarmSystem {
        ArrayList <FarmAnimal> farmAnimals = new ArrayList<>();
        System.out.println("farmAnimal: "+farmAnimal);
        farmAnimals.add(farmAnimal);
+       
        farmAnimal = new Chicken(0,"guinea",date,true);
        System.out.println("farmAnimal: "+farmAnimal);
        System.out.println("farmAnimal is a: "+farmAnimal.getClass());
        System.out.println("age in Months: "+farmAnimal.getAgeInMonths());
        System.out.println("farmAnimal is a: "+farmAnimal.getClass());
-        farmAnimals.add(farmAnimal);
-        farmAnimal = new Cow(true,0,"Jersey",new Date(2020,1,25));
-        System.out.println("Cow: "+farmAnimal);
-        System.out.println("farmAnimal is a: "+farmAnimal.getClass());
-        farmAnimals.add(farmAnimal);
-        farmAnimal.feed(0);
+       farmAnimals.add(farmAnimal);
+       
+       farmAnimal = new Cow(true,0,"Jersey",new Date(2020,1,25));
+       System.out.println("Cow: "+farmAnimal);
+       System.out.println("farmAnimal is a: "+farmAnimal.getClass());
+       farmAnimals.add(farmAnimal);
+       farmAnimal.feed(0);
                
         Chicken chicken = new Chicken (0,"negra",date,true);
-           System.out.println("Chicken: "+chicken);
-           farmAnimals.add(farmAnimal);
-           System.out.println("FarmAnimals"+farmAnimals);
-           System.out.println("FarmAnimals that I have"+farmAnimals.size());
+        System.out.println("Chicken: "+chicken);
+        farmAnimals.add(farmAnimal);
+           
+        System.out.println("FarmAnimals "+farmAnimals);
+        System.out.println("FarmAnimals that I have"+farmAnimals.size());
         
          Cow cow = new Cow(true,0,"Jersey",new Date(2020,1,25));
         System.out.println("Cow: "+cow);
@@ -50,6 +53,6 @@ public class FarmSystem {
         
         cow.feed(0);
         cow.feed(0, "grass");
-        cow.feed(0, 8);
+        cow.feed(0,8);
 }
 }
