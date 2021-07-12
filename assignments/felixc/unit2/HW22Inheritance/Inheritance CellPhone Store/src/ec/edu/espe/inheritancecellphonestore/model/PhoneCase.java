@@ -3,49 +3,30 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package ec.edu.espe.cellphonestore.model;
+package ec.edu.espe.inheritancecellphonestore.model;
 
 /**
  *
- * @author InnovaCode ESPE-DCCO
+ * @author 59399
  */
-public class PhoneCase {
-    private float price;
+public class PhoneCase extends Warehouse{
+    
     private String color;
     private String model;
     private String brand;
     private String material;
-    private int id;
 
-    public PhoneCase() {
-    }
-
-    @Override
-    public String toString() {
-        return "PhoneCase{" + "price=" + price + ", color=" + color + ", model=" + model + ", brand=" + brand + ", material=" + material + ", id=" + id + '}';
-    }
-
-    public PhoneCase(float price, String color, String model, String brand, String material, int id) {
-        this.price = price;
+    public PhoneCase(String color, String model, String brand, String material, int id, float priceRange) {
+        super(id, priceRange);
         this.color = color;
         this.model = model;
         this.brand = brand;
         this.material = material;
-        this.id = id;
     }
 
-    /**
-     * @return the price
-     */
-    public float getPrice() {
-        return price;
-    }
-
-    /**
-     * @param price the price to set
-     */
-    public void setPrice(float price) {
-        this.price = price;
+    @Override
+    public String toString() {
+        return "PhoneCase{" + "color=" + getColor() + ", model=" + getModel() + ", brand=" + getBrand() + ", material=" + getMaterial() + '}';
     }
 
     /**
@@ -103,19 +84,7 @@ public class PhoneCase {
     public void setMaterial(String material) {
         this.material = material;
     }
-
-    /**
-     * @return the id
-     */
-    public int getId() {
-        return id;
-    }
-
-    /**
-     * @param id the id to set
-     */
-    public void setId(int id) {
-        this.id = id;
-    }
+    
+    
     
 }

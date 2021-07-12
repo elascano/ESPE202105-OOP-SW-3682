@@ -3,66 +3,28 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package ec.edu.espe.cellphonestore.model;
+package ec.edu.espe.inheritancecellphonestore.model;
 
 /**
  *
- * @author InnovaCode
+ * @author 59399
  */
-public class Charger {
-    private float price;
-    private int id;
+public class Charger extends Warehouse{
+    
     private String color;
     private String entryType;
     private String model;
 
-    public Charger(String model, float price, int id, String color, String entryType ) {
-        this.price = price;
-        this.id = 0;
+    public Charger(String color, String entryType, String model, int id, float priceRange) {
+        super(id, priceRange);
         this.color = color;
         this.entryType = entryType;
         this.model = model;
     }
- public Charger(){
-        this.id = 0;
-        this.price = 0.0F;
-        this.entryType = "";
-        this.color = "";
-        this.model = "";
-        }
-    
-    
+
     @Override
     public String toString() {
-        return "Charger{" + "price=" + getPrice() + ", id=" + getId() + ", color=" + getColor() + ", entryType=" + getEntryType() + ", model=" + getModel() + '}';
-    }
-
-    /**
-     * @return the price
-     */
-    public float getPrice() {
-        return price;
-    }
-
-    /**
-     * @param price the price to set
-     */
-    public void setPrice(float price) {
-        this.price = price;
-    }
-
-    /**
-     * @return the id
-     */
-    public int getId() {
-        return id;
-    }
-
-    /**
-     * @param id the id to set
-     */
-    public void setId(int id) {
-        this.id = id;
+        return "Charger{" + "color=" + getColor() + ", entryType=" + getEntryType() + ", model=" + getModel() + '}';
     }
 
     /**
@@ -107,8 +69,6 @@ public class Charger {
         this.model = model;
     }
     
-
-} 
     
-
-
+    
+}
