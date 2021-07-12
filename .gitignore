@@ -24,3 +24,15 @@ hs_err_pid*
 
 #Visual paradigm backup files
 *.vpp.bak*
+/workshops/elascano/unit1/NewFolder/ClassDiagram/nbproject/private/
+/workshops/elascano/unit1/NewFolder/ClassDiagram/build/
+/workshops/elascano/unit1/WS13Aggregations/ChickenFarmSimulator/nbproject/private/
+/workshops/elascano/unit1/WS13Aggregations/ChickenFarmSimulator/build/
+/workshops/elascano/unit1/WS08DefiningObjects/ChickenFarmSimulator/build
+/workshops/elascano/unit2/NewFolder/Taxes/nbproject/private/
+/workshops/elascano/unit2/NewFolder/Taxes/build/
+/workshops/elascano/unit2/NewFolder/TaxLibrary/nbproject/private/
+/workshops/elascano/unit2/NewFolder/TaxLibrary/build/
+/workshops/elascano/unit2/NewFolder/TaxLibrary/dist/
+/workshops/elascano/unit2/NewFolder.1/FarmSystem/nbproject/private/
+/workshops/elascano/unit2/NewFolder.1/FarmSystem/build/
