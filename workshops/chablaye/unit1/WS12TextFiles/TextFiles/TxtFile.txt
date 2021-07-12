@@ -1,0 +1,10 @@
+-- PERSONA 1 --
+Nombre: Esteban
+Edad: 21
+Codigo: 124
+Pais: Ecuador
+-- PERSONA 2 --
+Nombre: Gissela
+Edad: 22
+Codigo: 512
+Pais: Ecuador
