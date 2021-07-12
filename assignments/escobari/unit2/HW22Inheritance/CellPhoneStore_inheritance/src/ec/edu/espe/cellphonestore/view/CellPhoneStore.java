@@ -25,8 +25,7 @@ import java.util.Scanner;
  * @author InnovaCode
  */
 public class CellPhoneStore {
-
-    /**
+/**
      * @param args the command line arguments
      */
     public static void main(String[] args) throws IOException {
@@ -41,9 +40,6 @@ public class CellPhoneStore {
         String name;
         String email;
         String phoneNumber;
-
-        GsonBuilder gsonBuilder = new GsonBuilder();
-        Gson gson = gsonBuilder.create();
         
         
         Scanner scan = new Scanner(System.in);
@@ -116,7 +112,7 @@ public class CellPhoneStore {
                             System.out.println("Write the color: ");
                             color = scan.nextLine();
 
-                            CellPhone cellphone = new CellPhone(model, id, price, brand, color);
+                            CellPhone cellphone = new CellPhone(color, model, id, price, brand);
                             System.out.println("Cellphone added. \n");
                             cellphones.add(cellphone);
                             break;
@@ -138,7 +134,7 @@ public class CellPhoneStore {
                             System.out.println("Write the material: ");
                             material = scan.nextLine();
 
-                            PhoneCase phoneCase = new PhoneCase(price, color, model, brand, material, id);
+                            PhoneCase phoneCase = new PhoneCase(color, model, material, id, price, brand);
                             System.out.println("Phone Case added. \n");
                             phoneCases.add(phoneCase);
                             break;
@@ -157,8 +153,10 @@ public class CellPhoneStore {
                             color = scan.nextLine();
                             System.out.println("Write the Entry Type: ");
                             entryType = scan.nextLine();
+                            System.out.println("Write the brand: ");
+                            brand = scan.nextLine();
 
-                            Charger charger = new Charger(model, price, id, color, entryType);
+                            Charger charger = new Charger(color, entryType, model, id, price, brand);
                             System.out.println("Phone Case added. \n");
                             chargers.add(charger);
                             break;
@@ -175,8 +173,10 @@ public class CellPhoneStore {
                             scan.nextLine();
                             System.out.println("Write the color: ");
                             color = scan.nextLine();
+                            System.out.println("Write the brand: ");
+                            brand = scan.nextLine();
 
-                            HeadPhone headPhone = new HeadPhone(model, price, id, color);
+                            HeadPhone headPhone = new HeadPhone(color, model, id, price, brand);
                             System.out.println("Phone Case added. \n");
                             headPhones.add(headPhone);
                             break;
@@ -193,9 +193,10 @@ public class CellPhoneStore {
                             scan.nextLine();
                             System.out.println("Write the material: ");
                             material = scan.nextLine();
-                            
+                            System.out.println("Write the brand: ");
+                            brand = scan.nextLine();
 
-                            ScreenProtector screenProtector = new ScreenProtector(model, price, material, id);
+                            ScreenProtector screenProtector = new ScreenProtector(material, model, id, price, brand);
                             System.out.println("ScreenProtector added. \n");
                             screenProtectors.add(screenProtector);
                             break;
@@ -355,14 +356,6 @@ public class CellPhoneStore {
                     System.out.println("That option does not exist.");
             }
         } while (selection != 4);
-
-        gson = new GsonBuilder().setPrettyPrinting().create();
-        try (Writer writer = new FileWriter("Products.json")) {
-            writer.write(gson.toJson(cellphones));
-            writer.write(gson.toJson(phoneCases));
-            writer.write(gson.toJson(screenProtectors));
-            writer.write(gson.toJson(chargers));
-            writer.write(gson.toJson(headPhones));
-        }
+        
     }
 }

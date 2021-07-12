@@ -9,60 +9,32 @@ package ec.edu.espe.cellphonestore.model;
  *
  * @author InnovaCode
  */
-public class HeadPhone extends Warehouse {
-    private float price;
-    private int id;
+public class HeadPhone extends Products{
     private String color;
     private String model;
 
-     public HeadPhone(){
-        this.id = 0;
-        this.price = 0.0F;
-        this.color = "";
-        this.model = "";
-        }
-    
-    
-    
-    public HeadPhone(String model, float price, int id, String color ) {
-        this.price = price;
-        this.id = id;
+    public HeadPhone(String color, String model, int id, float price, String brand) {
+        super(id, price, brand);
         this.color = color;
         this.model = model;
     }
+    
+    
 
     @Override
     public String toString() {
-        return "HeadPhone{" + "price=" + price + ", id=" + id + ", color=" + color + ", model=" + model + '}';
+        return "HeadPhone{" + "color=" + color + ", model=" + model + '}';
     }
-
     
-    /**
-     * @return the price
-     */
-    public float getPrice() {
-        return price;
+    
+
+    public HeadPhone(int id, float price, String brand) {
+        super(id, price, brand);
     }
 
-    /**
-     * @param price the price to set
-     */
-    public void setPrice(float price) {
-        this.price = price;
-    }
-
-    /**
-     * @return the id
-     */
-    public int getId() {
-        return id;
-    }
-
-    /**
-     * @param id the id to set
-     */
-    public void setId(int id) {
-        this.id = id;
+    @Override
+    public Profit generateProfit(float price) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     /**
@@ -92,14 +64,6 @@ public class HeadPhone extends Warehouse {
     public void setModel(String model) {
         this.model = model;
     }
-    
 
-   
-    
- 
-    
-    
-    
-    
-    
+       
 }
