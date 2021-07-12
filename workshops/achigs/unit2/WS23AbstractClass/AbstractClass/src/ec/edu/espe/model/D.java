@@ -31,7 +31,7 @@ public class D extends B{
 
     @Override
     public String toString() {
-        return "D{" + "x=" + x + ", y=" + y + '}';
+        return "D{" + super.toString() + "x=" + x + ", y=" + y + '}';
     }
 
     /**
