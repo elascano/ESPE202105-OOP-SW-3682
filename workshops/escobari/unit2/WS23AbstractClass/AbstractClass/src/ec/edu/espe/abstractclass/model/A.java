@@ -17,10 +17,6 @@ public class A {
     private int b;
     private ArrayList<C> cs;
     private B bs[]= new B[5] ;
-
-    public A(int a) {
-        this.a = a;
-    }
     
     
     
@@ -32,6 +28,11 @@ public class A {
      public A m() {
         return new A();
     }
+
+    public A() {
+    }
+     
+     
 
     /**
      * @return the a

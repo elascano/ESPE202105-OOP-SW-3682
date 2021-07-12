@@ -21,18 +21,11 @@
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
-<<<<<<< HEAD
-/workshops/campoverdec/unit1/WS05tructuredPrmming/build/
-/workshops/campoverdec/unit1/WS06DeveloomenEnv/nbproject/private/
-/workshops/campoverdec/unit1/WS06DeveloomenEnv/build/
-/workshops/solanos/unit1/WS08DefiningObjects/ApplianceStore/nbproject/private/
-/workshops/solanos/unit1/WS10CDClassDiagram/ClassDiagram/nbproject/private/
-/workshops/solanos/unit1/WS10CDClassDiagram/FormCDToCode/nbproject/private/
-/workshops/solanos/unit1/WS10CDClassDiagram/ClassDiagram/build/
 =======
 
 #Visual paradigm backup files
 *.vpp.bak*
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 /workshops/campoverdec/unit1/WS08DefiningObjects/Class Diagram/nbproject/private/
@@ -486,3 +479,5 @@ hs_err_pid*
 /assignments/solanos/unit2/HW22Inheritance/Inheritance/build/
 >>>>>>> d47c94ea52f08068d3bff7e4593ee606b2373894
 /workshops/escobari/unit2/WS23/AbstractClass/nbproject/private/
+=======
+>>>>>>> b70f4582a4f591dfb56a8d841f0199788f10532b
