@@ -21,18 +21,11 @@
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
-<<<<<<< HEAD
-/workshops/campoverdec/unit1/WS05tructuredPrmming/build/
-/workshops/campoverdec/unit1/WS06DeveloomenEnv/nbproject/private/
-/workshops/campoverdec/unit1/WS06DeveloomenEnv/build/
-/workshops/solanos/unit1/WS08DefiningObjects/ApplianceStore/nbproject/private/
-/workshops/solanos/unit1/WS10CDClassDiagram/ClassDiagram/nbproject/private/
-/workshops/solanos/unit1/WS10CDClassDiagram/FormCDToCode/nbproject/private/
-/workshops/solanos/unit1/WS10CDClassDiagram/ClassDiagram/build/
 =======
 
 #Visual paradigm backup files
 *.vpp.bak*
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 /workshops/campoverdec/unit1/WS08DefiningObjects/Class Diagram/nbproject/private/
@@ -455,6 +448,11 @@ hs_err_pid*
 >>>>>>> 9f9acdc86209dd48f2d8e2dcc5a6016b9eeb92b6
 >>>>>>> 82933191fd0b0c72b0f1fc0245f3458feaba9dd8
 <<<<<<< HEAD
+<<<<<<< HEAD
+/workshops/solanos/unit2/WH22/FarmSystem/nbproject/private/
+/workshops/solanos/unit2/WH22/FarmSystem/build/
+=======
+<<<<<<< HEAD
 /workshops/cajask/unit2/Nueva Carpeta/FarmSystem/nbproject/private/
 /workshops/cajask/unit2/Nueva Carpeta/FarmSystem/build/
 =======
@@ -469,6 +467,24 @@ hs_err_pid*
 /workshops/salazare/unit2/WS22Inheritance/FarmSystem/build/
 >>>>>>> e99f796c183b95bb3535a5ffa6c1fa942c146938
 >>>>>>> 104bec35b15c3e0b8683403054276729ee6fddd0
+<<<<<<< HEAD
+/workshops/escobari/unit2/WS22Inheritance/FarmSystem/build/
+/assignments/escobari/unit2/HW22Inheritance/CellPhoneStore_inheritance/nbproject/private/
+/assignments/escobari/unit2/HW22Inheritance/CellPhoneStore_inheritance/build/
+=======
 >>>>>>> ea769020630e9d5f84c9905a51e5612f08a002ea
 /workshops/cajask/unit2/WS22Inheritance Polymorphism/FarmSystem/build/
 /workshops/cajask/unit2/WS22Inheritance Polymorphism/FarmSystem/nbproject/private/
+>>>>>>> 99d9d1a6ffd9528e6e93d4730be367428ddd4866
+/assignments/solanos/unit2/HW22Inheritance/Inheritance/nbproject/private/
+/assignments/solanos/unit2/HW22Inheritance/Inheritance/build/
+>>>>>>> d47c94ea52f08068d3bff7e4593ee606b2373894
+/workshops/escobari/unit2/WS23/AbstractClass/nbproject/private/
+=======
+/workshops/salazare/unit2/WS22Inheritance/FarmSystem/nbproject/private/
+/workshops/salazare/unit2/WS22Inheritance/FarmSystem/build/
+/workshops/salazare/unit2/Nueva Carpeta/JavaApplication14/nbproject/private/
+/workshops/salazare/unit2/Nueva Carpeta/JavaApplication14/build/
+>>>>>>> fe3ae4fa0c61a918c50fef81216645463e1d0364
+=======
+>>>>>>> b70f4582a4f591dfb56a8d841f0199788f10532b
