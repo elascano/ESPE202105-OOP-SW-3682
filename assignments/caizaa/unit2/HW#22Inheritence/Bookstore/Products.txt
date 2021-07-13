@@ -1,0 +1,5 @@
+{"title":"Fabulas","author":"Juan","price":12.45}{"title":"Programming","author":"Mark Zuceberg","price":30.45}
+{"model":"Casio30x15","brand":"Casio","price":25.45}
+{"title":"Object","author":"Juan Zapata","price":26.45}
+{"title":"Dragons","author":"Juan Pedro","price":15.45}
+{"title":"Don","author":"Juan Zapata","price":89.45}
