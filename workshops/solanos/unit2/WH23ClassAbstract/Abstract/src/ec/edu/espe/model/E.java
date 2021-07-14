@@ -15,6 +15,7 @@ public class E extends B {
     private float p;
     private float q;
 
+
     @Override
     public String toString() {
         return "E{" + "p=" + p + ", q=" + q + '}';

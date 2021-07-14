@@ -16,6 +16,11 @@ public abstract class B  {
     private double d; 
     private ArrayList<G> gs;
 
+    @Override
+    public String toString() {
+        return "B{" + "f=" + f + ", d=" + d + ", gs=" + gs + '}';
+    }
+
     public B(float f, double d, ArrayList<G> gs) {
         this.f = f;
         this.d = d;

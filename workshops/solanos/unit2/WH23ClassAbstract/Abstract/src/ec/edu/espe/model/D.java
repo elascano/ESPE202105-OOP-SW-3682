@@ -14,11 +14,16 @@ import java.util.ArrayList;
 public class D extends B {
     int x; 
     int y;
-    
-    public D(float f,double d, ArrayList<G> gs, int x, int y){
-        super(f,d,gs);
+
+    public D(int x, int y, float f, double d, ArrayList<G> gs) {
+        super(f, d, gs);
         this.x = x;
         this.y = y;
+    }
+
+    @Override
+    public String toString() {
+        return "D{" + "x=" + x + ", y=" + y + '}';
     }
     
     public int m(int i){
