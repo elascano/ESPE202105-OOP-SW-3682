@@ -10,25 +10,27 @@ package ec.edu.espe.AbstractsClasses.model;
  *
  * @author pc
  */
-public class E extends B {
-    private float p;
-    private float q;
+public class E extends B { //1
+    private float p; //1
+    private float q; //1
 
-    public E(float f, double d) {
+    public E(float f, double d) {//p and q are missing.
         super(f, d);
     }
 
+    //Does not have the abstract methods of the father's class.
     
 
     @Override
-    public String toString() {
+    public String toString() {//0.5 super toString part is missing
         return "E{" + "p=" + getP() + ", q=" + getQ() + '}';
     }
     
-    public static void m1(boolean b){
+    public static void m1(boolean b){//Wrong method implementation.
     
     }
 
+    //2
     /**
      * @return the p
      */
