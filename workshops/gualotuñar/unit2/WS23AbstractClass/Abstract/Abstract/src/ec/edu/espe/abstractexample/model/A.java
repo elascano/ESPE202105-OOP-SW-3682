@@ -12,14 +12,14 @@ import java.util.ArrayList;
  * @author Ariel Gonzalez InnovaCode ESPE-DCCO
  */
 public class A {
-    private int a;
-    private int b;
-    private A asArray[] = new A[1];
-    private ArrayList<C> cs = new ArrayList<>();
-    private B bsArray[] = new B[5];
+    private int a;//1
+    private int b;//1
+    private A asArray[] = new A[1]; //1
+    private ArrayList<C> cs = new ArrayList<>();//1
+    private B bsArray[] = new B[5];//1
     
-
-    public A(int a, int b) {
+    
+    public A(int a, int b) {//the constructor has wrong because dont have all the parameters
         this.a = a;
         this.b = b;
     }
@@ -34,11 +34,11 @@ public class A {
     }
 
     
-    public A m(int m, int n){
+    public A m(int m, int n){ //0.5
         return new A();
     }
     
-    public A m(){
+    public A m(){ //0.5
         return new A();
     }
 
