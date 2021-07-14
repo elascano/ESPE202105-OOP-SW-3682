@@ -11,10 +11,10 @@ import java.util.ArrayList;
  *
  * @author Myckel Chamorro EMCL.java ESPE-DCCO
  */
-public class E extends B {
+public class E extends B { //1
 
-    private float p;
-    private float q;
+    private float p; //1
+    private float q; //1
 
     @Override
     public String toString() {
@@ -25,28 +25,28 @@ public class E extends B {
     }
 
 
-    public E(float p, float q, float f, double d, ArrayList<G> gs) {
+    public E(float p, float q, float f, double d, ArrayList<G> gs) { //1
         super(f, d, gs);
         this.p = p;
         this.q = q;
     }
     
 
-    public int m1(boolean b) {
+    public int m1(boolean b) {  //1
         return 0;
     }
 
     @Override
-    public int operation1(int n) {
+    public int operation1(int n) {  //1
         return n;
 
     }
 
     @Override
-    public float operation2(float f) {
+    public float operation2(float f) { //1
         return f;
     }
-
+//2
     /**
      * @return the p
      */

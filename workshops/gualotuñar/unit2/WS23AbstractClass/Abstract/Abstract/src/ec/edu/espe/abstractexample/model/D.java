@@ -17,7 +17,7 @@ public class D extends B {
     public String toString() {
         return "D{" + super.toString() + "x=" + x + ", y=" + y + '}';
     }
-
+    //because the class B atributes are miss, the class D does not inherit the array of gs
     public D(int x, int y, float f, double d) {
         super(f, d);
         this.x = x;
@@ -27,7 +27,7 @@ public class D extends B {
     public D() {
     }
     
-    public boolean m(int i){
+    public boolean m(int i){ //the  method id doing nothing
         return true;
     }
     

@@ -10,5 +10,7 @@ package ec.edu.espe.abstractclass.model;
  * @author Myckel Chamorro EMCL.java ESPE-DCCO
  */
 public class H {
+    // 4 has nothing in this class
+
     
 }

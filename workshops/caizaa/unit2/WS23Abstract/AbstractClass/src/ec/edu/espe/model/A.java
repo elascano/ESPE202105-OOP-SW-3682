@@ -12,37 +12,44 @@ import java.util.ArrayList;
  * @author Alisson Caiza ASUS ESPE-DCCO
  */
 public class A {
-    private int a;
-    private int b;
-    private A as[] = new A[2];
-    private B bs[] = new B[5];
-    private ArrayList<C> cs = new ArrayList<>();
+    private int a; //+1
+    private int b; //+1
+    private A as[] = new A[2]; //+1
+    private B bs[] = new B[5]; //+1
+    private ArrayList<C> cs = new ArrayList<>(); //+1
 
-    public A(int a, int b, A[] as, B[] bs, ArrayList<C> cs) {
-        this.a = a;
+    public A(int a, int b, A[] as, B[] bs, ArrayList<C> cs) { //+1
+        this.a = a; //this may not work
         this.b = b;
         this.as = as;
-        this.bs = bs;
+        this.bs = bs; //this may not work
+        /*for (int i = 0; i< bs.length; i++){
+            this.as[i] = as[i];
+        }*/
         this.cs = cs;
     }
 
-    private A() {
+    private A() { 
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
-    public A m(int m, int n){
+    public A m(int m, int n){ //0.5 not return new A(m, n, as, bs, cs);
         return new A();
+        //return new A(m, n, as, bs, cs);
     }
     
-    public A m(){
+    public A m(){ //0.5
+        //return new A(0, 0, as, bs, cs);
         return new A();
     }
     
     @Override
-    public String toString() {
+    public String toString() { //+1
         return "A{" + "a=" + a + ", b=" + b + ", as=" + as + ", bs=" + bs + ", cs=" + cs + '}';
     }
 
+                        //+1 getters and setters
+                
     /**
      * @return the a
      */
