@@ -22,10 +22,10 @@ public abstract class B {
         this.gs = gs;
     }
     
-    public int operation1(int n){
+    public int operation1(int n){ // The method is not abstract
         return 0;
     }
-    public float operation2(float f){
+    public float operation2(float f){ // The method is not abstract
         return 0;
     }
 

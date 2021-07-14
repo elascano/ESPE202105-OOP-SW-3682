@@ -11,15 +11,24 @@ import java.util.ArrayList;
  *
  * @author Alisson Caiza ASUS ESPE-DCCO
  */
-public class D extends B{
-    private int x;
-    private int y;
+public class D extends B{ //+1
+    private int x;        //+1
+    private int y;        //+1
     
-    public boolean m(int i){
+    public boolean m(int i){ //+1 the method is doing nothing, TODO program the algorithm
+        /*
+        boolean flag = false;
+        if (i%2==0){
+            flag = true;
+        }
+        return flag;
+        */
         return true;
     }
 
-    public D(int x, int y, float f, double d, ArrayList<G> gs) {
+    // the two methods inherited from the parent class B are missing -2
+    
+    public D(int x, int y, float f, double d, ArrayList<G> gs) { //+1
         super(f, d, gs);
         this.x = x;
         this.y = y;
@@ -30,10 +39,12 @@ public class D extends B{
     }
 
     @Override
-    public String toString() {
+    public String toString() { //+1
         return "D{" + super.toString() + "x=" + x + ", y=" + y + '}';
     }
 
+                                //+2 getters and setters
+                            
     /**
      * @return the x
      */
