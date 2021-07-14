@@ -13,35 +13,37 @@ import java.util.ArrayList;
  */
 public class A {
     
-    private int a;
-    private int b;
-    private B bs[] = new B[5];
-    private A as[] = new A[1];
-    private ArrayList<C> cs = new ArrayList<>();
+    private int a;//1
+    private int b;//1
+    private B bs[] = new B[5];//1
+    private A as[] = new A[1];//1
+    private ArrayList<C> cs = new ArrayList<>();//1
 
     @Override
-    public String toString() {
+    public String toString() {//1
         return "A{" + "a=" + a + ", b=" + b + ", bs=" + bs + ", as=" + as + ", cs=" + cs + '}';
     }
 
-    public A(int a, int b) {
+    public A(int a, int b) {//0.6
         this.a = a;
         this.b = b;
     }
+    //missing the arrayList and strings
 
     public A(){
         a = 0;
         b = 0;
     }
     
-    public A m(int m, int n){
+    public A m(int m, int n){//0.5
         return null;
     }
     
-    public A m(){
+    public A m(){//0.5
         return null;
     }
-
+    //not return parameters
+    //1
     /**
      * @return the a
      */

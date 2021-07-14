@@ -13,6 +13,12 @@ import java.util.ArrayList;
  */
 public class C extends A{
    private ArrayList<H>hs = new ArrayList<>();
+
+    @Override
+    public String toString() {
+        return "C{" + "hs=" + hs + '}';
+    }
+
   
    
    public void m(F f){
