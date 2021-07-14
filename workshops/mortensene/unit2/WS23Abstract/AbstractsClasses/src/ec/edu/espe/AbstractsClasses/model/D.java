@@ -9,25 +9,26 @@ package ec.edu.espe.AbstractsClasses.model;
  *
  * @author pc
  */
-public class D extends B {
-    private int x;
-    private int y;
+public class D extends B { //1
+    private int x;          //1
+    private int y;          //1
 
-    public D(float f, double d) {
+    public D(float f, double d) {//Worng constructor implementation, the class must have the father's class atributes.
         super(f, d);
     }
 
-  
+    //operation 1 and operation2 methods are missing.
 
     @Override
     public String toString() {
         return "D{" + "x=" + getX() + ", y=" + getY() + '}';
     }
     
-    public static void m(int i){
+    public static void m(int i){//Wrong method implementation.
     
     }
 
+    //2
     /**
      * @return the x
      */
