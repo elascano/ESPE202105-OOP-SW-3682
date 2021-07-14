@@ -11,32 +11,34 @@ import java.util.ArrayList;
  *
  * @author pc
  */
-public abstract class B {
-    private float f;
-    private double d;
-    private ArrayList<G>gs=new ArrayList<>(1);
-    private D dsArray []=new D[1];
-    private E esArray []=new E[1];
+public abstract class B {//1
+    private float f;//1
+    private double d;//1
+    private ArrayList<G>gs=new ArrayList<>(1);//1
+    private D dsArray []=new D[1]; //Unnecessary array
+    private E esArray []=new E[1];//Unnecessary array
 
     public B(float f, double d) {
         this.f = f;
         this.d = d;
+        //ArrayList is missing.
     }
 
     @Override
     public String toString() {
-        return "B{" + "f=" + getF() + ", d=" + getD() + ", g=" + getG() + '}';
+        return "B{" + "f=" + getF() + ", d=" + getD() + ", g=" + getG() + '}';//1
     }
     
     
     
-    public static void operation(int n){
+    public static void operation(int n){//Wrong type of method
    
    }
-   public static void operation2(float f){
+   public static void operation2(float f){//Wrong type of method
   
    }
 
+   //1
     /**
      * @return the f
      */
