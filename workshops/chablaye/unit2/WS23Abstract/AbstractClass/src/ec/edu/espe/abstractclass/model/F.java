@@ -9,33 +9,33 @@ package ec.edu.espe.abstractclass.model;
  *
  * @author Myckel Chamorro EMCL.java ESPE-DCCO
  */
-public class G {
-    private int z;
+public class F {
+    private String r;
 
     @Override
     public String toString() {
-        return "G{" + "z=" + z + '}';
+        return "F{" + "r=" + r + '}';
     }
 
-    public G() {
+    public F() {
     }
-
-    public G(int z) {
-        this.z = z;
-    }
-
-    /**
-     * @return the z
-     */
-    public int getZ() {
-        return z;
+    public F(String r) {
+        this.r = r;
     }
 
     /**
-     * @param z the z to set
+     * @return the r
      */
-    public void setZ(int z) {
-        this.z = z;
+    public String getR() {
+        return r;
     }
+
+    /**
+     * @param r the r to set
+     */
+    public void setR(String r) {
+        this.r = r;
+    }
+    
     
 }
