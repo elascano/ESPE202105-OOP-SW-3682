@@ -11,18 +11,27 @@ import java.util.ArrayList;
  *
  * @author Alisson Caiza ASUS ESPE-DCCO
  */
-public class E extends B{
-    private float p;
-    private float q;
+public class E extends B{   //+1
+    private float p;        //+1
+    private float q;        //+1
 
-    public E(float p, float q, float f, double d, ArrayList<G> gs) {
+    public int m1(boolean b){ //+1 to do use the Boolean B
+        /*
+        int result = 0;
+        if(b){
+            result = 1;
+        }
+        return result;
+        */
+        return 0;
+    }
+    
+    // the two methods inherited from the parent class B are missing -2
+    
+    public E(float p, float q, float f, double d, ArrayList<G> gs) { //+1
         super(f, d, gs);
         this.p = p;
         this.q = q;
-    }
-
-    public int m1(boolean b){
-        return 0;
     }
     
     public E(float f, double d, ArrayList<G> gs) {
@@ -31,9 +40,11 @@ public class E extends B{
 
     @Override
     public String toString() {
-        return "E{" + super.toString() + "p=" + p + ", q=" + q + '}';
+        return "E{" + super.toString() + "p=" + p + ", q=" + q + '}'; //+1
     }
 
+                            //+2 getters and setters
+    
     /**
      * @return the p
      */

@@ -12,36 +12,40 @@ import java.util.ArrayList;
  * @author Alisson Caiza ASUS ESPE-DCCO
  */
 public class C {
-    private ArrayList<H> hs = new ArrayList<>();
+    private ArrayList<H> hs = new ArrayList<>(); //+2
     
-    public C(ArrayList<H> hs) {
+    public C(ArrayList<H> hs) { //1
         this.hs = hs;
     }
     
-    public void m(F f){
-        
+    public void m(F f){ //-0.5 not printing anything
+        // System.out.println("method m of class C, reveiving a parameter + f");
     }
     
-    public float m(float f){
+    public float m(float f){ //-0.5 not printtig anything in two methods
+        /* float result;
+        result = f*10;
+        return result;
+        */
         return 0;
     }
 
     @Override
-    public String toString() {
+    public String toString() { //1
         return "C{" + "hs=" + hs + '}';
     }
 
     /**
      * @return the hs
      */
-    public ArrayList<H> getHs() {
+    public ArrayList<H> getHs() { //1
         return hs;
     }
 
     /**
      * @param hs the hs to set
      */
-    public void setHs(ArrayList<H> hs) {
+    public void setHs(ArrayList<H> hs) { //1
         this.hs = hs;
     }
     
