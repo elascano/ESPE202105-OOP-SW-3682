@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="AbstractsClasses">
+  <ClassDiagramComponents>
+    <Class name="B" package="ec.edu.espe.AbstractsClasses.model" visibility="public" isAbstract="true" xPosition="1363.0" yPosition="412.0">
+      <Fields>
+        <Field name="f" type="float" visibility="private"/>
+        <Field name="d" type="double" visibility="private"/>
+        <Field name="g" type="ArrayList&lt;G&gt;" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="float" name="f"/>
+          <Argument type="double" name="d"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="toString" returnType="String" visibility="public"/>
+        <Method name="operation" returnType="void" visibility="public" isStatic="true">
+          <Argument type="int" name="n"/>
+        </Method>
+        <Method name="operation2" returnType="void" visibility="public" isStatic="true">
+          <Argument type="float" name="f"/>
+        </Method>
+        <Method name="getF" returnType="float" visibility="public"/>
+        <Method name="setF" returnType="void" visibility="public">
+          <Argument type="float" name="f"/>
+        </Method>
+        <Method name="getD" returnType="double" visibility="public"/>
+        <Method name="setD" returnType="void" visibility="public">
+          <Argument type="double" name="d"/>
+        </Method>
+        <Method name="getG" returnType="ArrayList&lt;G&gt;" visibility="public"/>
+        <Method name="setG" returnType="void" visibility="public">
+          <Argument type="ArrayList&lt;G&gt;" name="g"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="C" package="ec.edu.espe.AbstractsClasses.model" visibility="public" xPosition="320.0" yPosition="20.0">
+      <Fields>
+        <Field name="h" type="ArrayList&lt;H&gt;" visibility="package"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="m" returnType="void" visibility="public" isStatic="true">
+          <Argument type="F" name="f"/>
+        </Method>
+        <Method name="m" returnType="void" visibility="public" isStatic="true">
+          <Argument type="float" name="f"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="D" package="ec.edu.espe.AbstractsClasses.model" visibility="public" xPosition="721.0" yPosition="386.0">
+      <Fields>
+        <Field name="x" type="int" visibility="private"/>
+        <Field name="y" type="int" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="int" name="x"/>
+          <Argument type="int" name="y"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="toString" returnType="String" visibility="public"/>
+        <Method name="m" returnType="void" visibility="public" isStatic="true">
+          <Argument type="int" name="i"/>
+        </Method>
+        <Method name="getX" returnType="int" visibility="public"/>
+        <Method name="setX" returnType="void" visibility="public">
+          <Argument type="int" name="x"/>
+        </Method>
+        <Method name="getY" returnType="int" visibility="public"/>
+        <Method name="setY" returnType="void" visibility="public">
+          <Argument type="int" name="y"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="E" package="ec.edu.espe.AbstractsClasses.model" visibility="public" xPosition="920.0" yPosition="20.0">
+      <Fields>
+        <Field name="p" type="float" visibility="private"/>
+        <Field name="q" type="float" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="float" name="p"/>
+          <Argument type="float" name="q"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="toString" returnType="String" visibility="public"/>
+        <Method name="m1" returnType="void" visibility="public" isStatic="true">
+          <Argument type="boolean" name="b"/>
+        </Method>
+        <Method name="getP" returnType="float" visibility="public"/>
+        <Method name="setP" returnType="void" visibility="public">
+          <Argument type="float" name="p"/>
+        </Method>
+        <Method name="getQ" returnType="float" visibility="public"/>
+        <Method name="setQ" returnType="void" visibility="public">
+          <Argument type="float" name="q"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="F" package="ec.edu.espe.AbstractsClasses.model" visibility="public" xPosition="676.0" yPosition="96.0">
+      <Fields>
+        <Field name="r" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="r"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="toString" returnType="String" visibility="public"/>
+        <Method name="getR" returnType="String" visibility="public"/>
+        <Method name="setR" returnType="void" visibility="public">
+          <Argument type="String" name="r"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="G" package="ec.edu.espe.AbstractsClasses.model" visibility="public" xPosition="1520.0" yPosition="20.0">
+      <Fields>
+        <Field name="z" type="int" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="int" name="z"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="toString" returnType="String" visibility="public"/>
+        <Method name="getZ" returnType="int" visibility="public"/>
+        <Method name="setZ" returnType="void" visibility="public">
+          <Argument type="int" name="z"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="H" package="ec.edu.espe.AbstractsClasses.model" visibility="public" xPosition="304.0" yPosition="508.0">
+      <Fields/>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="AbstractsClasses" package="ec.edu.espe.AbstractsClassses.view" visibility="public" xPosition="2120.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="h" source="ec.edu.espe.AbstractsClasses.model.C" target="ec.edu.espe.AbstractsClasses.model.H" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;H&gt;"/>
+    <UseRelation source="ec.edu.espe.AbstractsClasses.model.C" target="ec.edu.espe.AbstractsClasses.model.F" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="ec.edu.espe.AbstractsClasses.model.B" target="ec.edu.espe.AbstractsClasses.model.G" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="g" source="ec.edu.espe.AbstractsClasses.model.B" target="ec.edu.espe.AbstractsClasses.model.G" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;G&gt;"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
