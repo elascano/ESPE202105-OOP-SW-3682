@@ -21,8 +21,8 @@ public class A {
     public A(int a, int b, A[] as, B[] bs, ArrayList<C> cs) {
         this.a = a;
         this.b = b;
-        this.as = as;
-        this.bs = bs;
+        this.as = as; //this may not work
+        this.bs = bs; //this may not work
         this.cs = cs;
     }
 
@@ -30,11 +30,11 @@ public class A {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
-    public A m(int m, int n){
+    public A m(int m, int n){ //0,5 Object A must receive parameters
         return new A();
     }
     
-    public A m(){
+    public A m(){ //0,5 Object A must receive parameters
         return new A();
     }
     

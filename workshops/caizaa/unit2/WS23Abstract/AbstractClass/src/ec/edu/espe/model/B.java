@@ -11,29 +11,29 @@ import java.util.ArrayList;
  *
  * @author Alisson Caiza ASUS ESPE-DCCO
  */
-public abstract class B {
-    private float f;
-    private double d;
-    private ArrayList<G> gs = new ArrayList<>();
-
-    public B(float f, double d, ArrayList<G> gs) {
+public abstract class B { //+1
+    private float f; //+1
+    private double d; //+1
+    private ArrayList<G> gs = new ArrayList<>(); //+1
+    
+    public int operation1(int n){ //0 the abstract is missing in methods 
+        return 0;
+    }
+    public float operation2(float f){ //0 the abstract is missing in method
+        return 0;
+    }
+    
+    public B(float f, double d, ArrayList<G> gs) { //+1
         this.f = f;
         this.d = d;
         this.gs = gs;
     }
-    
-    public int operation1(int n){
-        return 0;
-    }
-    public float operation2(float f){
-        return 0;
-    }
 
     @Override
-    public String toString() {
+    public String toString() { //+1
         return "B{" + "f=" + f + ", d=" + d + ", gs=" + gs + '}';
     }
-
+                        //+2 getters and setters
     /**
      * @return the f
      */

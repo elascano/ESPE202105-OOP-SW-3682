@@ -12,7 +12,7 @@ package ec.edu.espe.abstractexample.model;
 public class E extends B {
     private float p;
     private float q;
-
+//because the class B atributes are miss, the class E does not inherit the array of gs
     public E(float p, float q, float f, double d) {
         super(f, d);
         this.p = p;

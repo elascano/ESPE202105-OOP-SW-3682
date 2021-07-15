@@ -15,14 +15,15 @@ public class C {
     private ArrayList<H> hs = new ArrayList<>();
 
     @Override
-    public String toString() {
+    public String toString() {  
         return "C{" + "hs=" + hs + '}';
     }
 
     public C() {
     }
-    
+    //miss the full constructor in C
     public void m(F f){
+    //miss the println for simulate the method
     
     }
     
