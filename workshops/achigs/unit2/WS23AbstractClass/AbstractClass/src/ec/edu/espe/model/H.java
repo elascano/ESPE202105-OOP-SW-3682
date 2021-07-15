@@ -9,6 +9,6 @@ package ec.edu.espe.model;
  *
  * @author Steven Achig Future Programmers ESPE-DCCO
  */
-public class H {
+public class H { //4 There is not constructor and toString
     
 }

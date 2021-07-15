@@ -10,8 +10,9 @@ package ec.edu.espe.abstractclasses.model;
  * @author Nicolas Suquillo NullPointers ESPE-DCCO
  */
 public class G {
-    
-    private int z;
+    //10 /10 
+    //Excelent
+    private int z;//2
 
     @Override
     public String toString() {
@@ -22,7 +23,7 @@ public class G {
         this.z = z;
     }
 
-    public G(){
+    public G(){//!!
         z=0;
     }
     /**

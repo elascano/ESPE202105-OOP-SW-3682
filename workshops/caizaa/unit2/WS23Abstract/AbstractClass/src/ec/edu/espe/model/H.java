@@ -9,6 +9,6 @@ package ec.edu.espe.model;
  *
  * @author Alisson Caiza ASUS ESPE-DCCO
  */
-public class H {
-    
+public class H { //4 
+    //-6 there is no constructor -3, there is not woString -3
 }
