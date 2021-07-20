@@ -10,5 +10,5 @@ package ec.edu.espe.AbstractsClasses.model;
  * @author pc
  */
 public class H {
-    
+    //Constructor and toString are missing.
 }

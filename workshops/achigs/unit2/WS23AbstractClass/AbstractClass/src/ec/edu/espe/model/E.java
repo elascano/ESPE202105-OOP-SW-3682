@@ -11,7 +11,7 @@ import java.util.ArrayList;
  *
  * @author Steven Achig Future Programmers ESPE-DCCO
  */
-public class E extends B{
+public class E extends B{ //Not inherit abstract methods from class B
     private float p;
     private float q;
 
@@ -21,7 +21,7 @@ public class E extends B{
         this.q = q;
     }
 
-    public int m1(boolean b){
+    public int m1(boolean b){ //The method is doing nothing,TODO program the algorithm and use the boolean b
         return 0;
     }
     

@@ -21,7 +21,7 @@ public class FarmSystem {
      */
     public static void main(String[] args) {
         Date date = new Date(2021,1,20);
-        FarmAnimal farmAnimal = new FarmAnimal(0, "breed", date);
+        FarmAnimal farmAnimal = new FarmAnimal(0, "breed", date) {};
         ArrayList<FarmAnimal> farmAnimals = new ArrayList<>();
         
         farmAnimals.add(farmAnimal);

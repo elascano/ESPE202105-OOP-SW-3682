@@ -11,34 +11,34 @@ import java.util.ArrayList;
  *
  * @author Nicolas Suquillo NullPointers ESPE-DCCO
  */
-public abstract class B {
+public abstract class B {//1
     
-    private float f;
-    private double d;
-    private ArrayList<G> gs = new ArrayList<>();
+    private float f;//1
+    private double d;//1
+    private ArrayList<G> gs = new ArrayList<>();//1
 
     @Override
-    public String toString() {
+    public String toString() {//1
         return "B{" + "f=" + f + ", d=" + d + ", gs=" + gs + '}';
     }
 
-    public B(float f, double d) {
+    public B(float f, double d) {//0.8
         this.f = f;
         this.d = d;
     }
-
+    //missing arrayList in the method
     public B(){
         f = 0.0F;
         d = 0.0;
     }
     
-    public abstract int operation1(int n);
-    public abstract float operation2(float f);
+    public abstract int operation1(int n);//1
+    public abstract float operation2(float f);//1
 
     /**
      * @return the f
      */
-    public float getF() {
+    public float getF() {//2 
         return f;
     }
 
