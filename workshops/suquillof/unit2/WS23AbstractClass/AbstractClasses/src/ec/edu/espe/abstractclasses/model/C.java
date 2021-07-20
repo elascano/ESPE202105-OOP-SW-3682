@@ -13,23 +13,24 @@ import java.util.ArrayList;
  */
 public class C {
     
-    private ArrayList<H> hs = new ArrayList<>();
-
-    public C() {
+    private ArrayList<H> hs = new ArrayList<>();//2
+    //missing to string 
+    public C() {//0.5
     }
 
     
-    public void m(F f){ 
+    public void m(F f){ //1.5
+        //missing println
     }
     
-    public float m(float f){
+    public float m(float f){//2
         return 0;
     }
 
     /**
      * @return the hs
      */
-    public ArrayList<H> getHs() {
+    public ArrayList<H> getHs() {//1
         return hs;
     }
 

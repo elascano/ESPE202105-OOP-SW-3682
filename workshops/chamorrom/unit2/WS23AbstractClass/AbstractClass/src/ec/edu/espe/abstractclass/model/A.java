@@ -13,19 +13,22 @@ import java.util.ArrayList;
  */
 public class A {
 
-    private int a;
-    private int b;
-    private ArrayList<C> cs;
-    private B bs[]= new B[5] ;
-
+    private int a; //1
+    private int b; //1
+    //private A a1; 0
+    private ArrayList<C> cs; //incomplete  0.5
+    private B bs[]= new B[5] ; //1
+    
     @Override
     public String toString() {
-        return "A{" + "a=" + a + ", b=" + b + ", cs=" + cs + ", bs=" + bs + '}';
+        return "A{" + "a=" + a + ", b=" + b + ", cs=" + cs + ", bs=" + bs + '}'; //0.7 luck the methods 
     }
 
-    public A(int a, int b, ArrayList<C> cs,B bs[]) {
+    public A(int a, int b, ArrayList<C> cs,B bs[]) { //0.90
         this.a = a;
         this.b = b;
+        //this.a1=a1 incomplete
+        //this.bs=bs // this may not work 
         this.cs = cs;
         this.bs = bs;
     }
@@ -35,13 +38,13 @@ public class A {
     
     
 
-    public A m(int n, int m) {
+    public A m(int n, int m) { //1
         return new A();
     }
-     public A m() {
+     public A m() { //1
         return new A();
     }
-
+     //1
     /**
      * @return the a
      */

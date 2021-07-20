@@ -21,10 +21,10 @@
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
-=======
 
 #Visual paradigm backup files
 *.vpp.bak*
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -492,3 +492,13 @@ hs_err_pid*
 =======
 >>>>>>> b70f4582a4f591dfb56a8d841f0199788f10532b
 >>>>>>> 68222d587257eea7617864d9326221fd6df0900b
+/workshops/escobari/unit2/WS24 UnitTest/HardwareStore/nbproject/private/
+=======
+<<<<<<< HEAD
+>>>>>>> b8c9488725c810374780487bc5b4e10c297f25ad
+>>>>>>> a286eb566431ec9c5796bb399e9b6c6f1466acdf
+/workshops/suquillof/unit2/WS23AbstractClass/AbstractClasses/build/
+/workshops/suquillof/unit2/WS23AbstractClass/AbstractClasses/dist/
+=======
+>>>>>>> 738b5e60b361515750ba353255ed6f3b6b600d19
+>>>>>>> a2432f3f0b4774deddc9ab40c0da2f73d8ccc7a8

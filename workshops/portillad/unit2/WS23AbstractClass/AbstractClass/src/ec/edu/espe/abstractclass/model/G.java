@@ -12,6 +12,15 @@ package ec.edu.espe.abstractclass.model;
 public class G {
     private int z;
 
+    @Override
+    public String toString() {
+        return "G{" + "z=" + z + '}';
+    }
+
+    public G(int z) {
+        this.z = z;
+    }
+
     /**
      * @return the z
      */
