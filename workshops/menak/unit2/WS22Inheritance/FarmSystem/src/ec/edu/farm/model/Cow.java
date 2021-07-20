@@ -3,30 +3,26 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package ec.edu.espe.fram.model;
+package ec.edu.farm.model;
 
 import java.util.Date;
 
 /**
  *
- * @author Paul Mena The Programmers ESPE-DCCO
+ * @author pc
  */
-public class Cow extends FarmAnimal {
-    
+public class Cow  extends FarmAnimal{
     private boolean isProducingMilk;
 
-    public Cow(boolean isProducingMilk, int id, String breed, Date borOn) {
-        super(id, breed, borOn);
+    public Cow(boolean isProducingMilk, int id, String breed, Date bornOn) {
+        super(id, breed, bornOn);
         this.isProducingMilk = isProducingMilk;
     }
 
-    
     @Override
     public String toString() {
-        return "Cow{" + super.toString() + "isProducingMilk=" + isProducingMilk + '}';
+        return "Cow{" + super.toString()+"isProducingMilk=" + isProducingMilk + '}';
     }
-
-    
     
     /**
      * @return the isProducingMilk
@@ -44,15 +40,16 @@ public class Cow extends FarmAnimal {
 
     @Override
     public void feed(int amount) {
-        System.out.println("feeding a cow with sugarcane");
+      System.out.println("feeding with sugarcane");
+      
     }
+     public void feed(int amount , String FoodType) {
+      System.out.println("feeding with:"+FoodType);
+     }
     
-    public void feed(int amount, String foodType) {
-        System.out.println("feeding a cow with " + foodType);
-    }
     
     public void feed(int amount, int foodType) {
-        System.out.println("feeding a cow with " + foodType);
+       System.out.println("feeding a cow with sugarcane" + foodType);
     }
     
 }

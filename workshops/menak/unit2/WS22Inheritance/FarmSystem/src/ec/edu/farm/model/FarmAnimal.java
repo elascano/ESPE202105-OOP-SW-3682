@@ -3,46 +3,24 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package ec.edu.espe.fram.model;
+package ec.edu.farm.model;
 
 import java.util.Date;
 
 /**
  *
- * @author Paul Mena The Programmers ESPE-DCCO
+ * @author pc
  */
 public abstract class FarmAnimal {
- 
-    private int id;
-    private String breed;
-    private Date borOn;
-     
-    
-    public int getAgeInMonths(){
-        
-        return borOn.getDate();
-    }
-    
     public abstract void feed(int amount);
     
+    private int id;
+    private String breed;
+    private Date bornOn;
     
-    
-    
-    public FarmAnimal(int id, String breed, Date borOn) {
-        this.id = id;
-        this.breed = breed;
-        this.borOn = borOn;
+    public int getAgeInMonths(){
+    return bornOn.getDate();
     }
-
-    
-    @Override
-    public String toString() {
-        return "FarmAnimal{" + "id=" + id + ", breed=" + breed + ", borOn=" + borOn + '}';
-    }
-    
-    
-        
-   
 
     /**
      * @return the id
@@ -73,17 +51,33 @@ public abstract class FarmAnimal {
     }
 
     /**
-     * @return the borOn
+     * @return the bornOn
      */
-    public Date getBorOn() {
-        return borOn;
+    public Date getBornOn() {
+        return bornOn;
     }
 
     /**
-     * @param borOn the borOn to set
+     * @param bornOn the bornOn to set
      */
-    public void setBorOn(Date borOn) {
-        this.borOn = borOn;
+    public void setBornOn(Date bornOn) {
+        this.bornOn = bornOn;
     }
+
+    public FarmAnimal(int id, String breed, Date bornOn) {
+        this.id = id;
+        this.breed = breed;
+        this.bornOn = bornOn;
+    }
+
+    @Override
+    public String toString() {
+        return "FarmAnimal{" + "id=" + id + ", breed=" + breed + ", bornOn=" + bornOn + '}';
+    }
+
+
+ 
+
+  
     
 }

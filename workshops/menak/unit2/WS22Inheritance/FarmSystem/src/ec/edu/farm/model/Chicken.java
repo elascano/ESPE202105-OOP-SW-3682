@@ -3,36 +3,31 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package ec.edu.espe.fram.model;
+package ec.edu.farm.model;
 
 import java.util.Date;
 
 /**
  *
- * @author Paul Mena The Programmers ESPE-DCCO
+ * @author pc
  */
 public class Chicken extends FarmAnimal {
-    
     private boolean isMolting;
 
     @Override
     public String toString() {
-        return "Chicken{" + super.toString() + "isMolting=" + isMolting + '}';
+        return "Chicken{" + super.toString()+"isMolting=" + isMolting + '}';
+    }
+    
+    
+
+    public Chicken(int id, String breed, Date bornOn, boolean isMolting) {
+        super(id, breed, bornOn);
+        this.isMolting=isMolting;
     }
 
-        
     
-    public Chicken(int id, String breed, Date borOn, boolean isMolting) {
-        super(id, breed, borOn);
-        this.isMolting = isMolting;
-    }
-    
-    
-    
-    
-    /**
-     * @return the isMolting
-     */
+     
     public boolean isIsMolting() {
         return isMolting;
     }
@@ -46,7 +41,7 @@ public class Chicken extends FarmAnimal {
 
     @Override
     public void feed(int amount) {
-        System.out.println("feeding a chicken with balanceado");
+        System.out.println("feeding with corn");
     }
     
     
