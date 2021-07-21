@@ -13,6 +13,9 @@ public class Tax {
     static float ivaPercentage=12.00F;
     
     public static float computeIva(float price){
+        if(price<=0){
+            return 0;
+        }
         float ivaValue;
         ivaValue = price * ivaPercentage/100;
         return ivaValue;
@@ -26,9 +29,7 @@ public class Tax {
         
     }
 
-    public static float computeTotalprice(float price) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+    
     
     
 }
