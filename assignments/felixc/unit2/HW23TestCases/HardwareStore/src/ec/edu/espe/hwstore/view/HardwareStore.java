@@ -9,7 +9,7 @@ import utils.Tax;
 
 /**
  *
- * @author Isaac Escobar InnovaCode ESPE-DCCO
+ * @author 59399
  */
 public class HardwareStore {
 
@@ -20,9 +20,8 @@ public class HardwareStore {
         
         float price = 100.00F;
         float total;
-        total= Tax.computeTotalPrice(price);
-        System.out.println("total "+total);
-                
+        total = Tax.computeIva(price);
+        System.out.println("total price" + total);
     }
     
 }

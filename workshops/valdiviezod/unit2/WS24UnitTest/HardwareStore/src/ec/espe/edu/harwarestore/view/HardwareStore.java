@@ -3,13 +3,13 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package ec.edu.espe.hwstore.view;
+package ec.espe.edu.harwarestore.view;
 
 import utils.Tax;
 
 /**
  *
- * @author Isaac Escobar InnovaCode ESPE-DCCO
+ * @author Darwin Valdiviezo NullPointers ESPE-DCCO
  */
 public class HardwareStore {
 
@@ -17,12 +17,13 @@ public class HardwareStore {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        
-        float price = 100.00F;
+       
+        float price =100.00F;
         float total;
         total= Tax.computeTotalPrice(price);
-        System.out.println("total "+total);
-                
+        System.out.println("total price " +total);
+        
+        
     }
     
 }
