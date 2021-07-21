@@ -18,11 +18,11 @@ public class C {
         this.hs = hs;
     }
     
-    public void m(F f){
+    public void m(F f){ //The method is empty
         
     }
     
-    public float m(float f){
+    public float m(float f){ //The method is doing nothing,TODO program the algorithm
         return 0;
     }
 

@@ -9,6 +9,6 @@ package ec.edu.espe.abstractclasses.model;
  *
  * @author Nicolas Suquillo NullPointers ESPE-DCCO
  */
-public class H {
-    
+public class H {//4
+  //constructor and to string missing  
 }
