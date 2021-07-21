@@ -41,7 +41,7 @@ public class ChickenCoop {
    }
    
    public Chicken nextChicken(){
-       return 0;
+       return new Chicken();
    }
 
     @Override
