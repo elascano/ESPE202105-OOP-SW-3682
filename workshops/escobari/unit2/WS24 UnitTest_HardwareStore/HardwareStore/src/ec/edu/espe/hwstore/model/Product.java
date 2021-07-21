@@ -5,6 +5,8 @@
  */
 package ec.edu.espe.hwstore.model;
 
+import utils.Tax;
+
 /**
  *
  * @author Isaac Escobar InnovaCode ESPE-DCCO
@@ -20,7 +22,20 @@ public class Product {
         this.id = id;
         this.description = description;
         this.price = price;
+        
+        this.salePrice = price *1.20F;
+        this.totalPrice = Tax.computeTotalPrice(salePrice);
     }
+
+    public Product(int id, String description, float price, float salePrice, float totalPrice) {
+        this.id = id;
+        this.description = description;
+        this.price = price;
+        this.salePrice = salePrice;
+        this.totalPrice = totalPrice;
+    }
+    
+    
     
     
 
