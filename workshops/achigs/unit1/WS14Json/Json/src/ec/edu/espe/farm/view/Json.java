@@ -68,7 +68,7 @@ public class Json {
         
         Chicken chicken2;
         // Deserialization
-        chicken2 = gson.fromJson(jsonChicken, Chicken.class);        
+        chicken2 = gson.fromJson(jsonChicken, Chicken.class);
         System.out.println("chicken2 name -> " + chicken2.getName());
         //JAR -> Java Archive
         //EAR -> Enterprise Archive

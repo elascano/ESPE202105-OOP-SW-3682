@@ -5,6 +5,8 @@
  */
 package ec.edu.espe.hardwarestore.model;
 
+import ec.espe.edu.hardwarestore.utils.Tax;
+
 /**
  *
  * @author Steven Achig FutureProgrammers ESPE-DCCO
@@ -20,6 +22,17 @@ public class Product {
         this.id = id;
         this.description = description;
         this.price = price;
+        
+        this.salePrice = price*1.2F;
+        this.totalPrice = Tax.computeTotalPrice(salePrice);
+    }
+
+    public Product(int id, String description, float price, float salePrice, float totalPrice) {
+        this.id = id;
+        this.description = description;
+        this.price = price;
+        this.salePrice = salePrice;
+        this.totalPrice = totalPrice;
     }
     
     /**
