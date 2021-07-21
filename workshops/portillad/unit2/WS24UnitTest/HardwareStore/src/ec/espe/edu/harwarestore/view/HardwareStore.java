@@ -5,6 +5,7 @@
  */
 package ec.espe.edu.harwarestore.view;
 
+import ec.espe.edu.harwarestore.model.Product;
 import utils.Tax;
 
 /**
@@ -23,6 +24,9 @@ public class HardwareStore {
         total= Tax.computeTotalPrice(price);
         System.out.println("total price " +total);
         
+        Product product = new Product(0,"Screw Drive" , price);
+        System.out.println("the product " + product.getDescription() + "thata cost->" +product.getSalePrice() +
+                ", its final price ->" + product.getTotalPrice());
         
     }
     

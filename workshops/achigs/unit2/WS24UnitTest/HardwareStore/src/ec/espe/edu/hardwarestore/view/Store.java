@@ -5,6 +5,7 @@
  */
 package ec.espe.edu.hardwarestore.view;
 
+import ec.edu.espe.hardwarestore.model.Product;
 import ec.espe.edu.hardwarestore.utils.Tax;
 
 /**
@@ -21,6 +22,10 @@ public class Store {
         float total;
         total = Tax.computeTotalPrice(price);
         System.out.println("total price " + total);
+        
+        Product product = new Product(0, "Screen Driver", price);
+        System.out.println("the product " + product.getDescription() + "  "  
+                + " FInal price is -> " + product.getSalePrice());
     }
     
 }
