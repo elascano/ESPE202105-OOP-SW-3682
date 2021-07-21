@@ -12,10 +12,11 @@ import java.util.ArrayList;
  * @author pc
  */
 public class C {
-  ArrayList<H>h= new ArrayList<>();  
-  public static void m(F f){
+  ArrayList<H>h= new ArrayList<>();  //wrong name of arrayList
+  public static void m(F f){ //wrong type of method.
   }
-    public static void m(float f){
+    public static void m(float f){ //wrong type of method.
   }
+    //Encapsulate fields is missing.
 }
 

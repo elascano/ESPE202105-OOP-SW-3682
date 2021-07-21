@@ -11,29 +11,29 @@ import java.util.ArrayList;
  *
  * @author Myckel Chamorro EMCL.java ESPE-DCCO
  */
-public abstract class B {
+public abstract class B { //1
 
-    private float f;
-    private double d;
-    private ArrayList<G> gs;
+    private float f; //1
+    private double d; //1
+    private ArrayList<G> gs; // 0.5 lack new arrayList
 
     public B() {
     }
 
     @Override
-    public String toString() {
+    public String toString() {  //1
         return "B{" + "f=" + f + ", d=" + d + ", gs=" + gs + '}';
     }
 
-    public B(float f, double d, ArrayList<G> gs) {
+    public B(float f, double d, ArrayList<G> gs) {  //1
         this.f = f;
         this.d = d;
         this.gs = gs;
     }
 
-    public abstract int operation1(int n) ;
+    public abstract int operation1(int n) ; //1
     
-     public abstract float operation2(float f);
+     public abstract float operation2(float f); //1
 
     /**
      * @return the f
@@ -41,7 +41,7 @@ public abstract class B {
     public float getF() {
         return f;
     }
-
+    //2
     /**
      * @param f the f to set
      */

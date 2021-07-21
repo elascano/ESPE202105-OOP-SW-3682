@@ -15,7 +15,7 @@ public abstract class B {
     private float f;
     private double d;
     private ArrayList<G> gs = new ArrayList<>();
-
+    //in the constructor miss the atribute for gs
     public B(float f, double d) {
         this.f = f;
         this.d = d;

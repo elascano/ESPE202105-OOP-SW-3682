@@ -11,11 +11,11 @@ import java.util.ArrayList;
  *
  * @author Steven Achig Future Programmers ESPE-DCCO
  */
-public class D extends B{
+public class D extends B{ //Not inherit abstract methods from class B
     private int x;
     private int y;
     
-    public boolean m(int i){
+    public boolean m(int i){ //1 The method is doing nothing,TODO program the algorithm
         return true;
     }
 
