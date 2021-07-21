@@ -20,7 +20,7 @@ public class HardwareStore {
         
         float price = 100.00F;
         float total;
-        total= Tax.computeTotalprice(price);
+        total= Tax.computeTotalPrice(price);
         System.out.println("total "+total);
                 
     }
