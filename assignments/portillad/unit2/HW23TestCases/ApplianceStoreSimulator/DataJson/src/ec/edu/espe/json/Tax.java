@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package utils;
+package ec.edu.espe.json;
 
 /**
  *
@@ -22,6 +22,5 @@ public class Tax {
         totalPrice =price +computeIva(price);
         return totalPrice;
     }
-    //TEST CASES 
-    //input/s      expected
+
 }
