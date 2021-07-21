@@ -5,6 +5,8 @@
  */
 package ec.edu.espe.hwstore.model;
 
+import Utils.Tax;
+
 /**
  *
  * @author pc
@@ -14,6 +16,16 @@ public class Product{
     public Product(int id, float price, String description) {
         this.id = id;
         this.price = price;
+        this.description = description;
+        this.salePrice = price *1.20F;
+        this.totalPrice = Tax.computeTotalprice(price); 
+    }
+
+    public Product(int id, float price, float salePrice, float totalPrice, String description) {
+        this.id = id;
+        this.price = price;
+        this.salePrice = salePrice;
+        this.totalPrice = totalPrice;
         this.description = description;
     }
 
