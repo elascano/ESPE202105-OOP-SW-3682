@@ -7,7 +7,7 @@ package ec.edu.espe.SanamedAccountSystem.model;
 
 /**
  *
- * @author Esteban
+ * @author Lizbeth Cajas
  */
 public class Product {
    private Medicins medicine;

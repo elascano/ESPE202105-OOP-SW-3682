@@ -19,7 +19,7 @@ import javax.swing.JOptionPane;
 
 /**
  *
- * @author Esteban
+ * @author Lizbeth Cajas
  */
 public class SanamedAccountSystem {
     public static void main(String[] args) {

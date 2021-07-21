@@ -7,7 +7,7 @@ package ec.edu.espe.SanamedAccountSystem.model;
 
 /**
  *
- * @author Esteban Chablay EMCL. Java ESPE-DCCO
+ * @author Lizbeth Cajas
  */
 public class FinalConsumer {
     private float totalValue;

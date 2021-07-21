@@ -10,7 +10,7 @@ import javax.swing.JOptionPane;
 
 /**
  *
- * @author Esteban Chablay EMCL. Java ESPE-DCCO
+ * @author Lizbeth Cajas
  */
 public class Pharmacy {
     private String name;
