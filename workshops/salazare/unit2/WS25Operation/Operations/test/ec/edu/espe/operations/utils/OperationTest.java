@@ -44,8 +44,8 @@ public class OperationTest {
     public void testSumZero() {
         System.out.println("sum");
         float addend1 = 9.4F;
-        float addend2 = -6.6F;
-        float expResult = -16.0F;
+        float addend2 = 0.00F;
+        float expResult = 9.4F;
         float result = Operation.sum(addend1, addend2);
         assertEquals(expResult, result, 0.0);
        
@@ -53,9 +53,9 @@ public class OperationTest {
     
     public void testSumLong() {
         System.out.println("sum");
-        float addend1 = -9.4F;
-        float addend2 = -6.6F;
-        float expResult = -16.0F;
+        float addend1 = -9.434F;
+        float addend2 = -6.6124F;
+        float expResult = -16.04F;
         float result = Operation.sum(addend1, addend2);
         assertEquals(expResult, result, 0.0);
        
@@ -63,9 +63,9 @@ public class OperationTest {
     
     public void testSumEquals() {
         System.out.println("sum");
-        float addend1 = -9.4F;
-        float addend2 = -6.6F;
-        float expResult = -16.0F;
+        float addend1 = 12.1F;
+        float addend2 = 12.1F;
+        float expResult = 24.2F;
         float result = Operation.sum(addend1, addend2);
         assertEquals(expResult, result, 0.0);
        
@@ -73,9 +73,9 @@ public class OperationTest {
     
     public void testSum1() {
         System.out.println("sum");
-        float addend1 = -9.4F;
+        float addend1 = 12.34F;
         float addend2 = -6.6F;
-        float expResult = -16.0F;
+        float expResult = 5.74F;
         float result = Operation.sum(addend1, addend2);
         assertEquals(expResult, result, 0.0);
        
@@ -83,9 +83,9 @@ public class OperationTest {
     
     public void testSum2() {
         System.out.println("sum");
-        float addend1 = -9.4F;
-        float addend2 = -6.6F;
-        float expResult = -16.0F;
+        float addend1 = 122.1F;
+        float addend2 = 14354.1F;
+        float expResult = 14476.2F;
         float result = Operation.sum(addend1, addend2);
         assertEquals(expResult, result, 0.0);
        
@@ -99,7 +99,7 @@ public class OperationTest {
         System.out.println("substract");
         float minuend = 10.0F;
         float substraend = 20.0F;
-        float expResult = 30.00F;
+        float expResult = 10.00F;
         float result = Operation.substract(minuend, substraend);
         assertEquals(expResult, result, 0.00);
        
