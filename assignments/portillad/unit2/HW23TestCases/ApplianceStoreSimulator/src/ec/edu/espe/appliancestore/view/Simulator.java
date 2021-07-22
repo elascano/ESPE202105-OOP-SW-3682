@@ -17,8 +17,9 @@ import ec.edu.espe.appliancestore.model.TV;
 import ec.edu.espe.appliancestore.model.Toaster;
 import ec.edu.espe.json.Descuent;
 import ec.edu.espe.json.Tax;
+import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.util.Scanner;
-
 
 
 /**
@@ -32,7 +33,8 @@ public class Simulator {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        dataPerson();
+        generatePayment();
+        //dataPerson();
     }
     public static String dataPerson(){
         int age;
@@ -68,7 +70,10 @@ public class Simulator {
         totalAmount=totalAmount+price;
         }
         total= Tax.computeTotalPrice(totalAmount);
-        System.out.println("total price " +total);
+        BigDecimal bd = new BigDecimal(total).setScale(2, RoundingMode.HALF_UP);
+        double totalDecimal = bd.doubleValue();
+        
+        System.out.println("total price " +totalDecimal);
         
         if(total>=1000){
             System.out.println("Discount for exceeding $ 1000 value");
