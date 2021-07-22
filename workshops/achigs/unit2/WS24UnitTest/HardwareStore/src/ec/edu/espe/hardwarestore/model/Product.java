@@ -23,8 +23,8 @@ public class Product {
         this.description = description;
         this.price = price;
         
-        this.salePrice = price*1.2F;
-        this.totalPrice = Tax.computeTotalPrice(salePrice);
+        this.salePrice = price*1.20F;
+        this.totalPrice = Tax.computeTotalPrice(price);
     }
 
     public Product(int id, String description, float price, float salePrice, float totalPrice) {
