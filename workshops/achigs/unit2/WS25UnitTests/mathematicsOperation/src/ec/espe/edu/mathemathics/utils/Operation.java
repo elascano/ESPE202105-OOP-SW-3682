@@ -5,6 +5,7 @@
  */
 package ec.espe.edu.mathemathics.utils;
 
+
 /**
  *
  * @author Steven Achig FutureProgrammers ESPE-DCCO
@@ -12,13 +13,13 @@ package ec.espe.edu.mathemathics.utils;
 public class Operation {
     
     public static float add(float addend1, float addend2){
-        float total = 0.00F;
+        float total;
         total = addend1+addend2;
         return total;
     }
     
     public static float substract(float substraend, float minuend){
-        float difference = 0.00F;
+        float difference;
         difference = substraend-minuend;
         return difference;
     }

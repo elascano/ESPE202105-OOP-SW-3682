@@ -35,7 +35,7 @@ public class OperationTest {
         System.out.println("add");
         float addend1 = 0.05F;
         float addend2 = 0.03F;
-        float expResult = 0.8F;
+        float expResult = 0.08F;
         float total = Operation.add(addend1, addend2);
         assertEquals(expResult, total, 0.00);
     }
@@ -63,9 +63,9 @@ public class OperationTest {
     @Test
     public void testAddBigTwo() {
         System.out.println("add");
-        float addend1 = 8965.360F;
+        float addend1 = 8965.36F;
         float addend2 = 7652.03F;
-        float expResult = 16671.39F;
+        float expResult = 16617.39F;
         float total = Operation.add(addend1, addend2);
         assertEquals(expResult, total, 0.00);
     }
@@ -135,8 +135,6 @@ public class OperationTest {
         float expResult = 0.0F;
         float difference = Operation.substract(substraend, minuend);
         assertEquals(expResult, difference, 0.0);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 @Test
     public void testSubstractSmall() {
@@ -144,7 +142,7 @@ public class OperationTest {
         float substraend = 0.05F;
         float minuend = 0.03F;
         float expResult = 0.02F;
-        float difference = Operation.add(substraend, minuend);
+        float difference = Operation.substract(substraend, minuend);
         assertEquals(expResult, difference, 0.00);
     }
     
@@ -154,7 +152,7 @@ public class OperationTest {
         float substraend = 0.21F;
         float minuend = 0.12F;
         float expResult = 0.09F;
-        float difference = Operation.add(substraend, minuend);
+        float difference = Operation.substract(substraend, minuend);
         assertEquals(expResult, difference, 0.00);
     }
     
@@ -163,18 +161,18 @@ public class OperationTest {
         System.out.println("add");
         float substraend = 98647.45F;
         float minuend = 1575.39F;
-        float expResult = 100222.84F;
-        float difference = Operation.add(substraend, minuend);
+        float expResult = 97072.06F;
+        float difference = Operation.substract(substraend, minuend);
         assertEquals(expResult, difference, 0.00);
     }
     
     @Test
-    public void testSubstractigTwo() {
+    public void testSubstractBigTwo() {
         System.out.println("add");
-        float substraend = 8965.360F;
+        float substraend = 8965.36F;
         float minuend = 7652.03F;
-        float expResult = 16671.39F;
-        float difference = Operation.add(substraend, minuend);
+        float expResult = 1313.33F;
+        float difference = Operation.substract(substraend, minuend);
         assertEquals(expResult, difference, 0.00);
     }
     
@@ -183,8 +181,8 @@ public class OperationTest {
         System.out.println("add");
         float substraend = -0.09F;
         float minuend = -0.12F;
-        float expResult = -0.21F;
-        float difference = Operation.add(substraend, minuend);
+        float expResult = 0.03F;
+        float difference = Operation.substract(substraend, minuend);
         assertEquals(expResult, difference, 0.00);
     }
     
@@ -193,8 +191,8 @@ public class OperationTest {
         System.out.println("add");
         float substraend = -0.95F;
         float minuend = -0.15F;
-        float expResult = -1.10F;
-        float difference = Operation.add(substraend, minuend);
+        float expResult = -0.80F;
+        float difference = Operation.substract(substraend, minuend);
         assertEquals(expResult, difference, 0.00);
     }
     
@@ -203,8 +201,8 @@ public class OperationTest {
         System.out.println("add");
         float substraend = -6523.86F;
         float minuend = -9836.25F;
-        float expResult = -16360.11F;
-        float difference = Operation.add(substraend, minuend);
+        float expResult = 3312.39F;
+        float difference = Operation.substract(substraend, minuend);
         assertEquals(expResult, difference, 0.00);
     }
     
@@ -213,8 +211,8 @@ public class OperationTest {
         System.out.println("add");
         float substraend = -9798445.13F;
         float minuend = -5632.89F;
-        float expResult = -9804078.02F;
-        float difference = Operation.add(substraend, minuend);
+        float expResult = -9792812.24F;
+        float difference = Operation.substract(substraend, minuend);
         assertEquals(expResult, difference, 0.00);
     }
     
@@ -223,8 +221,8 @@ public class OperationTest {
         System.out.println("add");
         float substraend = 25.50F;
         float minuend = 5.50F;
-        float expResult = 31.00F;
-        float difference = Operation.add(substraend, minuend);
+        float expResult = 20.00F;
+        float difference = Operation.substract(substraend, minuend);
         assertEquals(expResult, difference, 0.00);
     }
     
