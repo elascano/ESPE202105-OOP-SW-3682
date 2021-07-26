@@ -526,6 +526,10 @@ hs_err_pid*
 >>>>>>> 087ca9fea7ac031e513c90025dcdc9d22efc1bc2
 >>>>>>> 19a6bc1cfa78a240b08e86f3510b7fbc325857f8
 <<<<<<< HEAD
+/workshops/salazare/unit2/Operation/Operations/nbproject/private/
+/workshops/salazare/unit2/Operation/Operations/build/
+=======
+<<<<<<< HEAD
 /workshops/escobari/unit2/WS24 UnitTest/HardwareStore/build/
 /workshops/escobari/unit2/WS25UnitTest/addandsubtract/nbproject/private/
 =======
@@ -547,5 +551,9 @@ hs_err_pid*
 /workshops/mortensene/unit2/WS24HardwareStoreUnitTest/HardwareStore/build/
 /workshops/mortensene/unit2/WS24HardwareStoreUnitTest/HardwareStore/nbproject/private/
 /workshops/mortensene/unit2/WS24HardwareStoreUnitTest/UnitTest/nbproject/private/
+<<<<<<< HEAD
 /assignments/mortensene/unit2/HW24/GroseryStoreModel/nbproject/private/
 /assignments/mortensene/unit2/HW24/GroseryStoreModel/build/
+=======
+>>>>>>> 0675df9e0265d07c23ae5554669baaa96d8b7dc5
+>>>>>>> b5014923023c04d0cad818c66d5acdc010606217
