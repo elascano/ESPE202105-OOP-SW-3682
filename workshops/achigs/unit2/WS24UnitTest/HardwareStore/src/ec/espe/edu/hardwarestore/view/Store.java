@@ -25,7 +25,7 @@ public class Store {
         
         Product product = new Product(0, "Screen Driver", price);
         System.out.println("the product " + product.getDescription() + "  "  
-                + " FInal price is -> " + product.getSalePrice());
+                + " FInal price is -> " + product.getTotalPrice());
     }
     
 }
