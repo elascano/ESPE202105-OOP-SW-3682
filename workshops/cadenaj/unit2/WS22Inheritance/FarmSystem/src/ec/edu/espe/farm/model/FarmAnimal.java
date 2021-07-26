@@ -16,6 +16,10 @@ public abstract class FarmAnimal {
     private String breed;
     private Date bornOn;
 
+      public int getAgeInMonths(){
+        return bornOn.getDate();
+    }   
+      
     public abstract void feed(int amount);
 
     public FarmAnimal(int id, String breed, Date bornOn) {
