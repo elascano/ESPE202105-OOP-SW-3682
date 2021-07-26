@@ -10,7 +10,8 @@ import ec.espe.edu.hardwarestore.utils.Tax;
 
 /**
  *
- * @author Steven Achig FutureProgrammers ESPE-DCCO
+ * @author Alisson Caiza ASUS ESPE-DCCO
+
  */
 public class Store {
 
@@ -25,7 +26,7 @@ public class Store {
         
         Product product = new Product(0, "Screen Driver", price);
         System.out.println("the product " + product.getDescription() + "  "  
-                + " FInal price is -> " + product.getTotalPrice());
+                + " FInal price is -> " + product.getSalePrice());
     }
     
 }

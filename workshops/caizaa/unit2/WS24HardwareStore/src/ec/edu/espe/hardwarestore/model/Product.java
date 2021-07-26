@@ -9,7 +9,8 @@ import ec.espe.edu.hardwarestore.utils.Tax;
 
 /**
  *
- * @author Steven Achig FutureProgrammers ESPE-DCCO
+ * @author Alisson Caiza ASUS ESPE-DCCO
+
  */
 public class Product {
     private int id;
@@ -23,8 +24,8 @@ public class Product {
         this.description = description;
         this.price = price;
         
-        this.salePrice = price*1.20F;
-        this.totalPrice = Tax.computeTotalPrice(price);
+        this.salePrice = price*1.2F;
+        this.totalPrice = Tax.computeTotalPrice(salePrice);
     }
 
     public Product(int id, String description, float price, float salePrice, float totalPrice) {
