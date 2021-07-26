@@ -33,8 +33,7 @@ public class Simulator {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        generatePayment();
-        //dataPerson();
+        dataPerson();
     }
     public static String dataPerson(){
         int age;
