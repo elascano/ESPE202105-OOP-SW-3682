@@ -27,7 +27,7 @@ public class Tax {
     
     public static float computeGain(float price){
         float gain;
-        gain = (computeTotalPrice(price)-computeIva(price))*gainPercentage/100;
+        gain = computeTotalPrice(price)*gainPercentage/100;
         return gain;
     }
     
