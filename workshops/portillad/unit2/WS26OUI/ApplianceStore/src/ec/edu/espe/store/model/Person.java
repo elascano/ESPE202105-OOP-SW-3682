@@ -22,9 +22,9 @@ public class Person {
     private String description;
     private ArrayList<Gender> genders = new ArrayList <>();
     private Date birthDate;
-    private int datetoday;
+    private int age;
 
-    public Person(String name, String lastName, String email, String paswoord, String phoneNumber, String adress, String description, Date birthDate, int datetoday) {
+    public Person(String name, String lastName, String email, String paswoord, String phoneNumber, String adress, String description, Date birthDate, int age) {
         this.name = name;
         this.lastName = lastName;
         this.email = email;
@@ -33,7 +33,7 @@ public class Person {
         this.adress = adress;
         this.description = description;
         this.birthDate = birthDate;
-        this.datetoday = datetoday;
+        this.age = age;
     }
     
     
@@ -110,12 +110,12 @@ public class Person {
         this.birthDate = birthDate;
     }
 
-    public int getDatetoday() {
-        return datetoday;
+    public int getAge() {
+        return age;
     }
 
-    public void setDatetoday(int datetoday) {
-        this.datetoday = datetoday;
+    public void setAge(int age) {
+        this.age = age;
     }
 
     
