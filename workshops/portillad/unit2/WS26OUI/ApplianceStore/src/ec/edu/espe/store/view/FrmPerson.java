@@ -8,6 +8,7 @@ package ec.edu.espe.store.view;
 import ec.edu.espe.store.model.Person;
 import java.util.Date;
 import javax.swing.JOptionPane;
+import utils.InputValidation;
 
 /**
  *
@@ -95,7 +96,17 @@ public class FrmPerson extends javax.swing.JFrame {
         jLabel10.setText("Edad");
 
         txtName.setToolTipText("Ingresar su nombre");
+        txtName.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                txtNameFocusLost(evt);
+            }
+        });
 
+        txLastName.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                txLastNameFocusLost(evt);
+            }
+        });
         txLastName.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txLastNameActionPerformed(evt);
@@ -331,6 +342,27 @@ public class FrmPerson extends javax.swing.JFrame {
         person = new Person(name, lasName, email, paswoord, phoneNumber, adress, description, birthDate, datetoday);
         JOptionPane.showMessageDialog(null, "Datos almacenados correctamente");
     }//GEN-LAST:event_btnAddActionPerformed
+
+    private void txtNameFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtNameFocusLost
+    String name = txtName.getText();
+    boolean isCharacter;
+    isCharacter = InputValidation.validateCharacters(name);
+    if(!(isCharacter)){
+        JOptionPane.showMessageDialog(rootPane, "Enter only characters here");
+        txtName.requestFocus();
+        }
+    
+    }//GEN-LAST:event_txtNameFocusLost
+
+    private void txLastNameFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txLastNameFocusLost
+        String lastName = txLastName.getText();
+    boolean isCharacter;
+    isCharacter = InputValidation.validateCharacters(lastName);
+    if(!(isCharacter)){
+        JOptionPane.showMessageDialog(rootPane, "Enter only characters here");
+        txtName.requestFocus();
+        }
+    }//GEN-LAST:event_txLastNameFocusLost
 
     /**
      * @param args the command line arguments
