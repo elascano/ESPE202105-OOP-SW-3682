@@ -468,6 +468,12 @@ hs_err_pid*
 >>>>>>> e99f796c183b95bb3535a5ffa6c1fa942c146938
 >>>>>>> 104bec35b15c3e0b8683403054276729ee6fddd0
 <<<<<<< HEAD
+/workshops/campoverdec/unit2/WS22Inheritance/FarmSystem/nbproject/private/
+/workshops/campoverdec/unit2/WS22Inheritance/FarmSystem/build/
+/workshops/campoverdec/unit2/WS24UnitTest/HardwareStore/nbproject/private/
+/workshops/campoverdec/unit2/WS26/pharmacy account system/nbproject/private/
+=======
+<<<<<<< HEAD
 /workshops/escobari/unit2/WS22Inheritance/FarmSystem/build/
 /assignments/escobari/unit2/HW22Inheritance/CellPhoneStore_inheritance/nbproject/private/
 /assignments/escobari/unit2/HW22Inheritance/CellPhoneStore_inheritance/build/
@@ -565,3 +571,4 @@ hs_err_pid*
 /assignments/cadenaj/unit2/HW21Library/TaxBookstore/dist/
 /assignments/cadenaj/unit2/HW21Library/TaxBookstore/build/
 >>>>>>> 3b927bc0740a2f84dd32402420b96676e87140c2
+>>>>>>> 1dbf0e53fc67e7550110c09cccba019a05c48fd6

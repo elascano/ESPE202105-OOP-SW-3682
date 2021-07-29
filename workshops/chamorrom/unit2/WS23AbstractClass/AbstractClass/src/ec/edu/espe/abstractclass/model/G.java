@@ -9,7 +9,7 @@ package ec.edu.espe.abstractclass.model;
  *
  * @author Myckel Chamorro EMCL.java ESPE-DCCO
  */
-class G {
+public class G {
     private int z;
 
     @Override
