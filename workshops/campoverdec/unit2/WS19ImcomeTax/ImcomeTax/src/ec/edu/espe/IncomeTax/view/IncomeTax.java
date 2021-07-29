@@ -6,7 +6,14 @@
 package ec.edu.espe.IncomeTax.view;
 
 import ec.edu.espe.utils.IncomeTaxes;
-
+import java.util.Scanner;
+//import ec.edu.espe.utils.WriteJson;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.util.Scanner;
+import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
+import org.json.simple.parser.ParseException;
 public class IncomeTax {
 
     /**
@@ -14,8 +21,11 @@ public class IncomeTax {
      */
     public static void main(String[] args) {
         
-        float amount=3200.0F;
+        float amount;
         float incomeTax;
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Ingrese su sueldo mensual: ");
+        amount=scanner.nextFloat();
       
         
         incomeTax = IncomeTaxes.computeIncomeTax(amount);
