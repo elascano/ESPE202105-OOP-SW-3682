@@ -2,6 +2,7 @@ package ec.edu.espe.abstractclass.view;
 
 import ec.edu.espe.abstractclass.model.*;
 import java.util.ArrayList;
+import static javafx.scene.input.KeyCode.G;
 
 /**
  *

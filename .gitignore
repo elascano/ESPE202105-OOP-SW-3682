@@ -21,10 +21,10 @@
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
-=======
 
 #Visual paradigm backup files
 *.vpp.bak*
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -468,6 +468,12 @@ hs_err_pid*
 >>>>>>> e99f796c183b95bb3535a5ffa6c1fa942c146938
 >>>>>>> 104bec35b15c3e0b8683403054276729ee6fddd0
 <<<<<<< HEAD
+/workshops/campoverdec/unit2/WS22Inheritance/FarmSystem/nbproject/private/
+/workshops/campoverdec/unit2/WS22Inheritance/FarmSystem/build/
+/workshops/campoverdec/unit2/WS24UnitTest/HardwareStore/nbproject/private/
+/workshops/campoverdec/unit2/WS26/pharmacy account system/nbproject/private/
+=======
+<<<<<<< HEAD
 /workshops/escobari/unit2/WS22Inheritance/FarmSystem/build/
 /assignments/escobari/unit2/HW22Inheritance/CellPhoneStore_inheritance/nbproject/private/
 /assignments/escobari/unit2/HW22Inheritance/CellPhoneStore_inheritance/build/
@@ -478,10 +484,6 @@ hs_err_pid*
 >>>>>>> 99d9d1a6ffd9528e6e93d4730be367428ddd4866
 /assignments/solanos/unit2/HW22Inheritance/Inheritance/nbproject/private/
 /assignments/solanos/unit2/HW22Inheritance/Inheritance/build/
-<<<<<<< HEAD
-/workshops/solanos/unit2/WH23ClassAbstract/Abstract/nbproject/private/
-/workshops/solanos/unit2/WH23ClassAbstract/Abstract/build/
-=======
 >>>>>>> d47c94ea52f08068d3bff7e4593ee606b2373894
 <<<<<<< HEAD
 /workshops/mortensene/unit2/WS23/AbstractsClasses/nbproject/private/
@@ -497,13 +499,76 @@ hs_err_pid*
 >>>>>>> b70f4582a4f591dfb56a8d841f0199788f10532b
 >>>>>>> 68222d587257eea7617864d9326221fd6df0900b
 <<<<<<< HEAD
-/workshops/mortensene/unit2/WS23Abstract/AbstractsClasses/dist/
-/workshops/mortensene/unit2/WS23Abstract/AbstractsClasses/build/
-/workshops/gonzaleza/unit2/WS23Abstract/Abstract/build/
+/workshops/salazare/unit2/WS24UnitTest/HardwareStore/nbproject/private/
+/workshops/salazare/unit2/WS24UnitTest/HardwareStore/build/
+=======
+/workshops/escobari/unit2/WS24 UnitTest/HardwareStore/nbproject/private/
 =======
 <<<<<<< HEAD
-/workshops/achigs/unit2/WS23AbstractClass/AbstractClass/build/
-=======
 >>>>>>> b8c9488725c810374780487bc5b4e10c297f25ad
 >>>>>>> a286eb566431ec9c5796bb399e9b6c6f1466acdf
+<<<<<<< HEAD
 >>>>>>> b814be4e0aedce02ae33d6560116cfb6d5c2a0eb
+<<<<<<< HEAD
+/workshops/felixc/unit2/WS23AbstractClass/Abstract/nbproject/private/
+=======
+/workshops/mortensene/unit2/WS24/UnitTest/nbproject/private/
+/workshops/mortensene/unit2/WS24/HardwareStore/nbproject/private/
+/workshops/mortensene/unit2/WS24/HardwareStore/build/
+=======
+/workshops/suquillof/unit2/WS23AbstractClass/AbstractClasses/build/
+/workshops/suquillof/unit2/WS23AbstractClass/AbstractClasses/dist/
+=======
+>>>>>>> 738b5e60b361515750ba353255ed6f3b6b600d19
+>>>>>>> a2432f3f0b4774deddc9ab40c0da2f73d8ccc7a8
+<<<<<<< HEAD
+/assignments/portillad/unit2/HW23TestCases/ApplianceStoreSimulator/DataJson/build/
+/assignments/portillad/unit2/HW23TestCases/ApplianceStoreSimulator/DataJson/nbproject/private/
+/assignments/portillad/unit2/HW23TestCases/ApplianceStoreSimulator/build/
+/assignments/portillad/unit2/HW23TestCases/ApplianceStoreSimulator/dist/
+/assignments/portillad/unit2/HW23TestCases/ApplianceStoreSimulator/nbproject/private/
+/assignments/portillad/unit2/HW23TestCases/ApplianceStoreSimulator/DataJson/dist/
+=======
+>>>>>>> 087ca9fea7ac031e513c90025dcdc9d22efc1bc2
+>>>>>>> 19a6bc1cfa78a240b08e86f3510b7fbc325857f8
+<<<<<<< HEAD
+/workshops/salazare/unit2/Operation/Operations/nbproject/private/
+/workshops/salazare/unit2/Operation/Operations/build/
+=======
+<<<<<<< HEAD
+/workshops/escobari/unit2/WS24 UnitTest/HardwareStore/build/
+/workshops/escobari/unit2/WS25UnitTest/addandsubtract/nbproject/private/
+=======
+>>>>>>> 16e8662abe50ff39356c376fecbe38d28863f875
+/workshops/mortensene/unit2/WS23Abstract/AbstractsClasses/dist/
+/workshops/mortensene/unit2/WS23Abstract/AbstractsClasses/build/
+>>>>>>> 2d311bb0d32180d5457dc37fea5b2d787e8db53f
+/workshops/gonzaleza/unit2/WS23Abstract/Abstract/build/
+>>>>>>> d7df57c66308a79de8a9fdac2df1d4c02f0a3e49
+/workshops/mortensene/unit2/WS24UnitTest - copia/HardwareStore/build/
+/workshops/mortensene/unit2/WS24UnitTest - copia/HardwareStore/nbproject/private/
+/workshops/mortensene/unit2/WS24UnitTest - copia/UnitTest/nbproject/private/
+/workshops/mortensene/unit2/WS25UnitTest - copia/HardwareStore/build/
+/workshops/mortensene/unit2/WS25UnitTest - copia/HardwareStore/nbproject/private/
+/workshops/mortensene/unit2/WS25UnitTest - copia/UnitTest/nbproject/private/
+/workshops/mortensene/unit2/WS25UnitTest/HardwareStore/build/
+/workshops/mortensene/unit2/WS25UnitTest/HardwareStore/nbproject/private/
+/workshops/mortensene/unit2/WS25UnitTest/UnitTest/nbproject/private/
+/workshops/mortensene/unit2/WS24HardwareStoreUnitTest/HardwareStore/build/
+/workshops/mortensene/unit2/WS24HardwareStoreUnitTest/HardwareStore/nbproject/private/
+/workshops/mortensene/unit2/WS24HardwareStoreUnitTest/UnitTest/nbproject/private/
+<<<<<<< HEAD
+/assignments/mortensene/unit2/HW24/GroseryStoreModel/nbproject/private/
+/assignments/mortensene/unit2/HW24/GroseryStoreModel/build/
+=======
+>>>>>>> 0675df9e0265d07c23ae5554669baaa96d8b7dc5
+>>>>>>> b5014923023c04d0cad818c66d5acdc010606217
+<<<<<<< HEAD
+/assignments/portillad/unit2/HW26MongoDB/ApplianceStoreSimulator/nbproject/private/
+/assignments/portillad/unit2/HW26MongoDB/ApplianceStoreSimulator/dist/
+/assignments/portillad/unit2/HW26MongoDB/ApplianceStoreSimulator/build/
+=======
+/assignments/cadenaj/unit2/HW21Library/TaxBookstore/dist/
+/assignments/cadenaj/unit2/HW21Library/TaxBookstore/build/
+>>>>>>> 3b927bc0740a2f84dd32402420b96676e87140c2
+>>>>>>> 1dbf0e53fc67e7550110c09cccba019a05c48fd6
