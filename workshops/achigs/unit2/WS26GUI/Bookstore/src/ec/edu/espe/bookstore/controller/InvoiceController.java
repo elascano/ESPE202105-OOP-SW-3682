@@ -10,6 +10,7 @@ import ec.edu.espe.bookstore.model.Invoice;
 import ec.edu.espe.bookstore.view.FrmInvoice;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
+import utils.DBManager;
 
 /**
  *
@@ -19,12 +20,17 @@ public class InvoiceController {
     private Invoice invoice;
     private FrmInvoice frmInvoice;
     private ArrayList<Book> books;
+    private Persistence dataManager = new DBManager();
 
     public void addData(Invoice invoice){
         //TODO read contacts from datebase
         //TODO add contact to datebase
         //using the utils class
         
+        //TODO  invoice object to JSON
+        //TODO contact sent to datebasa
+        String invoiceJson = "{}";
+        dataManager.create(invoiceJson, "invoices");
     }
     
     public ArrayList<Invoice> readInvoices(){

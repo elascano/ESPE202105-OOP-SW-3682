@@ -468,6 +468,12 @@ hs_err_pid*
 >>>>>>> e99f796c183b95bb3535a5ffa6c1fa942c146938
 >>>>>>> 104bec35b15c3e0b8683403054276729ee6fddd0
 <<<<<<< HEAD
+/workshops/campoverdec/unit2/WS22Inheritance/FarmSystem/nbproject/private/
+/workshops/campoverdec/unit2/WS22Inheritance/FarmSystem/build/
+/workshops/campoverdec/unit2/WS24UnitTest/HardwareStore/nbproject/private/
+/workshops/campoverdec/unit2/WS26/pharmacy account system/nbproject/private/
+=======
+<<<<<<< HEAD
 /workshops/escobari/unit2/WS22Inheritance/FarmSystem/build/
 /assignments/escobari/unit2/HW22Inheritance/CellPhoneStore_inheritance/nbproject/private/
 /assignments/escobari/unit2/HW22Inheritance/CellPhoneStore_inheritance/build/
@@ -557,4 +563,21 @@ hs_err_pid*
 =======
 >>>>>>> 0675df9e0265d07c23ae5554669baaa96d8b7dc5
 >>>>>>> b5014923023c04d0cad818c66d5acdc010606217
+<<<<<<< HEAD
 /workshops/achigs/unit2/WS26GUI/Bookstore/build/
+=======
+<<<<<<< HEAD
+/assignments/portillad/unit2/HW26MongoDB/ApplianceStoreSimulator/nbproject/private/
+/assignments/portillad/unit2/HW26MongoDB/ApplianceStoreSimulator/dist/
+/assignments/portillad/unit2/HW26MongoDB/ApplianceStoreSimulator/build/
+=======
+/assignments/cadenaj/unit2/HW21Library/TaxBookstore/dist/
+/assignments/cadenaj/unit2/HW21Library/TaxBookstore/build/
+<<<<<<< HEAD
+/workshops/cadenaj/unit2/WS22Inheritance/FarmSystem/build/
+/workshops/cadenaj/unit2/WS24UnitTest/HardwareStore/build/
+=======
+>>>>>>> 3b927bc0740a2f84dd32402420b96676e87140c2
+>>>>>>> 1dbf0e53fc67e7550110c09cccba019a05c48fd6
+>>>>>>> f5d4a43e178fa00ca5619108567e9790bf1166d5
+>>>>>>> 3078e034365afafe3766512900a29ab1371bef83
