@@ -14,14 +14,14 @@ import java.util.Date;
 public class Chicken extends FarmAnimal {
     private boolean isMolting;
 
-    public Chicken(boolean isMolting, int id, String breed, Date bornOn) {
-        super(id, breed, bornOn);
-        this.isMolting = isMolting;
-    }
-
     @Override
     public String toString() {
         return "Chicken{" + super.toString() + "isMolting=" + isMolting + '}';
+    }
+
+    public Chicken(boolean isMolting, int id, String breed, Date bornOn) {
+        super(id, breed, bornOn);
+        this.isMolting = isMolting;
     }
 
     /**
@@ -40,7 +40,8 @@ public class Chicken extends FarmAnimal {
 
     @Override
     public void feed(int amount) {
-        System.out.println("Feeding a chicken with balanced. ");
+        System.out.println("feeding a Chicken whith balanced ");
     }
 
+   
 }
