@@ -8,9 +8,13 @@ package ec.edu.espe.bookstore.view;
 import ec.edu.espe.bookstore.controller.InvoiceController;
 import ec.edu.espe.bookstore.model.Book;
 import ec.edu.espe.bookstore.model.Invoice;
+import java.awt.HeadlessException;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import javax.swing.JOptionPane;
+import javax.swing.JTextField;
+import utils.FrmInvoices;
+import utils.InputValidation;
 
 /**
  *
@@ -93,6 +97,17 @@ public class FrmInvoice extends javax.swing.JFrame {
         jLabel11.setText("amount product");
 
         txtFirstName.setToolTipText("enter only your first name");
+        txtFirstName.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                txtFirstNameFocusLost(evt);
+            }
+        });
+
+        txtLastName.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                txtLastNameFocusLost(evt);
+            }
+        });
 
         pwdPassword.setText("jPasswordField1");
 
@@ -147,7 +162,7 @@ public class FrmInvoice extends javax.swing.JFrame {
                             .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 243, Short.MAX_VALUE))))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 45, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                         .addComponent(chkDonQuijote)
                         .addGroup(jPanel1Layout.createSequentialGroup()
                             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -162,7 +177,7 @@ public class FrmInvoice extends javax.swing.JFrame {
                                     .addComponent(chkHarryPotter))))
                         .addGroup(jPanel1Layout.createSequentialGroup()
                             .addComponent(jLabel11)
-                            .addGap(18, 18, 18)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                 .addGroup(jPanel1Layout.createSequentialGroup()
                                     .addComponent(spnAmount, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -227,7 +242,7 @@ public class FrmInvoice extends javax.swing.JFrame {
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(spnAmount, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel11))))
-                .addContainerGap(46, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         btnAdd.setText("Add");
@@ -240,6 +255,11 @@ public class FrmInvoice extends javax.swing.JFrame {
         btnSave.setText("Save");
 
         btnShowContac.setText("Show Invoice");
+        btnShowContac.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnShowContacActionPerformed(evt);
+            }
+        });
 
         btnFind.setText("Find");
 
@@ -280,23 +300,19 @@ public class FrmInvoice extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(33, 33, 33)
-                        .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addGap(33, 33, 33)
+                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
+            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(39, 39, 39)
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(48, 48, 48))
+                .addContainerGap())
         );
 
         pack();
@@ -321,9 +337,33 @@ public class FrmInvoice extends javax.swing.JFrame {
         
         invoiceController.addData(invoice);
         if(firstName.isEmpty()){
-        JOptionPane.showMessageDialog(rootPane, "missing first name, please enter your first name to save the contact");
+            JOptionPane.showMessageDialog(rootPane, "missing first name, please enter your first name to save the contact");
         }
     }//GEN-LAST:event_btnAddActionPerformed
+
+    private void txtFirstNameFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtFirstNameFocusLost
+        validateCharactersOnly(txtFirstName);      
+    }//GEN-LAST:event_txtFirstNameFocusLost
+
+    private void txtLastNameFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtLastNameFocusLost
+        validateCharactersOnly(txtLastName);
+    }//GEN-LAST:event_txtLastNameFocusLost
+
+    private void btnShowContacActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnShowContacActionPerformed
+        FrmInvoices frmInvoices = new FrmInvoices();
+        this.setVisible(false);
+        frmInvoices.setVisible(true);
+    }//GEN-LAST:event_btnShowContacActionPerformed
+
+    private void validateCharactersOnly(JTextField jTextField) throws HeadlessException {
+        String name = jTextField.getText();
+        boolean isCharacter;
+        isCharacter = InputValidation.validateCharacters(name);
+        if(!isCharacter){
+            JOptionPane.showMessageDialog(rootPane, "Enter only characters here");
+            jTextField.requestFocus();
+        }
+    }
 
     /**
      * @param args the command line arguments
