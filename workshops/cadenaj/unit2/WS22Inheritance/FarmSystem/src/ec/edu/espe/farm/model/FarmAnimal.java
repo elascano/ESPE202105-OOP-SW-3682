@@ -17,6 +17,7 @@ public abstract class FarmAnimal {
     private Date bornOn;
 
       public int getAgeInMonths(){
+          
         return bornOn.getDate();
     }   
       
@@ -74,5 +75,4 @@ public abstract class FarmAnimal {
     public void setBornOn(Date bornOn) {
         this.bornOn = bornOn;
     }
-
 }
