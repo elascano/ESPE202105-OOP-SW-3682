@@ -2,6 +2,9 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+<<<<<<< HEAD
+        <group/>
+=======
         <group>
 <<<<<<< HEAD
             <file>file:/C:/Users/pc/OneDrive/Escritorio/semestremayo21septiembre21/ESPE202105-OOP-SW-3682/workshops/mortensene/unit2/WS23Abstract/AbstractsClasses/src/ec/edu/espe/AbstractsClasses/model/G.java</file>
@@ -14,5 +17,6 @@
             <file>file:/C:/Users/LENOVO/OneDrive/Documentos/Ariel/Software/2%20Semestre/OOP/ESPE202105-OOP-SW-3682/workshops/mortensene/unit2/WS23Abstract/AbstractsClasses/src/ec/edu/espe/AbstractsClasses/model/H.java</file>
 >>>>>>> b814be4e0aedce02ae33d6560116cfb6d5c2a0eb
         </group>
+>>>>>>> 16e8662abe50ff39356c376fecbe38d28863f875
     </open-files>
 </project-private>
