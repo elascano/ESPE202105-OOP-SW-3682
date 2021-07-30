@@ -7,7 +7,7 @@ package ec.edu.espe.store.model;
 
 /**
  *
- * @author Darwin
+ * @author Darwin Valdiviezo NullPointers ESPE-DCCO
  */
 public class Iron {
     private int id;

@@ -11,7 +11,7 @@ import java.util.Date;
 
 /**
  *
- * @author Darwin
+ * @author Darwin Valdiviezo NullPointers ESPE-DCCO
  */
 public class Product {
     

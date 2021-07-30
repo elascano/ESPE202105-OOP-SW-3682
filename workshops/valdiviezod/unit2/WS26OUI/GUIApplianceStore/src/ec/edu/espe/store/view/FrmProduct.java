@@ -14,7 +14,7 @@ import utils.InputValidation;
 
 /**
  *
- * @author Darwin
+ * @author Darwin Valdiviezo NullPointers ESPE-DCCO
  */
 public class FrmProduct extends javax.swing.JFrame {
 

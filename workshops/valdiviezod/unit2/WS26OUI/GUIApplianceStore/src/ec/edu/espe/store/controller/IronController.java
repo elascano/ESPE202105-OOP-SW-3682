@@ -15,7 +15,7 @@ import java.util.ArrayList;
 
 /**
  *
- * @author Darwin
+ * @author Darwin Valdiviezo NullPointers ESPE-DCCO
  */
 public class IronController {
     private Product product;

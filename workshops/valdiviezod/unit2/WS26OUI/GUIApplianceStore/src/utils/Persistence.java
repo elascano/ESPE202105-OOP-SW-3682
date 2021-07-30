@@ -7,7 +7,7 @@ package utils;
 
 /**
  *
- * @author Diego Portilla NullPointers ESPE-DCCO
+ * @author Darwin Valdiviezo NullPointers ESPE-DCCO
  */
 public interface Persistence {
     public void crete(String data , String table);
