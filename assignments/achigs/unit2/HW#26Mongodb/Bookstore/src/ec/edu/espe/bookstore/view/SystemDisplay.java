@@ -37,14 +37,12 @@ public class SystemDisplay {
         Gson gson = gsonBuilder.create();
         Connection connection = new Connection();
         
-        
         do{
             System.out.println("--------------| Bookstore Menu |--------------");
             System.out.println("1. Enter a product.");
             System.out.println("2. Read the file of Products");
             System.out.println("3. Sell");
             System.out.println("4. Exit system.\n");
-
             System.out.print("Choose an option:  ");
             option = scan.nextInt();
             
@@ -76,12 +74,12 @@ public class SystemDisplay {
                                     price = scan.nextFloat();
                                     System.out.println("Enter your amount: ");
                                     amount = scan.nextInt();
-                                    
                                     for(id=1; id <= amount; id++){
                                         Book books = new Book(title, author, id, price, amount);
                                         listBook.add(books);
                                         jsonProduct = gson.toJson(books);
                                         Archive.writeArchive(jsonProduct, "Books.json");
+                                        connection = new Connection("books");
                                         connection.insert(jsonProduct);
                                     }
                                     
@@ -115,6 +113,8 @@ public class SystemDisplay {
                                         listCalculator.add(calculators);
                                         jsonProduct = gson.toJson(calculators);
                                         Archive.writeArchive(jsonProduct, "Calculators.json");
+                                        connection = new Connection("calculators");
+                                        connection.insert(jsonProduct);
                                     }
                                                                        
                                     System.out.println("Would you like to enter a new calculator?  1. Yes  2.No ");
@@ -143,6 +143,8 @@ public class SystemDisplay {
                                         listFolder.add(folders);
                                         jsonProduct = gson.toJson(folders);
                                         Archive.writeArchive(jsonProduct, "Folders.json");
+                                        connection = new Connection("folders");
+                                        connection.insert(jsonProduct);
                                     }
                                     
                                     System.out.println("Would you like to enter a new folder?  1. Yes  2.No ");
@@ -170,6 +172,8 @@ public class SystemDisplay {
                                         listMarker.add(markers);
                                         jsonProduct = gson.toJson(markers);
                                         Archive.writeArchive(jsonProduct, "Markers.json");
+                                        connection = new Connection("markers");
+                                        connection.insert(jsonProduct);
                                     }
                                     
                                     System.out.println("Would you like to enter a new marker?  1. Yes  2.No ");
@@ -198,6 +202,8 @@ public class SystemDisplay {
                                         listNotebook.add(notebooks);
                                         jsonProduct = gson.toJson(notebooks);
                                         Archive.writeArchive(jsonProduct, "Notebooks.json");
+                                        connection = new Connection("notebooks");
+                                        connection.insert(jsonProduct);
                                     }
                                     
                                     System.out.println("Would you like to enter a new notebook?  1. Yes  2.No ");
@@ -225,6 +231,8 @@ public class SystemDisplay {
                                         listPen.add(pens);
                                         jsonProduct = gson.toJson(pens);
                                         Archive.writeArchive(jsonProduct, "Pens.json");
+                                        connection = new Connection("pens");
+                                        connection.insert(jsonProduct);
                                     }
                                     
                                     System.out.println("Would you like to enter a new pen?  1. Yes  2.No ");
