@@ -7,28 +7,27 @@ package ec.edu.espe.utils;
 
 /**
  *
- * @author jejoc
+ * @author Steven Achig FutureProgrammers ESPE-DCCO
  */
 public class Tax {
-       
-    static float taxPercentage = 12.0F;
+    private static float taxPercentage = 12.0F;
     
     /**
-     * This function compute the iva value of any product based on 
-     * the percentage that the government has issued, currently 12%
-     * @param amount This is the PVP of the product are selling
-     * @return the iva th PVP that the system will charge for tax declaration 
+     * This fnction computes de iva value of any product based on 
+     * the porcentage that the goverment has issued, currently 12%
+     * @param amount this is the PVP of the prduct you are selling
+     * @return The iva of the PVP that the System will charge for taxes declaration
      */
     public static float computeIva(float amount){
         float ivaValue;
-        ivaValue = amount * taxPercentage /100;
+        ivaValue = amount * taxPercentage/100;
         return ivaValue;
     }
     
     /**
-     * compute the total price of products that need to add the IVA
+     * compute the toal price of products that need to add the IVA
      * @param amount the PVP
-     * @return The total price that will be charged to the costumer
+     * @return The total price that will be charged to the customer
      */
     public static float computeTotalPrice(float amount){
         float total;
