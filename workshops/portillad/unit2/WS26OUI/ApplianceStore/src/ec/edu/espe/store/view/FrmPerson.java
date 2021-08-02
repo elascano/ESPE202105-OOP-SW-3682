@@ -5,20 +5,37 @@
  */
 package ec.edu.espe.store.view;
 
+import com.mongodb.BasicDBObject;
+import com.mongodb.DB;
+import com.mongodb.DBCollection;
+import com.mongodb.Mongo;
 import ec.edu.espe.store.model.Person;
+import java.net.UnknownHostException;
 import java.util.Date;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JOptionPane;
+import utils.InputValidation;
 
 /**
  *
  * @author Diego Portilla NullPointers ESPE-DCCO
  */
 public class FrmPerson extends javax.swing.JFrame {
-
+    DB db;
+    DBCollection table;
     /**
      * Creates new form FrmPerson
      */
     public FrmPerson() {
+        try {
+            Mongo mongo = new Mongo("mongodb+srv://dportilla:DonBosco1@cluster0.9dzi2.mongodb.net/test",27017);
+            db=mongo.getDB("ApplianceStore");
+            table=db.getCollection("DataPerson");
+        } catch (UnknownHostException ex) {
+            Logger.getLogger(FrmPerson.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
         initComponents();
     }
 
@@ -44,7 +61,7 @@ public class FrmPerson extends javax.swing.JFrame {
         jLabel8 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
         txtName = new javax.swing.JTextField();
-        txLastName = new javax.swing.JTextField();
+        txtLastName = new javax.swing.JTextField();
         txtPaswoord = new javax.swing.JPasswordField();
         txtEmail = new javax.swing.JTextField();
         txtPhoneNumber = new javax.swing.JTextField();
@@ -95,10 +112,20 @@ public class FrmPerson extends javax.swing.JFrame {
         jLabel10.setText("Edad");
 
         txtName.setToolTipText("Ingresar su nombre");
+        txtName.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                txtNameFocusLost(evt);
+            }
+        });
 
-        txLastName.addActionListener(new java.awt.event.ActionListener() {
+        txtLastName.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                txtLastNameFocusLost(evt);
+            }
+        });
+        txtLastName.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txLastNameActionPerformed(evt);
+                txtLastNameActionPerformed(evt);
             }
         });
 
@@ -143,7 +170,7 @@ public class FrmPerson extends javax.swing.JFrame {
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                     .addComponent(txtName, javax.swing.GroupLayout.DEFAULT_SIZE, 283, Short.MAX_VALUE)
                                     .addComponent(txtEmail)
-                                    .addComponent(txLastName)))
+                                    .addComponent(txtLastName)))
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addComponent(jLabel3)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -177,7 +204,7 @@ public class FrmPerson extends javax.swing.JFrame {
                             .addComponent(jLabel6)
                             .addGap(15, 15, 15)
                             .addComponent(txtAdress, javax.swing.GroupLayout.PREFERRED_SIZE, 287, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addGap(0, 52, Short.MAX_VALUE))
+                .addGap(0, 85, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -192,7 +219,7 @@ public class FrmPerson extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
-                    .addComponent(txLastName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtLastName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel7)
                     .addComponent(cmbGender, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -206,23 +233,23 @@ public class FrmPerson extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel3)
-                            .addComponent(txtPaswoord, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(15, 15, 15)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(txtPhoneNumber, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel4))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(txtAdress, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel6)))
+                            .addComponent(txtPaswoord, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(20, 20, 20)
                         .addComponent(jdcBirthDate, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(15, 15, 15)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txtPhoneNumber, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel4))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(txtAdress, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel6))
                 .addGap(16, 16, 16)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel11)
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(51, 51, 51))
+                .addGap(261, 261, 261))
         );
 
         btnAdd.setText("Add");
@@ -233,6 +260,11 @@ public class FrmPerson extends javax.swing.JFrame {
         });
 
         btnShowPerson.setText("Show Person ");
+        btnShowPerson.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnShowPersonActionPerformed(evt);
+            }
+        });
 
         btnFindPerson.setText("Find");
 
@@ -277,35 +309,37 @@ public class FrmPerson extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(302, 302, 302)
                         .addComponent(jLabel9))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(54, 54, 54)
+                        .addGap(46, 46, 46)
+                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(119, 119, 119)
                         .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap())
+                .addContainerGap(66, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap(13, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel9)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 352, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(44, 44, 44))
+                .addContainerGap())
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void txLastNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txLastNameActionPerformed
+    private void txtLastNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtLastNameActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txLastNameActionPerformed
+    }//GEN-LAST:event_txtLastNameActionPerformed
 
     private void txtPhoneNumberActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPhoneNumberActionPerformed
         // TODO add your handling code here:
@@ -316,21 +350,46 @@ public class FrmPerson extends javax.swing.JFrame {
     }//GEN-LAST:event_txtAdressActionPerformed
 
     private void btnAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddActionPerformed
-        Person person;
-        String name = txtName.getText();
-        String lasName = txLastName.getText();
-        String email = txtEmail.getText();
-        String paswoord = txtPaswoord.getText();
-        String phoneNumber = txtPhoneNumber.getText();
-        String adress = txtAdress.getText();
-        String description = txaDescription.getText();
-        Date birthDate = jdcBirthDate.getDate();
-        int datetoday = 31;
-        String gender = cmbGender.getSelectedItem().toString();
-        
-        person = new Person(name, lasName, email, paswoord, phoneNumber, adress, description, birthDate, datetoday);
-        JOptionPane.showMessageDialog(null, "Datos almacenados correctamente");
+     BasicDBObject  document = new BasicDBObject();
+     document.put("name","'" + txtName.getText()+ "'");
+     document.put("lastName","'"+txtLastName.getText()+"'");
+     document.put("email","'"+txtEmail.getText()+"'");
+     document.put("paswoord","'"+txtPaswoord.getText()+"'");
+     document.put("phoneNumber","'"+txtPhoneNumber.getText()+"'");
+     document.put("adress","'"+txtAdress.getText()+"'");
+     document.put("description","'"+txaDescription.getText()+"'");
+     document.put("age","'"+txtAge.getValue().toString()+"'");
+     document.put("birthDate","'"+jdcBirthDate.getDate()+"'");
+     document.put("gender","'"+cmbGender.getSelectedItem()+"'");
+     table.insert(document);
     }//GEN-LAST:event_btnAddActionPerformed
+
+    private void txtNameFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtNameFocusLost
+    String name = txtName.getText();
+    boolean isCharacter;
+    isCharacter = InputValidation.validateCharacters(name);
+    if(!(isCharacter)){
+        JOptionPane.showMessageDialog(rootPane, "Enter only characters here");
+        txtName.requestFocus();
+        }
+    
+    }//GEN-LAST:event_txtNameFocusLost
+
+    private void txtLastNameFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtLastNameFocusLost
+        String lastName = txtLastName.getText();
+    boolean isCharacter;
+    isCharacter = InputValidation.validateCharacters(lastName);
+    if(!(isCharacter)){
+        JOptionPane.showMessageDialog(rootPane, "Enter only characters here");
+        txtName.requestFocus();
+        }
+    }//GEN-LAST:event_txtLastNameFocusLost
+
+    private void btnShowPersonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnShowPersonActionPerformed
+        FrmShowPerson frmshowPerson = new FrmShowPerson();
+        frmshowPerson.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_btnShowPersonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -391,11 +450,11 @@ public class FrmPerson extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel3;
     private javax.swing.JScrollPane jScrollPane1;
     private com.toedter.calendar.JDateChooser jdcBirthDate;
-    private javax.swing.JTextField txLastName;
     private javax.swing.JTextArea txaDescription;
     private javax.swing.JTextField txtAdress;
     private javax.swing.JSpinner txtAge;
     private javax.swing.JTextField txtEmail;
+    private javax.swing.JTextField txtLastName;
     private javax.swing.JTextField txtName;
     private javax.swing.JPasswordField txtPaswoord;
     private javax.swing.JTextField txtPhoneNumber;

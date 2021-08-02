@@ -510,6 +510,14 @@ hs_err_pid*
 <<<<<<< HEAD
 >>>>>>> b814be4e0aedce02ae33d6560116cfb6d5c2a0eb
 <<<<<<< HEAD
+/workshops/solanos/unit2/WS24UnitTest/HardwareStore/nbproject/private/
+/workshops/solanos/unit2/WS24UnitTest/HardwareStore/build/
+/workshops/solanos/unit2/WS25/Test/nbproject/private/
+/workshops/solanos/unit2/WS25/Test/build/
+/workshops/solanos/unit2/WS26GUI/ApplianceStore/nbproject/private/
+/workshops/solanos/unit2/WS26GUI/ApplianceStore/build/
+=======
+<<<<<<< HEAD
 /workshops/felixc/unit2/WS23AbstractClass/Abstract/nbproject/private/
 =======
 /workshops/mortensene/unit2/WS24/UnitTest/nbproject/private/
@@ -564,13 +572,60 @@ hs_err_pid*
 >>>>>>> 0675df9e0265d07c23ae5554669baaa96d8b7dc5
 >>>>>>> b5014923023c04d0cad818c66d5acdc010606217
 <<<<<<< HEAD
+/workshops/salazare/unit2/WS26GUI/ApplianceStore/nbproject/private/
+/workshops/salazare/unit2/WS26GUI/ApplianceStore/build/
+=======
+<<<<<<< HEAD
+/workshops/escobari/unit2/WS26GUI/InventoryCellphone/nbproject/private/
+/assignments/escobari/unit2/Nueva Carpeta/CellPhoneStore/nbproject/private/
+/assignments/escobari/unit2/Nueva Carpeta/CellPhoneStore/build/
+/assignments/escobari/unit2/Nueva Carpeta/cellphonetest/nbproject/private/
+/assignments/escobari/unit2/Nueva Carpeta/cellphonetest/build/
+/workshops/escobari/unit2/WS26GUI/InventoryCellphone/build/
+=======
+<<<<<<< HEAD
+/assignments/mortensene/unit2/HW23TestCases/GroseryStoreModel/nbproject/private/
+/assignments/mortensene/unit2/HW26/GroseryStoreModel/build/
+=======
+<<<<<<< HEAD
+/workshops/achigs/unit2/WS26GUI/Bookstore/build/
+=======
+<<<<<<< HEAD
 /assignments/portillad/unit2/HW26MongoDB/ApplianceStoreSimulator/nbproject/private/
 /assignments/portillad/unit2/HW26MongoDB/ApplianceStoreSimulator/dist/
 /assignments/portillad/unit2/HW26MongoDB/ApplianceStoreSimulator/build/
 =======
 /assignments/cadenaj/unit2/HW21Library/TaxBookstore/dist/
 /assignments/cadenaj/unit2/HW21Library/TaxBookstore/build/
+<<<<<<< HEAD
+/workshops/cadenaj/unit2/WS22Inheritance/FarmSystem/build/
+/workshops/cadenaj/unit2/WS24UnitTest/HardwareStore/build/
+=======
 >>>>>>> 3b927bc0740a2f84dd32402420b96676e87140c2
 >>>>>>> 1dbf0e53fc67e7550110c09cccba019a05c48fd6
+<<<<<<< HEAD
 /exams/campoverdec/Unit2/Q22/nbproject/private/
 /exams/campoverdec/Unit2/Q29/nbproject/private/
+=======
+>>>>>>> f5d4a43e178fa00ca5619108567e9790bf1166d5
+>>>>>>> 3078e034365afafe3766512900a29ab1371bef83
+>>>>>>> 02a328df543fa4f4e16cbcddd50c188f354c6441
+>>>>>>> dd167754406f3ee3e14fb31aaa7c36c49a546d49
+>>>>>>> 5a5d972a66be95a6beecc596c2dae8ab71888928
+<<<<<<< HEAD
+/exams/escobari/unit2/Question 22/ClassDiagram/nbproject/private/
+/exams/escobari/unit2/Question 29/Menu/nbproject/private/
+/exams/escobari/unit2/Question 29/System/nbproject/private/
+=======
+>>>>>>> a5b4a186a08b9690c634bcd42561a87b3b82922d
+<<<<<<< HEAD
+/exams/portillad/unit2/Q38/ClassDiagram/nbproject/private/
+/exams/portillad/unit2/Q22/ClassDiagram/nbproject/private/
+=======
+/exams/menak/Unit 2/Exam Q22/Exam Q22/nbproject/private/
+/exams/menak/Unit 2/Exam Q22/Exam Q22/build/
+/exams/menak/Unit 2/Exam Q22/q28/nbproject/private/
+/exams/menak/Unit 2/Exam Q22/q29/nbproject/private/
+>>>>>>> 35f9b7417374fd45c8573d6198bd7ee8e4c17389
+>>>>>>> a518c4f504b511f643cd28db69a01de1dbb2f079
+>>>>>>> 6ccf1fed1e4b6574eccedcc9da789e3845eef0dd

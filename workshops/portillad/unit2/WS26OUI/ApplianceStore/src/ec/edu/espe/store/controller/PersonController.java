@@ -11,6 +11,8 @@ import ec.edu.espe.store.view.FrmPerson;
 import java.sql.Date;
 import java.time.LocalDate;
 import java.util.ArrayList;
+import utils.DBManager;
+import utils.Persistence;
 
 /**
  *
@@ -20,9 +22,16 @@ public class PersonController {
     private Person data;
     private FrmPerson frmPerson = new FrmPerson();
     private ArrayList <Gender> genders = new ArrayList<>();
+    private Persistence dataManager = new DBManager();
     
     public void addPerson(Person data){
+        //TODO read perosn  (List) from database
+        //TODO add person to database
+        //using the utils class
         
+        //TODO contact 
+        String personJson="{}";
+        dataManager.crete(personJson, "persons");
 
     }
     
