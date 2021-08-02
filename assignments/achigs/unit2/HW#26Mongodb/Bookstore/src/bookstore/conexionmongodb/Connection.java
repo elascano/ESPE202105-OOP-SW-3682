@@ -22,20 +22,29 @@ public class Connection {
     DB DataBase;
     DBCollection collection;
     BasicDBObject document = new BasicDBObject();
-    
+
     public Connection(){
         try {
           Mongo mongo = new Mongo("localhost", 27017);
-          DataBase = mongo.getDB("myDataBase");
-          collection = DataBase.getCollection("products");
+          DataBase = mongo.getDB("Bookstore");
             System.out.println("Connect to database succesfully");
         } catch (UnknownHostException except) {
             Logger.getLogger(Connection.class.getName()).log(Level.SEVERE, null, except);
         }
     }
+
+    public Connection(String collections){
+        try {
+          Mongo mongo = new Mongo("localhost", 27017);
+          DataBase = mongo.getDB("Bookstore");
+          collection = DataBase.getCollection(collections);
+        } catch (UnknownHostException except) {
+            Logger.getLogger(Connection.class.getName()).log(Level.SEVERE, null, except);
+        }
+    }
     
-    public boolean insert(String action){
-        document.put("action", action);
+    public boolean insert(String product){
+        document.put("product", product);
         collection.insert(document);
         return true;
     }
@@ -47,16 +56,16 @@ public class Connection {
         }
     }
     
-    public boolean actualize(String oldAction, String newAction){
-        document.put("action", oldAction);
+    public boolean actualize(String oldData, String newData){
+        document.put("data", oldData);
         BasicDBObject newDocument = new BasicDBObject();
-        newDocument.put("action", newAction);
+        newDocument.put("data", newData);
         collection.findAndModify(document, newDocument);
         return true;
     }
     
-    public boolean delete(String action){
-        document.append("action", action);
+    public boolean delete(String data){
+        document.append("action", data);
         collection.remove(document);
         return true;
     }
