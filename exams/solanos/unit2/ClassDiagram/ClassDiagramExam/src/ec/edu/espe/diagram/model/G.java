@@ -10,10 +10,12 @@ package ec.edu.espe.diagram.model;
  * @author Sebastian Solano NullPunters ESPE-DCCO
  */
 public class G {
-    G gs;
-
-    public G(G gs) {
-        this.gs = gs;
+     public void m(J j){
+        
+    }
+    
+    public void m1(H h){
+        
     }
 
 }
