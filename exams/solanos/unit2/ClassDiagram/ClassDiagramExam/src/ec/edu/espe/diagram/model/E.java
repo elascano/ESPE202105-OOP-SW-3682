@@ -10,5 +10,6 @@ package ec.edu.espe.diagram.model;
  * @author Sebastian Solano NullPunters ESPE-DCCO
  */
 public class E {
-    
+     private C cs[] = new C[3];
+    private D ds[] = new D[4];
 }

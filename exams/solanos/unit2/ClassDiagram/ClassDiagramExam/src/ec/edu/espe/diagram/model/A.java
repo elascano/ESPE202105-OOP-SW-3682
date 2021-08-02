@@ -10,7 +10,7 @@ package ec.edu.espe.diagram.model;
  * @author Sebastian Solano NullPunters ESPE-DCCO
  */
 public abstract class A{
-    A as[];
+    private A as[] = new A[1];
     
     
 }
