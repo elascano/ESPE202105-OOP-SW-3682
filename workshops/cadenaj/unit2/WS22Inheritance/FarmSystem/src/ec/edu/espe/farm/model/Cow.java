@@ -14,6 +14,11 @@ import java.util.Date;
 public class Cow extends FarmAnimal {
     private boolean isProducingMilk;
 
+    @Override
+    public String toString() {
+        return "Cow{" + super.toString() + "isProducingMilk=" + isProducingMilk + '}';
+    }
+
     public Cow(boolean isProducingMilk, int id, String breed, Date bornOn) {
         super(id, breed, bornOn);
         this.isProducingMilk = isProducingMilk;
@@ -35,14 +40,14 @@ public class Cow extends FarmAnimal {
 
     @Override
     public void feed(int amount) {
-        System.out.println("Feeding the cow with sugarcane.");
+        System.out.println("feeding a cow with sugarcane");
     }
     
     public void feed(int amount, String foodType) {
-        System.out.println("Feeding the cow with " + foodType);
+        System.out.println("feeding a cow with " + foodType);
     }
     
     public void feed(int amount, int foodType) {
-        System.out.println("Feeding the cow with " + foodType);
+        System.out.println("feeding a cow with " + foodType);
     }
 }
