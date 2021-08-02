@@ -15,8 +15,7 @@ import ec.edu.espe.bookstore.utils.Archive;
 
 
 /**
- *
- * @author jejoc
+ * @author Steven Achig Future Programmers ESPE-DCCO
  */
 public class SystemDisplay {
     public static void main(String[] arg){
@@ -82,10 +81,6 @@ public class SystemDisplay {
                                         connection = new Connection("books");
                                         connection.insert(jsonProduct);
                                     }
-                                    
-                                    //Book book;
-                                    //book = gson.fromJson(jsonProduct, Book.class);
-                                    //System.out.println(book.toString());
 
                                     System.out.println("Would you like to enter a new book?  1. Yes  2.No ");
                                     System.out.print("Choose your option:  ");
