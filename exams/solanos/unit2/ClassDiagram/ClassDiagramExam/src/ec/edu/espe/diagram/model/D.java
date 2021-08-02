@@ -10,5 +10,5 @@ package ec.edu.espe.diagram.model;
  * @author Sebastian Solano NullPunters ESPE-DCCO
  */
 public class D extends A{
-    
+     private E es[] = new E[5];
 }
