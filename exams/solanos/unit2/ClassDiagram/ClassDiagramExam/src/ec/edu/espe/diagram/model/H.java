@@ -12,6 +12,6 @@ import java.util.ArrayList;
  * @author Sebastian Solano NullPunters ESPE-DCCO
  */
 public class H {
-    private ArrayList<B> bs = new ArrayList<>();
-    private G gs;
+    public void m (B b){
+}
 }
