@@ -11,7 +11,7 @@ import java.util.ArrayList;
  *
 * @author Eduardo Mortensen.java ESPE-DCCO
 */
-public class D extends B {
+public class D extends B { //0.1
 
     private int x;
     private int y;

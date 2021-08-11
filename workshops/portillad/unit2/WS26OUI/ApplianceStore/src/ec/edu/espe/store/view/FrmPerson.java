@@ -29,7 +29,7 @@ public class FrmPerson extends javax.swing.JFrame {
      */
     public FrmPerson() {
         try {
-            Mongo mongo = new Mongo("mongodb+srv://dportilla:DonBosco1@cluster0.9dzi2.mongodb.net/test",27017);
+            Mongo mongo = new Mongo("localhost",27017);
             db=mongo.getDB("ApplianceStore");
             table=db.getCollection("DataPerson");
         } catch (UnknownHostException ex) {

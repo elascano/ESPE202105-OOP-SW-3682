@@ -19,10 +19,10 @@ import static javafx.scene.input.KeyCode.J;
 */
 public class AbstractClass {
     public static void main(String[] args) {
-        A a;
-        B b;
-        C c;
-        D d;
+        A a; //0.1
+        B b; //0.1
+        C c; //0.1
+        D d; //0.1
         E e;
         F f;
         H h;

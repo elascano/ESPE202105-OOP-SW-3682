@@ -10,5 +10,6 @@ package ec.edu.espe.abstractclass.model;
 * @author Eduardo Mortensen.java ESPE-DCCO
 */
 public class H {
+        //0
     
 }
