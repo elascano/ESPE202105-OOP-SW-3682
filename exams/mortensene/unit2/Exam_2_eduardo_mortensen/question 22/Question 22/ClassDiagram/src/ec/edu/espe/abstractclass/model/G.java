@@ -10,5 +10,5 @@ package ec.edu.espe.abstractclass.model;
  * @author Eduardo Mortensen.java ESPE-DCCO
  */
 class G {
-    
+    //0.25
 }
