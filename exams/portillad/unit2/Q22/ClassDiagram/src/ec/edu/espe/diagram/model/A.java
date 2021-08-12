@@ -22,6 +22,7 @@ public abstract class A {
         return "A{" + "as=" + as + '}';
     }
     
+    
      /**
      * @return the as
      */

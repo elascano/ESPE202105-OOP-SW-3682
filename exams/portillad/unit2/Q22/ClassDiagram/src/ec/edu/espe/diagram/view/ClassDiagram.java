@@ -5,6 +5,8 @@
  */
 package ec.edu.espe.diagram.view;
 
+
+
 /**
  *
  * @author Diego Portilla NullPointers ESPE-DCCO
@@ -15,7 +17,7 @@ public class ClassDiagram {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+   
     }
     
 }
