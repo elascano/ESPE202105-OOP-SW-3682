@@ -10,6 +10,8 @@ package ec.edu.espe.q22.model;
  * @author Myckel Chamorro EMCL.java ESPE-DCCO
  */
 public class D extends A {
+    //ArrayList<F> fs;
+    //private E[] es;
 
     private E[] es = new E[4];
 
