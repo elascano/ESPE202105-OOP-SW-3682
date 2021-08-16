@@ -11,6 +11,12 @@ package ec.edu.espe.q22.model;
  */
 public class F {
 
+    @Override
+    public String toString() {
+        return "F{" + '}';
+    }
+    
+
     public F() {
     }
     

@@ -11,9 +11,9 @@ import java.util.ArrayList;
  *
  * @author Myckel Chamorro EMCL.java ESPE-DCCO
  */
-public class B extends A {
+public class B extends A { //0.5
     
- private ArrayList<H> hs;
+ private ArrayList<H> hs; //0.5
 
     public B(int a, ArrayList<H> hs,A aa) {
         super(a,aa);
