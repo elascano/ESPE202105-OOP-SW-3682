@@ -5,7 +5,7 @@
  */
 package ec.edu.espe.speaker.view;
 
-import ec.edu.espe.speaker.controller.DBManager;
+import ec.edu.espe.speaker.controller.Connection;
 
 /**
  *
@@ -17,8 +17,8 @@ public class VehicleManufacturer {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        DBManager dbManager;
-        dbManager = new DBManager();
+        Connection dbManager;
+        dbManager = new Connection();
         
     }
     
