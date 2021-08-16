@@ -11,6 +11,13 @@ package ec.edu.espe.q22.model;
  */
 public class J {
 
+    @Override
+    public String toString() {
+        return "J{" + '}';
+    }
+    
+    
+
     public J() {
     }
     
