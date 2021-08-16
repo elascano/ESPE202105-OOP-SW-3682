@@ -22,10 +22,10 @@ import java.util.logging.Logger;
  *
  * @author Steven Achig Future Programmers ESPE-DCCO
  */
-public class DBManager {
-    DB DataBase;
-    DBCollection collection;
-    BasicDBObject document = new BasicDBObject();
+public class Connection {
+    //DB DataBase;
+    //DBCollection collection;
+    //BasicDBObject document = new BasicDBObject();
 
     private String cluster;
     private MongoClientURI uri;
@@ -33,13 +33,20 @@ public class DBManager {
     private MongoDatabase database; 
     private MongoCollection collections;
 
-    public DBManager() {
-        cluster = "mongodb+srv://StevenAchig:%2aPrincesa2111@cluster0.7df9l.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
+    public Connection() {
+        cluster = "mongodb+srv://StevenAchig:*Princesa2111@cluster0.7df9l.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
         uri = new MongoClientURI(cluster);
         mongoClient = new MongoClient(uri);
         database= mongoClient.getDatabase("VehicleManufacturer");
         collections = database.getCollection("Model");
-        System.out.println("Connect to database succesfully");
+    }
+    
+    public Connection() {
+        cluster = "mongodb+srv://StevenAchig:*Princesa2111@cluster0.7df9l.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
+        uri = new MongoClientURI(cluster);
+        mongoClient = new MongoClient(uri);
+        database= mongoClient.getDatabase("SpeakerSystem");
+        collection = database.getCollection("Speaker");
     }
     
     /*public DBManager(){
@@ -62,7 +69,7 @@ public class DBManager {
         }
     }*/
     
-    public boolean insert(String product){
+/*    public boolean insert(String product){
         document.put("product", product);
         collection.insert(document);
         return true;
@@ -87,5 +94,5 @@ public class DBManager {
         document.append("data", data);
         collection.remove(document);
         return true;
-    }
+    }*/
 }
