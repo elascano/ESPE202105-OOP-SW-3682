@@ -9,7 +9,7 @@ package ec.edu.espe.q22.model;
  *
  * @author jejoc
  */
-public class E {
+public class E {  //0.8
     private C cs[] = new C[3];
     private D ds[] = new D[4];
 }
