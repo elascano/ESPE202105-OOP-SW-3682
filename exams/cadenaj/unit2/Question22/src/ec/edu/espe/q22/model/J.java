@@ -9,6 +9,6 @@ package ec.edu.espe.q22.model;
  *
  * @author jejoc
  */
-public class J {
+public class J { //0.8 has no override 
     
 }

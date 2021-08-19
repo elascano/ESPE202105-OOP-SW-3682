@@ -9,9 +9,9 @@ package ec.edu.espe.q22.model;
  *
  * @author jejoc
  */
-public class H {
+public class H { //0.1  //has no interface 
     
-    public void m (B b){
-        
+    public void m (B b){ //0
+    // era J j     
     }
 }
