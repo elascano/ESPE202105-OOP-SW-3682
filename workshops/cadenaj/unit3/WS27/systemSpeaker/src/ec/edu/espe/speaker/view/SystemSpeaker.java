@@ -10,6 +10,7 @@ import com.google.gson.GsonBuilder;
 import ec.edu.espe.bookstore.utils.Archive;
 import ec.edu.espe.speaker.model.Speaker;
 import java.util.Scanner;
+import utils.Connection;
 
 /**
  *
@@ -31,6 +32,7 @@ public class SystemSpeaker {
         GsonBuilder gsonBuilder = new GsonBuilder();
         Gson gson = gsonBuilder.create();
         String jsonProduct;
+        Connection connect = new Connection();
                
         System.out.println("power");
         scan.nextLine();
