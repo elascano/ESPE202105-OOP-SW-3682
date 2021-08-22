@@ -5,17 +5,52 @@
  */
 package ec.edu.espe.groceryStore.view;
 
+import com.mongodb.BasicDBObject;
+import com.mongodb.DB;
+import com.mongodb.DBCollection;
+import com.mongodb.MongoClient;
+import com.mongodb.MongoClientURI;
+import com.mongodb.client.MongoCollection;
+import com.mongodb.client.MongoDatabase;
+
 /**
  *
  * @author pc
  */
 public class FrmChangePassword extends javax.swing.JFrame {
+     public static MongoClient createConection() {
+        String cluster;
+        MongoClientURI uri;
+        MongoClient mongoClient;
+        MongoDatabase database;
+        MongoCollection collection;
+
+        cluster = "mongodb+srv://eduardo:gutenmorgen@cluster0.gngrt.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
+        uri = new MongoClientURI(cluster);
+        mongoClient = new MongoClient(uri);
+        database = mongoClient.getDatabase("GroceryStore");
+        collection = database.getCollection("Costumers");
+        return mongoClient;
+    }
+    public void change(){
+         BasicDBObject  document = new BasicDBObject();
+           BasicDBObject  newDocument = new BasicDBObject();
+       MongoClient conection = createConection();
+       DB db = conection.getDB("GroceryStore");
+       DBCollection collection = db.getCollection("Costumers");
+         newDocument.put("Name",txtName.getText() );
+       newDocument.put("Email", txtEmail.getText());
+       document.put("Password", txtPassword.getText());
+       newDocument.put("Password",txtNewPassword.getText());
+       collection.findAndModify(document, newDocument);
+    }
 
     /**
      * Creates new form FrmChangePassword
      */
     public FrmChangePassword() {
         initComponents();
+        change();
     }
 
     /**
@@ -30,10 +65,14 @@ public class FrmChangePassword extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        jPasswordField1 = new javax.swing.JPasswordField();
-        jPasswordField2 = new javax.swing.JPasswordField();
-        jButton1 = new javax.swing.JButton();
+        txtPassword = new javax.swing.JPasswordField();
+        txtNewPassword = new javax.swing.JPasswordField();
+        changePassword = new javax.swing.JButton();
         btnCancel = new javax.swing.JButton();
+        jLabel4 = new javax.swing.JLabel();
+        txtEmail = new javax.swing.JTextField();
+        jLabel5 = new javax.swing.JLabel();
+        txtName = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -43,11 +82,16 @@ public class FrmChangePassword extends javax.swing.JFrame {
 
         jLabel3.setText("New Password:");
 
-        jPasswordField1.setText("jPasswordField1");
+        txtPassword.setText("jPasswordField1");
 
-        jPasswordField2.setText("jPasswordField2");
+        txtNewPassword.setText("jPasswordField2");
 
-        jButton1.setText("OK");
+        changePassword.setText("OK");
+        changePassword.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                changePasswordActionPerformed(evt);
+            }
+        });
 
         btnCancel.setText("CANCEL");
         btnCancel.addActionListener(new java.awt.event.ActionListener() {
@@ -55,6 +99,10 @@ public class FrmChangePassword extends javax.swing.JFrame {
                 btnCancelActionPerformed(evt);
             }
         });
+
+        jLabel4.setText("Email:");
+
+        jLabel5.setText("Name:");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -69,17 +117,21 @@ public class FrmChangePassword extends javax.swing.JFrame {
                         .addGap(47, 47, 47)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel3)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jPasswordField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel2)
-                                .addGap(18, 18, 18)
-                                .addComponent(jPasswordField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jButton1)
+                                .addComponent(changePassword)
                                 .addGap(91, 91, 91)
-                                .addComponent(btnCancel)))))
+                                .addComponent(btnCancel))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel3)
+                                    .addComponent(jLabel2)
+                                    .addComponent(jLabel4)
+                                    .addComponent(jLabel5))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(txtPassword, javax.swing.GroupLayout.DEFAULT_SIZE, 133, Short.MAX_VALUE)
+                                    .addComponent(txtNewPassword)
+                                    .addComponent(txtEmail)
+                                    .addComponent(txtName))))))
                 .addContainerGap(133, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -87,19 +139,27 @@ public class FrmChangePassword extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(39, 39, 39)
                 .addComponent(jLabel1)
-                .addGap(40, 40, 40)
+                .addGap(16, 16, 16)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2)
-                    .addComponent(jPasswordField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(20, 20, 20)
+                    .addComponent(jLabel5)
+                    .addComponent(txtName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel4)
+                    .addComponent(txtEmail, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txtPassword, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel2))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
-                    .addComponent(jPasswordField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(46, 46, 46)
+                    .addComponent(txtNewPassword, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(28, 28, 28)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1)
+                    .addComponent(changePassword)
                     .addComponent(btnCancel))
-                .addContainerGap(70, Short.MAX_VALUE))
+                .addContainerGap(64, Short.MAX_VALUE))
         );
 
         pack();
@@ -109,6 +169,10 @@ public class FrmChangePassword extends javax.swing.JFrame {
          GroceryStore groceryStore = new GroceryStore();
          groceryStore.setVisible(true);
     }//GEN-LAST:event_btnCancelActionPerformed
+
+    private void changePasswordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_changePasswordActionPerformed
+        change();
+    }//GEN-LAST:event_changePasswordActionPerformed
 
     /**
      * @param args the command line arguments
@@ -147,11 +211,15 @@ public class FrmChangePassword extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnCancel;
-    private javax.swing.JButton jButton1;
+    private javax.swing.JButton changePassword;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JPasswordField jPasswordField1;
-    private javax.swing.JPasswordField jPasswordField2;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JTextField txtEmail;
+    private javax.swing.JTextField txtName;
+    private javax.swing.JPasswordField txtNewPassword;
+    private javax.swing.JPasswordField txtPassword;
     // End of variables declaration//GEN-END:variables
 }

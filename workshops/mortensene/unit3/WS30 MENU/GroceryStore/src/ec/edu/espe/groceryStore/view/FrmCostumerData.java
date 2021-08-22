@@ -14,16 +14,13 @@ import com.mongodb.MongoClientURI;
 import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
 import javax.swing.table.DefaultTableModel;
-import org.bson.types.ObjectId;
 
 /**
  *
  * @author Eduardo Mortensen The Programers
  */
-public class FrmProductData extends javax.swing.JFrame {
-
-    
-     public static MongoClient createConection() {
+public class FrmCostumerData extends javax.swing.JFrame {
+    public static MongoClient createConection() {
         String cluster;
         MongoClientURI uri;
         MongoClient mongoClient;
@@ -34,34 +31,34 @@ public class FrmProductData extends javax.swing.JFrame {
         uri = new MongoClientURI(cluster);
         mongoClient = new MongoClient(uri);
         database = mongoClient.getDatabase("GroceryStore");
-        collection = database.getCollection("Products");
+        collection = database.getCollection("Costumers");
         return mongoClient;
     }
-     public void showProducts(){
+     public void showCostumers(){
           try {
             DBCursor cursor = null;
             MongoClient conection = createConection();
             DB db = conection.getDB("GroceryStore");
-            DBCollection collection = db.getCollection("Products");
+            DBCollection collection = db.getCollection("Costumers");
             cursor = collection.find();
             while (cursor.hasNext()) {
                 DBObject obj = cursor.next();
-                String type = (String) obj.get("Type");
-                String price = (String) obj.get("Price");
-                String description = (String) obj.get("Description");
+                String name = (String) obj.get("Name");
+                String email = (String) obj.get("Email");
+                String password = (String) obj.get("Password");
                 DefaultTableModel model = (DefaultTableModel) DataView.getModel();
-                model.addRow(new Object[]{type, price, description});
+                model.addRow(new Object[]{name, email, password});
             }
             cursor.close();
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
      }
-    
+
     /**
-     * Creates new form FrmProductData
+     * Creates new form FrmCostumerData
      */
-    public FrmProductData() {
+    public FrmCostumerData() {
         initComponents();
         createConection();
     }
@@ -76,39 +73,31 @@ public class FrmProductData extends javax.swing.JFrame {
     private void initComponents() {
 
         jLabel1 = new javax.swing.JLabel();
+        showCostumers = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         DataView = new javax.swing.JTable();
-        show = new javax.swing.JButton();
         cancel = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel1.setText("PRODUCTS DATA");
+        jLabel1.setText("COSTUMER DATA");
+
+        showCostumers.setText("OK");
+        showCostumers.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                showCostumersActionPerformed(evt);
+            }
+        });
 
         DataView.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
             },
             new String [] {
-                "Type", "Price", "Description"
+                "Name", "Email", "Password"
             }
-        ) {
-            boolean[] canEdit = new boolean [] {
-                false, true, true
-            };
-
-            public boolean isCellEditable(int rowIndex, int columnIndex) {
-                return canEdit [columnIndex];
-            }
-        });
+        ));
         jScrollPane1.setViewportView(DataView);
-
-        show.setText("OK");
-        show.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                showActionPerformed(evt);
-            }
-        });
 
         cancel.setText("CANCEL");
         cancel.addActionListener(new java.awt.event.ActionListener() {
@@ -122,44 +111,44 @@ public class FrmProductData extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGap(166, 166, 166)
+                .addComponent(jLabel1)
+                .addContainerGap(233, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(171, 171, 171)
-                        .addComponent(jLabel1))
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 375, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(49, 49, 49))
                     .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 375, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(15, Short.MAX_VALUE))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(70, 70, 70)
-                .addComponent(show, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(cancel, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(84, 84, 84))
+                        .addComponent(showCostumers, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(cancel, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(81, 81, 81))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(28, 28, 28)
+                .addContainerGap()
                 .addComponent(jLabel1)
-                .addGap(18, 18, 18)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 47, Short.MAX_VALUE)
+                .addGap(33, 33, 33)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(61, 61, 61)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(show)
+                    .addComponent(showCostumers)
                     .addComponent(cancel))
-                .addGap(23, 23, 23))
+                .addContainerGap(76, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void showActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_showActionPerformed
-      showProducts();
-    }//GEN-LAST:event_showActionPerformed
+    private void showCostumersActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_showCostumersActionPerformed
+        showCostumers();
+    }//GEN-LAST:event_showCostumersActionPerformed
 
     private void cancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cancelActionPerformed
-      GroceryStore groceryStore = new GroceryStore();
+       GroceryStore groceryStore = new GroceryStore();
         groceryStore.setVisible(true);
     }//GEN-LAST:event_cancelActionPerformed
 
@@ -180,20 +169,20 @@ public class FrmProductData extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(FrmProductData.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FrmCostumerData.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(FrmProductData.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FrmCostumerData.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(FrmProductData.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FrmCostumerData.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(FrmProductData.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FrmCostumerData.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new FrmProductData().setVisible(true);
+                new FrmCostumerData().setVisible(true);
             }
         });
     }
@@ -203,6 +192,6 @@ public class FrmProductData extends javax.swing.JFrame {
     private javax.swing.JButton cancel;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JButton show;
+    private javax.swing.JButton showCostumers;
     // End of variables declaration//GEN-END:variables
 }
