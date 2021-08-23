@@ -10,12 +10,18 @@ package ec.edu.espe.groceryStore.view;
  * @author pc
  */
 public class GroceryStore extends javax.swing.JFrame {
+    public void showProducts(){
+        FrmProductData frmProductData = new FrmProductData();
+        frmProductData.setVisible(true);
+    }
 
     /**
      * Creates new form GroceryStore
      */
     public GroceryStore() {
         initComponents();
+       
+       
     }
 
     /**
@@ -32,15 +38,19 @@ public class GroceryStore extends javax.swing.JFrame {
         jMenuItem3 = new javax.swing.JMenuItem();
         jMenuItem4 = new javax.swing.JMenuItem();
         jMenuItem5 = new javax.swing.JMenuItem();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         MnuExit = new javax.swing.JMenu();
         MnuUsers = new javax.swing.JMenu();
         ItmCreate = new javax.swing.JMenuItem();
         ItmChangePassword = new javax.swing.JMenuItem();
+        ItmShowUsers = new javax.swing.JMenuItem();
         MnuProduct = new javax.swing.JMenu();
         ItmBuy = new javax.swing.JMenuItem();
         ItmAdd = new javax.swing.JMenuItem();
         ItmDelete = new javax.swing.JMenuItem();
+        ItmShowProducts = new javax.swing.JMenuItem();
         MnuBill = new javax.swing.JMenu();
         ItmGenerate = new javax.swing.JMenuItem();
         ItmReview = new javax.swing.JMenuItem();
@@ -57,6 +67,12 @@ public class GroceryStore extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        jLabel1.setFont(new java.awt.Font("Verdana", 0, 36)); // NOI18N
+        jLabel1.setText("GROCERY STORE");
+
+        jLabel2.setFont(new java.awt.Font("Verdana", 0, 18)); // NOI18N
+        jLabel2.setText("WELLCOME!!");
+
         MnuExit.setText("Exit");
         MnuExit.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -72,7 +88,7 @@ public class GroceryStore extends javax.swing.JFrame {
             }
         });
 
-        ItmCreate.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_A, java.awt.event.InputEvent.CTRL_MASK));
+        ItmCreate.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_A, java.awt.event.InputEvent.CTRL_DOWN_MASK));
         ItmCreate.setText("Create");
         ItmCreate.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -81,7 +97,7 @@ public class GroceryStore extends javax.swing.JFrame {
         });
         MnuUsers.add(ItmCreate);
 
-        ItmChangePassword.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_B, java.awt.event.InputEvent.CTRL_MASK));
+        ItmChangePassword.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_B, java.awt.event.InputEvent.CTRL_DOWN_MASK));
         ItmChangePassword.setText("Change Password");
         ItmChangePassword.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -90,11 +106,20 @@ public class GroceryStore extends javax.swing.JFrame {
         });
         MnuUsers.add(ItmChangePassword);
 
+        ItmShowUsers.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_C, java.awt.event.InputEvent.CTRL_DOWN_MASK));
+        ItmShowUsers.setText("Show Users");
+        ItmShowUsers.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ItmShowUsersActionPerformed(evt);
+            }
+        });
+        MnuUsers.add(ItmShowUsers);
+
         jMenuBar1.add(MnuUsers);
 
         MnuProduct.setText("Product");
 
-        ItmBuy.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_A, java.awt.event.InputEvent.CTRL_MASK));
+        ItmBuy.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_A, java.awt.event.InputEvent.CTRL_DOWN_MASK));
         ItmBuy.setText("Buy Product");
         ItmBuy.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -103,7 +128,7 @@ public class GroceryStore extends javax.swing.JFrame {
         });
         MnuProduct.add(ItmBuy);
 
-        ItmAdd.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_B, java.awt.event.InputEvent.CTRL_MASK));
+        ItmAdd.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_B, java.awt.event.InputEvent.CTRL_DOWN_MASK));
         ItmAdd.setText("Add Product");
         ItmAdd.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -112,7 +137,7 @@ public class GroceryStore extends javax.swing.JFrame {
         });
         MnuProduct.add(ItmAdd);
 
-        ItmDelete.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_C, java.awt.event.InputEvent.CTRL_MASK));
+        ItmDelete.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_C, java.awt.event.InputEvent.CTRL_DOWN_MASK));
         ItmDelete.setText("Delete Product");
         ItmDelete.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -120,6 +145,15 @@ public class GroceryStore extends javax.swing.JFrame {
             }
         });
         MnuProduct.add(ItmDelete);
+
+        ItmShowProducts.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_D, java.awt.event.InputEvent.CTRL_DOWN_MASK));
+        ItmShowProducts.setText("show Product");
+        ItmShowProducts.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ItmShowProductsActionPerformed(evt);
+            }
+        });
+        MnuProduct.add(ItmShowProducts);
 
         jMenuBar1.add(MnuProduct);
 
@@ -130,7 +164,7 @@ public class GroceryStore extends javax.swing.JFrame {
             }
         });
 
-        ItmGenerate.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_A, java.awt.event.InputEvent.CTRL_MASK));
+        ItmGenerate.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_A, java.awt.event.InputEvent.CTRL_DOWN_MASK));
         ItmGenerate.setText("Generate Bill");
         ItmGenerate.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -139,7 +173,7 @@ public class GroceryStore extends javax.swing.JFrame {
         });
         MnuBill.add(ItmGenerate);
 
-        ItmReview.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_B, java.awt.event.InputEvent.CTRL_MASK));
+        ItmReview.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_B, java.awt.event.InputEvent.CTRL_DOWN_MASK));
         ItmReview.setText("review Bill");
         ItmReview.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -156,11 +190,23 @@ public class GroceryStore extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap(40, Short.MAX_VALUE)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 326, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(34, 34, 34))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(133, 133, 133)
+                .addComponent(jLabel2)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 274, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(44, 44, 44)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(35, 35, 35)
+                .addComponent(jLabel2)
+                .addContainerGap(119, Short.MAX_VALUE))
         );
 
         pack();
@@ -213,6 +259,16 @@ public class GroceryStore extends javax.swing.JFrame {
         frmGenerate.setVisible(true);
     }//GEN-LAST:event_ItmGenerateActionPerformed
 
+    private void ItmShowProductsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ItmShowProductsActionPerformed
+        FrmProductData frmProductData = new FrmProductData();
+        frmProductData.setVisible(true);
+    }//GEN-LAST:event_ItmShowProductsActionPerformed
+
+    private void ItmShowUsersActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ItmShowUsersActionPerformed
+        FrmCostumerData frmCostumerData = new FrmCostumerData();
+        frmCostumerData.setVisible(true);
+    }//GEN-LAST:event_ItmShowUsersActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -256,10 +312,14 @@ public class GroceryStore extends javax.swing.JFrame {
     private javax.swing.JMenuItem ItmDelete;
     private javax.swing.JMenuItem ItmGenerate;
     private javax.swing.JMenuItem ItmReview;
+    private javax.swing.JMenuItem ItmShowProducts;
+    private javax.swing.JMenuItem ItmShowUsers;
     private javax.swing.JMenu MnuBill;
     private javax.swing.JMenu MnuExit;
     private javax.swing.JMenu MnuProduct;
     private javax.swing.JMenu MnuUsers;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem2;
