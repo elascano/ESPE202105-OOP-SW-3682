@@ -39,7 +39,7 @@ public class FrmAdd extends javax.swing.JFrame {
        DB db = conection.getDB("GroceryStore");
        DBCollection collection = db.getCollection("Products");
        document.put("Price", txtPrice.getText());
-       document.put("Type",jComboBox1.getText());
+       document.put("Type",txtType.getText());
        document.put("Description", txtDescription.getText());
        collection.insert(document);
        }
@@ -55,8 +55,6 @@ public class FrmAdd extends javax.swing.JFrame {
     public FrmAdd() {
         initComponents();
         createConection();
-        add();
-        cancel();
      
     }
 
@@ -229,6 +227,7 @@ public class FrmAdd extends javax.swing.JFrame {
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
+            @Override
             public void run() {
                 new FrmAdd().setVisible(true);
             }
