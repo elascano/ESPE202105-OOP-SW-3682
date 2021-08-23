@@ -3,13 +3,15 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package ec.edu.espe.contatcs.view;
+package ec.edu.espe.contact.view;
 
-import ec.edu.espe.contatcs.controller.ContactController;
-import ec.edu.espe.contatcs.model.Book;
-import ec.edu.espe.contatcs.model.Contact;
+
+import ec.edu.espe.contact.controller.ContactController;
+import ec.edu.espe.contact.mondel.Book;
+import ec.edu.espe.contact.mondel.Contact;
 import java.util.ArrayList;
 import javax.swing.JOptionPane;
+import org.bson.Document;
 import utils.MongoDBManager;
 
 /**
@@ -174,34 +176,41 @@ public class FrmContactsRegistration extends javax.swing.JFrame {
 
     }//GEN-LAST:event_btnOKActionPerformed
     private void addContact(){
+           
+        int option = JOptionPane.showConfirmDialog(this,"You want to save the documents");
+
+        if (option == 0) {
+           addcontacts();
+            emptyFields();
+
+        } else if (option == 1) {
+             emptyFields();
+
+        } else if (option == 2) {
+            emptyFields();
+            int CANCEL_OPTION = JOptionPane.CANCEL_OPTION;
+        }
+    }
+    private void add(){
         String name;
         Integer numberOfFriends;
         float salary;
         String email;
         Book book;
-        ArrayList<Contact>contacts= new ArrayList<>();
-        Contact contactsArray[]= new Contact[10];
+        Contact contact;
         ContactController contactController = new ContactController();
+        MongoDBManager mongo = new MongoDBManager();
+        mongo.connect();
+        ArrayList<Contact>contacts = new ArrayList<>();
+        
         name = txtName.getText();
         numberOfFriends = Integer.valueOf(txtNumberOffriends.getText());
         salary = Float.parseFloat(txtSalary.getText());
         email = txtEmail.getText();
-
-        Contact contact = new Contact(name, numberOfFriends, salary, email);
+        contact = new Contact(name, numberOfFriends, salary, email);
         contacts.add(contact);
-        int option = JOptionPane.showConfirmDialog(this,"You want to save the documents");
-
-        if (option == 0) {
-            emptyFields();
-
-        } else if (option == 1) {
-            contactController.addContactToBook(contacts);
-
-            emptyFields();
-        } else if (option == 2) {
-            emptyFields();
-            int CANCEL_OPTION = JOptionPane.CANCEL_OPTION;
-        }
+        mongo.add(contacts);
+        
     }
     private void emptyFields() {
         
@@ -210,6 +219,29 @@ public class FrmContactsRegistration extends javax.swing.JFrame {
         txtSalary.setText("");
         txtEmail.setText("");
         cmbBook.setSelectedIndex(0);
+    }
+    private void addcontacts(){
+        String name;
+        Integer numberOfFriends;
+        float salary;
+        String email;
+        String books;
+        Book book;
+        Contact contact;
+        MongoDBManager mongo = new MongoDBManager();
+        mongo.connect();
+  
+        
+        name = txtName.getText();
+        numberOfFriends = Integer.valueOf(txtNumberOffriends.getText());
+        salary = Float.parseFloat(txtSalary.getText());
+        email = txtEmail.getText();
+        books = (String) cmbBook.getSelectedItem();
+        Document dc = new Document();
+        dc.append("name", name).append("numberOfFriends",numberOfFriends).append("salary",salary).append("email",email).append("books", books);
+        mongo.getCollection().insertOne(dc);
+        
+        
     }
 
     /**
@@ -237,6 +269,8 @@ public class FrmContactsRegistration extends javax.swing.JFrame {
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(FrmContactsRegistration.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
 

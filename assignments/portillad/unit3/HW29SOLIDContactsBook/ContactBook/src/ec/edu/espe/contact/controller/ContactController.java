@@ -1,12 +1,12 @@
 /** Copyright ESPE-DECC
 */
 
-package ec.edu.espe.contatcs.controller;
+package ec.edu.espe.contact.controller;
 
 import com.google.gson.Gson;
-import ec.edu.espe.contatcs.model.Book;
-import ec.edu.espe.contatcs.model.Contact;
-import ec.edu.espe.contatcs.view.FrmContactsRegistration;
+import ec.edu.espe.contact.mondel.Book;
+import ec.edu.espe.contact.mondel.Contact;
+import ec.edu.espe.contact.view.FrmContactsRegistration;
 import java.util.ArrayList;
 import utils.MongoDBManager;
 
@@ -17,13 +17,11 @@ import utils.MongoDBManager;
 public class ContactController implements ContactControllerI{
     Contact contact;
     MongoDBManager db;
-    Gson gson;
     FrmContactsRegistration registration;
     
    @Override
-    public boolean addContactToBook(ArrayList contact) {
-        db = new MongoDBManager();
-        gson = new Gson();        
+    public boolean addContactToBook(Book book , Contact contact) {
+       book.getContacts().add(contact);
         return true;
     }
     
