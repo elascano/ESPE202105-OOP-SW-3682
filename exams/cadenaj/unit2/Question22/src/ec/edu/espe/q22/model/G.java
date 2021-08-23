@@ -9,14 +9,14 @@ package ec.edu.espe.q22.model;
  *
  * @author jejoc
  */
-public class G {
+public class G { //implement class H 0
     
     
     public void m(J j){
         
     }
     
-    public void m1(H h){
+    public void m1(H h){   //0
         
     }
 }
