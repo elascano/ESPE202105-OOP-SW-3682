@@ -8,32 +8,54 @@ package ec.edu.espe.groceryStore.view;
 import com.mongodb.BasicDBObject;
 import com.mongodb.DB;
 import com.mongodb.DBCollection;
-import com.mongodb.DBCursor;
-import com.mongodb.Mongo;
 import com.mongodb.MongoClient;
-import java.net.UnknownHostException;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+import com.mongodb.MongoClientURI;
+import com.mongodb.client.MongoCollection;
+import com.mongodb.client.MongoDatabase;
 
 /**
  *
  * @author pc
  */
 public class FrmAdd extends javax.swing.JFrame {
-    DB db;
-    DBCollection table;
-    DBCursor cursor = null;
+    
+       public static MongoClient createConection() {
+        String cluster;
+        MongoClientURI uri;
+        MongoClient mongoClient;
+        MongoDatabase database;
+        MongoCollection collection;
+
+        cluster = "mongodb+srv://eduardo:gutenmorgen@cluster0.gngrt.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
+        uri = new MongoClientURI(cluster);
+        mongoClient = new MongoClient(uri);
+        database = mongoClient.getDatabase("GroceryStore");
+        collection = database.getCollection("Products");
+        return mongoClient;
+    }
+       public void add(){
+       BasicDBObject  document = new BasicDBObject();
+       MongoClient conection = createConection();
+       DB db = conection.getDB("GroceryStore");
+       DBCollection collection = db.getCollection("Products");
+       document.put("Price", txtPrice.getText());
+       document.put("Type",txtType.getText());
+       document.put("Description", txtDescription.getText());
+       collection.insert(document);
+       }
+       public void cancel(){
+            GroceryStore groceryStore = new GroceryStore();
+        groceryStore.setVisible(true);
+       }
+       
     /**
+     * 
      * Creates new form FrmAdd
      */
     public FrmAdd() {
-       
-        Mongo mongo = new MongoClient("localhost", 27017);
-        db=mongo.getDB("GroceryStore");
-        table=db.getCollection("CostumerData");
-        
-       
         initComponents();
+        createConection();
+     
     }
 
     /**
@@ -56,7 +78,6 @@ public class FrmAdd extends javax.swing.JFrame {
         txtDescription = new javax.swing.JTextArea();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
-        Show = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -98,54 +119,47 @@ public class FrmAdd extends javax.swing.JFrame {
 
         jLabel5.setText("Description:");
 
-        Show.setText("Show");
-        Show.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ShowActionPerformed(evt);
-            }
-        });
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(48, 48, 48)
+                .addGap(55, 55, 55)
                 .addComponent(add)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 114, Short.MAX_VALUE)
-                .addComponent(Show)
-                .addGap(88, 88, 88)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(btnCancel)
-                .addGap(60, 60, 60))
+                .addGap(88, 88, 88))
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(111, 111, 111)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel2)
-                            .addComponent(jLabel3)
-                            .addComponent(jLabel4))
-                        .addGap(22, 22, 22))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jLabel5)
-                        .addGap(18, 18, 18)))
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel1)
-                    .addGroup(layout.createSequentialGroup()
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(111, 111, 111)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel2)
+                                    .addComponent(jLabel3)
+                                    .addComponent(jLabel4))
+                                .addGap(22, 22, 22))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(jLabel5)
+                                .addGap(18, 18, 18)))
                         .addGap(10, 10, 10)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(txtPrice, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtType, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(txtType, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(195, 195, 195)
+                        .addComponent(jLabel1)))
+                .addContainerGap(147, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(39, 39, 39)
+                .addGap(32, 32, 32)
                 .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtType, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel2))
@@ -161,8 +175,7 @@ public class FrmAdd extends javax.swing.JFrame {
                 .addGap(24, 24, 24)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnCancel)
-                    .addComponent(add)
-                    .addComponent(Show))
+                    .addComponent(add))
                 .addContainerGap(56, Short.MAX_VALUE))
         );
 
@@ -170,16 +183,11 @@ public class FrmAdd extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnCancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelActionPerformed
-        GroceryStore groceryStore = new GroceryStore();
-        groceryStore.setVisible(true);
+     cancel();
     }//GEN-LAST:event_btnCancelActionPerformed
 
     private void addActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addActionPerformed
-       BasicDBObject  document = new BasicDBObject();
-       document.put("Price", txtPrice.getText());
-       document.put("Type",txtType.getText());
-       document.put("Description", txtDescription.getText());
-       table.insert(document);
+     add();     
     }//GEN-LAST:event_addActionPerformed
 
     private void txtPriceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPriceActionPerformed
@@ -189,11 +197,6 @@ public class FrmAdd extends javax.swing.JFrame {
     private void txtTypeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtTypeActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtTypeActionPerformed
-
-    private void ShowActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ShowActionPerformed
-        FrmProductData frmProductData = new FrmProductData();
-        frmProductData.setVisible(true);
-    }//GEN-LAST:event_ShowActionPerformed
 
     /**
      * @param args the command line arguments
@@ -224,6 +227,7 @@ public class FrmAdd extends javax.swing.JFrame {
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
+            @Override
             public void run() {
                 new FrmAdd().setVisible(true);
             }
@@ -231,7 +235,6 @@ public class FrmAdd extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton Show;
     private javax.swing.JButton add;
     private javax.swing.JButton btnCancel;
     private javax.swing.JLabel jLabel1;
