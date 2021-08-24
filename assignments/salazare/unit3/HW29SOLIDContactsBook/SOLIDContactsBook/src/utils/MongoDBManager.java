@@ -55,15 +55,17 @@ public class MongoDBManager implements DBManager{
     @Override
     public boolean connect(String connectionString) {
         try {
-        cluster = "mongodb://NullPointers:*****@finalproyect-shard-00-00.6vyqq.mongodb.net:27017,finalproyect-shard-00-01.6vyqq.mongodb.net:27017,finalproyect-shard-00-02.6vyqq.mongodb.net:27017/test?authSource=admin&replicaSet=atlas-7i12u1-shard-0&readPreference=primary&appname=MongoDB%20Compass&ssl=true";
+        cluster = "mongodb+srv://Matthew1141:matthew2012@contactbook.ukiri.mongodb.net/test";
         uri = new MongoClientURI(cluster);
         mongoClient = new MongoClient(uri);
-        database= mongoClient.getDatabase("ContactsBook");
+        database= mongoClient.getDatabase("ContactBook");
         collection = database.getCollection("Contact");
         return true;
         } catch (IndexOutOfBoundsException ex) {
             return false;
         }
     }
+
+    
 
 }
