@@ -9,7 +9,7 @@ package ec.edu.espe.q22.model;
  *
  * @author jejoc
  */
-public class F {
+public class F {  //0.8
     private int id;
     private D ds[] = new D[1];
 
@@ -17,7 +17,7 @@ public class F {
         this.id = id;
     }
 
-    @Override
+    @Override    //0.2
     public String toString() {
         return "F{" + "id=" + id + '}';
     }

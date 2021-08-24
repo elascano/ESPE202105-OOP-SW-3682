@@ -9,7 +9,7 @@ package ec.edu.espe.q22.model;
  *
  * @author jejoc
  */
-public abstract class A {
-    private A as[] = new A[1];
+public abstract class A {       //it is no abstract 0.2
+    private A as[] = new A[1];  //AraayList 0
     
 }

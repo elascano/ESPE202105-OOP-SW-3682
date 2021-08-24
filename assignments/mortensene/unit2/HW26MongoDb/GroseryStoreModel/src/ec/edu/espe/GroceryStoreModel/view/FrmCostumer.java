@@ -5,14 +5,21 @@
  */
 package ec.edu.espe.GroceryStoreModel.view;
 
+import com.mongodb.DB;
+import com.mongodb.DBCollection;
+import com.mongodb.Mongo;
+import com.mongodb.MongoClient;
 import ec.edu.espe.groceryStore.controller.CostumerController;
 import ec.edu.espe.groseryStoreModel.model.Costumer;
 import ec.edu.espe.groseryStoreModel.model.Products;
 import java.awt.HeadlessException;
+import java.net.UnknownHostException;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.jar.Attributes;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 import utils.InputValidation;
 
@@ -21,13 +28,26 @@ import utils.InputValidation;
  * @author pc
  */
 public class FrmCostumer extends javax.swing.JFrame {
-
+    DB db;
+    DBCollection table;
     /**
      * Creates new form FrmCostumer
      */
     public FrmCostumer() {
+        
+           try {
+            Mongo mongo = new MongoClient("localhost", 27017);
+            db=mongo.getDB("grocery Store");
+            table=db.getCollection("CostumerData");
+        } catch (UnknownHostException ex) {
+            Logger.getLogger(FrmCostumer.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
         initComponents();
     }
+       
+    
+
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -60,7 +80,6 @@ public class FrmCostumer extends javax.swing.JFrame {
         Products = new javax.swing.JList<>();
         jSpinner1 = new javax.swing.JSpinner();
         jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
         jCalendar2 = new com.toedter.calendar.JCalendar();
 
@@ -92,10 +111,32 @@ public class FrmCostumer extends javax.swing.JFrame {
             }
         });
 
+        txtEmail.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                txtEmailFocusLost(evt);
+            }
+        });
+
         txtPhone.setToolTipText("ingrese el numero empezando con 09");
+        txtPhone.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                txtPhoneFocusLost(evt);
+            }
+        });
+
+        txtAdress.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                txtAdressFocusLost(evt);
+            }
+        });
 
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Drinks", "", "Item 3", "Item 4" }));
         jComboBox1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        jComboBox1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jComboBox1ActionPerformed(evt);
+            }
+        });
 
         Products.setModel(new javax.swing.AbstractListModel<String>() {
             String[] strings = { "Bebidas", "Snacks", "Congelados" };
@@ -110,8 +151,6 @@ public class FrmCostumer extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
-
-        jButton2.setText("Remove");
 
         jButton3.setText("Find");
 
@@ -162,9 +201,7 @@ public class FrmCostumer extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(jButton1)
-                        .addGap(18, 18, 18)
-                        .addComponent(jButton2)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGap(104, 104, 104)
                         .addComponent(jButton3)))
                 .addContainerGap(143, Short.MAX_VALUE))
         );
@@ -205,7 +242,6 @@ public class FrmCostumer extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 33, Short.MAX_VALUE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jButton1)
-                            .addComponent(jButton2)
                             .addComponent(jButton3))
                         .addGap(68, 68, 68))
                     .addGroup(layout.createSequentialGroup()
@@ -243,18 +279,45 @@ public class FrmCostumer extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void txtNameFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtNameFocusLost
-         ValidateCharacterOnly();
-         txtName.requestFocus();
+         String name = txtName.getText();
+    boolean isCharacter;
+    isCharacter = InputValidation.validateCharacters(name);
+    if(!(isCharacter)){
+        JOptionPane.showMessageDialog(rootPane, "Enter only characters here");
+        txtName.requestFocus();
+        }
     }//GEN-LAST:event_txtNameFocusLost
 
-    private void ValidateCharacterOnly() throws HeadlessException {
-        String name =txtName.getText();
-        boolean isCharacter;
-        isCharacter = InputValidation.validateCharacters(name);
-        if(!isCharacter){
-            JOptionPane.showMessageDialog(rootPane, "enter only characters here");
+    private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jComboBox1ActionPerformed
+
+    private void txtEmailFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtEmailFocusLost
+          String email = txtEmail.getText();
+    boolean isCharacter;
+    isCharacter = InputValidation.validateCharacters(email);
+    if(!(isCharacter)){
+        JOptionPane.showMessageDialog(rootPane, "Enter only characters here");
+        txtName.requestFocus();
         }
-    }
+    }//GEN-LAST:event_txtEmailFocusLost
+
+    private void txtPhoneFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtPhoneFocusLost
+        // TODO add your handling code here:
+         String phone = txtPhone.getText();
+    boolean isCharacter;
+    isCharacter = InputValidation.validateNumbers(phone);
+    if(!(isCharacter)){
+        JOptionPane.showMessageDialog(rootPane, "Enter only numbers here");
+        txtName.requestFocus();
+        }
+         
+    }//GEN-LAST:event_txtPhoneFocusLost
+
+    private void txtAdressFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtAdressFocusLost
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtAdressFocusLost
+
 
     /**
      * @param args the command line arguments
@@ -295,7 +358,6 @@ public class FrmCostumer extends javax.swing.JFrame {
     private javax.swing.JLabel BuyDate;
     private javax.swing.JList<String> Products;
     private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private com.toedter.calendar.JCalendar jCalendar1;

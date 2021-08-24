@@ -9,6 +9,6 @@ package ec.edu.espe.q22.model;
  *
  * @author jejoc
  */
-public class D extends A{
-    private E es[] = new E[5];
+public class D extends A{ //0.2
+    private E es[] = new E[5]; //0.3
 }
