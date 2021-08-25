@@ -10,16 +10,18 @@ package utils;
  * @author Cristian Félix InnovaCode ESPE-DCCO
  */
 public class Tax {
+
     private static float taxPercentage = 20.0F;
-    
-    public static float computeIva(float amount){
+
+    public static float computeIva(float amount) {
         float ivaValue;
         ivaValue = amount * taxPercentage / 100;
         return ivaValue;
     }
-     public static float computeTotalPrice(float amount){
+
+    public static float computeTotalPrice(float amount) {
         float total;
         total = amount + computeIva(amount);
-        return total;  
-     }
+        return total;
+    }
 }

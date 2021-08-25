@@ -5,18 +5,19 @@
  */
 package ec.edu.espe.tax.view;
 
+import utils.USTax;
 import utils.Tax;
 
 /**
  *
  * @author Cristian Félix InnovaCode ESPE-DCCOO
  */
-public class FrmUSTax extends javax.swing.JFrame {
+public class FrmUSTaxCalculator extends javax.swing.JFrame {
 
     /**
      * Creates new form FrmUSTax
      */
-    public FrmUSTax() {
+    public FrmUSTaxCalculator() {
         initComponents();
     }
 
@@ -129,7 +130,7 @@ public class FrmUSTax extends javax.swing.JFrame {
     }//GEN-LAST:event_txtTotalActionPerformed
 
     private void btnCalculateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCalculateActionPerformed
-        Calculator();
+        computeSalesTotal();
     }//GEN-LAST:event_btnCalculateActionPerformed
 
     private void btnCleanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCleanActionPerformed
@@ -138,17 +139,31 @@ public class FrmUSTax extends javax.swing.JFrame {
         txtIvaValue.setText("");
     }//GEN-LAST:event_btnCleanActionPerformed
 
-    private void Calculator(){
+    private void computeSalesTotal() {
+        float value;
+        float salesTotal;
+        USTax usTax = USTax.getInstance();
+
+        value = Float.parseFloat(TxtAmount.getText());
+
+        salesTotal = usTax.computeSalesTotal(value);
+
+        txtTotal.setText(String.valueOf(salesTotal));
+
+    }
+
+    private void Calc() {
         float value;
         float iva;
         float totalTax;
-        
+
         value = Float.parseFloat(TxtAmount.getText());
         iva = Tax.computeIva(value);
         totalTax = Tax.computeTotalPrice(value);
-        
+
         txtTotal.setText(String.valueOf(totalTax));
     }
+
     /**
      * @param args the command line arguments
      */
@@ -166,8 +181,20 @@ public class FrmUSTax extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException | InstantiationException | IllegalAccessException | javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(FrmUSTax.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FrmUSTaxCalculator.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
         //</editor-fold>
@@ -177,7 +204,7 @@ public class FrmUSTax extends javax.swing.JFrame {
         java.awt.EventQueue.invokeLater(new Runnable() {
             @Override
             public void run() {
-                new FrmUSTax().setVisible(true);
+                new FrmUSTaxCalculator().setVisible(true);
             }
         });
     }
@@ -193,6 +220,5 @@ public class FrmUSTax extends javax.swing.JFrame {
     private javax.swing.JTextField txtIvaValue;
     private javax.swing.JTextField txtTotal;
     // End of variables declaration//GEN-END:variables
-
 
 }

@@ -5,16 +5,16 @@
  */
 package ec.edu.espe.tax.controller;
 
-import ec.edu.espe.tax.model.USTax;
+import utils.USTax;
 
 /**
  *
  * @author Cristian Félix InnovaCode ESPE-DCCO
  */
 public class Calculator {
-    public static void main (String args[]){
+
+    public static void main(String args[]) {
         USTax tax = USTax.getInstance();
-        tax.salesTotal(0);
+        tax.computeSalesTotal(0);
     }
-    
 }
