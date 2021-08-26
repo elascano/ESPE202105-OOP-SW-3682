@@ -7,10 +7,10 @@ package utils;
 
 /**
  *
- * @author Diego Portilla NullPointers ESPE-DCCO
+ * @author Gualotuña Richard INNOVA CODE
  */
-public class Tax {
-    private static float taxPercentage = 6.1F;
+public class HW30Tax {
+      private static float taxPercentage = 12.0F;
     
     public static float computeIva(float amount){
         float ivaValue;

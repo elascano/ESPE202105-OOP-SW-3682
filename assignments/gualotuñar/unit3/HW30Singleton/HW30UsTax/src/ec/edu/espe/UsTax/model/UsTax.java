@@ -3,21 +3,20 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package ec.edu.espe.ustax.model;
+package ec.edu.espe.UsTax.model;
 
 /**
  *
- * @author Isaac Escobar InnovaCode ESPE-DCCO
+ * @author Gualotuña Richard INNOVA CODE
  */
-
 public class UsTax {
-    private static UsTax instace;
-    private float taxPercenage;
-    
+     private static UsTax instace;
+        
     private UsTax() {
         
     }
-     public static UsTax getInstance (){
+       
+    public static UsTax getInstance (){
         if(instace == null){
             instace = new UsTax();
         }
@@ -26,8 +25,6 @@ public class UsTax {
         
         
     }
-     
-     
     public float salesTotal(float amount){
         float ivaValue ;
         float taxPercentage = 20.0F;
@@ -46,13 +43,5 @@ public class UsTax {
     public static void setInstace(UsTax instace) {
         UsTax.instace = instace;
     }
-
-    public float ComputeSalesTotal(float value) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-    
     
 }
-
-       
-   

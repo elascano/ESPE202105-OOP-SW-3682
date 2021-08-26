@@ -13,12 +13,12 @@ import utils.Tax;
  *
  * @author Diego Portilla NullPointers ESPE-DCCO
  */
-public class FrmUSTax extends javax.swing.JFrame {
+public class FrmTaxCalculator extends javax.swing.JFrame {
 
     /**
      * Creates new form FrmUSTax
      */
-    public FrmUSTax() {
+    public FrmTaxCalculator() {
         initComponents();
     }
 
@@ -122,7 +122,8 @@ public class FrmUSTax extends javax.swing.JFrame {
     }//GEN-LAST:event_txtTotalActionPerformed
 
     private void btnOkActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnOkActionPerformed
-        calc();
+        computeSalesTotal();
+        
        
         
        
@@ -132,34 +133,27 @@ public class FrmUSTax extends javax.swing.JFrame {
         TxtAmount.setText("");
         txtTotal.setText("");
     }//GEN-LAST:event_btnDeleteActionPerformed
-    private void calculator(){
+    
+    
+    private void computeSalesTotal(){
         float value;
-        float totalTax;
-        USTax usTax = USTax.getInstace();
+        float salesTotal;
         
+        USTax usTax = USTax.getInstance();
         value = Float.parseFloat(TxtAmount.getText());
+        usTax.computeSalesTotal(value);
+            
         
-        totalTax=usTax.salesTotal(value);
+        salesTotal=usTax.computeSalesTotal(value);
         
-        txtTotal.setText(String.valueOf(totalTax));
+        txtTotal.setText(String.valueOf(salesTotal));
     }
     
     
     
     
     
-    private void calc(){
-        float value;
-        float iva;
-        float totalTax;
-        
-        
-        value = Float.parseFloat(TxtAmount.getText());
-        iva = Tax.computeIva(value);
-        totalTax = Tax.computeTotalPrice(value);
-        
-        txtTotal.setText(String.valueOf(totalTax));
-    }
+    
     /**
      * @param args the command line arguments
      */
@@ -177,14 +171,18 @@ public class FrmUSTax extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(FrmUSTax.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FrmTaxCalculator.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(FrmUSTax.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FrmTaxCalculator.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(FrmUSTax.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FrmTaxCalculator.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(FrmUSTax.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FrmTaxCalculator.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
         //</editor-fold>
@@ -193,7 +191,7 @@ public class FrmUSTax extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new FrmUSTax().setVisible(true);
+                new FrmTaxCalculator().setVisible(true);
             }
         });
     }
