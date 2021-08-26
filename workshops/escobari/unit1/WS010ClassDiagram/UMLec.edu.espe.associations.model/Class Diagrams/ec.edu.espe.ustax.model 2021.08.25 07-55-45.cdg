@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="ec.edu.espe.ustax.model">
+  <ClassDiagramComponents>
+    <Class name="UsTax" package="ec.edu.espe.ustax.model" visibility="public" xPosition="20.0" yPosition="20.0">
+      <Fields>
+        <Field name="instace" type="UsTax" visibility="private" isStatic="true"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="private"/>
+      </Constructors>
+      <Methods>
+        <Method name="getInstance" returnType="UsTax" visibility="public" isStatic="true"/>
+        <Method name="salesTotal" returnType="float" visibility="public">
+          <Argument type="float" name="amount"/>
+        </Method>
+        <Method name="getInstace" returnType="UsTax" visibility="public" isStatic="true"/>
+        <Method name="setInstace" returnType="void" visibility="public" isStatic="true">
+          <Argument type="UsTax" name="instace"/>
+        </Method>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="instace" source="ec.edu.espe.ustax.model.UsTax" target="ec.edu.espe.ustax.model.UsTax" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="ec.edu.espe.ustax.model.UsTax" target="ec.edu.espe.ustax.model.UsTax" sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
