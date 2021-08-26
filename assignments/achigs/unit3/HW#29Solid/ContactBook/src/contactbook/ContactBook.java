@@ -3,22 +3,19 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package ec.edu.espe.bookstore.view;
-
-import ec.edu.espe.bookstore.model.USTax;
+package contactbook;
 
 /**
  *
  * @author Steven Achig Future Programmers ESPE-DCCO
  */
-public class calculator {
+public class ContactBook {
 
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        USTax tax = USTax.getInstance();
-        tax.salesTotal();   
+        // TODO code application logic here
     }
     
 }
