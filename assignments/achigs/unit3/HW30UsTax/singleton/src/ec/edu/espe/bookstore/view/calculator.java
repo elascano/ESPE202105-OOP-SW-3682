@@ -5,17 +5,20 @@
  */
 package ec.edu.espe.bookstore.view;
 
+import ec.edu.espe.bookstore.model.USTax;
+
 /**
  *
  * @author Steven Achig Future Programmers ESPE-DCCO
  */
-public class Bookstore {
+public class calculator {
 
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        USTax tax = USTax.getInstance();
+        tax.salesTotal();   
     }
     
 }
