@@ -10,7 +10,7 @@ package utils;
  * @author Diego Portilla NullPointers ESPE-DCCO
  */
 public class Tax {
-    private static float taxPercentage = 20.0F;
+    private static float taxPercentage = 6.1F;
     
     public static float computeIva(float amount){
         float ivaValue;
