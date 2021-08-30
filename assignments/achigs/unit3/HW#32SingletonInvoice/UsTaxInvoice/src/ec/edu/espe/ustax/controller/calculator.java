@@ -3,9 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package ec.edu.espe.bookstore.controller;
+package ec.edu.espe.ustax.controller;
 
-import ec.edu.espe.bookstore.model.USTax;
+import ec.edu.espe.ustax.model.USTax;
 
 /**
  *
