@@ -6,10 +6,7 @@
 package ec.edu.espe.contact.view;
 
 
-import ec.edu.espe.contact.controller.ContactController;
-import ec.edu.espe.contact.mondel.Book;
-import ec.edu.espe.contact.mondel.Contact;
-import java.util.ArrayList;
+
 import javax.swing.JOptionPane;
 import org.bson.Document;
 import utils.MongoDBManager;
@@ -23,10 +20,7 @@ public class FrmContactsRegistration extends javax.swing.JFrame {
     /**
      * Creates new form Contacts
      */
-    public FrmContactsRegistration() {
-        initComponents();
-        this.setLocationRelativeTo(null);
-    }
+
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -191,27 +185,9 @@ public class FrmContactsRegistration extends javax.swing.JFrame {
             int CANCEL_OPTION = JOptionPane.CANCEL_OPTION;
         }
     }
-    private void add(){
-        String name;
-        Integer numberOfFriends;
-        float salary;
-        String email;
-        Book book;
-        Contact contact;
-        ContactController contactController = new ContactController();
-        MongoDBManager mongo = new MongoDBManager();
-        mongo.connect();
-        ArrayList<Contact>contacts = new ArrayList<>();
+   
         
-        name = txtName.getText();
-        numberOfFriends = Integer.valueOf(txtNumberOffriends.getText());
-        salary = Float.parseFloat(txtSalary.getText());
-        email = txtEmail.getText();
-        contact = new Contact(name, numberOfFriends, salary, email);
-        contacts.add(contact);
-        mongo.add(contacts);
-        
-    }
+    
     private void emptyFields() {
         
         txtName.setText("");
@@ -226,12 +202,8 @@ public class FrmContactsRegistration extends javax.swing.JFrame {
         float salary;
         String email;
         String books;
-        Book book;
-        Contact contact;
         MongoDBManager mongo = new MongoDBManager();
-        mongo.connect();
-  
-        
+        mongo.connect();      
         name = txtName.getText();
         numberOfFriends = Integer.valueOf(txtNumberOffriends.getText());
         salary = Float.parseFloat(txtSalary.getText());
