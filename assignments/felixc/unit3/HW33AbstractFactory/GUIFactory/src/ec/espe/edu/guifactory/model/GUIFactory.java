@@ -10,21 +10,24 @@ package ec.espe.edu.guifactory.model;
  * @author Cristian Félix InnovaCode ESPE-DCCO
  */
 public abstract class GUIFactory {
-    public static GUIFactory getFactory(){
+
+    public static GUIFactory getFactory() {
         int sys = readFromConfigFile("OS_TYPE");
-        
-        if(sys == 0){
-            return new WindowsFactory();
-        } else if(sys == 1){
+
+        if (sys == 0) {
+            return new WinFactory();
+        } else if (sys == 1) {
             return new LinuxFactory();
-        } else 
+        } else {
             return new MacOSFactory();
+        }
     }
+
+    public abstract Button createButton();
+
+    public abstract Menu createMenu();
 
     private static int readFromConfigFile(String os_type) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-    
-    public abstract Button createButton();
-    public abstract Menu createMenu();
 }

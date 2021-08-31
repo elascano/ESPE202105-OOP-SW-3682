@@ -9,11 +9,16 @@ package ec.espe.edu.guifactory.model;
  *
  * @author Cristian Félix InnovaCode ESPE-DCCO
  */
-public class WindowsButton extends Button {
+public class WinFactory extends GUIFactory {
 
     @Override
-    public void paint() {
-        System.out.println("I'm a WindowsButton: " + caption);
+    public Button createButton() {
+        return new WinButton();
+    }
+
+    @Override
+    public Menu createMenu() {
+        return new WinMenu();
     }
     
 }

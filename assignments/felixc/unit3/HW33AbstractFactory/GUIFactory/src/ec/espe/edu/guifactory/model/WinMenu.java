@@ -9,11 +9,11 @@ package ec.espe.edu.guifactory.model;
  *
  * @author Cristian Félix InnovaCode ESPE-DCCO
  */
-public class WindowsMenu extends Menu {
+public class WinMenu extends Menu {
 
     @Override
     public void paint() {
-        System.out.println("I'm a WindowsMenu: " + caption);
+        System.out.println("I'm a WinMenu: " + caption);
     }
     
 }
