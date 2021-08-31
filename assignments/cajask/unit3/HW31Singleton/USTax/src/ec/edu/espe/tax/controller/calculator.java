@@ -5,7 +5,7 @@
  */
 package ec.edu.espe.tax.controller;
 
-import ec.edu.espe.tax.model.USTax;
+import utils.USTax;
 
 /**
  *
