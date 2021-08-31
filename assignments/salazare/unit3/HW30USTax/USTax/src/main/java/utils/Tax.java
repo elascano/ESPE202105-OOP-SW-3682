@@ -10,16 +10,16 @@ package utils;
  * @author Salazar Matthew NullPointers ESPE-DCC
  */
 public class Tax {
-    private static float taxes = 20.0F;
+    private static float taxes = 6.1F;
     
-    public static float computeIva(float amount){
+    public static float computeSalesTotal(float amount){
         float ivaValue;
         ivaValue = amount * taxes / 100;
         return ivaValue;
     }
      public static float computeTotalPrice(float amount){
         float total;
-        total = amount + computeIva(amount);
+        total = amount + computeSalesTotal(amount);
         return total;  
      }
      
