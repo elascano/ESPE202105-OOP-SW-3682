@@ -10,23 +10,24 @@ package ec.edu.espe.tax.model;
  * @author Diego Portilla NullPointers ESPE-DCCO
  */
 public class USTax {
+
     private static USTax instace;
-    
-    public static USTax getInstance (){
-        if(getInstace() == null){
+
+    public static USTax getInstance() {
+        if (getInstace() == null) {
             setInstace(new USTax());
         }
-            return getInstace();    
+        return getInstace();
     }
-    
-    public float totalSales(float amount){
-        float ivaValue ;
+
+    public float totalSales(float amount) {
+        float ivaValue;
         float taxPercentage = 20.0F;
         float total;
-        
+
         ivaValue = amount * taxPercentage / 100;
         total = amount + ivaValue;
-        
+
         return total;
     }
 
@@ -37,5 +38,5 @@ public class USTax {
     public static void setInstace(USTax instace) {
         USTax.instace = instace;
     }
-    
+
 }
