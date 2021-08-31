@@ -17,9 +17,9 @@ public class Tax {
         ivaValue = amount * taxPercentage / 100;
         return ivaValue;
     }
-     public static float computeTotalPrice(float amount){
+    public static float computeTotalPrice(float amount){
         float total;
         total = amount + computeIva(amount);
         return total;  
-     }
+    }
 }
