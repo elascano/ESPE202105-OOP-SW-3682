@@ -12,6 +12,7 @@ package ec.edu.espe.ustax.model;
 
 public class UsTax {
     private static UsTax instace;
+    private float taxPercenage;
     
     private UsTax() {
         
@@ -44,6 +45,10 @@ public class UsTax {
 
     public static void setInstace(UsTax instace) {
         UsTax.instace = instace;
+    }
+
+    public float ComputeSalesTotal(float value) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
     

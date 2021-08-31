@@ -32,13 +32,13 @@ public class FrmBookstore extends javax.swing.JFrame {
         jMenu2 = new javax.swing.JMenu();
         itmCreate = new javax.swing.JMenuItem();
         itmChange = new javax.swing.JMenuItem();
-        mnuProduct = new javax.swing.JMenu();
-        jMenuItem1 = new javax.swing.JMenuItem();
-        jMenuItem2 = new javax.swing.JMenuItem();
-        jMenuItem3 = new javax.swing.JMenuItem();
         mnuBill = new javax.swing.JMenu();
-        jMenuItem4 = new javax.swing.JMenuItem();
-        jMenuItem5 = new javax.swing.JMenuItem();
+        itmGenerate = new javax.swing.JMenuItem();
+        itmReview = new javax.swing.JMenuItem();
+        mnuProduct = new javax.swing.JMenu();
+        itmBuy = new javax.swing.JMenuItem();
+        itmAdd = new javax.swing.JMenuItem();
+        itmDelete = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -72,28 +72,58 @@ public class FrmBookstore extends javax.swing.JFrame {
 
         jMenuBar1.add(jMenu2);
 
-        mnuProduct.setText("Product");
-
-        jMenuItem1.setText("Buy");
-        mnuProduct.add(jMenuItem1);
-
-        jMenuItem2.setText("Add");
-        mnuProduct.add(jMenuItem2);
-
-        jMenuItem3.setText("Delete");
-        mnuProduct.add(jMenuItem3);
-
-        jMenuBar1.add(mnuProduct);
-
         mnuBill.setText("Bill");
 
-        jMenuItem4.setText("Generate");
-        mnuBill.add(jMenuItem4);
+        itmGenerate.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_G, java.awt.event.InputEvent.ALT_MASK));
+        itmGenerate.setText("Generate");
+        itmGenerate.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                itmGenerateActionPerformed(evt);
+            }
+        });
+        mnuBill.add(itmGenerate);
 
-        jMenuItem5.setText("Review");
-        mnuBill.add(jMenuItem5);
+        itmReview.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_R, java.awt.event.InputEvent.ALT_MASK));
+        itmReview.setText("Review");
+        itmReview.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                itmReviewActionPerformed(evt);
+            }
+        });
+        mnuBill.add(itmReview);
 
         jMenuBar1.add(mnuBill);
+
+        mnuProduct.setText("Product");
+
+        itmBuy.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_E, java.awt.event.InputEvent.ALT_MASK));
+        itmBuy.setText("Buy");
+        itmBuy.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                itmBuyActionPerformed(evt);
+            }
+        });
+        mnuProduct.add(itmBuy);
+
+        itmAdd.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_V, java.awt.event.InputEvent.ALT_MASK));
+        itmAdd.setText("Add");
+        itmAdd.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                itmAddActionPerformed(evt);
+            }
+        });
+        mnuProduct.add(itmAdd);
+
+        itmDelete.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_C, java.awt.event.InputEvent.ALT_MASK));
+        itmDelete.setText("Delete");
+        itmDelete.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                itmDeleteActionPerformed(evt);
+            }
+        });
+        mnuProduct.add(itmDelete);
+
+        jMenuBar1.add(mnuProduct);
 
         setJMenuBar(jMenuBar1);
 
@@ -126,6 +156,36 @@ public class FrmBookstore extends javax.swing.JFrame {
         createUser.setVisible(true);
         dispose();
     }//GEN-LAST:event_itmCreateActionPerformed
+
+    private void itmBuyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itmBuyActionPerformed
+        FrmBuy buy = new FrmBuy();
+        buy.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_itmBuyActionPerformed
+
+    private void itmAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itmAddActionPerformed
+        FrmAdd add = new FrmAdd();
+        add.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_itmAddActionPerformed
+
+    private void itmDeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itmDeleteActionPerformed
+        FrmDelete delete = new FrmDelete();
+        delete.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_itmDeleteActionPerformed
+
+    private void itmGenerateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itmGenerateActionPerformed
+        FrmGenerate generate = new FrmGenerate();
+        generate.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_itmGenerateActionPerformed
+
+    private void itmReviewActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itmReviewActionPerformed
+        FrmReview review = new FrmReview();
+        review.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_itmReviewActionPerformed
 
     /**
      * @param args the command line arguments
@@ -163,15 +223,15 @@ public class FrmBookstore extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JMenuItem itmAdd;
+    private javax.swing.JMenuItem itmBuy;
     private javax.swing.JMenuItem itmChange;
     private javax.swing.JMenuItem itmCreate;
+    private javax.swing.JMenuItem itmDelete;
+    private javax.swing.JMenuItem itmGenerate;
+    private javax.swing.JMenuItem itmReview;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenuBar jMenuBar1;
-    private javax.swing.JMenuItem jMenuItem1;
-    private javax.swing.JMenuItem jMenuItem2;
-    private javax.swing.JMenuItem jMenuItem3;
-    private javax.swing.JMenuItem jMenuItem4;
-    private javax.swing.JMenuItem jMenuItem5;
     private javax.swing.JMenu mnuBill;
     private javax.swing.JMenu mnuExit;
     private javax.swing.JMenu mnuProduct;
