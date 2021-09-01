@@ -1,0 +1,49 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package ec.edu.espe.sortapp.model;
+
+/**
+ *
+ * @author Steven Achig Future Programmers ESPE-DCCO
+ */
+public class QuickSort implements SortingStrategy {
+
+    public int[] sort(int data[]) {
+        int i, j, pivote, aux;
+        int primero=0; 
+        int ultimo=data.length-1;
+        
+        i = primero;
+        j = ultimo;
+        pivote=data[(primero+ultimo)/2];
+        
+        do{
+            while(data[i]<pivote){
+                i++;
+            }
+            while(data[j]>pivote){
+                j--;
+            }
+            
+            if(i<=j){
+                aux = data[i];
+                data[i] = data[j];
+                data[j] = aux;
+                i++;
+                j--;
+            }
+        }while(i<=j);
+        
+        /*if(primero<j){
+            sort(data, primero, j);
+        }
+        if(i<ultimo){
+            sort(data, i, ultimo);
+        }*/
+        
+        return data;
+    }
+}
