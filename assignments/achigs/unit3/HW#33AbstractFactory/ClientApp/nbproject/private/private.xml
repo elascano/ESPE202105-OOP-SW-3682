@@ -2,21 +2,6 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group>
-            <file>file:/C:/Users/steve/OneDrive/Escritorio/ClientApp/src/ec/edu/espe/gui/view/FrmClientApp.java</file>
-            <file>file:/C:/Users/steve/OneDrive/Escritorio/ClientApp/src/ec/edu/espe/gui/controller/MacButton.java</file>
-            <file>file:/C:/Users/steve/OneDrive/Escritorio/ClientApp/src/ec/edu/espe/gui/model/Button.java</file>
-            <file>file:/C:/Users/steve/OneDrive/Escritorio/ClientApp/src/ec/edu/espe/gui/controller/LinuxMenu.java</file>
-            <file>file:/C:/Users/steve/OneDrive/Escritorio/ClientApp/src/ec/edu/espe/gui/controller/LinuxButton.java</file>
-            <file>file:/C:/Users/steve/OneDrive/Escritorio/ClientApp/src/ec/edu/espe/gui/model/Menu.java</file>
-            <file>file:/C:/Users/steve/OneDrive/Escritorio/ClientApp/src/ec/edu/espe/gui/model/WinFactory.java</file>
-            <file>file:/C:/Users/steve/OneDrive/Escritorio/ClientApp/src/ec/edu/espe/gui/controller/WinButton.java</file>
-            <file>file:/C:/Users/steve/OneDrive/Escritorio/ClientApp/src/ec/edu/espe/gui/model/GUIFactory.java</file>
-            <file>file:/C:/Users/steve/OneDrive/Escritorio/ClientApp/src/ec/edu/espe/gui/model/LinuxFactory.java</file>
-            <file>file:/C:/Users/steve/OneDrive/Escritorio/ClientApp/src/ec/edu/espe/gui/model/MacFactory.java</file>
-            <file>file:/C:/Users/steve/OneDrive/Escritorio/ClientApp/src/ec/edu/espe/gui/model/ClientApp.java</file>
-            <file>file:/C:/Users/steve/OneDrive/Escritorio/ClientApp/src/ec/edu/espe/gui/controller/MacMenu.java</file>
-            <file>file:/C:/Users/steve/OneDrive/Escritorio/ClientApp/src/ec/edu/espe/gui/controller/WinMenu.java</file>
-        </group>
+        <group/>
     </open-files>
 </project-private>
