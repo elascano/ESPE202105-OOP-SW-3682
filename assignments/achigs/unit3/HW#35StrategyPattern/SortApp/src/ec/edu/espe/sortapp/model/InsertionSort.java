@@ -11,6 +11,8 @@ package ec.edu.espe.sortapp.model;
  */
 public class InsertionSort implements SortingStrategy {
 
+    int order [] = {};
+    
     public int[] sort(int data[]) {
         int i, pos, aux;
         for(i=0;i<data.length;i++){
@@ -23,6 +25,12 @@ public class InsertionSort implements SortingStrategy {
             }
             data[pos] = aux;
         }
-        return data;
+
+        for(i=0; i<data.length; i++){
+            order[i]=data[i];
+        }
+
+        System.out.println("Insertion Sort");
+        return order;
     }
 }

@@ -12,18 +12,43 @@ package ec.edu.espe.sortapp.model;
 public class BubbleSort implements SortingStrategy {
 
     public int[] sort(int data[]) {
-        int i, j, aux;
+//        int i, j, aux;
+//        
+//        for(i=0; i<data.length; i++){
+//            for(j=0; j<data.length; j++){
+//                if(data[j]>data[j+1]){
+//                    aux=data[j];
+//                    data[j]=data[j+1];
+//                    data[j+1]=aux;
+//                }
+//            }
+//        }
+        
+        int i, aux;
+        boolean cambios = false;
+        int order [] = {};
+        
+        while (true) {
+            cambios = false;
+            for (i = 1; i < data.length; i++) {
+                if(data[i]<data[i-1]){
+                    aux = data[i];
+                    data[i]=data[i-1];
+                    data[i-1] = aux;
+                    cambios = true;
+                }
+                
+            }
+            if(cambios==false)
+                break;
+        }
         
         for(i=0; i<data.length; i++){
-            for(j=0; j<data.length; j++){
-                if(data[j]>data[j+1]){
-                    aux=data[j];
-                    data[j]=data[j+1];
-                    data[j+1]=aux;
-                }
-            }
+            order[i]=data[i];
         }
-        return data;
+            
+        System.out.println("Bubble Sort");
+        return order;
     }
     
 }

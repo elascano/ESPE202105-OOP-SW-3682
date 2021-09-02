@@ -21,6 +21,14 @@ public class Application {
         SortingContext sc = new SortingContext();
         int sortedList[] = sc.sort(data);
         
+        System.out.println(sortedList);
         
+//        sadasdas o = new sadasdas();
+//        o.sort(data);
+//        
+//        
+//        for(int i=0; i<data.length; i++){
+//            System.out.print(data[i] + " ");
+//        }
     }
 }

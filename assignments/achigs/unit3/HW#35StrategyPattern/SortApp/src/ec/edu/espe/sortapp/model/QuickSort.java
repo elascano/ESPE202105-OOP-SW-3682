@@ -12,6 +12,9 @@ package ec.edu.espe.sortapp.model;
 public class QuickSort implements SortingStrategy {
 
     public int[] sort(int data[]) {
+        
+        int order [] = {};
+        
         int i, j, pivote, aux;
         int primero=0; 
         int ultimo=data.length-1;
@@ -37,13 +40,13 @@ public class QuickSort implements SortingStrategy {
             }
         }while(i<=j);
         
-        /*if(primero<j){
-            sort(data, primero, j);
-        }
-        if(i<ultimo){
-            sort(data, i, ultimo);
-        }*/
         
-        return data;
+        for(i=0; i<data.length; i++){
+            order[i]=data[i];
+        }
+        
+        System.out.println("Quick Sort");
+        return order;
+        
     }
 }
