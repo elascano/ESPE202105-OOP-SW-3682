@@ -9,7 +9,7 @@ package ec.edu.espe.q22.model;
  *
  * @author Myckel Chamorro EMCL.java ESPE-DCCO
  */
-public class A {
+public class A { //0.5
     private int a;
     private A aa;
 

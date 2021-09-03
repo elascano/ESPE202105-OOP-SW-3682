@@ -9,7 +9,7 @@ package ec.edu.espe.q22.model;
  *
  * @author jejoc
  */
-public class B extends A{
-    
+public class B extends A{ //0.5
+  ///Missing  ArrayList, dont has code 
     
 }

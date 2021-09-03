@@ -1,0 +1,41 @@
+/** Copyright ESPE-DECC
+*/
+
+package utils;
+
+/**
+ *
+ * @author Edison Lascano OOPTech ESPE-DCCO
+ */
+public class DBManager implements Persistence{
+
+    @Override
+    public void create(String data, String table) {
+        //TODO insert new record in MongoDB
+    }
+
+    @Override
+    public String read(String table) {
+        //TODO read all data from MongoDB
+        return "";
+    }
+
+    @Override
+    public String find(String searchString, String table) {
+        //TODO find a record in MongoDB
+        return "";
+    }
+
+    @Override
+    public boolean update(String searchString, String data, String table) {
+        //TODO update the MongoDB
+        return true;
+    }
+
+    @Override
+    public boolean delete(String searchString, String table) {
+        //TODO delete from MongoDB
+        return true;
+    }
+    
+}

@@ -14,7 +14,7 @@ public class Question22 {
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) {
+    public static void main(String[] args) { //has no code 
         // TODO code application logic here
     }
     
