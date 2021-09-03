@@ -3,14 +3,14 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package ec.edu.espe.aircraft.model;
-
-import com.mongodb.BasicDBObject;
+package edu.ec.espe.contac.controller;
+import ec.edu.espe.contact.mondel.Book;
+import ec.edu.espe.contact.mondel.Contact;
 
 /**
  *
  * @author Sebastian Solano NullPunters ESPE-DCCO
  */
-public class Aircraft {
-    
+public interface ContactControllerI {
+    public boolean addContactToBook(Book book , Contact contact);
 }

@@ -3,14 +3,17 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package ec.edu.espe.aircraft.model;
-
-import com.mongodb.BasicDBObject;
+package ec.edu.espe.employee.model;
 
 /**
  *
  * @author Sebastian Solano NullPunters ESPE-DCCO
  */
-public class Aircraft {
+public abstract class Employee {
+     String name = "not assigned yet";
+    String title = "not assigned yet";
     
+    public void stateName(){
+        System.out.println(title + "" + name);
+    }
 }
