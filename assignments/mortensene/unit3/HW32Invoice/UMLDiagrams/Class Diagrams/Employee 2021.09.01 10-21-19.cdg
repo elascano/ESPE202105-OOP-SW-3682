@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Employee">
+  <ClassDiagramComponents>
+    <Class name="Clerk" package="ec.edu.espe.Employee.model" visibility="public" xPosition="20.0" yPosition="20.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="aName"/>
+        </Constructor>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="stateName" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Client" package="ec.edu.espe.Employee.model" visibility="public" xPosition="320.0" yPosition="20.0">
+      <Fields>
+        <Field name="employee" type="Employee" visibility="public" isStatic="true"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="doClientTasks" returnType="void" visibility="public" isStatic="true"/>
+      </Methods>
+    </Class>
+    <Class name="Employee" package="ec.edu.espe.Employee.model" visibility="public" isAbstract="true" xPosition="620.0" yPosition="20.0">
+      <Fields>
+        <Field name="name" type="String" visibility="package"/>
+        <Field name="title" type="String" visibility="package"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="stateName" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Manager" package="ec.edu.espe.Employee.model" visibility="public" xPosition="920.0" yPosition="20.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="aName"/>
+        </Constructor>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="stateName" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="President" package="ec.edu.espe.Employee.model" visibility="public" xPosition="1220.0" yPosition="20.0">
+      <Fields>
+        <Field name="president" type="President" visibility="private" isStatic="true"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="private">
+          <Argument type="String" name="aName"/>
+        </Constructor>
+        <Constructor visibility="private"/>
+      </Constructors>
+      <Methods>
+        <Method name="stateName" returnType="void" visibility="public"/>
+        <Method name="getPresident" returnType="President" visibility="public" isStatic="true">
+          <Argument type="String" name="aName"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Supervisor" package="ec.edu.espe.Employee.model" visibility="public" isAbstract="true" xPosition="1520.0" yPosition="20.0">
+      <Fields>
+        <Field name="directReports" type="Vector" visibility="protected"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="stateName" returnType="void" visibility="public"/>
+        <Method name="add" returnType="void" visibility="public">
+          <Argument type="Employee" name="anEmployee"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Teller" package="ec.edu.espe.Employee.model" visibility="public" xPosition="1820.0" yPosition="20.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="aName"/>
+        </Constructor>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="stateName" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Setup" package="ec.edu.espe.Employee.view" visibility="public" xPosition="2120.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <IsRelation name="is" source="ec.edu.espe.Employee.model.President" target="ec.edu.espe.Employee.model.Supervisor"/>
+    <IsRelation name="is" source="ec.edu.espe.Employee.model.Clerk" target="ec.edu.espe.Employee.model.Employee"/>
+    <HasRelation name="president" source="ec.edu.espe.Employee.model.President" target="ec.edu.espe.Employee.model.President" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="ec.edu.espe.Employee.model.Supervisor" target="ec.edu.espe.Employee.model.Employee" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="ec.edu.espe.Employee.model.Teller" target="ec.edu.espe.Employee.model.Employee"/>
+    <IsRelation name="is" source="ec.edu.espe.Employee.model.Supervisor" target="ec.edu.espe.Employee.model.Employee"/>
+    <IsRelation name="is" source="ec.edu.espe.Employee.model.Manager" target="ec.edu.espe.Employee.model.Supervisor"/>
+    <HasRelation name="employee" source="ec.edu.espe.Employee.model.Client" target="ec.edu.espe.Employee.model.Employee" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="ec.edu.espe.Employee.model.President" target="ec.edu.espe.Employee.model.President" sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
