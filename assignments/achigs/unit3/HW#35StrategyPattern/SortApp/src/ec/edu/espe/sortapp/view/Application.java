@@ -17,11 +17,15 @@ public class Application {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        int data[] = {3, 6, 4, 6, 7, 8, 5, 6, 7, 5, 3, 3};
+        int data[] = {3, 6, 4, 6, 7, 8, 5, 6, 7, 5, 3, 3, 4, 5, 8, 45, 19, 87, 13, 25, 26, 28};
         SortingContext sc = new SortingContext();
         int sortedList[] = sc.sort(data);
         
-        System.out.println(sortedList);
+        for(int i=0; i<sortedList.length; i++){
+            System.out.print(sortedList[i] + " ");
+        }
+        
+        //System.out.println(sortedList);
         
 //        sadasdas o = new sadasdas();
 //        o.sort(data);
