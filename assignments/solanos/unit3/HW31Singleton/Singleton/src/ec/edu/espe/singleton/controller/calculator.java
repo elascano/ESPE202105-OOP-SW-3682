@@ -3,14 +3,13 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package ec.edu.espe.aircraft.model;
+package ec.edu.espe.singleton.controller;
 
-import com.mongodb.BasicDBObject;
 
 /**
  *
  * @author Sebastian Solano NullPunters ESPE-DCCO
  */
-public class Aircraft {
+public class calculator {
     
 }

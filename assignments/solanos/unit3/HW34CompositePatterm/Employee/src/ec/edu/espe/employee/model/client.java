@@ -3,14 +3,16 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package ec.edu.espe.aircraft.model;
-
-import com.mongodb.BasicDBObject;
+package ec.edu.espe.employee.model;
 
 /**
  *
  * @author Sebastian Solano NullPunters ESPE-DCCO
  */
-public class Aircraft {
+public class client {
+    public static Employee employee;
+    
+    public static void doClientTasks(){
+        employee.stateName();
     
 }
