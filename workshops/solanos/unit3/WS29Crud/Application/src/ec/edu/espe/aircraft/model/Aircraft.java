@@ -5,6 +5,8 @@
  */
 package ec.edu.espe.aircraft.model;
 
+import com.mongodb.BasicDBObject;
+
 /**
  *
  * @author Sebastian Solano NullPunters ESPE-DCCO
