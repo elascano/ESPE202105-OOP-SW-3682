@@ -10,7 +10,7 @@ package ec.edu.espe.store.model;
  * @author Sebastian Solano NullPunters ESPE-DCCO
  */
 public class Vehicule {
-     private int id;
+    private int id;
     private String brand;
     private String model;
 
