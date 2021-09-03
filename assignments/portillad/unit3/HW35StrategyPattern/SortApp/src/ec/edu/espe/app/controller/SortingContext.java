@@ -20,11 +20,14 @@ public class SortingContext {
     
     public SortingStrategy setSortStrategy(int n){
        if(n>0 && n<5)
-           ss = new BubbleSort();
+           System.out.println("BubbleSort:");
+            ss = new BubbleSort();
        if(n>=5 && n<10)
-           ss = new InsertionSort();
+           System.out.println("InsertionSort:");
+            ss = new InsertionSort();
        if(n>=10)
-           ss = new QuickSort();
+           System.out.println("QuickSort:");
+            ss = new QuickSort();
        
        return ss;
     }

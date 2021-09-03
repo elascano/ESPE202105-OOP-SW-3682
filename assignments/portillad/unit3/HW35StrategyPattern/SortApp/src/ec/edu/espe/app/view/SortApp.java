@@ -6,6 +6,7 @@
 package ec.edu.espe.app.view;
 
 import ec.edu.espe.app.controller.SortingContext;
+import java.util.Scanner;
 
 /**
  *
@@ -17,7 +18,18 @@ public class SortApp {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-    int data[] = {3,6,4,6,3,7,8};
+    int insert;
+    Scanner cs = new Scanner(System.in);
+        System.out.println("Enter the quantity");
+        insert = cs.nextInt();
+        int data[] = new int[insert];
+        for(int i=0; i<insert; i++)
+        {
+            System.out.printf("\nEnter the number %d: ", i+1);
+            data[i] = cs.nextInt();
+        }
+    
+       
     SortingContext sc = new SortingContext();
     int sortedList[] = sc.sort(data);
     
