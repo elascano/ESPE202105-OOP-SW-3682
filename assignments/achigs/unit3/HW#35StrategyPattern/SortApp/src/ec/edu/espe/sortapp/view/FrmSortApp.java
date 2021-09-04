@@ -5,7 +5,6 @@
  */
 package ec.edu.espe.sortapp.view;
 
-import ec.edu.espe.sortapp.model.SortingContext;
 import java.util.ArrayList;
 import javax.swing.JOptionPane;
 
