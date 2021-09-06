@@ -5,6 +5,8 @@
  */
 package ec.edu.espe.sortapp.model;
 
+import ec.edu.espe.sortapp.controller.SortingStrategy;
+
 /**
  *
  * @author Steven Achig Future Programmers ESPE-DCCO
@@ -12,7 +14,8 @@ package ec.edu.espe.sortapp.model;
 public class SortingContext {
 
     private SortingStrategy sortingStrategy;
-
+    QuickSort quick = new QuickSort();
+    
     public int[] sort(int data[]) {
         int size = data.length;
         sortingStrategy = setSortStrategy(size);
@@ -20,13 +23,13 @@ public class SortingContext {
     }
 
     public SortingStrategy setSortStrategy(int n) {
-        if (n > 0 && n < 30) {
+        if (n > 0 && n < 10) {
             sortingStrategy = new BubbleSort();
         }
-        if (n >= 30 && n < 100) {
+        if (n >= 10 && n < 20) {
             sortingStrategy = new InsertionSort();
         }
-        if (n >= 100) {
+        if (n >= 20) {
             sortingStrategy = new QuickSort();
         }
         return sortingStrategy;
