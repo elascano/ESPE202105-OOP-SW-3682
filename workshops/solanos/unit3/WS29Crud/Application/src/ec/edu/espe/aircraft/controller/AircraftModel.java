@@ -5,6 +5,8 @@
  */
 package ec.edu.espe.aircraft.controller;
 
+import com.mongodb.Mongo;
+
 /**
  *
  * @author Sebastian Solano NullPunters ESPE-DCCO
@@ -15,6 +17,9 @@ public class AircraftModel extends javax.swing.JFrame {
      * Creates new form AircraftModel
      */
     public AircraftModel() {
+        try{
+        Mongo mongo = new mongo("LocalHost");
+        }catch ()
         initComponents();
     }
 

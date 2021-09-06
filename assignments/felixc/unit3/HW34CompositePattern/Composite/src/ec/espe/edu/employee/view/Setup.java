@@ -13,7 +13,7 @@ import ec.espe.edu.employee.model.Teller;
 
 /**
  *
- * @author Ariel Gonzalez InnovaCode ESPE-DCCO
+ * @author Cristian Félix InnovaCode ESPE-DCCO
  */
 public class Setup {
     public static void main(String[] args) {
