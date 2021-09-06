@@ -1,0 +1,25 @@
+[{
+  "_id": {
+    "$oid": "61362107d5f67f311cd80832"
+  },
+  "size": "4",
+  "sort algorith": "Insertion Sort",
+  "sorted": "3,5,7,9",
+  "unsorted": "3,9,5,7"
+},{
+  "_id": {
+    "$oid": "613621c8d5f67f311cd80833"
+  },
+  "size": "7",
+  "sort algorith": "Insertion Sort",
+  "sorted": "2,4,5,6,7,8,9",
+  "unsorted": "7,4,9,5,2,8,6"
+},{
+  "_id": {
+    "$oid": "61362241d5f67f311cd80834"
+  },
+  "size": "5",
+  "sort algorith": "Insertion Sort",
+  "sorted": "3,3,5,6,8",
+  "unsorted": "6,8,3,3,5"
+}]
