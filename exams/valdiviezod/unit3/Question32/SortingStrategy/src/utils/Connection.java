@@ -12,7 +12,7 @@ import com.mongodb.client.MongoDatabase;
 
 /**
  *
- * @author Darwin
+ * @author Darwin Valdiviezo NullPointers ESPE-DCCO
  */
 public class Connection {
     private String cluster;

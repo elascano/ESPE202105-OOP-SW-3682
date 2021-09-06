@@ -7,7 +7,7 @@ package ec.edu.espe.app.controller;
 
 /**
  *
- * @author Diego Portilla NullPointers ESPE-DCCO
+ * @author Darwin Valdiviezo NullPointers ESPE-DCCO
  */
 public class InsertionSort implements SortingStrategy{
 
