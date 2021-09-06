@@ -5,16 +5,20 @@
  */
 package ec.edu.espe.sortapp.model;
 
+import ec.edu.espe.sortapp.controller.SortingStrategy;
+
 /**
  *
  * @author Steven Achig Future Programmers ESPE-DCCO
  */
 public class InsertionSort implements SortingStrategy {
 
-    int order [] = {};
+    int order [];
     
     public int[] sort(int data[]) {
         int i, pos, aux;
+        order = new int[data.length];
+        
         for(i=0;i<data.length;i++){
             pos = i;
             aux = data[i];
@@ -29,7 +33,7 @@ public class InsertionSort implements SortingStrategy {
         for(i=0; i<data.length; i++){
             order[i]=data[i];
         }
-
+        
         System.out.println("Insertion Sort");
         return order;
     }

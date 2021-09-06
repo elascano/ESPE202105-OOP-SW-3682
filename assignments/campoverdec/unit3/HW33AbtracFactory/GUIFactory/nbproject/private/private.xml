@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/C:/Users/Admin/Desktop/assi/HW33AbstractFactory/GUIFactory/src/ec/edu/espe/factory/model/MacButton.java</file>
+            <file>file:/C:/Users/Admin/Desktop/assi/HW33AbstractFactory/GUIFactory/src/ec/edu/espe/factory/model/LinuxButton.java</file>
+            <file>file:/C:/Users/Admin/Desktop/assi/HW33AbstractFactory/GUIFactory/src/ec/edu/espe/factory/view/ClientApp.java</file>
+            <file>file:/C:/Users/Admin/Desktop/assi/HW33AbstractFactory/GUIFactory/src/ec/edu/espe/factory/model/MacFactory.java</file>
+            <file>file:/C:/Users/Admin/Desktop/assi/HW33AbstractFactory/GUIFactory/src/ec/edu/espe/factory/model/MacMenu.java</file>
+            <file>file:/C:/Users/Admin/Desktop/assi/HW33AbstractFactory/GUIFactory/src/ec/edu/espe/factory/model/Menu.java</file>
+            <file>file:/C:/Users/Admin/Desktop/assi/HW33AbstractFactory/GUIFactory/src/ec/edu/espe/factory/model/WinButton.java</file>
+            <file>file:/C:/Users/Admin/Desktop/assi/HW33AbstractFactory/GUIFactory/src/ec/edu/espe/factory/model/GUIFactory.java</file>
+            <file>file:/C:/Users/Admin/Desktop/assi/HW33AbstractFactory/GUIFactory/src/ec/edu/espe/factory/model/WinFactory.java</file>
+            <file>file:/C:/Users/Admin/Desktop/assi/HW33AbstractFactory/GUIFactory/src/ec/edu/espe/factory/model/Button.java</file>
+            <file>file:/C:/Users/Admin/Desktop/assi/HW33AbstractFactory/GUIFactory/src/ec/edu/espe/factory/model/LinuxMenu.java</file>
+            <file>file:/C:/Users/Admin/Desktop/assi/HW33AbstractFactory/GUIFactory/src/ec/edu/espe/factory/model/WinMenu.java</file>
+            <file>file:/C:/Users/Admin/Desktop/assi/HW33AbstractFactory/GUIFactory/src/ec/edu/espe/factory/model/LinuxFactory.java</file>
+        </group>
+    </open-files>
+</project-private>
