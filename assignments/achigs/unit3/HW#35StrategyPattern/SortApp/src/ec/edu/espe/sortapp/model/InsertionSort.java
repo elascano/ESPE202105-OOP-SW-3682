@@ -5,6 +5,8 @@
  */
 package ec.edu.espe.sortapp.model;
 
+import ec.edu.espe.sortapp.controller.SortingStrategy;
+
 /**
  *
  * @author Steven Achig Future Programmers ESPE-DCCO
@@ -32,6 +34,7 @@ public class InsertionSort implements SortingStrategy {
             order[i]=data[i];
         }
         
+        System.out.println("Insertion Sort");
         return order;
     }
 }
