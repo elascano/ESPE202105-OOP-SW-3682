@@ -37,7 +37,7 @@ public class BubbleSort implements SortingStrategy {
         for(i=0; i<data.length; i++){
             order[i]=data[i];
         }
-            
+        
         System.out.println("Bubble Sort");
         return order;
     }
