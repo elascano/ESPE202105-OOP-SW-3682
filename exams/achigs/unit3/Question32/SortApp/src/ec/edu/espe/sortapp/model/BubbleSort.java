@@ -21,7 +21,7 @@ public class BubbleSort implements SortingStrategy {
         
         while (true) {
             cambios = false;
-            for (i = 1; i < data.length; i++) {
+            for (i = 1; i < data.length-1; i++) {
                 if(data[i]<data[i-1]){
                     aux = data[i];
                     data[i]=data[i-1];
@@ -34,12 +34,11 @@ public class BubbleSort implements SortingStrategy {
                 break;
         }
         
-        for(i=0; i<data.length; i++){
+        for(i=0; i<data.length-1; i++){
             order[i]=data[i];
         }
-        
+            
         System.out.println("Bubble Sort");
         return order;
     }
-    
 }
