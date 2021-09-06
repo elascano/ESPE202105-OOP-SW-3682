@@ -5,6 +5,8 @@
  */
 package ec.edu.espe.sortapp.model;
 
+import ec.edu.espe.sortapp.controller.SortingStrategy;
+
 /**
  *
  * @author Steven Achig Future Programmers ESPE-DCCO
