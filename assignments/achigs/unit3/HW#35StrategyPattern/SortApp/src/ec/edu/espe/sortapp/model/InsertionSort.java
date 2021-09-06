@@ -34,6 +34,7 @@ public class InsertionSort implements SortingStrategy {
             order[i]=data[i];
         }
         
+        System.out.println("Insertion Sort");
         return order;
     }
 }

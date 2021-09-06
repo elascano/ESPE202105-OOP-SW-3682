@@ -24,15 +24,5 @@ public class Application {
         for(int i=0; i<sortedList.length; i++){
             System.out.print(sortedList[i] + " ");
         }
-        
-        //System.out.println(sortedList);
-        
-//        sadasdas o = new sadasdas();
-//        o.sort(data);
-//        
-//        
-//        for(int i=0; i<data.length; i++){
-//            System.out.print(data[i] + " ");
-//        }
     }
 }

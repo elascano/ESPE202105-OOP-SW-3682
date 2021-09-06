@@ -14,22 +14,28 @@ import ec.edu.espe.sortapp.controller.SortingStrategy;
 public class QuickSort implements SortingStrategy {
 
     public int[] sort(int data[]) {
-        
+        int order[];
+        order = sortApp(0, (data.length-1), data);
+        return order;
+    }
+    
+    public int[] sortApp(int first, int latest, int[] data){
         int order [] = {};
         
-        int i, j, pivote, aux;
-        int primero=0; 
-        int ultimo=data.length-1;
+        int pivote, aux;
+        first = 0; 
+        latest = data.length-1;
         
-        i = primero;
-        j = ultimo;
-        pivote=data[(primero+ultimo)/2];
+        int i = first;
+        int j = latest;
+        pivote=data[(first+latest)/2];
         
         do{
-            while(data[i]<pivote){
+            while(pivote>data[i]){
                 i++;
             }
-            while(data[j]>pivote){
+
+            while(pivote<data[j]){
                 j--;
             }
             
@@ -41,14 +47,18 @@ public class QuickSort implements SortingStrategy {
                 j--;
             }
         }while(i<=j);
-        
+        if(first<j){
+            sortApp(first, j, data);
+        }
+        if(latest>i){
+            sortApp(i, latest, data);
+        }
         
         for(i=0; i<data.length; i++){
-            order[i]=data[i];
+           order[i]=data[i];
         }
         
         System.out.println("Quick Sort");
         return order;
-        
     }
 }

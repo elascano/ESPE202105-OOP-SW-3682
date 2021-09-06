@@ -14,7 +14,8 @@ import ec.edu.espe.sortapp.controller.SortingStrategy;
 public class SortingContext {
 
     private SortingStrategy sortingStrategy;
-
+    QuickSort quick = new QuickSort();
+    
     public int[] sort(int data[]) {
         int size = data.length;
         sortingStrategy = setSortStrategy(size);
@@ -25,10 +26,10 @@ public class SortingContext {
         if (n > 0 && n < 10) {
             sortingStrategy = new BubbleSort();
         }
-        if (n >= 10 && n < 50) {
+        if (n >= 10 && n < 20) {
             sortingStrategy = new InsertionSort();
         }
-        if (n >= 50) {
+        if (n >= 20) {
             sortingStrategy = new QuickSort();
         }
         return sortingStrategy;
