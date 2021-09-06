@@ -157,8 +157,9 @@ public class FrmSortApp extends javax.swing.JFrame {
             
         if(!validate(txtNumberForOrders.getText().trim())){    
             JOptionPane.showMessageDialog(null, "Insert Only numbers   ");
+            txtNumberForOrders.setText(" ");
         } else {
-            if (!txtNumberForOrders.getText().equals("")) {
+            if (!txtNumberForOrders.getText().equals("")){
                 data.add(Integer.parseInt(txtNumberForOrders.getText().toString()));
                 txtNumberForOrders.setText("");
                 txtNumberForOrders.requestFocus();
@@ -175,7 +176,7 @@ public class FrmSortApp extends javax.swing.JFrame {
     }//GEN-LAST:event_btnAddMouseClicked
 
     public static boolean validate(String datas){
-        return datas.matches("[0-9]");
+        return datas.matches("[0-9]*");
     }
     
     /*public void show() {
