@@ -17,7 +17,9 @@ public class Application {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        int data[] = {3, 6, 4, 6, 7, 8, 5, 6, 7, 5, 3, 3, 4, 5, 8, 45, 19, 87, 13, 25, 26, 28};
+        int data[] = {3, 6, 4, 6, 7, 8, 5};
+            //7, 5, 3, 3, 4, 5, 8, 45, 19, 87, 13, 25, 26, 28};
+        
         SortingContext sc = new SortingContext();
         int sortedList[] = sc.sort(data);
         
