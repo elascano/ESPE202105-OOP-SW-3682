@@ -1,0 +1,10 @@
+ec\edu\espe\sortapp\core\InsertionSort.class
+ec\edu\espe\sortapp\view\FrmMain$1.class
+ec\edu\espe\sortapp\model\SortedEntry.class
+ec\edu\espe\sortapp\core\BubbleSort.class
+ec\edu\espe\sortapp\controller\MainController.class
+ec\edu\espe\sortapp\core\SortApp.class
+ec\edu\espe\sortapp\core\SortingStrategy.class
+ec\edu\espe\sortapp\view\FrmMain.class
+ec\edu\espe\sortapp\core\QuickSort.class
+ec\edu\espe\sortapp\core\SortingContext.class
