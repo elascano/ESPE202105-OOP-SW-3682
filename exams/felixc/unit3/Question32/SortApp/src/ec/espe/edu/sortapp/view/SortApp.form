@@ -47,7 +47,7 @@
               </Group>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                  <Component id="txtArraySorted" pref="331" max="32767" attributes="0"/>
+                  <Component id="txtSortedNumbers" pref="331" max="32767" attributes="0"/>
                   <Component id="txtArray" pref="331" max="32767" attributes="0"/>
                   <Component id="txtSortAlgorithm" alignment="0" max="32767" attributes="0"/>
               </Group>
@@ -68,7 +68,7 @@
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="btnSort" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="txtArraySorted" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtSortedNumbers" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
@@ -110,7 +110,7 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnSortActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JTextField" name="txtArraySorted">
+    <Component class="javax.swing.JTextField" name="txtSortedNumbers">
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel3">
       <Properties>
