@@ -2,6 +2,14 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+<<<<<<< HEAD
         <group/>
+=======
+        <group>
+            <file>file:/C:/Users/Esteban/Documents/MATERIAS%20S3/POO/Proyect/ESPE202105-OOP-SW-3682/workshops/elascano/unit3/WS30Menu/BookStore/src/ec/edu/espe/bookstore/view/FrmCreateUser.java</file>
+            <file>file:/C:/Users/Esteban/Documents/MATERIAS%20S3/POO/Proyect/ESPE202105-OOP-SW-3682/workshops/elascano/unit3/WS30Menu/BookStore/src/ec/edu/espe/bookstore/view/BookStore.java</file>
+            <file>file:/C:/Users/Esteban/Documents/MATERIAS%20S3/POO/Proyect/ESPE202105-OOP-SW-3682/workshops/elascano/unit3/WS30Menu/BookStore/src/ec/edu/espe/bookstore/view/FrmBooks.java</file>
+        </group>
+>>>>>>> 479df0677d24ed7dcdd7453b077b47296a89f30c
     </open-files>
 </project-private>

@@ -21,7 +21,7 @@ public class MongoDB {
     private MongoDatabase database; 
     private MongoCollection collection;
 
-    public Connection() {
+    public MongoDB() {
         cluster = "cloud.mongodb.com/v2/6100e02f62cc7776fd9f9040#metrics/replicaSet/61127b36457892036a7a19a2/explorer/Aircraft/Aircraft/find";
         uri = new MongoClientURI(cluster);
         mongoClient = new MongoClient(uri);

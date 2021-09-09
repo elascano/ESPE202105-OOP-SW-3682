@@ -1,0 +1,63 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package ec.edu.espe.fquestion.controller;
+
+/**
+ *
+ * @author jejoc
+ */
+public class QuickSort implements SortingStrategy{
+    
+    
+    @Override
+    public int[] sort(int[] data) {
+        
+        data = firstQuickSort(data);
+           
+            return null; 
+    }
+    
+    public int [] firstQuickSort(int numbers[]){
+        return secondQuickSort(numbers,0,numbers.length-1);
+    }
+    
+    public int[] secondQuickSort(int numbers[],int left,int right){
+        if(left>=right)
+            return numbers;
+        int l=left;
+        int r=right;
+        
+        if(left!=right){
+            int pivot;
+            int aux;
+            
+            pivot = left;
+            while(left!=right){
+                while(numbers[right]>=numbers[pivot] && left<right)
+                    right--;
+                  while(numbers[left]<numbers[pivot] && left<right)
+                      left++;
+                  
+            if(right!=left){
+                aux=numbers[right];
+                numbers[right]=numbers[left];
+                numbers[left]=aux;
+            }
+            if(left==right){
+                secondQuickSort(numbers,l,left-1);
+                secondQuickSort(numbers, left+1,r);
+                
+            }
+            }
+               
+        }
+        else
+            return numbers;
+        return numbers;
+    }
+    
+    
+}
