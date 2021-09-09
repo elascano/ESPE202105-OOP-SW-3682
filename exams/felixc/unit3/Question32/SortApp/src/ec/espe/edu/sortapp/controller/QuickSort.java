@@ -57,5 +57,4 @@ public class QuickSort implements SortingStrategy {
         }
         return array;
     }
-
 }

@@ -10,5 +10,6 @@ package ec.espe.edu.sortapp.controller;
  * @author Cristian Félix InnovaCode ESPE-DCCO
  */
 public interface SortingStrategy {
+
     public int[] sort(int data[]);
 }

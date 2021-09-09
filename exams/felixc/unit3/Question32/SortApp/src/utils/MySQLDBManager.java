@@ -1,13 +1,12 @@
 /** Copyright ESPE-DECC
-*/
-
+ */
 package utils;
 
 /**
  *
  * @author Edison Lascano OOPTech ESPE-DCCO
  */
-public class MySQLDBManager implements DBManager{
+public class MySQLDBManager implements DBManager {
 
     @Override
     public boolean connect(String connectionString) {

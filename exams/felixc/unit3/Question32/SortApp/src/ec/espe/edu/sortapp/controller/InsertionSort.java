@@ -25,5 +25,5 @@ public class InsertionSort implements SortingStrategy {
         }
         return data;
     }
-    
+
 }

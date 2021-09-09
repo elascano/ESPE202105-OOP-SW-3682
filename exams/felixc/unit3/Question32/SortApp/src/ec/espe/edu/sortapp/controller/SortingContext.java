@@ -31,4 +31,21 @@ public class SortingContext {
         }
         return ss;
     }
+
+    public String getSortStrategy(int n, int data[]) {
+        String sort = "";
+        if (n >= 0 && n <= 3) {
+            ss = new BubbleSort();
+            sort = "Bubble Sort";
+
+        } else if (n >= 4 && n <= 7) {
+            ss = new InsertionSort();
+            sort = "Insertion Sort";
+        } else if (n >= 7) {
+            ss = new QuickSort();
+            sort = "Quick Sort";
+        }
+
+        return sort;
+    }
 }

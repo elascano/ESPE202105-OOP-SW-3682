@@ -12,7 +12,7 @@ package utils;
 public interface DBManager {
 
     public boolean connect(String connectionString);
-    
+
     public boolean add(String data, String table);
 
     public String read(String table);
