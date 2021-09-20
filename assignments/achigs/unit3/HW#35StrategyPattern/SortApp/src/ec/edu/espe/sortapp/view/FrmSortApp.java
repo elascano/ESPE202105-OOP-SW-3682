@@ -174,7 +174,7 @@ public class FrmSortApp extends javax.swing.JFrame {
 
     private void btnAddMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnAddMouseClicked
             
-        if(!validate(txtNumberForOrders.getText().trim())){    
+        if(!validate(txtNumberForOrders.getText().trim())){
             JOptionPane.showMessageDialog(null, "Insert Only numbers   ");
             txtNumberForOrders.setText(" ");
         } else {
@@ -192,6 +192,7 @@ public class FrmSortApp extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null, "Insert Data to the List");
             }
         }
+        
     }//GEN-LAST:event_btnAddMouseClicked
 
     public static boolean validate(String datas){
